@@ -1,5 +1,23 @@
 /******************************************************************************
 
+ An enhanced version for VerifiedFT by Tuan Phong Ngo
+ 
+ ******************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************************************************
+
 Copyright (c) 2016, Cormac Flanagan (University of California, Santa Cruz)
                     and Stephen Freund (Williams College) 
 
@@ -105,8 +123,8 @@ import acme.util.option.CommandLine;
  * The performance over the JavaGrande and DaCapo benchmarks is more or less
  * identical to the old implementation (within ~1% overall in our tests).
  */
-@Abbrev("FT2L")
-public class FastTrackTool extends Tool implements BarrierListener<FTBarrierState>  {
+@Abbrev("FT2E-V1")
+public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTBarrierState>  {
 
 	private static final boolean COUNT_OPERATIONS = RRMain.slowMode();
 	private static final int INIT_VECTOR_CLOCK_SIZE = 4;
@@ -130,7 +148,7 @@ public class FastTrackTool extends Tool implements BarrierListener<FTBarrierStat
 		}
 	}
 
-	public FastTrackTool(final String name, final Tool next, CommandLine commandLine) {
+	public FastTrackToolEnhancedV1(final String name, final Tool next, CommandLine commandLine) {
 		super(name, next, commandLine);
 		new BarrierMonitor<FTBarrierState>(this, new DefaultValue<Object,FTBarrierState>() {
 			public FTBarrierState get(Object k) {
@@ -334,7 +352,8 @@ public class FastTrackTool extends Tool implements BarrierListener<FTBarrierStat
 	private static final ThreadLocalCounter barrier = new ThreadLocalCounter("FT", "Barrier", RR.maxTidOption.get());
 	private static final ThreadLocalCounter wait = new ThreadLocalCounter("FT", "Wait", RR.maxTidOption.get());
 	private static final ThreadLocalCounter vol = new ThreadLocalCounter("FT", "Volatile", RR.maxTidOption.get());
-
+  // new added variables
+  private static final ThreadLocalCounter readWriteSameLongEpoch = new ThreadLocalCounter("FT", "Read with Write Same LongEpoch", RR.maxTidOption.get());
 	
 	private static final ThreadLocalCounter other = new ThreadLocalCounter("FT", "Other", RR.maxTidOption.get());
 
@@ -342,15 +361,16 @@ public class FastTrackTool extends Tool implements BarrierListener<FTBarrierStat
 	}
 
 	public void fini() {
-		AggregateCounter reads = new AggregateCounter("FT", "Total Reads", readSameLongEpoch, readSharedSameLongEpoch, readExclusive, readShare, readShared, writeReadError);
+		AggregateCounter reads = new AggregateCounter("FT", "Total Reads", readWriteSameLongEpoch, readSameLongEpoch, readSharedSameLongEpoch, readExclusive, readShare, readShared, writeReadError);
 		AggregateCounter writes = new AggregateCounter("FT", "Total Writes", writeSameLongEpoch, writeExclusive, writeShared, writeWriteError, readWriteError, sharedWriteError);
 		AggregateCounter accesses = new AggregateCounter("FT", "Total Access Ops", reads, writes);
 		new AggregateCounter("FT", "Total Ops", accesses, acquire, release, fork, join, barrier, wait, vol, other);
 		if (COUNT_OPERATIONS) {
-			Util.printf("\n\nWrite Same LongEpoch:       %g\n", ((double)writeSameLongEpoch.getCount()) / accesses.getCount());
-			Util.printf("Read Same LongEpoch:        %g\n", ((double)readSameLongEpoch.getCount()) / accesses.getCount());
-			Util.printf("Read Shared Same LongEpoch: %g\n------------------------------------\n", ((double)readSharedSameLongEpoch.getCount()) / accesses.getCount());
-			Util.printf("All Fast Paths:         %g\n\n\n", ((double)(writeSameLongEpoch.getCount() + readSameLongEpoch.getCount() + readSharedSameLongEpoch.getCount())) / accesses.getCount());
+			Util.printf("\n\nWrite Same LongEpoch:        %g\n", ((double)writeSameLongEpoch.getCount()) / accesses.getCount());
+      Util.printf("Read with Write Same LongEpoch:  %g\n", ((double)readWriteSameLongEpoch.getCount()) / accesses.getCount());
+			Util.printf("Read Same LongEpoch:             %g\n", ((double)readSameLongEpoch.getCount()) / accesses.getCount());
+			Util.printf("Read Shared Same LongEpoch:      %g\n------------------------------------\n", ((double)readSharedSameLongEpoch.getCount()) / accesses.getCount());
+			Util.printf("All Fast Paths:              %g\n\n\n", ((double)(writeSameLongEpoch.getCount() + readWriteSameLongEpoch.getCount() + readSameLongEpoch.getCount() + readSharedSameLongEpoch.getCount())) / accesses.getCount());
 		}
 	}
 	
@@ -359,13 +379,19 @@ public class FastTrackTool extends Tool implements BarrierListener<FTBarrierStat
 
 		/* optional */ {
 			final long/*epoch*/ r = sx.R;
-			if (r == e) {
+      
+      final long/*epoch*/ w = sx.W; // newly added
+      
+      if (w == e) { // newly added
+        if (COUNT_OPERATIONS) readWriteSameLongEpoch.inc(st.getTid());
+        return;
+      } else if (r == e) {
 				if (COUNT_OPERATIONS) readSameLongEpoch.inc(st.getTid());
 				return;
 			} else if (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e) {
 				if (COUNT_OPERATIONS) readSharedSameLongEpoch.inc(st.getTid());
 				return;
-			}
+      }
 		}
 
 		synchronized(sx) {
@@ -411,13 +437,19 @@ public class FastTrackTool extends Tool implements BarrierListener<FTBarrierStat
 
 			/* optional */ {
 				final long/*epoch*/ r = sx.R;
-				if (r == e) {
+        
+        final long/*epoch*/ w = sx.W; // newly added
+        
+        if (w == e) { // newly added
+          if (COUNT_OPERATIONS) readWriteSameLongEpoch.inc(st.getTid());
+          return true;
+        } else if (r == e) {
 					if (COUNT_OPERATIONS) readSameLongEpoch.inc(st.getTid());
 					return true;
 				} else if (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e) {
 					if (COUNT_OPERATIONS) readSharedSameLongEpoch.inc(st.getTid());
 					return true;
-				}
+        }
 			}
 
 			synchronized(sx) {

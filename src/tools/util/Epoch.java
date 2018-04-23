@@ -97,6 +97,11 @@ public final class Epoch {
 		// Assert.assertTrue(tid(e1) == tid(e2));
 		return clock(e1) <= clock(e2);
 	}
+  
+  public static boolean equal(int/*epoch*/ e1, int/*epoch*/ e2) {
+    // Assert.assertTrue(tid(e1) == tid(e2));
+    return clock(e1) == clock(e2);
+  }
 
 	public static int/*epoch*/ max(int/*epoch*/ e1, int/*epoch*/ e2) {
 		// Assert.assertTrue(tid(e1) == tid(e2));

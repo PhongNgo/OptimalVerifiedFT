@@ -72,6 +72,9 @@ ftExperimentV1 =        MultiExperiment('FastTrackV1', standardCmd + " -tool=FT2
 ftExperimentV2 =        MultiExperiment('FastTrackV1.5', standardCmd + " -tool=FT2-V1.5", TRIALS, startNum=START)
 ftExperimentOld =        MultiExperiment('FastTrackOld', standardCmd + " -tool=tools.old.fasttrack.FastTrackTool", TRIALS, startNum=START)
 ftExperimentOldCAS =        MultiExperiment('FastTrackCASOld', standardCmd + " -tool=tools.old.fasttrack_cas.FastTrackTool", TRIALS, startNum=START)
+ftExperimentV4 =        MultiExperiment('FastTrackEnhancedV1', standardCmd + " -tool=FT2E-V1", TRIALS, startNum=START)
+ftExperimentV5 =        MultiExperiment('FastTrackEnhanced', standardCmd + " -tool=FT2E", TRIALS, startNum=START)
+
 
 def getTime(e,row,outDir): 
     return e.getXMLCounter(row,outDir,'RRBench: Average')
@@ -164,9 +167,12 @@ cols = [
     Column("(sec)", lambda row, outDir: round(baseExperiment.getXMLCounter(row,outDir,'RRBench: Average') / 1000.0, S), '','r|','c|'),
     makeOverhead(ftExperimentOld,'FTOld'),
     makeOverhead(ftExperimentOldCAS,'FTOldCAS'),
-    makeOverhead(ftExperimentV1,'VFT-v1'),
-    makeOverhead(ftExperimentV2,'VFT-v1.5'),
+##    makeOverhead(ftExperimentV1,'VFT-v1'),
+##    makeOverhead(ftExperimentV2,'VFT-v1.5'),
     makeOverhead(ftExperimentV3,'VFT-v2'),
+    makeOverhead(ftExperimentV4,'VFT-E-v1'),
+    makeOverhead(ftExperimentV5,'VFT-E'),
+              
 #    Column("(ci)", lambda row, outDir: confidenceIntervalForSlowdownRatios(ftExperimentV3,ftExperimentOldCAS,row, outDir), '','c|','c|')
 ]
 
@@ -184,9 +190,11 @@ headers = [
 
 exps=[
     baseExperiment,
-    ftExperimentV1,
-    ftExperimentV2,
+##    ftExperimentV1,
+##    ftExperimentV2,
     ftExperimentV3,
+    ftExperimentV4,
+    ftExperimentV5,
     ftExperimentOld,
     ftExperimentOldCAS,
 ]
@@ -201,9 +209,11 @@ cols = [
     Column("Program", (lambda row, outDir: row.name), 'Total', '|l||', '|c||'),
     makeErrors(ftExperimentOld,'FTOld', 'c|','r|'),
     makeErrors(ftExperimentOld,'FTOldCAS', 'c|','r|'),
-    makeErrors(ftExperimentV1,'VFT-v1', 'c|','r|'),
-    makeErrors(ftExperimentV2,'VFT-v1.5', 'c|','r|'),
+##    makeErrors(ftExperimentV1,'VFT-v1', 'c|','r|'),
+##    makeErrors(ftExperimentV2,'VFT-v1.5', 'c|','r|'),
     makeErrors(ftExperimentV3,'VFT-v2', 'c|','r|'),
+    makeErrors(ftExperimentV4,'VFT-E-v1', 'c|','r|'),
+    makeErrors(ftExperimentV5,'VFT-E', 'c|','r|'),
 ]
 
 headers = [

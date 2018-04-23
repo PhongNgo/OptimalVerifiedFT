@@ -60,15 +60,23 @@ defaultRRArgs='%rowextra -quiet -maxWarn=1 -xml=%log -logs=%path %extra '
 standardCmd =  'cd %dir ; gtimeout -s 9 -k 5 2h                                env RR_MODE=SLOW env JVM_ARGS="$JVM_ARGS ' + jvmArgs +'"  ./%command   -classpath=original.jar ' + defaultRRArgs + '  '
 
 # The experiments to run to gather timing measurements.
-ftExperimentV2 =        MultiExperiment('FastTrackV2Counts', standardCmd + " -tool=FT2", TRIALS)
+ftExperimentV5 =        MultiExperiment('FastTrackV5Counts', standardCmd + " -tool=FT2E", TRIALS)
 
-def sameEpochPercent(e,name='',title='c|',rowf='r|'):
+##def sameEpochPercent(e,name='',title='c|',rowf='r|'):
+##    if name=='':
+##       name = e.abbrev
+##    return AverageColumn(name, 
+##                  lambda row, outDir: 
+##		               round(float((e.getXMLCounter(row,outDir,'FT: Read Same Epoch')+e.getXMLCounter(row,outDir,'FT: Write Same Epoch'))) / 
+##                                     float(e.getXMLCounter(row,outDir,'FT: Total Access Ops')),S), rowf,title,[],scale=3,sideways=True)
+
+def delayedReleasePercent(e,name='',title='c|',rowf='r|'):
     if name=='':
        name = e.abbrev
     return AverageColumn(name, 
                   lambda row, outDir: 
-		               round(float((e.getXMLCounter(row,outDir,'FT: Read Same Epoch')+e.getXMLCounter(row,outDir,'FT: Write Same Epoch'))) / 
-                                     float(e.getXMLCounter(row,outDir,'FT: Total Access Ops')),S), rowf,title,[],scale=3,sideways=True)
+		               round(float((e.getXMLCounter(row,outDir,'FT: Delayed Release'))) / 
+                                     float(e.getXMLCounter(row,outDir,'FT: Release')),S), rowf,title,[],scale=3,sideways=True)
 
 
 def sameReadEpochPercent(e,name='',title='c|',rowf='r|'):
@@ -77,6 +85,13 @@ def sameReadEpochPercent(e,name='',title='c|',rowf='r|'):
     return AverageColumn(name, 
                   lambda row, outDir: 
 		               round(float((e.getXMLCounter(row,outDir,'FT: Read Same Epoch'))) / 
+                                     float(e.getXMLCounter(row,outDir,'FT: Total Access Ops')),S), rowf,title,[],scale=3,sideways=True)
+def sameReadWriteEpochPercent(e,name='',title='c|',rowf='r|'):
+    if name=='':
+       name = e.abbrev
+    return AverageColumn(name, 
+                  lambda row, outDir: 
+		               round(float((e.getXMLCounter(row,outDir,'FT: Read with Write Same Epoch'))) / 
                                      float(e.getXMLCounter(row,outDir,'FT: Total Access Ops')),S), rowf,title,[],scale=3,sideways=True)
 
 def sameReadSharedEpochPercent(e,name='',title='c|',rowf='r|'):
@@ -100,7 +115,7 @@ def sameEpochWithRSPercent(e,name='',title='c|',rowf='r|'):
        name = e.abbrev
     return AverageColumn(name, 
                   lambda row, outDir: 
-		               round(float((e.getXMLCounter(row,outDir,'FT: Read Same Epoch')+e.getXMLCounter(row,outDir,'FT: ReadShared Same Epoch')+e.getXMLCounter(row,outDir,'FT: Write Same Epoch'))) / 
+		               round(float((e.getXMLCounter(row,outDir,'FT: Read Same Epoch')+e.getXMLCounter(row,outDir,'FT: Read with Write Same Epoch')+e.getXMLCounter(row,outDir,'FT: ReadShared Same Epoch')+e.getXMLCounter(row,outDir,'FT: Write Same Epoch'))) / 
                                      float(e.getXMLCounter(row,outDir,'FT: Total Access Ops')),S),rowf,title,[],scale=3,sideways=True)
 
 
@@ -108,14 +123,16 @@ def sameEpochWithRSPercent(e,name='',title='c|',rowf='r|'):
 
 cols = [
     Column("", (lambda row, outDir: row.name), 'Mean', '|l|', '|c|'),
-    sameReadEpochPercent(ftExperimentV2,'ReadSameEpoch'),
-    sameWriteEpochPercent(ftExperimentV2,'WriteSameEpoch'),
-    sameReadSharedEpochPercent(ftExperimentV2,'ReadSharedSameEpoch'),
-    sameEpochWithRSPercent(ftExperimentV2,'Total'),
+    sameReadEpochPercent(ftExperimentV5,'ReadSameEpoch'),
+    sameReadWriteEpochPercent(ftExperimentV5,'ReadwithWriteSameEpoch'),
+    sameWriteEpochPercent(ftExperimentV5,'WriteSameEpoch'),
+    sameReadSharedEpochPercent(ftExperimentV5,'ReadSharedSameEpoch'),
+    delayedReleasePercent(ftExperimentV5,'DelayedRelease'),
+    sameEpochWithRSPercent(ftExperimentV5,'Total'),
 ]
 
 exps=[
-    ftExperimentV2,
+    ftExperimentV5,
 ]
 
 statsTable =      Table('Performance', 'large-stats',  [],  javagrade_rows + dacapo_rows, cols, exps,'stats')

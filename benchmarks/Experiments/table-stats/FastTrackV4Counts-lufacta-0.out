@@ -1,0 +1,183 @@
+<entry>
+  <date> Mon Apr 23 16:28:39 CEST 2018 </date> 
+  <mode> SLOW </mode> 
+  <timeout> NO </timeout> 
+  <options>
+    <option><name> javaArgs </name>           <value> RRBench 8  </value> </option>
+    <option><name> noDecInline </name>        <value> false </value> </option>
+    <option><name> quiet </name>              <value> true </value> </option>
+    <option><name> logDepth </name>           <value> 100 </value> </option>
+    <option><name> logs </name>               <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/Experiments/table-stats </value> </option>
+    <option><name> out </name>                <value>  </value>   </option>
+    <option><name> err </name>                <value>  </value>   </option>
+    <option><name> noinst </name>             <value> false </value> </option>
+    <option><name> inst </name>               <value> INST </value> </option>
+    <option><name> infThreads </name>         <value> 0 </value>  </option>
+    <option><name> benchmark </name>          <value> 0 </value>  </option>
+    <option><name> warmup </name>             <value> 3 </value>  </option>
+    <option><name> availableProcessors </name> <value> 8 </value>  </option>
+    <option><name> args </name>               <value> [] </value> </option>
+    <option><name> d </name>                  <value> [] </value> </option>
+    <option><name> maxYikes </name>           <value> 5 </value>  </option>
+    <option><name> help </name>               <value> false </value> </option>
+    <option><name> toolpath </name>           <value> /Users/tuan-phongngo/OptimalVerifiedFT/classes/rr/simple:/Users/tuan-phongngo/OptimalVerifiedFT/classes/tools </value> </option>
+    <option><name> classpath </name>          <value> original.jar </value> </option>
+    <option><name> tool </name>               <value> FT2E </value> </option>
+    <option><name> tools </name>              <value> false </value> </option>
+    <option><name> noxml </name>              <value> false </value> </option>
+    <option><name> constantGC </name>         <value> false </value> </option>
+    <option><name> noFP </name>               <value> false </value> </option>
+    <option><name> noShutdownHook </name>     <value> false </value> </option>
+    <option><name> noEnter </name>            <value> true </value> </option>
+    <option><name> xml </name>                <value> FastTrackV4Counts-lufacta-0.out </value> </option>
+    <option><name> pulse </name>              <value>  </value>   </option>
+    <option><name> maxTime </name>            <value> 0 </value>  </option>
+    <option><name> maxMem </name>             <value> 10240 </value> </option>
+    <option><name> maxTid </name>             <value> 16 </value> </option>
+    <option><name> stacks </name>             <value> true </value> </option>
+    <option><name> values </name>             <value> false </value> </option>
+    <option><name> noTidGC </name>            <value> false </value> </option>
+    <option><name> noEventReuse </name>       <value> false </value> </option>
+    <option><name> trackMemoryUsage </name>   <value> false </value> </option>
+    <option><name> repository </name>         <value>  </value>   </option>
+    <option><name> meta </name>               <value> null </value> </option>
+    <option><name> methods </name>            <value> ["-.*Barrier.await\(\)V", "-java.util.concurrent.CyclicBarrier.await\(JLjava/util/concurrent/TimeUnit;\)I", "-java.util.concurrent.CyclicBarrier.await\(\)I", "-.*Barrier.DoBarrier\(I\)V", "-.*TournamentBarrier.DoBarrier\(I\)V", default=ACCEPT] </value> </option>
+    <option><name> fields </name>             <value> ["-.*this\$.*", "-$.*__\$rr.*", default=ACCEPT] </value> </option>
+    <option><name> lines </name>              <value> [default=ACCEPT] </value> </option>
+    <option><name> classes </name>            <value> ["-.*Barrier.*", "-java..*", "-javax..*", "-com.sun..*", "-sun..*", "-rr..*", "-tools..*", "-acme..*", "-.*__\$rr_.*", "-org.xml..*", default=ACCEPT] </value> </option>
+    <option><name> shadowThread </name>       <value> ["-.*", default=ACCEPT] </value> </option>
+    <option><name> noop </name>               <value> [default=ACCEPT] </value> </option>
+    <option><name> noConstructor </name>      <value> false </value> </option>
+    <option><name> noClone </name>            <value> false </value> </option>
+    <option><name> dump </name>               <value>  </value>   </option>
+    <option><name> field </name>              <value> FINE </value> </option>
+    <option><name> fancy </name>              <value> false </value> </option>
+    <option><name> verify </name>             <value> false </value> </option>
+    <option><name> trackReflection </name>    <value> false </value> </option>
+    <option><name> arraySites </name>         <value> false </value> </option>
+    <option><name> Use TestAcquires </name>   <value> false </value> </option>
+    <option><name> sanity </name>             <value> false </value> </option>
+    <option><name> reentrantEvents </name>    <value> false </value> </option>
+    <option><name> nojoin </name>             <value> false </value> </option>
+    <option><name> multiLoader </name>        <value> false </value> </option>
+    <option><name> indices </name>            <value> 2147483647 </value> </option>
+    <option><name> updaters </name>           <value> SAFE </value> </option>
+    <option><name> array </name>              <value> FINE </value> </option>
+    <option><name> userArray </name>          <value> rr.state.ArrayStateCreator$1@45ee12a7 </value> </option>
+    <option><name> nobarrier </name>          <value> false </value> </option>
+    <option><name> arrayCacheType </name>     <value> STRONG </value> </option>
+    <option><name> callSites </name>          <value> false </value> </option>
+    <option><name> maxWarn </name>            <value> 1 </value>  </option>
+    <option><name> noInterrupt </name>        <value> false </value> </option>
+  </options>
+  <system>
+    <host> dhcp-11-249.it.uu.se </host> 
+    <name> java.vm.version </name>     <value> 25.101-b13 </value> 
+    <name> java.vm.vendor </name>      <value> Oracle Corporation </value> 
+    <name> java.vm.name </name>        <value> Java HotSpot(TM) 64-Bit Server VM </value> 
+    <name> java.class.path </name>     <value> .:/Users/tuan-phongngo/OptimalVerifiedFT/build/jar/rragent.jar </value> 
+    <name> os.name </name>             <value> Mac OS X </value> 
+    <name> os.arch </name>             <value> x86_64 </value> 
+    <name> os.version </name>          <value> 10.12.4 </value> 
+    <name> user.name </name>           <value> tuan-phongngo </value> 
+    <name> user.dir </name>            <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/lufacta </value> 
+    <availableProcs> 8 </availableProcs> 
+    <memCommitted> 982 </memCommitted> 
+    <memUsed> 221 </memUsed> 
+    <memTotal> 982 </memTotal> 
+    <compileTime> 3883 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 0 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 0 </time> </gc>
+  </system>
+  <instrumented> JGFLUFactBenchSizeA RRBench jgfutil/JGFInstrumentor jgfutil/JGFSection2 jgfutil/JGFTimer lufact/JGFLUFactBench lufact/Linpack lufact/LinpackRunner  </instrumented> 
+  <instrumentedNum> 8 </instrumentedNum> 
+  <skipped> lufact/Barrier lufact/TournamentBarrier  </skipped> 
+  <skippedNum> 2 </skippedNum> 
+  <sanityChecked>  </sanityChecked> 
+  <sanityCheckedNum> 0 </sanityCheckedNum> 
+  <counters>
+
+    <counter><name> "ArrayStateFactory: Size" </name>                    <value> 509 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>0.00000</total> <count>0</count>  </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 0 </value> </counter>
+
+    <counter><name> "Clone: Count" </name>                               <value> 0 </value> </counter>
+
+    <counter><name> "FT: Read Same Epoch" </name>                        <value>  1,028,591 </value> </counter>
+    <counter><name> "FT: ReadShared Same Epoch" </name>                  <value> 41,548,944 </value> </counter>
+    <counter><name> "FT: Read Exclusive" </name>                         <value> 42,108,162 </value> </counter>
+    <counter><name> "FT: Read Share" </name>                             <value>    125,751 </value> </counter>
+    <counter><name> "FT: Read Shared" </name>                            <value>  2,015,767 </value> </counter>
+    <counter><name> "FT: Write-Read Error" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Write Same Epoch" </name>                       <value>  1,377,161 </value> </counter>
+    <counter><name> "FT: Write Exclusive" </name>                        <value> 41,791,098 </value> </counter>
+    <counter><name> "FT: Write Shared" </name>                           <value>    250,978 </value> </counter>
+    <counter><name> "FT: Write-Write Error" </name>                      <value>          0 </value> </counter>
+    <counter><name> "FT: Read-Write Error" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Shared-Write Error" </name>                     <value>          0 </value> </counter>
+    <counter><name> "FT: Acquire" </name>                                <value>          6 </value> </counter>
+    <counter><name> "FT: Release" </name>                                <value>          6 </value> </counter>
+    <counter><name> "FT: Fork" </name>                                   <value>          7 </value> </counter>
+    <counter><name> "FT: Join" </name>                                   <value>          7 </value> </counter>
+    <counter><name> "FT: Barrier" </name>                                <value>     47,904 </value> </counter>
+    <counter><name> "FT: Wait" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Volatile" </name>                               <value>          0 </value> </counter>
+    <counter><name> "FT: Read with Write Same Epoch" </name>             <value>  2,628,138 </value> </counter>
+    <counter><name> "FT: Other" </name>                                  <value>         10 </value> </counter>
+    <counter><name> "FT: Total Reads" </name>                            <value> 89,455,353 </value> </counter>
+    <counter><name> "FT: Total Writes" </name>                           <value> 43,419,237 </value> </counter>
+    <counter><name> "FT: Total Access Ops" </name>                       <value> 132,874,590 </value> </counter>
+    <counter><name> "FT: Total Ops" </name>                              <value> 132,922,530 </value> </counter>
+
+    <counter><name> "GCRunner: Max Usage" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "Handler: Count" </name>                             <value> 0 </value> </counter>
+
+    <counter><name> "ShadowLock: objects" </name>                        <value> 1 </value> </counter>
+
+    <counter><name> "ShadowThread: Count" </name>                        <value> 8 </value> </counter>
+    <counter><name> "ShadowThread: Max Live" </name>                     <value> 8 </value> </counter>
+    <counter><name> "ShadowThread: getCurrentThread() calls" </name>     <value> 1,660,985 </value> </counter>
+
+    <counter><name> "ShadowVolatile: objects" </name>                    <value> 0 </value> </counter>
+
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>107.000</total> <count>8</count> <ave>13.3750</ave> </value> </counter>
+  </counters>
+  <yikes>
+  </yikes>
+  <tool>
+    <name> tools.fasttrack.FastTrackToolEnhanced </name> 
+    <thread> [tid=0    C=[(0:BC2) (1:BB5) (2:BB5) (3:BB5) (4:BB5) (5:BB5) (6:BB5) (7:BB5)]   E=(0:BC2)] </thread> 
+    <thread> [tid=1    C=[(0:BBE) (1:BB5) (2:BB4) (3:BB4) (4:BB4) (5:BB4) (6:BB4) (7:BB4)]   E=(1:BB5)] </thread> 
+    <thread> [tid=3    C=[(0:BBE) (1:BB4) (2:BB4) (3:BB5) (4:BB4) (5:BB4) (6:BB4) (7:BB4)]   E=(3:BB5)] </thread> 
+    <thread> [tid=6    C=[(0:BBE) (1:BB4) (2:BB4) (3:BB4) (4:BB4) (5:BB4) (6:BB5) (7:BB4)]   E=(6:BB5)] </thread> 
+    <thread> [tid=2    C=[(0:BBE) (1:BB4) (2:BB5) (3:BB4) (4:BB4) (5:BB4) (6:BB4) (7:BB4)]   E=(2:BB5)] </thread> 
+    <thread> [tid=7    C=[(0:BBE) (1:BB4) (2:BB4) (3:BB4) (4:BB4) (5:BB4) (6:BB4) (7:BB5)]   E=(7:BB5)] </thread> 
+    <thread> [tid=5    C=[(0:BBE) (1:BB4) (2:BB4) (3:BB4) (4:BB4) (5:BB5) (6:BB4) (7:BB4)]   E=(5:BB5)] </thread> 
+    <thread> [tid=4    C=[(0:BBE) (1:BB4) (2:BB4) (3:BB4) (4:BB5) (5:BB4) (6:BB4) (7:BB4)]   E=(4:BB5)] </thread> 
+  </tool>
+  <tool>
+    <name> Last </name> 
+  </tool>
+  <threadCount> 8 </threadCount> 
+  <threadMaxActive> 8 </threadMaxActive> 
+  <errorTotal> 0 </errorTotal> 
+  <distinctErrorTotal> 0 </distinctErrorTotal> 
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <arrays>
+  </arrays>
+  <locks>
+  </locks>
+  <fieldAccesses>
+  </fieldAccesses>
+  <errorCountPerErrorType>
+  </errorCountPerErrorType>
+  <warningsTotal> 0 </warningsTotal> 
+  <yikesTotal> 0 </yikesTotal> 
+  <failed> false </failed> 
+  <failedReason>  </failedReason> 
+  <time> 2449 </time> 
+</entry>

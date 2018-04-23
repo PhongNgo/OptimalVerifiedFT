@@ -1,0 +1,449 @@
+rrrun -classpath=original.jar -benchmark=10 -classpath=original.jar -quiet -maxWarn=1 -xml=FastTrackV1.5-crypta-0.out -logs=/Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/Experiments/table-bench -tool=FT2-V1.5 RRBench 8
+java version "1.8.0_101"
+Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
+
+objc[34361]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/bin/java (0x101e064c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x101ece4e0). One of the two will be used. Which one is undefined.
+[premain: Installling RoadRunner Agent...]
+[main: RoadRunner Agent Loaded.]
+[main: Running in FAST Mode]
+[RR: Creating Fresh Meta Data]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 1.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
+Executing on 8 threads
+
+## YIKES: Concurrent array state creation...
+
+## YIKES: Concurrent array state creation...
+
+## YIKES: Concurrent array state creation...
+
+## YIKES: Concurrent array state creation...
+
+## YIKES: Concurrent array state creation...
+## Suppressing further yikes messages like that one.
+
+Section2:Crypt:Kernel:SizeA	2.072 (s) 	 2895.753	 (Kbyte/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 2703.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 2.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
+Section2:Crypt:Kernel:SizeA	4.017 (s) 	 2987.304	 (Kbyte/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 2351.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 3.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
+Section2:Crypt:Kernel:SizeA	4.767 (s) 	 3775.9597	 (Kbyte/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1166.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 1.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
+Section2:Crypt:Kernel:SizeA	5.392 (s) 	 4451.0386	 (Kbyte/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 988.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 2.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
+Section2:Crypt:Kernel:SizeA	6.015000000000001 (s) 	 4987.5312	 (Kbyte/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1003.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 3.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
+Section2:Crypt:Kernel:SizeA	6.705 (s) 	 5369.1274	 (Kbyte/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1059.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 4.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
+Section2:Crypt:Kernel:SizeA	8.924 (s) 	 4706.4097	 (Kbyte/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 2652.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 5.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
+Section2:Crypt:Kernel:SizeA	9.565 (s) 	 5018.296	 (Kbyte/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1026.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 6.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
+Section2:Crypt:Kernel:SizeA	10.206 (s) 	 5291.0054	 (Kbyte/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1012.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 7.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
+Section2:Crypt:Kernel:SizeA	10.793999999999999 (s) 	 5558.6436	 (Kbyte/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 968.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 8.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
+Section2:Crypt:Kernel:SizeA	11.383 (s) 	 5798.12	 (Kbyte/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 944.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 9.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
+Section2:Crypt:Kernel:SizeA	11.921999999999999 (s) 	 6039.2554	 (Kbyte/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 885.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 10.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
+Section2:Crypt:Kernel:SizeA	12.627999999999998 (s) 	 6176.75	 (Kbyte/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1072.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[RR: Total Time: 41134]
+<entry>
+  <date> Mon Apr 23 18:06:30 CEST 2018 </date> 
+  <mode> FAST </mode> 
+  <timeout> NO </timeout> 
+  <options>
+    <option><name> javaArgs </name>           <value> RRBench 8  </value> </option>
+    <option><name> noDecInline </name>        <value> false </value> </option>
+    <option><name> quiet </name>              <value> true </value> </option>
+    <option><name> logDepth </name>           <value> 100 </value> </option>
+    <option><name> logs </name>               <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/Experiments/table-bench </value> </option>
+    <option><name> out </name>                <value>  </value>   </option>
+    <option><name> err </name>                <value>  </value>   </option>
+    <option><name> noinst </name>             <value> false </value> </option>
+    <option><name> inst </name>               <value> INST </value> </option>
+    <option><name> infThreads </name>         <value> 0 </value>  </option>
+    <option><name> benchmark </name>          <value> 10 </value> </option>
+    <option><name> warmup </name>             <value> 3 </value>  </option>
+    <option><name> availableProcessors </name> <value> 8 </value>  </option>
+    <option><name> args </name>               <value> [] </value> </option>
+    <option><name> d </name>                  <value> [] </value> </option>
+    <option><name> maxYikes </name>           <value> 5 </value>  </option>
+    <option><name> help </name>               <value> false </value> </option>
+    <option><name> toolpath </name>           <value> /Users/tuan-phongngo/OptimalVerifiedFT/classes/rr/simple:/Users/tuan-phongngo/OptimalVerifiedFT/classes/tools </value> </option>
+    <option><name> classpath </name>          <value> original.jar </value> </option>
+    <option><name> tool </name>               <value> FT2-V1.5 </value> </option>
+    <option><name> tools </name>              <value> false </value> </option>
+    <option><name> noxml </name>              <value> false </value> </option>
+    <option><name> constantGC </name>         <value> false </value> </option>
+    <option><name> noFP </name>               <value> false </value> </option>
+    <option><name> noShutdownHook </name>     <value> false </value> </option>
+    <option><name> noEnter </name>            <value> true </value> </option>
+    <option><name> xml </name>                <value> FastTrackV1.5-crypta-0.out </value> </option>
+    <option><name> pulse </name>              <value>  </value>   </option>
+    <option><name> maxTime </name>            <value> 0 </value>  </option>
+    <option><name> maxMem </name>             <value> 10240 </value> </option>
+    <option><name> maxTid </name>             <value> 16 </value> </option>
+    <option><name> stacks </name>             <value> true </value> </option>
+    <option><name> values </name>             <value> false </value> </option>
+    <option><name> noTidGC </name>            <value> false </value> </option>
+    <option><name> noEventReuse </name>       <value> false </value> </option>
+    <option><name> trackMemoryUsage </name>   <value> false </value> </option>
+    <option><name> repository </name>         <value>  </value>   </option>
+    <option><name> meta </name>               <value> null </value> </option>
+    <option><name> methods </name>            <value> ["-.*Barrier.await\(\)V", "-java.util.concurrent.CyclicBarrier.await\(JLjava/util/concurrent/TimeUnit;\)I", "-java.util.concurrent.CyclicBarrier.await\(\)I", "-.*Barrier.DoBarrier\(I\)V", "-.*TournamentBarrier.DoBarrier\(I\)V", default=ACCEPT] </value> </option>
+    <option><name> fields </name>             <value> ["-.*this\$.*", "-$.*__\$rr.*", default=ACCEPT] </value> </option>
+    <option><name> lines </name>              <value> [default=ACCEPT] </value> </option>
+    <option><name> classes </name>            <value> ["-.*Barrier.*", "-java..*", "-javax..*", "-com.sun..*", "-sun..*", "-rr..*", "-tools..*", "-acme..*", "-.*__\$rr_.*", "-org.xml..*", default=ACCEPT] </value> </option>
+    <option><name> shadowThread </name>       <value> ["-.*", default=ACCEPT] </value> </option>
+    <option><name> noop </name>               <value> [default=ACCEPT] </value> </option>
+    <option><name> noConstructor </name>      <value> false </value> </option>
+    <option><name> noClone </name>            <value> false </value> </option>
+    <option><name> dump </name>               <value>  </value>   </option>
+    <option><name> field </name>              <value> FINE </value> </option>
+    <option><name> fancy </name>              <value> false </value> </option>
+    <option><name> verify </name>             <value> false </value> </option>
+    <option><name> trackReflection </name>    <value> false </value> </option>
+    <option><name> arraySites </name>         <value> false </value> </option>
+    <option><name> Use TestAcquires </name>   <value> false </value> </option>
+    <option><name> sanity </name>             <value> false </value> </option>
+    <option><name> reentrantEvents </name>    <value> false </value> </option>
+    <option><name> nojoin </name>             <value> false </value> </option>
+    <option><name> multiLoader </name>        <value> false </value> </option>
+    <option><name> indices </name>            <value> 2147483647 </value> </option>
+    <option><name> updaters </name>           <value> SAFE </value> </option>
+    <option><name> array </name>              <value> FINE </value> </option>
+    <option><name> userArray </name>          <value> rr.state.ArrayStateCreator$1@45ee12a7 </value> </option>
+    <option><name> nobarrier </name>          <value> false </value> </option>
+    <option><name> arrayCacheType </name>     <value> STRONG </value> </option>
+    <option><name> callSites </name>          <value> false </value> </option>
+    <option><name> maxWarn </name>            <value> 1 </value>  </option>
+    <option><name> noInterrupt </name>        <value> false </value> </option>
+  </options>
+  <system>
+    <host> dhcp-11-249.it.uu.se </host> 
+    <name> java.vm.version </name>     <value> 25.101-b13 </value> 
+    <name> java.vm.vendor </name>      <value> Oracle Corporation </value> 
+    <name> java.vm.name </name>        <value> Java HotSpot(TM) 64-Bit Server VM </value> 
+    <name> java.class.path </name>     <value> .:/Users/tuan-phongngo/OptimalVerifiedFT/build/jar/rragent.jar </value> 
+    <name> os.name </name>             <value> Mac OS X </value> 
+    <name> os.arch </name>             <value> x86_64 </value> 
+    <name> os.version </name>          <value> 10.12.4 </value> 
+    <name> user.name </name>           <value> tuan-phongngo </value> 
+    <name> user.dir </name>            <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/crypta </value> 
+    <availableProcs> 8 </availableProcs> 
+    <memCommitted> 3214 </memCommitted> 
+    <memUsed> 1273 </memUsed> 
+    <memTotal> 3214 </memTotal> 
+    <compileTime> 38185 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 2429 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 24344 </time> </gc>
+  </system>
+  <instrumented> JGFCryptBenchSizeA RRBench crypt/IDEARunner crypt/IDEATest crypt/JGFCryptBench jgfutil/JGFInstrumentor jgfutil/JGFSection2 jgfutil/JGFTimer  </instrumented> 
+  <instrumentedNum> 8 </instrumentedNum> 
+  <skipped>  </skipped> 
+  <skippedNum> 0 </skippedNum> 
+  <sanityChecked>  </sanityChecked> 
+  <sanityCheckedNum> 0 </sanityCheckedNum> 
+  <counters>
+
+    <counter><name> "ArrayStateFactory: Size" </name>                    <value> 280 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>4.00000</total> <count>28</count> <ave>0.142857</ave> </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 8 </value> </counter>
+
+    <counter><name> "Clone: Count" </name>                               <value> 0 </value> </counter>
+
+    <counter><name> "FT: Read Same Epoch" </name>                        <value>          0 </value> </counter>
+    <counter><name> "FT: ReadShared Same Epoch" </name>                  <value>          0 </value> </counter>
+    <counter><name> "FT: Read Exclusive" </name>                         <value>          0 </value> </counter>
+    <counter><name> "FT: Read Share" </name>                             <value>          0 </value> </counter>
+    <counter><name> "FT: Read Shared" </name>                            <value>          0 </value> </counter>
+    <counter><name> "FT: Write-Read Error" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Write Same Epoch" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Write Exclusive" </name>                        <value>          0 </value> </counter>
+    <counter><name> "FT: Write Shared" </name>                           <value>          0 </value> </counter>
+    <counter><name> "FT: Write-Write Error" </name>                      <value>          0 </value> </counter>
+    <counter><name> "FT: Read-Write Error" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Shared-Write Error" </name>                     <value>          0 </value> </counter>
+    <counter><name> "FT: Acquire" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Release" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Fork" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Join" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Barrier" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Wait" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Volatile" </name>                               <value>          0 </value> </counter>
+    <counter><name> "FT: Other" </name>                                  <value>          0 </value> </counter>
+    <counter><name> "FT: Total Reads" </name>                            <value> 0 </value> </counter>
+    <counter><name> "FT: Total Writes" </name>                           <value> 0 </value> </counter>
+    <counter><name> "FT: Total Access Ops" </name>                       <value> 0 </value> </counter>
+    <counter><name> "FT: Total Ops" </name>                              <value> 0 </value> </counter>
+
+    <counter><name> "GCRunner: Max Usage" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "Handler: Count" </name>                             <value> 0 </value> </counter>
+
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 2,703 </value> </counter>
+    <counter><name> "RRBench: Warmup 2" </name>                          <value> 2,351 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 1,166 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 988 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 1,003 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 1,059 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 2,652 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 1,026 </value> </counter>
+    <counter><name> "RRBench: Iter 6" </name>                            <value> 1,012 </value> </counter>
+    <counter><name> "RRBench: Iter 7" </name>                            <value> 968 </value> </counter>
+    <counter><name> "RRBench: Iter 8" </name>                            <value> 944 </value> </counter>
+    <counter><name> "RRBench: Iter 9" </name>                            <value> 885 </value> </counter>
+    <counter><name> "RRBench: Iter 10" </name>                           <value> 1,072 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 1,160 </value> </counter>
+
+    <counter><name> "ShadowLock: objects" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "ShadowThread: Count" </name>                        <value> 183 </value> </counter>
+    <counter><name> "ShadowThread: Max Live" </name>                     <value> 8 </value> </counter>
+    <counter><name> "ShadowThread: getCurrentThread() calls" </name>     <value> 0 </value> </counter>
+
+    <counter><name> "ShadowVolatile: objects" </name>                    <value> 0 </value> </counter>
+
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>105.000</total> <count>8</count> <ave>13.1250</ave> </value> </counter>
+  </counters>
+  <yikes>
+    <message> Concurrent array state creation... </message> <count> 150 </count> 
+  </yikes>
+  <tool>
+    <name> tools.fasttrack.FastTrackToolV15 </name> 
+    <thread> [tid=3    C=[(0:F8) (1:48) (2:48) (3:4B) (4:48) (5:48) (6:48) (7:48)]   E=(3:4B)] </thread> 
+    <thread> [tid=7    C=[(0:103) (1:4B) (2:4B) (3:4B) (4:4B) (5:4B) (6:4B) (7:4E)]   E=(7:4E)] </thread> 
+    <thread> [tid=6    C=[(0:102) (1:4B) (2:4B) (3:4B) (4:4B) (5:4B) (6:4E) (7:4B)]   E=(6:4E)] </thread> 
+    <thread> [tid=4    C=[(0:100) (1:4B) (2:4B) (3:4B) (4:4E) (5:4B) (6:4B) (7:4B)]   E=(4:4E)] </thread> 
+    <thread> [tid=1    C=[(0:FD) (1:4E) (2:4B) (3:4B) (4:4B) (5:4B) (6:4B) (7:4B)]   E=(1:4E)] </thread> 
+    <thread> [tid=3    C=[(0:FF) (1:4B) (2:4B) (3:4E) (4:4B) (5:4B) (6:4B) (7:4B)]   E=(3:4E)] </thread> 
+    <thread> [tid=6    C=[(0:FB) (1:48) (2:48) (3:48) (4:48) (5:48) (6:4B) (7:48)]   E=(6:4B)] </thread> 
+    <thread> [tid=5    C=[(0:101) (1:4B) (2:4B) (3:4B) (4:4B) (5:4E) (6:4B) (7:4B)]   E=(5:4E)] </thread> 
+    <thread> [tid=0    C=[(0:107) (1:4E) (2:4E) (3:4E) (4:4E) (5:4E) (6:4E) (7:4E)]   E=(0:107)] </thread> 
+    <thread> [tid=1    C=[(0:F6) (1:4B) (2:48) (3:48) (4:48) (5:48) (6:48) (7:48)]   E=(1:4B)] </thread> 
+    <thread> [tid=7    C=[(0:FC) (1:48) (2:48) (3:48) (4:48) (5:48) (6:48) (7:4B)]   E=(7:4B)] </thread> 
+    <thread> [tid=2    C=[(0:FE) (1:4B) (2:4E) (3:4B) (4:4B) (5:4B) (6:4B) (7:4B)]   E=(2:4E)] </thread> 
+    <thread> [tid=5    C=[(0:FA) (1:48) (2:48) (3:48) (4:48) (5:4B) (6:48) (7:48)]   E=(5:4B)] </thread> 
+    <thread> [tid=4    C=[(0:F9) (1:48) (2:48) (3:48) (4:4B) (5:48) (6:48) (7:48)]   E=(4:4B)] </thread> 
+    <thread> [tid=2    C=[(0:F7) (1:48) (2:4B) (3:48) (4:48) (5:48) (6:48) (7:48)]   E=(2:4B)] </thread> 
+  </tool>
+  <tool>
+    <name> Last </name> 
+  </tool>
+  <threadCount> 15 </threadCount> 
+  <threadMaxActive> 8 </threadMaxActive> 
+  <errorTotal> 0 </errorTotal> 
+  <distinctErrorTotal> 0 </distinctErrorTotal> 
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <arrays>
+  </arrays>
+  <locks>
+  </locks>
+  <fieldAccesses>
+  </fieldAccesses>
+  <errorCountPerErrorType>
+  </errorCountPerErrorType>
+  <warningsTotal> 0 </warningsTotal> 
+  <yikesTotal> 150 </yikesTotal> 
+  <failed> false </failed> 
+  <failedReason>  </failedReason> 
+  <time> 41134 </time> 
+</entry>
+[RR: Time = 41134]
+[RR: Exiting: 0]

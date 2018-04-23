@@ -176,6 +176,38 @@ public class VectorClock implements Serializable {
 	final public boolean leq(VectorClock other) {
 		return !anyGt(other);
 	}
+  
+  
+  /**
+   * Return true if we do a tick at the index tid for this vector clock,
+   * and then the ticked vector is equal to other vector
+   */
+  final public boolean fakeIncThenCheckEq(VectorClock other, int tid) {
+    int/*epoch*/[] thisValues = this.values;
+    int/*epoch*/[] otherValues = other.values;
+    
+    int thisLen = thisValues.length;
+    int otherLen = otherValues.length;
+    
+    if (thisLen != otherLen || thisLen <= tid) return false;
+    
+    
+    for (int i = 0; i < tid; i++) {
+      if (!Epoch.equal(thisValues[i], otherValues[i])) return false;
+    }
+    
+    // the tid that we need to do a tick
+    if (!Epoch.equal(thisValues[tid]+1, otherValues[tid])) return false;
+    
+    for (int i = tid+1; i < thisLen; i++) {
+      if (!Epoch.equal(thisValues[i], otherValues[i])) return false;
+    }
+    
+    return true;
+      
+  }
+  
+  
 
 	/* Return true if any entry in this.values is greater than in other.values. */
 	// requires: exclusive access to this and other

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+CMD="./TEST_BENCH -classpath=original.jar -tool=FT2 -quiet -maxWarn=1 -benchmark=15 $*"
+
+echo ""
+echo "Command: $CMD"
+echo ""
+
+$CMD
+

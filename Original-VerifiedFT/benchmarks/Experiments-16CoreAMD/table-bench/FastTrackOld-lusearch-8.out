@@ -1,0 +1,208 @@
+<entry>
+  <date> Sat Aug 12 08:31:15 EDT 2017 </date> 
+  <mode> FAST </mode> 
+  <timeout> NO </timeout> 
+  <options>
+    <option><name> javaArgs </name>           <value> RRBench  </value> </option>
+    <option><name> noDecInline </name>        <value> false </value> </option>
+    <option><name> quiet </name>              <value> true </value> </option>
+    <option><name> logDepth </name>           <value> 100 </value> </option>
+    <option><name> logs </name>               <value> /home/freund/workspace/RoadRunner/benchmarks/Experiments/table-bench </value> </option>
+    <option><name> out </name>                <value>  </value>   </option>
+    <option><name> err </name>                <value>  </value>   </option>
+    <option><name> noinst </name>             <value> false </value> </option>
+    <option><name> inst </name>               <value> INST </value> </option>
+    <option><name> infThreads </name>         <value> 0 </value>  </option>
+    <option><name> benchmark </name>          <value> 10 </value> </option>
+    <option><name> warmup </name>             <value> 3 </value>  </option>
+    <option><name> availableProcessors </name> <value> 16 </value> </option>
+    <option><name> args </name>               <value> [] </value> </option>
+    <option><name> d </name>                  <value> [] </value> </option>
+    <option><name> maxYikes </name>           <value> 5 </value>  </option>
+    <option><name> help </name>               <value> false </value> </option>
+    <option><name> toolpath </name>           <value> /home/freund/workspace/RoadRunner/classes/rr/simple:/home/freund/workspace/RoadRunner/classes/tools </value> </option>
+    <option><name> classpath </name>          <value> original.jar </value> </option>
+    <option><name> tool </name>               <value> tools.old.fasttrack.FastTrackTool </value> </option>
+    <option><name> tools </name>              <value> false </value> </option>
+    <option><name> noxml </name>              <value> false </value> </option>
+    <option><name> constantGC </name>         <value> false </value> </option>
+    <option><name> noFP </name>               <value> false </value> </option>
+    <option><name> noShutdownHook </name>     <value> false </value> </option>
+    <option><name> noEnter </name>            <value> true </value> </option>
+    <option><name> xml </name>                <value> FastTrackOld-lusearch-8.out </value> </option>
+    <option><name> pulse </name>              <value>  </value>   </option>
+    <option><name> maxTime </name>            <value> 0 </value>  </option>
+    <option><name> maxMem </name>             <value> 10240 </value> </option>
+    <option><name> maxTid </name>             <value> 26 </value> </option>
+    <option><name> stacks </name>             <value> false </value> </option>
+    <option><name> values </name>             <value> false </value> </option>
+    <option><name> noTidGC </name>            <value> false </value> </option>
+    <option><name> noEventReuse </name>       <value> false </value> </option>
+    <option><name> trackMemoryUsage </name>   <value> false </value> </option>
+    <option><name> repository </name>         <value>  </value>   </option>
+    <option><name> meta </name>               <value> null </value> </option>
+    <option><name> methods </name>            <value> ["-.*Barrier.await\(\)V", "-java.util.concurrent.CyclicBarrier.await\(JLjava/util/concurrent/TimeUnit;\)I", "-java.util.concurrent.CyclicBarrier.await\(\)I", "-.*Barrier.DoBarrier\(I\)V", "-.*TournamentBarrier.DoBarrier\(I\)V", default=ACCEPT] </value> </option>
+    <option><name> fields </name>             <value> ["-.*this\$.*", "-$.*__\$rr.*", default=ACCEPT] </value> </option>
+    <option><name> lines </name>              <value> [default=ACCEPT] </value> </option>
+    <option><name> classes </name>            <value> ["-.*Barrier.*", "-java..*", "-javax..*", "-com.sun..*", "-sun..*", "-rr..*", "-tools..*", "-acme..*", "-.*__\$rr_.*", "-org.xml..*", default=ACCEPT] </value> </option>
+    <option><name> shadowThread </name>       <value> ["-.*", default=ACCEPT] </value> </option>
+    <option><name> noop </name>               <value> [default=ACCEPT] </value> </option>
+    <option><name> noConstructor </name>      <value> false </value> </option>
+    <option><name> noClone </name>            <value> false </value> </option>
+    <option><name> dump </name>               <value>  </value>   </option>
+    <option><name> field </name>              <value> FINE </value> </option>
+    <option><name> fancy </name>              <value> false </value> </option>
+    <option><name> verify </name>             <value> false </value> </option>
+    <option><name> trackReflection </name>    <value> false </value> </option>
+    <option><name> arraySites </name>         <value> false </value> </option>
+    <option><name> Use TestAcquires </name>   <value> false </value> </option>
+    <option><name> sanity </name>             <value> false </value> </option>
+    <option><name> reentrantEvents </name>    <value> false </value> </option>
+    <option><name> nojoin </name>             <value> false </value> </option>
+    <option><name> multiLoader </name>        <value> false </value> </option>
+    <option><name> indices </name>            <value> 2147483647 </value> </option>
+    <option><name> updaters </name>           <value> SAFE </value> </option>
+    <option><name> array </name>              <value> FINE </value> </option>
+    <option><name> userArray </name>          <value> rr.state.ArrayStateCreator$1@4554617c </value> </option>
+    <option><name> nobarrier </name>          <value> false </value> </option>
+    <option><name> arrayCacheType </name>     <value> STRONG </value> </option>
+    <option><name> callSites </name>          <value> false </value> </option>
+    <option><name> maxWarn </name>            <value> 1 </value>  </option>
+    <option><name> noInterrupt </name>        <value> false </value> </option>
+  </options>
+  <system>
+    <host> ubuntu </host> 
+    <name> java.vm.version </name>     <value> 25.121-b13 </value> 
+    <name> java.vm.vendor </name>      <value> Oracle Corporation </value> 
+    <name> java.vm.name </name>        <value> Java HotSpot(TM) 64-Bit Server VM </value> 
+    <name> java.class.path </name>     <value> .:/home/freund/workspace/RoadRunner/build/jar/rragent.jar </value> 
+    <name> os.name </name>             <value> Linux </value> 
+    <name> os.arch </name>             <value> amd64 </value> 
+    <name> os.version </name>          <value> 4.4.0-78-generic </value> 
+    <name> user.name </name>           <value> freund </value> 
+    <name> user.dir </name>            <value> /home/freund/workspace/RoadRunner/benchmarks/lusearch </value> 
+    <availableProcs> 16 </availableProcs> 
+    <memCommitted> 27679 </memCommitted> 
+    <memUsed> 15927 </memUsed> 
+    <memTotal> 27679 </memTotal> 
+    <compileTime> 69938 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 76768 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 14505 </time> </gc>
+  </system>
+  <instrumented> RRBench org/apache/lucene/analysis/Analyzer org/apache/lucene/analysis/CharArraySet org/apache/lucene/analysis/LowerCaseFilter org/apache/lucene/analysis/StopAnalyzer org/apache/lucene/analysis/StopFilter org/apache/lucene/analysis/Token org/apache/lucene/analysis/TokenFilter org/apache/lucene/analysis/TokenStream org/apache/lucene/analysis/Tokenizer org/apache/lucene/analysis/standard/StandardAnalyzer org/apache/lucene/analysis/standard/StandardFilter org/apache/lucene/analysis/standard/StandardTokenizer org/apache/lucene/analysis/standard/StandardTokenizerImpl org/apache/lucene/document/AbstractField org/apache/lucene/document/DateTools$Resolution org/apache/lucene/document/Document org/apache/lucene/document/Field org/apache/lucene/document/Field$Index org/apache/lucene/document/Field$Store org/apache/lucene/document/Field$TermVector org/apache/lucene/document/FieldSelector org/apache/lucene/document/FieldSelectorResult org/apache/lucene/document/Fieldable org/apache/lucene/index/CompoundFileReader org/apache/lucene/index/CompoundFileReader$CSIndexInput org/apache/lucene/index/CompoundFileReader$FileEntry org/apache/lucene/index/DefaultSkipListReader org/apache/lucene/index/DefaultSkipListWriter org/apache/lucene/index/DirectoryIndexReader org/apache/lucene/index/DirectoryIndexReader$1 org/apache/lucene/index/FieldInfo org/apache/lucene/index/FieldInfos org/apache/lucene/index/FieldsReader org/apache/lucene/index/IndexDeletionPolicy org/apache/lucene/index/IndexFileNameFilter org/apache/lucene/index/IndexFileNames org/apache/lucene/index/IndexReader org/apache/lucene/index/MultiLevelSkipListReader org/apache/lucene/index/MultiLevelSkipListWriter org/apache/lucene/index/Payload org/apache/lucene/index/ReadOnlySegmentReader org/apache/lucene/index/SegmentInfo org/apache/lucene/index/SegmentInfos org/apache/lucene/index/SegmentInfos$FindSegmentsFile org/apache/lucene/index/SegmentMergeQueue org/apache/lucene/index/SegmentMerger org/apache/lucene/index/SegmentMerger$CheckAbort org/apache/lucene/index/SegmentReader org/apache/lucene/index/SegmentReader$Norm org/apache/lucene/index/SegmentTermDocs org/apache/lucene/index/SegmentTermEnum org/apache/lucene/index/Term org/apache/lucene/index/TermBuffer org/apache/lucene/index/TermDocs org/apache/lucene/index/TermEnum org/apache/lucene/index/TermInfo org/apache/lucene/index/TermInfosReader org/apache/lucene/index/TermInfosReader$ThreadResources org/apache/lucene/index/TermInfosWriter org/apache/lucene/index/TermVectorsReader org/apache/lucene/queryParser/CharStream org/apache/lucene/queryParser/FastCharStream org/apache/lucene/queryParser/QueryParser org/apache/lucene/queryParser/QueryParser$JJCalls org/apache/lucene/queryParser/QueryParser$LookaheadSuccess org/apache/lucene/queryParser/QueryParser$Operator org/apache/lucene/queryParser/QueryParserConstants org/apache/lucene/queryParser/QueryParserTokenManager org/apache/lucene/queryParser/Token org/apache/lucene/search/BooleanClause org/apache/lucene/search/BooleanClause$Occur org/apache/lucene/search/BooleanQuery org/apache/lucene/search/BooleanQuery$BooleanWeight org/apache/lucene/search/BooleanScorer2 org/apache/lucene/search/BooleanScorer2$Coordinator org/apache/lucene/search/DefaultSimilarity org/apache/lucene/search/DocIdSetIterator org/apache/lucene/search/Filter org/apache/lucene/search/HitCollector org/apache/lucene/search/HitQueue org/apache/lucene/search/IndexSearcher org/apache/lucene/search/NonMatchingScorer org/apache/lucene/search/Query org/apache/lucene/search/ScoreDoc org/apache/lucene/search/Scorer org/apache/lucene/search/Searchable org/apache/lucene/search/Searcher org/apache/lucene/search/Similarity org/apache/lucene/search/TermQuery org/apache/lucene/search/TermQuery$TermWeight org/apache/lucene/search/TermScorer org/apache/lucene/search/TopDocCollector org/apache/lucene/search/TopDocs org/apache/lucene/search/Weight org/apache/lucene/store/BufferedIndexInput org/apache/lucene/store/ChecksumIndexInput org/apache/lucene/store/ChecksumIndexOutput org/apache/lucene/store/Directory org/apache/lucene/store/FSDirectory org/apache/lucene/store/FSDirectory$FSIndexInput org/apache/lucene/store/FSDirectory$FSIndexInput$Descriptor org/apache/lucene/store/IndexInput org/apache/lucene/store/IndexOutput org/apache/lucene/store/Lock org/apache/lucene/store/LockFactory org/apache/lucene/store/SimpleFSLockFactory org/apache/lucene/util/BitVector org/apache/lucene/util/CloseableThreadLocal org/apache/lucene/util/Parameter org/apache/lucene/util/PriorityQueue org/apache/lucene/util/SmallFloat org/apache/lucene/util/ToStringUtils org/apache/lucene/util/UnicodeUtil org/apache/lucene/util/UnicodeUtil$UTF16Result org/apache/lucene/util/UnicodeUtil$UTF8Result org/apache/lucene/util/cache/Cache org/apache/lucene/util/cache/SimpleLRUCache org/apache/lucene/util/cache/SimpleLRUCache$1 org/apache/lucene/util/cache/SimpleMapCache org/dacapo/lusearch/Search org/dacapo/lusearch/Search$QueryProcessor org/dacapo/lusearch/Search$QueryThread  </instrumented> 
+  <instrumentedNum> 123 </instrumentedNum> 
+  <skipped>  </skipped> 
+  <skippedNum> 0 </skippedNum> 
+  <sanityChecked>  </sanityChecked> 
+  <sanityCheckedNum> 0 </sanityCheckedNum> 
+  <counters>
+
+    <counter><name> "ArrayStateFactory: Size" </name>                    <value> 11,306,648 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>6915.00</total> <count>224</count> <ave>30.8705</ave> </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 22,291 </value> </counter>
+
+    <counter><name> "CV: Count" </name>                                  <value> 0 </value> </counter>
+    <counter><name> "CV: Ops" </name>                                    <value> 0 </value> </counter>
+
+    <counter><name> "Clone: Count" </name>                               <value> 32,271,052 </value> </counter>
+
+    <counter><name> "GCRunner: Max Usage" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "Handler: Count" </name>                             <value> 0 </value> </counter>
+
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 22,275 </value> </counter>
+    <counter><name> "RRBench: Warmup 2" </name>                          <value> 17,143 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 13,099 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 12,122 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 12,177 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 12,400 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 15,576 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 12,362 </value> </counter>
+    <counter><name> "RRBench: Iter 6" </name>                            <value> 11,954 </value> </counter>
+    <counter><name> "RRBench: Iter 7" </name>                            <value> 12,449 </value> </counter>
+    <counter><name> "RRBench: Iter 8" </name>                            <value> 18,160 </value> </counter>
+    <counter><name> "RRBench: Iter 9" </name>                            <value> 12,725 </value> </counter>
+    <counter><name> "RRBench: Iter 10" </name>                           <value> 12,654 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 13,257 </value> </counter>
+
+    <counter><name> "ShadowLock: objects" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "ShadowThread: Count" </name>                        <value> 210 </value> </counter>
+    <counter><name> "ShadowThread: Max Live" </name>                     <value> 18 </value> </counter>
+    <counter><name> "ShadowThread: getCurrentThread() calls" </name>     <value> 0 </value> </counter>
+
+    <counter><name> "ShadowVolatile: objects" </name>                    <value> 0 </value> </counter>
+
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>746.000</total> <count>123</count> <ave>6.06504</ave> </value> </counter>
+  </counters>
+  <yikes>
+    <message> Concurrent array state creation... </message> <count> 12 </count> 
+    <message> Concurrent array guard state init.. </message> <count> 3 </count> 
+    <message> SafeFieldUpdater: Concurrent update </message> <count> 3 </count> 
+    <message> concurrent initialization of guard  </message> <count> 3 </count> 
+    <message> Bad Update </message>    <count> 3 </count> 
+    <message> Concurrent class rr.state.ShadowVol </message> <count> 9 </count> 
+    <message> Old Version Number in class file. U </message> <count> 111 </count> 
+  </yikes>
+  <tool>
+    <name> tools.old.fasttrack.FastTrackTool </name> 
+    <thread> [tid=7    cv=[(0:3BD) (1:F54CC) (2:F26D1) (3:F07E9) (4:F2907) (5:F4121) (6:EE099) (7:F2970) (8:EF389) (9:EF793) (10:F2FB9) (11:F0694) (12:F0914) (13:F21D3) (14:EEE4F) (15:EEF3A) (16:EE545)]   epoch=(7:F2970)] </thread> 
+    <thread> [tid=10   cv=[(0:3B9) (1:F02F4) (2:F26D1) (3:F07E9) (4:F2907) (5:F4121) (6:EE099) (7:ED774) (8:EF389) (9:EF793) (10:F2FBA) (11:EB5F0) (12:F0914) (13:ED19F) (14:EEE4F) (15:EEF3A) (16:EE545)]   epoch=(10:F2FBA)] </thread> 
+    <thread> [tid=9    cv=[(0:40A) (1:104A05) (2:106A0C) (3:104F54) (4:106C72) (5:103511) (6:1024C2) (7:101AE7) (8:108B31) (9:108DDD) (10:10252C) (11:104720) (12:1050AE) (13:101470) (14:103371) (15:1034A5) (16:10299E)]   epoch=(9:108DDD)] </thread> 
+    <thread> [tid=13   cv=[(0:411) (1:104A05) (2:106A0C) (3:10A071) (4:106C72) (5:10868E) (6:1024C2) (7:106CE2) (8:108B31) (9:108DDC) (10:10252C) (11:104720) (12:10A2D8) (13:1064A5) (14:103371) (15:108673) (16:107887)]   epoch=(13:1064A5)] </thread> 
+    <thread> [tid=16   cv=[(0:3C2) (1:F54CC) (2:F26D1) (3:F5906) (4:F2907) (5:F4121) (6:F31EF) (7:F296F) (8:EF389) (9:F47DF) (10:F2FB9) (11:F0694) (12:F5B3E) (13:F21D3) (14:EEE4F) (15:EEF3A) (16:F342F)]   epoch=(16:F342F)] </thread> 
+    <thread> [tid=11   cv=[(0:3BC) (1:F54CC) (2:F26D1) (3:F07E9) (4:F2907) (5:F4121) (6:EE099) (7:ED774) (8:EF389) (9:EF793) (10:F2FB9) (11:F0695) (12:F0914) (13:F21D3) (14:EEE4F) (15:EEF3A) (16:EE545)]   epoch=(11:F0695)] </thread> 
+    <thread> [tid=9    cv=[(0:3BE) (1:F54CC) (2:F26D1) (3:F07E9) (4:F2907) (5:F4121) (6:EE099) (7:F296F) (8:EF389) (9:F47E0) (10:F2FB9) (11:F0694) (12:F0914) (13:F21D3) (14:EEE4F) (15:EEF3A) (16:EE545)]   epoch=(9:F47E0)] </thread> 
+    <thread> [tid=5    cv=[(0:410) (1:104A05) (2:106A0C) (3:10A071) (4:106C72) (5:10868F) (6:1024C2) (7:106CE2) (8:108B31) (9:108DDC) (10:10252C) (11:104720) (12:10A2D8) (13:101470) (14:103371) (15:108673) (16:107887)]   epoch=(5:10868F)] </thread> 
+    <thread> [tid=12   cv=[(0:3C0) (1:F54CC) (2:F26D1) (3:F5906) (4:F2907) (5:F4121) (6:EE099) (7:F296F) (8:EF389) (9:F47DF) (10:F2FB9) (11:F0694) (12:F5B3F) (13:F21D3) (14:EEE4F) (15:EEF3A) (16:EE545)]   epoch=(12:F5B3F)] </thread> 
+    <thread> [tid=1    cv=[(0:3BA) (1:F54CD) (2:F26D1) (3:F07E9) (4:F2907) (5:F4121) (6:EE099) (7:ED774) (8:EF389) (9:EF793) (10:F2FB9) (11:EB5F0) (12:F0914) (13:ED19F) (14:EEE4F) (15:EEF3A) (16:EE545)]   epoch=(1:F54CD)] </thread> 
+    <thread> [tid=16   cv=[(0:40C) (1:104A05) (2:106A0C) (3:10A071) (4:106C72) (5:103511) (6:1024C2) (7:101AE7) (8:108B31) (9:108DDC) (10:10252C) (11:104720) (12:1050AE) (13:101470) (14:103371) (15:1034A5) (16:107888)]   epoch=(16:107888)] </thread> 
+    <thread> [tid=15   cv=[(0:40E) (1:104A05) (2:106A0C) (3:10A071) (4:106C72) (5:103511) (6:1024C2) (7:106CE2) (8:108B31) (9:108DDC) (10:10252C) (11:104720) (12:1050AE) (13:101470) (14:103371) (15:108674) (16:107887)]   epoch=(15:108674)] </thread> 
+    <thread> [tid=7    cv=[(0:40D) (1:104A05) (2:106A0C) (3:10A071) (4:106C72) (5:103511) (6:1024C2) (7:106CE3) (8:108B31) (9:108DDC) (10:10252C) (11:104720) (12:1050AE) (13:101470) (14:103371) (15:1034A5) (16:107887)]   epoch=(7:106CE3)] </thread> 
+    <thread> [tid=15   cv=[(0:3C3) (1:F54CC) (2:F26D1) (3:F5906) (4:F2907) (5:F4121) (6:F31EF) (7:F296F) (8:EF389) (9:F47DF) (10:F2FB9) (11:F0694) (12:F5B3E) (13:F21D3) (14:EEE4F) (15:F4109) (16:F342E)]   epoch=(15:F4109)] </thread> 
+    <thread> [tid=11   cv=[(0:407) (1:104A05) (2:106A0C) (3:104F54) (4:101BB4) (5:103511) (6:1024C2) (7:101AE7) (8:103953) (9:103D90) (10:10252C) (11:104721) (12:1050AE) (13:101470) (14:103371) (15:1034A5) (16:10299E)]   epoch=(11:104721)] </thread> 
+    <thread> [tid=8    cv=[(0:408) (1:104A05) (2:106A0C) (3:104F54) (4:101BB4) (5:103511) (6:1024C2) (7:101AE7) (8:108B32) (9:103D90) (10:10252C) (11:104720) (12:1050AE) (13:101470) (14:103371) (15:1034A5) (16:10299E)]   epoch=(8:108B32)] </thread> 
+    <thread> [tid=5    cv=[(0:3B7) (1:F02F4) (2:F26D1) (3:F07E9) (4:ED849) (5:F4122) (6:EE099) (7:ED774) (8:EF389) (9:EF793) (10:EE132) (11:EB5F0) (12:F0914) (13:ED19F) (14:EEE4F) (15:EEF3A) (16:EE545)]   epoch=(5:F4122)] </thread> 
+    <thread> [tid=3    cv=[(0:3BF) (1:F54CC) (2:F26D1) (3:F5907) (4:F2907) (5:F4121) (6:EE099) (7:F296F) (8:EF389) (9:F47DF) (10:F2FB9) (11:F0694) (12:F0914) (13:F21D3) (14:EEE4F) (15:EEF3A) (16:EE545)]   epoch=(3:F5907)] </thread> 
+    <thread> [tid=8    cv=[(0:3C5) (1:F54CC) (2:F26D1) (3:F5906) (4:F2907) (5:F4121) (6:F31EF) (7:F296F) (8:F456A) (9:F47DF) (10:F2FB9) (11:F0694) (12:F5B3E) (13:F21D3) (14:F3D9B) (15:F4108) (16:F342E)]   epoch=(8:F456A)] </thread> 
+    <thread> [tid=1    cv=[(0:415) (1:109BE0) (2:106A0C) (3:10A071) (4:106C72) (5:10868E) (6:107618) (7:106CE2) (8:108B31) (9:108DDC) (10:1073B3) (11:104720) (12:10A2D8) (13:1064A4) (14:1082BD) (15:108673) (16:107887)]   epoch=(1:109BE0)] </thread> 
+    <thread> [tid=2    cv=[(0:3B6) (1:F02F4) (2:F26D2) (3:F07E9) (4:ED849) (5:EEFA4) (6:EE099) (7:ED774) (8:EF389) (9:EF793) (10:EE132) (11:EB5F0) (12:F0914) (13:ED19F) (14:EEE4F) (15:EEF3A) (16:EE545)]   epoch=(2:F26D2)] </thread> 
+    <thread> [tid=14   cv=[(0:413) (1:104A05) (2:106A0C) (3:10A071) (4:106C72) (5:10868E) (6:1024C2) (7:106CE2) (8:108B31) (9:108DDC) (10:1073B3) (11:104720) (12:10A2D8) (13:1064A4) (14:1082BE) (15:108673) (16:107887)]   epoch=(14:1082BE)] </thread> 
+    <thread> [tid=13   cv=[(0:3BB) (1:F54CC) (2:F26D1) (3:F07E9) (4:F2907) (5:F4121) (6:EE099) (7:ED774) (8:EF389) (9:EF793) (10:F2FB9) (11:EB5F0) (12:F0914) (13:F21D4) (14:EEE4F) (15:EEF3A) (16:EE545)]   epoch=(13:F21D4)] </thread> 
+    <thread> [tid=0    cv=[(0:416) (1:109BDF) (2:106A0C) (3:10A071) (4:106C72) (5:10868E) (6:107618) (7:106CE2) (8:108B31) (9:108DDC) (10:1073B3) (11:104720) (12:10A2D8) (13:1064A4) (14:1082BD) (15:108673) (16:107887)]   epoch=(0:416)] </thread> 
+    <thread> [tid=2    cv=[(0:406) (1:104A05) (2:106A0D) (3:104F54) (4:101BB4) (5:103511) (6:1024C2) (7:101AE7) (8:103953) (9:103D90) (10:10252C) (11:FF67C) (12:1050AE) (13:101470) (14:103371) (15:1034A5) (16:10299E)]   epoch=(2:106A0D)] </thread> 
+    <thread> [tid=10   cv=[(0:412) (1:104A05) (2:106A0C) (3:10A071) (4:106C72) (5:10868E) (6:1024C2) (7:106CE2) (8:108B31) (9:108DDC) (10:1073B4) (11:104720) (12:10A2D8) (13:1064A4) (14:103371) (15:108673) (16:107887)]   epoch=(10:1073B4)] </thread> 
+    <thread> [tid=6    cv=[(0:3C1) (1:F54CC) (2:F26D1) (3:F5906) (4:F2907) (5:F4121) (6:F31F0) (7:F296F) (8:EF389) (9:F47DF) (10:F2FB9) (11:F0694) (12:F5B3E) (13:F21D3) (14:EEE4F) (15:EEF3A) (16:EE545)]   epoch=(6:F31F0)] </thread> 
+    <thread> [tid=4    cv=[(0:3B8) (1:F02F4) (2:F26D1) (3:F07E9) (4:F2908) (5:F4121) (6:EE099) (7:ED774) (8:EF389) (9:EF793) (10:EE132) (11:EB5F0) (12:F0914) (13:ED19F) (14:EEE4F) (15:EEF3A) (16:EE545)]   epoch=(4:F2908)] </thread> 
+    <thread> [tid=3    cv=[(0:40B) (1:104A05) (2:106A0C) (3:10A072) (4:106C72) (5:103511) (6:1024C2) (7:101AE7) (8:108B31) (9:108DDC) (10:10252C) (11:104720) (12:1050AE) (13:101470) (14:103371) (15:1034A5) (16:10299E)]   epoch=(3:10A072)] </thread> 
+    <thread> [tid=4    cv=[(0:409) (1:104A05) (2:106A0C) (3:104F54) (4:106C73) (5:103511) (6:1024C2) (7:101AE7) (8:108B31) (9:103D90) (10:10252C) (11:104720) (12:1050AE) (13:101470) (14:103371) (15:1034A5) (16:10299E)]   epoch=(4:106C73)] </thread> 
+    <thread> [tid=14   cv=[(0:3C4) (1:F54CC) (2:F26D1) (3:F5906) (4:F2907) (5:F4121) (6:F31EF) (7:F296F) (8:EF389) (9:F47DF) (10:F2FB9) (11:F0694) (12:F5B3E) (13:F21D3) (14:F3D9C) (15:F4108) (16:F342E)]   epoch=(14:F3D9C)] </thread> 
+    <thread> [tid=12   cv=[(0:40F) (1:104A05) (2:106A0C) (3:10A071) (4:106C72) (5:103511) (6:1024C2) (7:106CE2) (8:108B31) (9:108DDC) (10:10252C) (11:104720) (12:10A2D9) (13:101470) (14:103371) (15:108673) (16:107887)]   epoch=(12:10A2D9)] </thread> 
+    <thread> [tid=6    cv=[(0:414) (1:104A05) (2:106A0C) (3:10A071) (4:106C72) (5:10868E) (6:107619) (7:106CE2) (8:108B31) (9:108DDC) (10:1073B3) (11:104720) (12:10A2D8) (13:1064A4) (14:1082BD) (15:108673) (16:107887)]   epoch=(6:107619)] </thread> 
+    <thread> [tid=17   cv=[(0:0) (1:0) (2:0) (3:0) (4:0) (5:0) (6:0) (7:0) (8:0) (9:0) (10:0) (11:0) (12:0) (13:0) (14:0) (15:0) (16:0) (17:1)]   epoch=(17:1)] </thread> 
+  </tool>
+  <tool>
+    <name> Last </name> 
+  </tool>
+  <threadCount> 34 </threadCount> 
+  <threadMaxActive> 18 </threadMaxActive> 
+  <errorTotal> 0 </errorTotal> 
+  <distinctErrorTotal> 0 </distinctErrorTotal> 
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <arrays>
+  </arrays>
+  <locks>
+  </locks>
+  <fieldAccesses>
+  </fieldAccesses>
+  <errorCountPerErrorType>
+  </errorCountPerErrorType>
+  <warningsTotal> 0 </warningsTotal> 
+  <yikesTotal> 144 </yikesTotal> 
+  <failed> false </failed> 
+  <failedReason>  </failedReason> 
+  <time> 189619 </time> 
+</entry>

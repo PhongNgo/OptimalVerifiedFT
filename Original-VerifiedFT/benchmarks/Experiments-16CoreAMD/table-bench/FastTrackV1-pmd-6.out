@@ -1,0 +1,288 @@
+<entry>
+  <date> Sat Aug 12 08:55:06 EDT 2017 </date> 
+  <mode> FAST </mode> 
+  <timeout> NO </timeout> 
+  <options>
+    <option><name> javaArgs </name>           <value> RRBench  </value> </option>
+    <option><name> noDecInline </name>        <value> false </value> </option>
+    <option><name> quiet </name>              <value> true </value> </option>
+    <option><name> logDepth </name>           <value> 100 </value> </option>
+    <option><name> logs </name>               <value> /home/freund/workspace/RoadRunner/benchmarks/Experiments/table-bench </value> </option>
+    <option><name> out </name>                <value>  </value>   </option>
+    <option><name> err </name>                <value>  </value>   </option>
+    <option><name> noinst </name>             <value> false </value> </option>
+    <option><name> inst </name>               <value> INST </value> </option>
+    <option><name> infThreads </name>         <value> 0 </value>  </option>
+    <option><name> benchmark </name>          <value> 10 </value> </option>
+    <option><name> warmup </name>             <value> 3 </value>  </option>
+    <option><name> availableProcessors </name> <value> 16 </value> </option>
+    <option><name> args </name>               <value> [] </value> </option>
+    <option><name> d </name>                  <value> [] </value> </option>
+    <option><name> maxYikes </name>           <value> 5 </value>  </option>
+    <option><name> help </name>               <value> false </value> </option>
+    <option><name> toolpath </name>           <value> /home/freund/workspace/RoadRunner/classes/rr/simple:/home/freund/workspace/RoadRunner/classes/tools </value> </option>
+    <option><name> classpath </name>          <value> original.jar </value> </option>
+    <option><name> tool </name>               <value> FT2-V1 </value> </option>
+    <option><name> tools </name>              <value> false </value> </option>
+    <option><name> noxml </name>              <value> false </value> </option>
+    <option><name> constantGC </name>         <value> false </value> </option>
+    <option><name> noFP </name>               <value> false </value> </option>
+    <option><name> noShutdownHook </name>     <value> false </value> </option>
+    <option><name> noEnter </name>            <value> true </value> </option>
+    <option><name> xml </name>                <value> FastTrackV1-pmd-6.out </value> </option>
+    <option><name> pulse </name>              <value>  </value>   </option>
+    <option><name> maxTime </name>            <value> 0 </value>  </option>
+    <option><name> maxMem </name>             <value> 10240 </value> </option>
+    <option><name> maxTid </name>             <value> 26 </value> </option>
+    <option><name> stacks </name>             <value> false </value> </option>
+    <option><name> values </name>             <value> false </value> </option>
+    <option><name> noTidGC </name>            <value> false </value> </option>
+    <option><name> noEventReuse </name>       <value> false </value> </option>
+    <option><name> trackMemoryUsage </name>   <value> false </value> </option>
+    <option><name> repository </name>         <value>  </value>   </option>
+    <option><name> meta </name>               <value> null </value> </option>
+    <option><name> methods </name>            <value> ["-.*Barrier.await\(\)V", "-java.util.concurrent.CyclicBarrier.await\(JLjava/util/concurrent/TimeUnit;\)I", "-java.util.concurrent.CyclicBarrier.await\(\)I", "-.*Barrier.DoBarrier\(I\)V", "-.*TournamentBarrier.DoBarrier\(I\)V", default=ACCEPT] </value> </option>
+    <option><name> fields </name>             <value> ["-.*this\$.*", "-$.*__\$rr.*", default=ACCEPT] </value> </option>
+    <option><name> lines </name>              <value> [default=ACCEPT] </value> </option>
+    <option><name> classes </name>            <value> ["-.*Barrier.*", "-java..*", "-javax..*", "-com.sun..*", "-sun..*", "-rr..*", "-tools..*", "-acme..*", "-.*__\$rr_.*", "-org.xml..*", default=ACCEPT] </value> </option>
+    <option><name> shadowThread </name>       <value> ["-.*", default=ACCEPT] </value> </option>
+    <option><name> noop </name>               <value> [default=ACCEPT] </value> </option>
+    <option><name> noConstructor </name>      <value> false </value> </option>
+    <option><name> noClone </name>            <value> false </value> </option>
+    <option><name> dump </name>               <value>  </value>   </option>
+    <option><name> field </name>              <value> FINE </value> </option>
+    <option><name> fancy </name>              <value> false </value> </option>
+    <option><name> verify </name>             <value> false </value> </option>
+    <option><name> trackReflection </name>    <value> false </value> </option>
+    <option><name> arraySites </name>         <value> false </value> </option>
+    <option><name> Use TestAcquires </name>   <value> false </value> </option>
+    <option><name> sanity </name>             <value> false </value> </option>
+    <option><name> reentrantEvents </name>    <value> false </value> </option>
+    <option><name> nojoin </name>             <value> false </value> </option>
+    <option><name> multiLoader </name>        <value> false </value> </option>
+    <option><name> indices </name>            <value> 2147483647 </value> </option>
+    <option><name> updaters </name>           <value> SAFE </value> </option>
+    <option><name> array </name>              <value> FINE </value> </option>
+    <option><name> userArray </name>          <value> rr.state.ArrayStateCreator$1@1540e19d </value> </option>
+    <option><name> nobarrier </name>          <value> false </value> </option>
+    <option><name> arrayCacheType </name>     <value> STRONG </value> </option>
+    <option><name> callSites </name>          <value> false </value> </option>
+    <option><name> maxWarn </name>            <value> 1 </value>  </option>
+    <option><name> noInterrupt </name>        <value> false </value> </option>
+  </options>
+  <system>
+    <host> ubuntu </host> 
+    <name> java.vm.version </name>     <value> 25.121-b13 </value> 
+    <name> java.vm.vendor </name>      <value> Oracle Corporation </value> 
+    <name> java.vm.name </name>        <value> Java HotSpot(TM) 64-Bit Server VM </value> 
+    <name> java.class.path </name>     <value> :original.jar:/home/freund/workspace/RoadRunner/build/jar/rragent.jar </value> 
+    <name> os.name </name>             <value> Linux </value> 
+    <name> os.arch </name>             <value> amd64 </value> 
+    <name> os.version </name>          <value> 4.4.0-78-generic </value> 
+    <name> user.name </name>           <value> freund </value> 
+    <name> user.dir </name>            <value> /home/freund/workspace/RoadRunner/benchmarks/pmd </value> 
+    <availableProcs> 16 </availableProcs> 
+    <memCommitted> 2370 </memCommitted> 
+    <memUsed> 1355 </memUsed> 
+    <memTotal> 2370 </memTotal> 
+    <compileTime> 180109 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 3776 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 6245 </time> </gc>
+  </system>
+  <instrumented> RRBench net/sourceforge/pmd/AbstractDelegateRule net/sourceforge/pmd/AbstractJavaRule net/sourceforge/pmd/AbstractRule net/sourceforge/pmd/AbstractRuleChainVisitor net/sourceforge/pmd/CommandLineOptions net/sourceforge/pmd/CommonAbstractRule net/sourceforge/pmd/DataSource net/sourceforge/pmd/FileDataSource net/sourceforge/pmd/IRuleViolation net/sourceforge/pmd/Language net/sourceforge/pmd/PMD net/sourceforge/pmd/PMD$1 net/sourceforge/pmd/PMD$PmdRunnable net/sourceforge/pmd/PMD$PmdThread net/sourceforge/pmd/PMD$PmdThreadFactory net/sourceforge/pmd/PMDException net/sourceforge/pmd/PropertyDescriptor net/sourceforge/pmd/Report net/sourceforge/pmd/Report$ProcessingError net/sourceforge/pmd/Rule net/sourceforge/pmd/RuleChain net/sourceforge/pmd/RuleChainVisitor net/sourceforge/pmd/RuleContext net/sourceforge/pmd/RuleReference net/sourceforge/pmd/RuleSet net/sourceforge/pmd/RuleSetFactory net/sourceforge/pmd/RuleSetNotFoundException net/sourceforge/pmd/RuleSets net/sourceforge/pmd/RuleViolation net/sourceforge/pmd/RuleViolation$RuleViolationComparator net/sourceforge/pmd/ScopedLogHandlersManager net/sourceforge/pmd/SimpleRuleSetNameMapper net/sourceforge/pmd/SourceFileSelector net/sourceforge/pmd/SourceType net/sourceforge/pmd/SourceTypeDiscoverer net/sourceforge/pmd/SourceTypeToRuleLanguageMapper net/sourceforge/pmd/TargetJDK1_4 net/sourceforge/pmd/TargetJDKVersion net/sourceforge/pmd/ant/Formatter net/sourceforge/pmd/ant/PMDTask net/sourceforge/pmd/ant/RuleSetWrapper net/sourceforge/pmd/ast/ASTAdditiveExpression net/sourceforge/pmd/ast/ASTAllocationExpression net/sourceforge/pmd/ast/ASTAndExpression net/sourceforge/pmd/ast/ASTAnnotation net/sourceforge/pmd/ast/ASTAnnotationMethodDeclaration net/sourceforge/pmd/ast/ASTAnnotationTypeBody net/sourceforge/pmd/ast/ASTAnnotationTypeDeclaration net/sourceforge/pmd/ast/ASTAnnotationTypeMemberDeclaration net/sourceforge/pmd/ast/ASTArgumentList net/sourceforge/pmd/ast/ASTArguments net/sourceforge/pmd/ast/ASTArrayDimsAndInits net/sourceforge/pmd/ast/ASTArrayInitializer net/sourceforge/pmd/ast/ASTAssertStatement net/sourceforge/pmd/ast/ASTAssignmentOperator net/sourceforge/pmd/ast/ASTBlock net/sourceforge/pmd/ast/ASTBlockStatement net/sourceforge/pmd/ast/ASTBooleanLiteral net/sourceforge/pmd/ast/ASTBreakStatement net/sourceforge/pmd/ast/ASTCastExpression net/sourceforge/pmd/ast/ASTCatchStatement net/sourceforge/pmd/ast/ASTClassOrInterfaceBody net/sourceforge/pmd/ast/ASTClassOrInterfaceBodyDeclaration net/sourceforge/pmd/ast/ASTClassOrInterfaceDeclaration net/sourceforge/pmd/ast/ASTClassOrInterfaceType net/sourceforge/pmd/ast/ASTCompilationUnit net/sourceforge/pmd/ast/ASTConditionalAndExpression net/sourceforge/pmd/ast/ASTConditionalExpression net/sourceforge/pmd/ast/ASTConditionalOrExpression net/sourceforge/pmd/ast/ASTConstructorDeclaration net/sourceforge/pmd/ast/ASTContinueStatement net/sourceforge/pmd/ast/ASTDefaultValue net/sourceforge/pmd/ast/ASTDoStatement net/sourceforge/pmd/ast/ASTEmptyStatement net/sourceforge/pmd/ast/ASTEnumBody net/sourceforge/pmd/ast/ASTEnumConstant net/sourceforge/pmd/ast/ASTEnumDeclaration net/sourceforge/pmd/ast/ASTEqualityExpression net/sourceforge/pmd/ast/ASTExclusiveOrExpression net/sourceforge/pmd/ast/ASTExplicitConstructorInvocation net/sourceforge/pmd/ast/ASTExpression net/sourceforge/pmd/ast/ASTExtendsList net/sourceforge/pmd/ast/ASTFieldDeclaration net/sourceforge/pmd/ast/ASTFinallyStatement net/sourceforge/pmd/ast/ASTForInit net/sourceforge/pmd/ast/ASTForStatement net/sourceforge/pmd/ast/ASTForUpdate net/sourceforge/pmd/ast/ASTFormalParameter net/sourceforge/pmd/ast/ASTFormalParameters net/sourceforge/pmd/ast/ASTIfStatement net/sourceforge/pmd/ast/ASTImplementsList net/sourceforge/pmd/ast/ASTImportDeclaration net/sourceforge/pmd/ast/ASTInclusiveOrExpression net/sourceforge/pmd/ast/ASTInitializer net/sourceforge/pmd/ast/ASTInstanceOfExpression net/sourceforge/pmd/ast/ASTLabeledStatement net/sourceforge/pmd/ast/ASTLiteral net/sourceforge/pmd/ast/ASTLocalVariableDeclaration net/sourceforge/pmd/ast/ASTMarkerAnnotation net/sourceforge/pmd/ast/ASTMemberSelector net/sourceforge/pmd/ast/ASTMemberValue net/sourceforge/pmd/ast/ASTMemberValueArrayInitializer net/sourceforge/pmd/ast/ASTMemberValuePair net/sourceforge/pmd/ast/ASTMemberValuePairs net/sourceforge/pmd/ast/ASTMethodDeclaration net/sourceforge/pmd/ast/ASTMethodDeclarator net/sourceforge/pmd/ast/ASTMultiplicativeExpression net/sourceforge/pmd/ast/ASTName net/sourceforge/pmd/ast/ASTNameList net/sourceforge/pmd/ast/ASTNormalAnnotation net/sourceforge/pmd/ast/ASTNullLiteral net/sourceforge/pmd/ast/ASTPackageDeclaration net/sourceforge/pmd/ast/ASTPostfixExpression net/sourceforge/pmd/ast/ASTPreDecrementExpression net/sourceforge/pmd/ast/ASTPreIncrementExpression net/sourceforge/pmd/ast/ASTPrimaryExpression net/sourceforge/pmd/ast/ASTPrimaryPrefix net/sourceforge/pmd/ast/ASTPrimarySuffix net/sourceforge/pmd/ast/ASTPrimitiveType net/sourceforge/pmd/ast/ASTRSIGNEDSHIFT net/sourceforge/pmd/ast/ASTRUNSIGNEDSHIFT net/sourceforge/pmd/ast/ASTReferenceType net/sourceforge/pmd/ast/ASTRelationalExpression net/sourceforge/pmd/ast/ASTResultType net/sourceforge/pmd/ast/ASTReturnStatement net/sourceforge/pmd/ast/ASTShiftExpression net/sourceforge/pmd/ast/ASTSingleMemberAnnotation net/sourceforge/pmd/ast/ASTStatement net/sourceforge/pmd/ast/ASTStatementExpression net/sourceforge/pmd/ast/ASTStatementExpressionList net/sourceforge/pmd/ast/ASTSwitchLabel net/sourceforge/pmd/ast/ASTSwitchStatement net/sourceforge/pmd/ast/ASTSynchronizedStatement net/sourceforge/pmd/ast/ASTThrowStatement net/sourceforge/pmd/ast/ASTTryStatement net/sourceforge/pmd/ast/ASTType net/sourceforge/pmd/ast/ASTTypeArgument net/sourceforge/pmd/ast/ASTTypeArguments net/sourceforge/pmd/ast/ASTTypeBound net/sourceforge/pmd/ast/ASTTypeDeclaration net/sourceforge/pmd/ast/ASTTypeParameter net/sourceforge/pmd/ast/ASTTypeParameters net/sourceforge/pmd/ast/ASTUnaryExpression net/sourceforge/pmd/ast/ASTUnaryExpressionNotPlusMinus net/sourceforge/pmd/ast/ASTVariableDeclarator net/sourceforge/pmd/ast/ASTVariableDeclaratorId net/sourceforge/pmd/ast/ASTVariableInitializer net/sourceforge/pmd/ast/ASTWhileStatement net/sourceforge/pmd/ast/ASTWildcardBounds net/sourceforge/pmd/ast/AccessNode net/sourceforge/pmd/ast/AccessNodeInterface net/sourceforge/pmd/ast/CanSuppressWarnings net/sourceforge/pmd/ast/CharStream net/sourceforge/pmd/ast/Comment net/sourceforge/pmd/ast/CompilationUnit net/sourceforge/pmd/ast/Dimensionable net/sourceforge/pmd/ast/FormalComment net/sourceforge/pmd/ast/JJTJavaParserState net/sourceforge/pmd/ast/JavaCharStream net/sourceforge/pmd/ast/JavaNode net/sourceforge/pmd/ast/JavaParser net/sourceforge/pmd/ast/JavaParser$JJCalls net/sourceforge/pmd/ast/JavaParser$LookaheadSuccess net/sourceforge/pmd/ast/JavaParserConstants net/sourceforge/pmd/ast/JavaParserTokenManager net/sourceforge/pmd/ast/JavaParserTreeConstants net/sourceforge/pmd/ast/JavaParserVisitor net/sourceforge/pmd/ast/JavaParserVisitorAdapter net/sourceforge/pmd/ast/JavaRuleChainVisitor net/sourceforge/pmd/ast/JavaRuleChainVisitor$1 net/sourceforge/pmd/ast/MultiLineComment net/sourceforge/pmd/ast/Node net/sourceforge/pmd/ast/ParseException net/sourceforge/pmd/ast/SimpleJavaAccessNode net/sourceforge/pmd/ast/SimpleJavaAccessTypeNode net/sourceforge/pmd/ast/SimpleJavaNode net/sourceforge/pmd/ast/SimpleJavaTypeNode net/sourceforge/pmd/ast/SimpleNode net/sourceforge/pmd/ast/SingleLineComment net/sourceforge/pmd/ast/Token net/sourceforge/pmd/ast/Token$GTToken net/sourceforge/pmd/ast/TokenMgrError net/sourceforge/pmd/ast/TypeNode net/sourceforge/pmd/cpd/AbstractLanguage net/sourceforge/pmd/cpd/AbstractTokenizer net/sourceforge/pmd/cpd/AnyLanguage net/sourceforge/pmd/cpd/AnyTokenizer net/sourceforge/pmd/cpd/CPD net/sourceforge/pmd/cpd/CPDListener net/sourceforge/pmd/cpd/CPDNullListener net/sourceforge/pmd/cpd/CPDTask net/sourceforge/pmd/cpd/CPPLanguage net/sourceforge/pmd/cpd/CPPTokenizer net/sourceforge/pmd/cpd/CSVRenderer net/sourceforge/pmd/cpd/FileFinder net/sourceforge/pmd/cpd/FileReporter net/sourceforge/pmd/cpd/FortranLanguage net/sourceforge/pmd/cpd/FortranTokenizer net/sourceforge/pmd/cpd/GUI net/sourceforge/pmd/cpd/GridBagHelper net/sourceforge/pmd/cpd/JSPLanguage net/sourceforge/pmd/cpd/JSPTokenizer net/sourceforge/pmd/cpd/JavaLanguage net/sourceforge/pmd/cpd/JavaTokenizer net/sourceforge/pmd/cpd/Language net/sourceforge/pmd/cpd/LanguageFactory net/sourceforge/pmd/cpd/Match net/sourceforge/pmd/cpd/MatchAlgorithm net/sourceforge/pmd/cpd/MatchCollector net/sourceforge/pmd/cpd/PHPLanguage net/sourceforge/pmd/cpd/PHPTokenizer net/sourceforge/pmd/cpd/Renderer net/sourceforge/pmd/cpd/ReportException net/sourceforge/pmd/cpd/RubyLanguage net/sourceforge/pmd/cpd/RubyTokenizer net/sourceforge/pmd/cpd/SimpleRenderer net/sourceforge/pmd/cpd/SourceCode net/sourceforge/pmd/cpd/SourceFileOrDirectoryFilter net/sourceforge/pmd/cpd/TokenEntry net/sourceforge/pmd/cpd/Tokenizer net/sourceforge/pmd/cpd/Tokens net/sourceforge/pmd/cpd/VSRenderer net/sourceforge/pmd/cpd/XMLRenderer net/sourceforge/pmd/cpd/cppast/CPPParserConstants net/sourceforge/pmd/cpd/cppast/CPPParserTokenManager net/sourceforge/pmd/cpd/cppast/ParseException net/sourceforge/pmd/cpd/cppast/SimpleCharStream net/sourceforge/pmd/cpd/cppast/Token net/sourceforge/pmd/cpd/cppast/TokenMgrError net/sourceforge/pmd/dcd/ClassLoaderUtil net/sourceforge/pmd/dcd/DCD net/sourceforge/pmd/dcd/DumpNodeVisitor net/sourceforge/pmd/dcd/UsageNodeVisitor net/sourceforge/pmd/dcd/asm/PrintVisitor net/sourceforge/pmd/dcd/asm/TypeSignatureVisitor net/sourceforge/pmd/dcd/graph/ClassNode net/sourceforge/pmd/dcd/graph/ClassNodeComparator net/sourceforge/pmd/dcd/graph/ConstructorNode net/sourceforge/pmd/dcd/graph/FieldNode net/sourceforge/pmd/dcd/graph/MemberNode net/sourceforge/pmd/dcd/graph/MemberNodeComparator net/sourceforge/pmd/dcd/graph/MethodNode net/sourceforge/pmd/dcd/graph/NodeVisitor net/sourceforge/pmd/dcd/graph/NodeVisitorAcceptor net/sourceforge/pmd/dcd/graph/NodeVisitorAdapter net/sourceforge/pmd/dcd/graph/UsageGraph net/sourceforge/pmd/dcd/graph/UsageGraphBuilder net/sourceforge/pmd/dfa/DaaRule net/sourceforge/pmd/dfa/DaaRuleViolation net/sourceforge/pmd/dfa/DataFlowFacade net/sourceforge/pmd/dfa/DataFlowNode net/sourceforge/pmd/dfa/IDataFlowNode net/sourceforge/pmd/dfa/Linker net/sourceforge/pmd/dfa/LinkerException net/sourceforge/pmd/dfa/NodeType net/sourceforge/pmd/dfa/SequenceChecker net/sourceforge/pmd/dfa/SequenceException net/sourceforge/pmd/dfa/StackObject net/sourceforge/pmd/dfa/StatementAndBraceFinder net/sourceforge/pmd/dfa/pathfinder/CurrentPath net/sourceforge/pmd/dfa/pathfinder/DAAPathFinder net/sourceforge/pmd/dfa/pathfinder/Executable net/sourceforge/pmd/dfa/report/AbstractReportNode net/sourceforge/pmd/dfa/report/ClassNode net/sourceforge/pmd/dfa/report/PackageNode net/sourceforge/pmd/dfa/report/ReportTree net/sourceforge/pmd/dfa/report/ViolationNode net/sourceforge/pmd/dfa/variableaccess/VariableAccess net/sourceforge/pmd/dfa/variableaccess/VariableAccessVisitor net/sourceforge/pmd/jaxen/Attribute net/sourceforge/pmd/jaxen/AttributeAxisIterator net/sourceforge/pmd/jaxen/AttributeAxisIterator$MethodWrapper net/sourceforge/pmd/jaxen/DocumentNavigator net/sourceforge/pmd/jaxen/DocumentNavigator$1 net/sourceforge/pmd/jaxen/DocumentNavigator$2 net/sourceforge/pmd/jaxen/MatchesFunction net/sourceforge/pmd/jaxen/NodeIterator net/sourceforge/pmd/jaxen/TypeOfFunction net/sourceforge/pmd/jsp/ast/CharStream net/sourceforge/pmd/jsp/ast/JspCharStream net/sourceforge/pmd/jsp/ast/JspParserConstants net/sourceforge/pmd/jsp/ast/JspParserTokenManager net/sourceforge/pmd/jsp/ast/Token net/sourceforge/pmd/parsers/Java15Parser net/sourceforge/pmd/parsers/Parser net/sourceforge/pmd/properties/AbstractPMDProperty net/sourceforge/pmd/properties/AbstractScalarProperty net/sourceforge/pmd/properties/BooleanProperty net/sourceforge/pmd/properties/IntegerProperty net/sourceforge/pmd/renderers/AbstractRenderer net/sourceforge/pmd/renderers/CSVRenderer net/sourceforge/pmd/renderers/EmacsRenderer net/sourceforge/pmd/renderers/HTMLRenderer net/sourceforge/pmd/renderers/IDEAJRenderer net/sourceforge/pmd/renderers/OnTheFlyRenderer net/sourceforge/pmd/renderers/PapariTextRenderer net/sourceforge/pmd/renderers/Renderer net/sourceforge/pmd/renderers/SummaryHTMLRenderer net/sourceforge/pmd/renderers/TextRenderer net/sourceforge/pmd/renderers/VBHTMLRenderer net/sourceforge/pmd/renderers/XMLRenderer net/sourceforge/pmd/renderers/XSLTRenderer net/sourceforge/pmd/renderers/YAHTMLRenderer net/sourceforge/pmd/rules/DoubleCheckedLocking net/sourceforge/pmd/rules/OverrideBothEqualsAndHashcode net/sourceforge/pmd/rules/UnnecessaryConversionTemporary net/sourceforge/pmd/rules/UselessOperationOnImmutable net/sourceforge/pmd/rules/UselessOverridingMethod net/sourceforge/pmd/rules/XPathRule net/sourceforge/pmd/rules/basic/AvoidMultipleUnaryOperators net/sourceforge/pmd/rules/basic/AvoidUsingHardCodedIP net/sourceforge/pmd/rules/basic/AvoidUsingOctalValues net/sourceforge/pmd/rules/basic/BigIntegerInstantiation net/sourceforge/pmd/rules/basic/BooleanInstantiation net/sourceforge/pmd/rules/basic/BrokenNullCheck net/sourceforge/pmd/rules/basic/UnnecessaryReturn net/sourceforge/pmd/sourcetypehandlers/Java13Handler net/sourceforge/pmd/sourcetypehandlers/Java14Handler net/sourceforge/pmd/sourcetypehandlers/Java15Handler net/sourceforge/pmd/sourcetypehandlers/Java16Handler net/sourceforge/pmd/sourcetypehandlers/Java17Handler net/sourceforge/pmd/sourcetypehandlers/JavaTypeHandler net/sourceforge/pmd/sourcetypehandlers/JavaTypeHandler$2 net/sourceforge/pmd/sourcetypehandlers/JavaTypeHandler$3 net/sourceforge/pmd/sourcetypehandlers/JspTypeHandler net/sourceforge/pmd/sourcetypehandlers/SourceTypeHandler net/sourceforge/pmd/sourcetypehandlers/SourceTypeHandlerBroker net/sourceforge/pmd/sourcetypehandlers/VisitorStarter net/sourceforge/pmd/symboltable/AbstractNameDeclaration net/sourceforge/pmd/symboltable/AbstractScope net/sourceforge/pmd/symboltable/ClassNameDeclaration net/sourceforge/pmd/symboltable/ClassScope net/sourceforge/pmd/symboltable/ClassScope$1 net/sourceforge/pmd/symboltable/ImageFinderFunction net/sourceforge/pmd/symboltable/LocalScope net/sourceforge/pmd/symboltable/MethodNameDeclaration net/sourceforge/pmd/symboltable/MethodScope net/sourceforge/pmd/symboltable/NameDeclaration net/sourceforge/pmd/symboltable/NameFinder net/sourceforge/pmd/symboltable/NameOccurrence net/sourceforge/pmd/symboltable/OccurrenceFinder net/sourceforge/pmd/symboltable/Scope net/sourceforge/pmd/symboltable/ScopeAndDeclarationFinder net/sourceforge/pmd/symboltable/Search net/sourceforge/pmd/symboltable/SourceFileScope net/sourceforge/pmd/symboltable/SymbolFacade net/sourceforge/pmd/symboltable/VariableNameDeclaration net/sourceforge/pmd/symboltable/VariableUsageFinderFunction net/sourceforge/pmd/typeresolution/ClassTypeResolver net/sourceforge/pmd/typeresolution/PMDASMClassLoader net/sourceforge/pmd/typeresolution/TypeHelper net/sourceforge/pmd/typeresolution/TypeResolutionFacade net/sourceforge/pmd/typeresolution/visitors/PMDASMVisitor net/sourceforge/pmd/typeresolution/visitors/PMDASMVisitor$PMDAnnotationVisitor net/sourceforge/pmd/typeresolution/visitors/PMDASMVisitor$PMDFieldVisitor net/sourceforge/pmd/typeresolution/visitors/PMDASMVisitor$PMDMethodVisitor net/sourceforge/pmd/typeresolution/visitors/PMDASMVisitor$PMDSignatureVisitor net/sourceforge/pmd/util/AntLogHandler net/sourceforge/pmd/util/Applier net/sourceforge/pmd/util/Benchmark net/sourceforge/pmd/util/Benchmark$BenchmarkResult net/sourceforge/pmd/util/ClassUtil net/sourceforge/pmd/util/ClasspathClassLoader net/sourceforge/pmd/util/CollectionUtil net/sourceforge/pmd/util/ConsoleLogHandler net/sourceforge/pmd/util/FileFinder net/sourceforge/pmd/util/PmdLogFormatter net/sourceforge/pmd/util/ResourceLoader net/sourceforge/pmd/util/StringUtil net/sourceforge/pmd/util/TypeMap net/sourceforge/pmd/util/UnaryFunction net/sourceforge/pmd/util/filter/AbstractCompoundFilter net/sourceforge/pmd/util/filter/AbstractDelegateFilter net/sourceforge/pmd/util/filter/Filter net/sourceforge/pmd/util/filter/Filters net/sourceforge/pmd/util/filter/Filters$1 net/sourceforge/pmd/util/filter/NotFilter net/sourceforge/pmd/util/filter/OrFilter org/apache/tools/ant/AntClassLoader org/apache/tools/ant/BuildException org/apache/tools/ant/BuildListener org/apache/tools/ant/DirectoryScanner org/apache/tools/ant/FileScanner org/apache/tools/ant/Project org/apache/tools/ant/ProjectComponent org/apache/tools/ant/SubBuildListener org/apache/tools/ant/Task org/apache/tools/ant/types/AbstractFileSet org/apache/tools/ant/types/DataType org/apache/tools/ant/types/EnumeratedAttribute org/apache/tools/ant/types/FileSet org/apache/tools/ant/types/Path org/apache/tools/ant/types/Reference org/apache/tools/ant/types/ResourceCollection org/apache/tools/ant/types/ResourceFactory org/apache/tools/ant/types/selectors/SelectorContainer org/apache/tools/ant/types/selectors/SelectorScanner org/apache/xerces/dom/AttrImpl org/apache/xerces/dom/AttributeMap org/apache/xerces/dom/CDATASectionImpl org/apache/xerces/dom/CharacterDataImpl org/apache/xerces/dom/CharacterDataImpl$1 org/apache/xerces/dom/ChildNode org/apache/xerces/dom/CoreDocumentImpl org/apache/xerces/dom/DOMConfigurationImpl org/apache/xerces/dom/DOMNormalizer org/apache/xerces/dom/DeferredAttrImpl org/apache/xerces/dom/DeferredCDATASectionImpl org/apache/xerces/dom/DeferredDocumentImpl org/apache/xerces/dom/DeferredDocumentImpl$RefCount org/apache/xerces/dom/DeferredElementImpl org/apache/xerces/dom/DeferredNode org/apache/xerces/dom/DeferredTextImpl org/apache/xerces/dom/DocumentImpl org/apache/xerces/dom/DocumentImpl$EnclosingAttr org/apache/xerces/dom/DocumentTypeImpl org/apache/xerces/dom/ElementImpl org/apache/xerces/dom/EntityImpl org/apache/xerces/dom/NamedNodeMapImpl org/apache/xerces/dom/NodeImpl org/apache/xerces/dom/NodeListCache org/apache/xerces/dom/ParentNode org/apache/xerces/dom/TextImpl org/apache/xerces/impl/Constants org/apache/xerces/impl/Constants$ArrayEnumeration org/apache/xerces/impl/ExternalSubsetResolver org/apache/xerces/impl/RevalidationHandler org/apache/xerces/impl/XML11DTDScannerImpl org/apache/xerces/impl/XML11DocumentScannerImpl org/apache/xerces/impl/XML11NSDocumentScannerImpl org/apache/xerces/impl/XMLDTDScannerImpl org/apache/xerces/impl/XMLDocumentFragmentScannerImpl org/apache/xerces/impl/XMLDocumentFragmentScannerImpl$Dispatcher org/apache/xerces/impl/XMLDocumentFragmentScannerImpl$ElementStack org/apache/xerces/impl/XMLDocumentFragmentScannerImpl$FragmentContentDispatcher org/apache/xerces/impl/XMLDocumentScannerImpl org/apache/xerces/impl/XMLDocumentScannerImpl$ContentDispatcher org/apache/xerces/impl/XMLDocumentScannerImpl$DTDDispatcher org/apache/xerces/impl/XMLDocumentScannerImpl$PrologDispatcher org/apache/xerces/impl/XMLDocumentScannerImpl$TrailingMiscDispatcher org/apache/xerces/impl/XMLDocumentScannerImpl$XMLDeclDispatcher org/apache/xerces/impl/XMLEntityHandler org/apache/xerces/impl/XMLEntityManager org/apache/xerces/impl/XMLEntityManager$CharacterBuffer org/apache/xerces/impl/XMLEntityManager$CharacterBufferPool org/apache/xerces/impl/XMLEntityManager$Entity org/apache/xerces/impl/XMLEntityManager$ExternalEntity org/apache/xerces/impl/XMLEntityManager$RewindableInputStream org/apache/xerces/impl/XMLEntityManager$ScannedEntity org/apache/xerces/impl/XMLEntityScanner org/apache/xerces/impl/XMLErrorReporter org/apache/xerces/impl/XMLNSDocumentScannerImpl org/apache/xerces/impl/XMLNSDocumentScannerImpl$NSContentDispatcher org/apache/xerces/impl/XMLScanner org/apache/xerces/impl/XMLVersionDetector org/apache/xerces/impl/dtd/DTDGrammar org/apache/xerces/impl/dtd/DTDGrammarBucket org/apache/xerces/impl/dtd/XML11DTDProcessor org/apache/xerces/impl/dtd/XML11DTDValidator org/apache/xerces/impl/dtd/XML11NSDTDValidator org/apache/xerces/impl/dtd/XMLAttributeDecl org/apache/xerces/impl/dtd/XMLDTDDescription org/apache/xerces/impl/dtd/XMLDTDLoader org/apache/xerces/impl/dtd/XMLDTDProcessor org/apache/xerces/impl/dtd/XMLDTDValidator org/apache/xerces/impl/dtd/XMLDTDValidatorFilter org/apache/xerces/impl/dtd/XMLElementDecl org/apache/xerces/impl/dtd/XMLEntityDecl org/apache/xerces/impl/dtd/XMLNSDTDValidator org/apache/xerces/impl/dtd/XMLSimpleType org/apache/xerces/impl/dtd/models/ContentModelValidator org/apache/xerces/impl/dv/DTDDVFactory org/apache/xerces/impl/dv/DatatypeValidator org/apache/xerces/impl/dv/ObjectFactory org/apache/xerces/impl/dv/SecuritySupport org/apache/xerces/impl/dv/SecuritySupport$1 org/apache/xerces/impl/dv/SecuritySupport$2 org/apache/xerces/impl/dv/ValidationContext org/apache/xerces/impl/dv/dtd/DTDDVFactoryImpl org/apache/xerces/impl/dv/dtd/ENTITYDatatypeValidator org/apache/xerces/impl/dv/dtd/IDDatatypeValidator org/apache/xerces/impl/dv/dtd/IDREFDatatypeValidator org/apache/xerces/impl/dv/dtd/ListDatatypeValidator org/apache/xerces/impl/dv/dtd/NMTOKENDatatypeValidator org/apache/xerces/impl/dv/dtd/NOTATIONDatatypeValidator org/apache/xerces/impl/dv/dtd/StringDatatypeValidator org/apache/xerces/impl/io/MalformedByteSequenceException org/apache/xerces/impl/io/UTF8Reader org/apache/xerces/impl/msg/XMLMessageFormatter org/apache/xerces/impl/validation/EntityState org/apache/xerces/impl/validation/ValidationManager org/apache/xerces/impl/validation/ValidationState org/apache/xerces/impl/xs/XMLSchemaValidator org/apache/xerces/impl/xs/identity/FieldActivator org/apache/xerces/jaxp/DocumentBuilderFactoryImpl org/apache/xerces/jaxp/DocumentBuilderImpl org/apache/xerces/jaxp/JAXPConstants org/apache/xerces/parsers/AbstractDOMParser org/apache/xerces/parsers/AbstractXMLDocumentParser org/apache/xerces/parsers/DOMParser org/apache/xerces/parsers/ObjectFactory org/apache/xerces/parsers/SecuritySupport org/apache/xerces/parsers/SecuritySupport$1 org/apache/xerces/parsers/SecuritySupport$2 org/apache/xerces/parsers/SecuritySupport$4 org/apache/xerces/parsers/SecuritySupport$6 org/apache/xerces/parsers/SecuritySupport$7 org/apache/xerces/parsers/XIncludeAwareParserConfiguration org/apache/xerces/parsers/XML11Configurable org/apache/xerces/parsers/XML11Configuration org/apache/xerces/parsers/XMLParser org/apache/xerces/util/AugmentationsImpl org/apache/xerces/util/AugmentationsImpl$AugmentationsItemsContainer org/apache/xerces/util/AugmentationsImpl$SmallContainer org/apache/xerces/util/DOMErrorHandlerWrapper org/apache/xerces/util/MessageFormatter org/apache/xerces/util/NamespaceSupport org/apache/xerces/util/ParserConfigurationSettings org/apache/xerces/util/SecurityManager org/apache/xerces/util/SymbolTable org/apache/xerces/util/SymbolTable$Entry org/apache/xerces/util/URI org/apache/xerces/util/XMLAttributesImpl org/apache/xerces/util/XMLAttributesImpl$Attribute org/apache/xerces/util/XMLChar org/apache/xerces/util/XMLResourceIdentifierImpl org/apache/xerces/util/XMLStringBuffer org/apache/xerces/util/XMLSymbols org/apache/xerces/xinclude/MultipleScopeNamespaceSupport org/apache/xerces/xinclude/XIncludeHandler org/apache/xerces/xinclude/XIncludeNamespaceSupport org/apache/xerces/xni/Augmentations org/apache/xerces/xni/NamespaceContext org/apache/xerces/xni/QName org/apache/xerces/xni/XMLAttributes org/apache/xerces/xni/XMLDTDContentModelHandler org/apache/xerces/xni/XMLDTDHandler org/apache/xerces/xni/XMLDocumentHandler org/apache/xerces/xni/XMLLocator org/apache/xerces/xni/XMLResourceIdentifier org/apache/xerces/xni/XMLString org/apache/xerces/xni/grammars/Grammar org/apache/xerces/xni/grammars/XMLDTDDescription org/apache/xerces/xni/grammars/XMLGrammarDescription org/apache/xerces/xni/grammars/XMLGrammarLoader org/apache/xerces/xni/grammars/XMLGrammarPool org/apache/xerces/xni/parser/XMLComponent org/apache/xerces/xni/parser/XMLComponentManager org/apache/xerces/xni/parser/XMLDTDContentModelFilter org/apache/xerces/xni/parser/XMLDTDContentModelSource org/apache/xerces/xni/parser/XMLDTDFilter org/apache/xerces/xni/parser/XMLDTDScanner org/apache/xerces/xni/parser/XMLDTDSource org/apache/xerces/xni/parser/XMLDocumentFilter org/apache/xerces/xni/parser/XMLDocumentScanner org/apache/xerces/xni/parser/XMLDocumentSource org/apache/xerces/xni/parser/XMLEntityResolver org/apache/xerces/xni/parser/XMLErrorHandler org/apache/xerces/xni/parser/XMLInputSource org/apache/xerces/xni/parser/XMLParserConfiguration org/apache/xerces/xni/parser/XMLPullParserConfiguration org/jaxen/BaseXPath org/jaxen/Context org/jaxen/ContextSupport org/jaxen/DefaultNavigator org/jaxen/Function org/jaxen/FunctionContext org/jaxen/JaxenException org/jaxen/JaxenHandler org/jaxen/NamedAccessNavigator org/jaxen/NamespaceContext org/jaxen/Navigator org/jaxen/QualifiedName org/jaxen/SimpleFunctionContext org/jaxen/SimpleNamespaceContext org/jaxen/SimpleVariableContext org/jaxen/VariableContext org/jaxen/XPath org/jaxen/XPathFunctionContext org/jaxen/expr/AllNodeStep org/jaxen/expr/BinaryExpr org/jaxen/expr/DefaultAbsoluteLocationPath org/jaxen/expr/DefaultAllNodeStep org/jaxen/expr/DefaultAndExpr org/jaxen/expr/DefaultBinaryExpr org/jaxen/expr/DefaultEqualityExpr org/jaxen/expr/DefaultEqualsExpr org/jaxen/expr/DefaultExpr org/jaxen/expr/DefaultFilterExpr org/jaxen/expr/DefaultFunctionCallExpr org/jaxen/expr/DefaultGreaterThanExpr org/jaxen/expr/DefaultLiteralExpr org/jaxen/expr/DefaultLocationPath org/jaxen/expr/DefaultLogicalExpr org/jaxen/expr/DefaultNameStep org/jaxen/expr/DefaultNotEqualsExpr org/jaxen/expr/DefaultNumberExpr org/jaxen/expr/DefaultOrExpr org/jaxen/expr/DefaultPathExpr org/jaxen/expr/DefaultPredicate org/jaxen/expr/DefaultRelationalExpr org/jaxen/expr/DefaultRelativeLocationPath org/jaxen/expr/DefaultStep org/jaxen/expr/DefaultTruthExpr org/jaxen/expr/DefaultUnionExpr org/jaxen/expr/DefaultVariableReferenceExpr org/jaxen/expr/DefaultXPathExpr org/jaxen/expr/DefaultXPathFactory org/jaxen/expr/EqualityExpr org/jaxen/expr/Expr org/jaxen/expr/FilterExpr org/jaxen/expr/FunctionCallExpr org/jaxen/expr/IdentitySet org/jaxen/expr/IdentitySet$IdentityWrapper org/jaxen/expr/LiteralExpr org/jaxen/expr/LocationPath org/jaxen/expr/LogicalExpr org/jaxen/expr/NameStep org/jaxen/expr/NodeComparator org/jaxen/expr/NumberExpr org/jaxen/expr/PathExpr org/jaxen/expr/Predicate org/jaxen/expr/PredicateSet org/jaxen/expr/Predicated org/jaxen/expr/RelationalExpr org/jaxen/expr/Step org/jaxen/expr/UnionExpr org/jaxen/expr/VariableReferenceExpr org/jaxen/expr/XPathExpr org/jaxen/expr/XPathFactory org/jaxen/expr/iter/IterableAncestorAxis org/jaxen/expr/iter/IterableAttributeAxis org/jaxen/expr/iter/IterableAxis org/jaxen/expr/iter/IterableChildAxis org/jaxen/expr/iter/IterableDescendantAxis org/jaxen/expr/iter/IterableDescendantOrSelfAxis org/jaxen/expr/iter/IterableFollowingSiblingAxis org/jaxen/expr/iter/IterableParentAxis org/jaxen/expr/iter/IterablePrecedingSiblingAxis org/jaxen/expr/iter/IterableSelfAxis org/jaxen/function/BooleanFunction org/jaxen/function/CeilingFunction org/jaxen/function/ConcatFunction org/jaxen/function/ContainsFunction org/jaxen/function/CountFunction org/jaxen/function/FalseFunction org/jaxen/function/FloorFunction org/jaxen/function/IdFunction org/jaxen/function/LangFunction org/jaxen/function/LastFunction org/jaxen/function/LocalNameFunction org/jaxen/function/NameFunction org/jaxen/function/NamespaceUriFunction org/jaxen/function/NormalizeSpaceFunction org/jaxen/function/NotFunction org/jaxen/function/NumberFunction org/jaxen/function/PositionFunction org/jaxen/function/RoundFunction org/jaxen/function/StartsWithFunction org/jaxen/function/StringFunction org/jaxen/function/StringLengthFunction org/jaxen/function/SubstringAfterFunction org/jaxen/function/SubstringBeforeFunction org/jaxen/function/SubstringFunction org/jaxen/function/SumFunction org/jaxen/function/TranslateFunction org/jaxen/function/TrueFunction org/jaxen/function/ext/EndsWithFunction org/jaxen/function/ext/EvaluateFunction org/jaxen/function/ext/LocaleFunctionSupport org/jaxen/function/ext/LowerFunction org/jaxen/function/ext/UpperFunction org/jaxen/function/xslt/DocumentFunction org/jaxen/saxpath/Axis org/jaxen/saxpath/SAXPathEventSource org/jaxen/saxpath/SAXPathException org/jaxen/saxpath/XPathHandler org/jaxen/saxpath/XPathReader org/jaxen/saxpath/base/Token org/jaxen/saxpath/base/Verifier org/jaxen/saxpath/base/XPathLexer org/jaxen/saxpath/base/XPathReader org/jaxen/saxpath/helpers/DefaultXPathHandler org/jaxen/saxpath/helpers/XPathReaderFactory org/jaxen/util/AncestorAxisIterator org/jaxen/util/AncestorOrSelfAxisIterator org/jaxen/util/DescendantAxisIterator org/jaxen/util/DescendantOrSelfAxisIterator org/jaxen/util/SelfAxisIterator org/jaxen/util/SingleObjectIterator org/jaxen/util/SingletonList org/objectweb/asm/AnnotationVisitor org/objectweb/asm/Attribute org/objectweb/asm/ClassReader org/objectweb/asm/ClassVisitor org/objectweb/asm/ClassWriter org/objectweb/asm/Edge org/objectweb/asm/FieldVisitor org/objectweb/asm/Frame org/objectweb/asm/Label org/objectweb/asm/MethodVisitor org/objectweb/asm/MethodWriter org/objectweb/asm/Type org/objectweb/asm/signature/SignatureReader org/objectweb/asm/signature/SignatureVisitor  </instrumented> 
+  <instrumentedNum> 706 </instrumentedNum> 
+  <skipped>  </skipped> 
+  <skippedNum> 0 </skippedNum> 
+  <sanityChecked>  </sanityChecked> 
+  <sanityCheckedNum> 0 </sanityCheckedNum> 
+  <counters>
+
+    <counter><name> "ArrayStateFactory: Size" </name>                    <value> 2,940,149 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>2176.00</total> <count>117</count> <ave>18.5983</ave> </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 2,273,025 </value> </counter>
+
+    <counter><name> "Clone: Count" </name>                               <value> 3,653 </value> </counter>
+
+    <counter><name> "FT: Read Same Epoch" </name>                        <value>          0 </value> </counter>
+    <counter><name> "FT: ReadShared Same Epoch" </name>                  <value>          0 </value> </counter>
+    <counter><name> "FT: Read Exclusive" </name>                         <value>          0 </value> </counter>
+    <counter><name> "FT: Read Share" </name>                             <value>          0 </value> </counter>
+    <counter><name> "FT: Read Shared" </name>                            <value>          0 </value> </counter>
+    <counter><name> "FT: Write-Read Error" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Write Same Epoch" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Write Exclusive" </name>                        <value>          0 </value> </counter>
+    <counter><name> "FT: Write Shared" </name>                           <value>          0 </value> </counter>
+    <counter><name> "FT: Write-Write Error" </name>                      <value>          0 </value> </counter>
+    <counter><name> "FT: Read-Write Error" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Shared-Write Error" </name>                     <value>          0 </value> </counter>
+    <counter><name> "FT: Acquire" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Release" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Fork" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Join" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Barrier" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Wait" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Volatile" </name>                               <value>          0 </value> </counter>
+    <counter><name> "FT: Other" </name>                                  <value>          0 </value> </counter>
+    <counter><name> "FT: Total Reads" </name>                            <value> 0 </value> </counter>
+    <counter><name> "FT: Total Writes" </name>                           <value> 0 </value> </counter>
+    <counter><name> "FT: Total Access Ops" </name>                       <value> 0 </value> </counter>
+    <counter><name> "FT: Total Ops" </name>                              <value> 0 </value> </counter>
+
+    <counter><name> "GCRunner: Max Usage" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "Handler: Count" </name>                             <value> 0 </value> </counter>
+
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 18,137 </value> </counter>
+    <counter><name> "RRBench: Warmup 2" </name>                          <value> 8,786 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 6,544 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 6,000 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 5,830 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 5,761 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 5,666 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 5,844 </value> </counter>
+    <counter><name> "RRBench: Iter 6" </name>                            <value> 5,856 </value> </counter>
+    <counter><name> "RRBench: Iter 7" </name>                            <value> 5,640 </value> </counter>
+    <counter><name> "RRBench: Iter 8" </name>                            <value> 5,751 </value> </counter>
+    <counter><name> "RRBench: Iter 9" </name>                            <value> 5,674 </value> </counter>
+    <counter><name> "RRBench: Iter 10" </name>                           <value> 5,639 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 5,766 </value> </counter>
+
+    <counter><name> "ShadowLock: objects" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "ShadowThread: Count" </name>                        <value> 209 </value> </counter>
+    <counter><name> "ShadowThread: Max Live" </name>                     <value> 17 </value> </counter>
+    <counter><name> "ShadowThread: getCurrentThread() calls" </name>     <value> 0 </value> </counter>
+
+    <counter><name> "ShadowVolatile: objects" </name>                    <value> 0 </value> </counter>
+
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>3109.00</total> <count>706</count> <ave>4.40368</ave> </value> </counter>
+  </counters>
+  <yikes>
+    <message> Bad shadow array set: out of bounds </message> <count> 13 </count> 
+    <message> Can't find method in Thread Data In </message> <count> 1 </count> 
+    <message> SafeFieldUpdater: Concurrent update </message> <count> 26 </count> 
+    <message> Failed to load class org/apache/too </message> <count> 1 </count> 
+    <message> concurrent initialization of guard  </message> <count> 1 </count> 
+    <message> Bad shadow array get: out of bounds </message> <count> 26 </count> 
+    <message> Failed to load class org/apache/too </message> <count> 1 </count> 
+    <message> Can't find method in Thread Data In </message> <count> 1 </count> 
+    <message> Old Version Number in class file. U </message> <count> 244 </count> 
+  </yikes>
+  <tool>
+    <name> tools.fasttrack.FastTrackToolV1 </name> 
+    <thread> [tid=3    C=[(0:B6D) (1:1BA1) (2:F1A) (3:2210) (4:1B20) (5:EAE) (6:1A42) (7:1F47) (8:1624) (9:14C5) (10:1E85) (11:216D) (12:1F21) (13:20A6) (14:1C15) (15:22A4) (16:1A1A)]   E=(3:2210)] </thread> 
+    <thread> [tid=10   C=[(0:B6D) (1:1BC6) (2:F24) (3:220F) (4:1B45) (5:EAF) (6:1A43) (7:1F47) (8:1624) (9:14C7) (10:1EAD) (11:216D) (12:1F21) (13:20CD) (14:1C15) (15:22A4) (16:1A1A)]   E=(10:1EAD)] </thread> 
+    <thread> [tid=13   C=[(0:B6D) (1:1BC2) (2:F24) (3:220F) (4:1B45) (5:EAF) (6:1A42) (7:1F47) (8:1624) (9:14C5) (10:1E87) (11:216D) (12:1F21) (13:20CE) (14:1C15) (15:22A4) (16:1A1A)]   E=(13:20CE)] </thread> 
+    <thread> [tid=2    C=[(0:B6D) (1:1BA3) (2:F25) (3:220F) (4:1B37) (5:EAE) (6:1A42) (7:1F47) (8:1624) (9:14C5) (10:1E85) (11:216D) (12:1F21) (13:20A8) (14:1C15) (15:22A4) (16:1A1A)]   E=(2:F25)] </thread> 
+    <thread> [tid=7    C=[(0:B6D) (1:1BA0) (2:F10) (3:21FF) (4:1B1E) (5:EAE) (6:1A42) (7:1F48) (8:1614) (9:14C5) (10:1E85) (11:2146) (12:1F21) (13:20A6) (14:1C15) (15:229D) (16:1A1A)]   E=(7:1F48)] </thread> 
+    <thread> [tid=15   C=[(0:B6D) (1:1BA0) (2:F12) (3:2201) (4:1B1E) (5:EAE) (6:1A42) (7:1F47) (8:1619) (9:14C5) (10:1E85) (11:2146) (12:1F21) (13:20A6) (14:1C15) (15:22A5) (16:1A1A)]   E=(15:22A5)] </thread> 
+    <thread> [tid=14   C=[(0:B6D) (1:1BC6) (2:F24) (3:220F) (4:1B45) (5:ED4) (6:1A69) (7:1F47) (8:1624) (9:14EC) (10:1EAC) (11:216D) (12:1F48) (13:20CD) (14:1C3D) (15:22A4) (16:1A41)]   E=(14:1C3D)] </thread> 
+    <thread> [tid=5    C=[(0:B6D) (1:1BC6) (2:F24) (3:220F) (4:1B45) (5:ED5) (6:1A69) (7:1F47) (8:1624) (9:14EC) (10:1EAC) (11:216D) (12:1F21) (13:20CD) (14:1C15) (15:22A4) (16:1A1A)]   E=(5:ED5)] </thread> 
+    <thread> [tid=16   C=[(0:B6D) (1:1BC6) (2:F24) (3:220F) (4:1B45) (5:ED4) (6:1A69) (7:1F47) (8:1624) (9:14EC) (10:1EAC) (11:216D) (12:1F48) (13:20CD) (14:1C15) (15:22A4) (16:1A42)]   E=(16:1A42)] </thread> 
+    <thread> [tid=1    C=[(0:B6D) (1:1BC7) (2:F24) (3:220F) (4:1B45) (5:EAF) (6:1A42) (7:1F47) (8:1624) (9:14C5) (10:1E98) (11:216D) (12:1F21) (13:20CD) (14:1C15) (15:22A4) (16:1A1A)]   E=(1:1BC7)] </thread> 
+    <thread> [tid=6    C=[(0:B6D) (1:1BC6) (2:F24) (3:220F) (4:1B45) (5:EC5) (6:1A6A) (7:1F47) (8:1624) (9:14E7) (10:1EAC) (11:216D) (12:1F21) (13:20CD) (14:1C15) (15:22A4) (16:1A1A)]   E=(6:1A6A)] </thread> 
+    <thread> [tid=9    C=[(0:B6D) (1:1BC6) (2:F24) (3:220F) (4:1B45) (5:EC6) (6:1A69) (7:1F47) (8:1624) (9:14ED) (10:1EAC) (11:216D) (12:1F21) (13:20CD) (14:1C15) (15:22A4) (16:1A1A)]   E=(9:14ED)] </thread> 
+    <thread> [tid=0    C=[(0:BCB) (1:1BC6) (2:F24) (3:220F) (4:1B45) (5:ED4) (6:1A69) (7:1F47) (8:1624) (9:14EC) (10:1EAC) (11:216D) (12:1F48) (13:20CD) (14:1C3C) (15:22A4) (16:1A41)]   E=(0:BCB)] </thread> 
+    <thread> [tid=12   C=[(0:B6D) (1:1BC6) (2:F24) (3:220F) (4:1B45) (5:ED4) (6:1A69) (7:1F47) (8:1624) (9:14EC) (10:1EAC) (11:216D) (12:1F49) (13:20CD) (14:1C15) (15:22A4) (16:1A3F)]   E=(12:1F49)] </thread> 
+    <thread> [tid=8    C=[(0:B6D) (1:1BA0) (2:F14) (3:2204) (4:1B1F) (5:EAE) (6:1A42) (7:1F47) (8:1625) (9:14C5) (10:1E85) (11:2148) (12:1F21) (13:20A6) (14:1C15) (15:22A4) (16:1A1A)]   E=(8:1625)] </thread> 
+    <thread> [tid=11   C=[(0:B6D) (1:1BA1) (2:F15) (3:2206) (4:1B1F) (5:EAE) (6:1A42) (7:1F47) (8:1624) (9:14C5) (10:1E85) (11:216E) (12:1F21) (13:20A6) (14:1C15) (15:22A4) (16:1A1A)]   E=(11:216E)] </thread> 
+    <thread> [tid=4    C=[(0:B6D) (1:1BB5) (2:F24) (3:220F) (4:1B46) (5:EAE) (6:1A42) (7:1F47) (8:1624) (9:14C5) (10:1E85) (11:216D) (12:1F21) (13:20A8) (14:1C15) (15:22A4) (16:1A1A)]   E=(4:1B46)] </thread> 
+  </tool>
+  <tool>
+    <name> Last </name> 
+  </tool>
+  <threadCount> 17 </threadCount> 
+  <threadMaxActive> 17 </threadMaxActive> 
+  <errorTotal> 18 </errorTotal> 
+  <distinctErrorTotal> 18 </distinctErrorTotal> 
+  <methods>
+  </methods>
+  <fields>
+    <field>
+      <name> org/jaxen/saxpath/helpers/XPathReaderFactory.class$org$jaxen$saxpath$XPathReader_Ljava/lang/Class; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> net/sourceforge/pmd/PMD.excludeMarker_Ljava/lang/String; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> net/sourceforge/pmd/SourceTypeDiscoverer.mapExtensionOnSourceType_Ljava/util/Map; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xerces/parsers/ObjectFactory.class$org$apache$xerces$parsers$ObjectFactory_Ljava/lang/Class; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/jaxen/QualifiedName.localName_Ljava/lang/String; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/jaxen/QualifiedName.namespaceURI_Ljava/lang/String; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> net/sourceforge/pmd/Report.suppressedRuleViolations_Ljava/util/List; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> net/sourceforge/pmd/jaxen/AttributeAxisIterator$MethodWrapper.method_Ljava/lang/reflect/Method; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> net/sourceforge/pmd/PMD.sourceTypeDiscoverer_Lnet/sourceforge/pmd/SourceTypeDiscoverer; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> net/sourceforge/pmd/jaxen/AttributeAxisIterator$MethodWrapper.name_Ljava/lang/String; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/jaxen/saxpath/helpers/XPathReaderFactory.class$org$jaxen$saxpath$helpers$XPathReaderFactory_Ljava/lang/Class; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> net/sourceforge/pmd/RuleContext.report_Lnet/sourceforge/pmd/Report; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> net/sourceforge/pmd/PMD$PmdThread.ruleSetFactory_Lnet/sourceforge/pmd/RuleSetFactory; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> net/sourceforge/pmd/RuleViolation.filename_Ljava/lang/String; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> net/sourceforge/pmd/PMD.classLoader_Ljava/lang/ClassLoader; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> net/sourceforge/pmd/RuleViolation.beginLine_I </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> net/sourceforge/pmd/PMD$PmdThread.context_Lnet/sourceforge/pmd/RuleContext; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> net/sourceforge/pmd/RuleViolation.description_Ljava/lang/String; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+  </fields>
+  <arrays>
+  </arrays>
+  <locks>
+  </locks>
+  <fieldAccesses>
+  </fieldAccesses>
+  <errorCountPerErrorType>
+    <errorType> <name> FastTrack </name> <count> 18 </count> </errorType>
+  </errorCountPerErrorType>
+  <warningsTotal> 0 </warningsTotal> 
+  <yikesTotal> 314 </yikesTotal> 
+  <failed> false </failed> 
+  <failedReason>  </failedReason> 
+  <time> 99530 </time> 
+</entry>
