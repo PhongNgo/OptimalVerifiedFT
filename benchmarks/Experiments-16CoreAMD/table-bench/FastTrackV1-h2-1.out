@@ -1,0 +1,261 @@
+<entry>
+  <date> Sat Jul 29 04:42:21 EDT 2017 </date> 
+  <mode> FAST </mode> 
+  <timeout> NO </timeout> 
+  <options>
+    <option><name> javaArgs </name>           <value> RRBench  </value> </option>
+    <option><name> noDecInline </name>        <value> false </value> </option>
+    <option><name> quiet </name>              <value> true </value> </option>
+    <option><name> logDepth </name>           <value> 100 </value> </option>
+    <option><name> logs </name>               <value> /home/freund/workspace/RoadRunner/benchmarks/Experiments/table-bench </value> </option>
+    <option><name> out </name>                <value>  </value>   </option>
+    <option><name> err </name>                <value>  </value>   </option>
+    <option><name> noinst </name>             <value> false </value> </option>
+    <option><name> inst </name>               <value> INST </value> </option>
+    <option><name> infThreads </name>         <value> 0 </value>  </option>
+    <option><name> benchmark </name>          <value> 10 </value> </option>
+    <option><name> warmup </name>             <value> 3 </value>  </option>
+    <option><name> availableProcessors </name> <value> 16 </value> </option>
+    <option><name> args </name>               <value> [] </value> </option>
+    <option><name> d </name>                  <value> [] </value> </option>
+    <option><name> maxYikes </name>           <value> 5 </value>  </option>
+    <option><name> help </name>               <value> false </value> </option>
+    <option><name> toolpath </name>           <value> /home/freund/workspace/RoadRunner/classes/rr/simple:/home/freund/workspace/RoadRunner/classes/tools </value> </option>
+    <option><name> classpath </name>          <value> original.jar </value> </option>
+    <option><name> tool </name>               <value> FT2-V1 </value> </option>
+    <option><name> tools </name>              <value> false </value> </option>
+    <option><name> noxml </name>              <value> false </value> </option>
+    <option><name> constantGC </name>         <value> false </value> </option>
+    <option><name> noFP </name>               <value> false </value> </option>
+    <option><name> noShutdownHook </name>     <value> false </value> </option>
+    <option><name> noEnter </name>            <value> true </value> </option>
+    <option><name> xml </name>                <value> FastTrackV1-h2-1.out </value> </option>
+    <option><name> pulse </name>              <value>  </value>   </option>
+    <option><name> maxTime </name>            <value> 0 </value>  </option>
+    <option><name> maxMem </name>             <value> 10240 </value> </option>
+    <option><name> maxTid </name>             <value> 74 </value> </option>
+    <option><name> stacks </name>             <value> false </value> </option>
+    <option><name> values </name>             <value> false </value> </option>
+    <option><name> noTidGC </name>            <value> false </value> </option>
+    <option><name> noEventReuse </name>       <value> false </value> </option>
+    <option><name> trackMemoryUsage </name>   <value> false </value> </option>
+    <option><name> repository </name>         <value>  </value>   </option>
+    <option><name> meta </name>               <value> null </value> </option>
+    <option><name> methods </name>            <value> ["-.*Barrier.await\(\)V", "-java.util.concurrent.CyclicBarrier.await\(JLjava/util/concurrent/TimeUnit;\)I", "-java.util.concurrent.CyclicBarrier.await\(\)I", "-.*Barrier.DoBarrier\(I\)V", "-.*TournamentBarrier.DoBarrier\(I\)V", default=ACCEPT] </value> </option>
+    <option><name> fields </name>             <value> ["-.*this\$.*", "-$.*__\$rr.*", default=ACCEPT] </value> </option>
+    <option><name> lines </name>              <value> [default=ACCEPT] </value> </option>
+    <option><name> classes </name>            <value> ["-.*Barrier.*", "-java..*", "-javax..*", "-com.sun..*", "-sun..*", "-rr..*", "-tools..*", "-acme..*", "-.*__\$rr_.*", "-org.xml..*", default=ACCEPT] </value> </option>
+    <option><name> shadowThread </name>       <value> ["-.*", default=ACCEPT] </value> </option>
+    <option><name> noop </name>               <value> [default=ACCEPT] </value> </option>
+    <option><name> noConstructor </name>      <value> false </value> </option>
+    <option><name> noClone </name>            <value> false </value> </option>
+    <option><name> dump </name>               <value>  </value>   </option>
+    <option><name> field </name>              <value> FINE </value> </option>
+    <option><name> fancy </name>              <value> false </value> </option>
+    <option><name> verify </name>             <value> false </value> </option>
+    <option><name> trackReflection </name>    <value> false </value> </option>
+    <option><name> arraySites </name>         <value> false </value> </option>
+    <option><name> Use TestAcquires </name>   <value> false </value> </option>
+    <option><name> sanity </name>             <value> false </value> </option>
+    <option><name> reentrantEvents </name>    <value> false </value> </option>
+    <option><name> nojoin </name>             <value> false </value> </option>
+    <option><name> multiLoader </name>        <value> false </value> </option>
+    <option><name> indices </name>            <value> 2147483647 </value> </option>
+    <option><name> updaters </name>           <value> SAFE </value> </option>
+    <option><name> array </name>              <value> FINE </value> </option>
+    <option><name> userArray </name>          <value> rr.state.ArrayStateCreator$1@4554617c </value> </option>
+    <option><name> nobarrier </name>          <value> false </value> </option>
+    <option><name> arrayCacheType </name>     <value> STRONG </value> </option>
+    <option><name> callSites </name>          <value> false </value> </option>
+    <option><name> maxWarn </name>            <value> 1 </value>  </option>
+    <option><name> noInterrupt </name>        <value> false </value> </option>
+  </options>
+  <system>
+    <host> ubuntu </host> 
+    <name> java.vm.version </name>     <value> 25.121-b13 </value> 
+    <name> java.vm.vendor </name>      <value> Oracle Corporation </value> 
+    <name> java.vm.name </name>        <value> Java HotSpot(TM) 64-Bit Server VM </value> 
+    <name> java.class.path </name>     <value> .:/home/freund/workspace/RoadRunner/build/jar/rragent.jar </value> 
+    <name> os.name </name>             <value> Linux </value> 
+    <name> os.arch </name>             <value> amd64 </value> 
+    <name> os.version </name>          <value> 4.4.0-78-generic </value> 
+    <name> user.name </name>           <value> freund </value> 
+    <name> user.dir </name>            <value> /home/freund/workspace/RoadRunner/benchmarks/h2 </value> 
+    <availableProcs> 16 </availableProcs> 
+    <memCommitted> 5265 </memCommitted> 
+    <memUsed> 3648 </memUsed> 
+    <memTotal> 5265 </memTotal> 
+    <compileTime> 95000 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 12267 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 23572 </time> </gc>
+  </system>
+  <instrumented> RRBench org/apache/derbyTesting/system/oe/client/Display org/apache/derbyTesting/system/oe/client/Load org/apache/derbyTesting/system/oe/client/Operations org/apache/derbyTesting/system/oe/client/Submitter org/apache/derbyTesting/system/oe/direct/OrderItem4Sort org/apache/derbyTesting/system/oe/direct/Standard org/apache/derbyTesting/system/oe/direct/StatementHelper org/apache/derbyTesting/system/oe/load/SimpleInsert org/apache/derbyTesting/system/oe/load/ThreadInsert org/apache/derbyTesting/system/oe/model/Address org/apache/derbyTesting/system/oe/model/Customer org/apache/derbyTesting/system/oe/model/District org/apache/derbyTesting/system/oe/model/Order org/apache/derbyTesting/system/oe/model/OrderLine org/apache/derbyTesting/system/oe/model/Warehouse org/apache/derbyTesting/system/oe/routines/Data org/apache/derbyTesting/system/oe/util/OERandom org/dacapo/h2/TPCC org/dacapo/h2/TPCC$1 org/dacapo/h2/TPCC$2 org/dacapo/h2/TPCC$3 org/dacapo/h2/TPCCDataSource org/dacapo/h2/TPCCDataSource$NullWriter org/dacapo/h2/TPCCReporter org/dacapo/h2/TPCCSubmitter org/h2/Driver org/h2/api/DatabaseEventListener org/h2/command/Command org/h2/command/CommandContainer org/h2/command/CommandInterface org/h2/command/Parser org/h2/command/Prepared org/h2/command/ddl/AlterTableAddConstraint org/h2/command/ddl/CreateIndex org/h2/command/ddl/CreateTable org/h2/command/ddl/CreateTableData org/h2/command/ddl/CreateView org/h2/command/ddl/DefineCommand org/h2/command/ddl/DropTable org/h2/command/ddl/SchemaCommand org/h2/command/dml/Call org/h2/command/dml/Delete org/h2/command/dml/Insert org/h2/command/dml/NoOperation org/h2/command/dml/Optimizer org/h2/command/dml/Query org/h2/command/dml/Select org/h2/command/dml/SelectOrderBy org/h2/command/dml/Set org/h2/command/dml/SetTypes org/h2/command/dml/TransactionCommand org/h2/command/dml/Update org/h2/constant/ErrorCode org/h2/constant/SysProperties org/h2/constraint/Constraint org/h2/constraint/ConstraintReferential org/h2/constraint/ConstraintUnique org/h2/engine/ConnectionInfo org/h2/engine/Database org/h2/engine/DatabaseCloser org/h2/engine/DbObject org/h2/engine/DbObjectBase org/h2/engine/Engine org/h2/engine/MetaRecord org/h2/engine/MetaRecord$1 org/h2/engine/Mode org/h2/engine/RightOwner org/h2/engine/Role org/h2/engine/Session org/h2/engine/SessionFactory org/h2/engine/SessionFactoryEmbedded org/h2/engine/SessionInterface org/h2/engine/SessionRemote org/h2/engine/SessionWithState org/h2/engine/Setting org/h2/engine/User org/h2/expression/Aggregate org/h2/expression/AggregateData org/h2/expression/Alias org/h2/expression/Comparison org/h2/expression/Condition org/h2/expression/ConditionAndOr org/h2/expression/ConditionExists org/h2/expression/ConditionIn org/h2/expression/ConditionNot org/h2/expression/Expression org/h2/expression/ExpressionColumn org/h2/expression/ExpressionVisitor org/h2/expression/Function org/h2/expression/FunctionCall org/h2/expression/FunctionInfo org/h2/expression/Operation org/h2/expression/Parameter org/h2/expression/ParameterInterface org/h2/expression/SequenceValue org/h2/expression/ValueExpression org/h2/expression/Wildcard org/h2/index/BaseIndex org/h2/index/Cursor org/h2/index/Index org/h2/index/IndexCondition org/h2/index/IndexCursor org/h2/index/IndexType org/h2/index/MetaIndex org/h2/index/MultiVersionCursor org/h2/index/MultiVersionIndex org/h2/index/PageDataIndex org/h2/index/PageIndex org/h2/index/RowIndex org/h2/index/ScanCursor org/h2/index/ScanIndex org/h2/index/TreeCursor org/h2/index/TreeIndex org/h2/index/TreeNode org/h2/index/ViewCursor org/h2/index/ViewIndex org/h2/index/ViewIndex$CostElement org/h2/jdbc/JdbcConnection org/h2/jdbc/JdbcPreparedStatement org/h2/jdbc/JdbcResultSet org/h2/jdbc/JdbcSQLException org/h2/jdbc/JdbcStatement org/h2/log/LogFile org/h2/log/LogSystem org/h2/log/UndoLog org/h2/log/UndoLogRecord org/h2/message/Message org/h2/message/Trace org/h2/message/TraceObject org/h2/message/TraceSystem org/h2/message/TraceWriter org/h2/result/LocalResult org/h2/result/ResultExternal org/h2/result/ResultInterface org/h2/result/Row org/h2/result/RowList org/h2/result/SearchRow org/h2/result/SimpleRow org/h2/result/SortOrder org/h2/schema/Schema org/h2/schema/SchemaObject org/h2/schema/SchemaObjectBase org/h2/schema/Sequence org/h2/security/SHA256 org/h2/server/ShutdownHandler org/h2/store/DataHandler org/h2/store/DataPage org/h2/store/DiskFile org/h2/store/FileLock org/h2/store/FileStore org/h2/store/PageStore org/h2/store/Record org/h2/store/RecordReader org/h2/store/Storage org/h2/store/WriterThread org/h2/table/Column org/h2/table/ColumnResolver org/h2/table/IndexColumn org/h2/table/MetaTable org/h2/table/Plan org/h2/table/PlanItem org/h2/table/SingleColumnResolver org/h2/table/Table org/h2/table/TableData org/h2/table/TableData$1 org/h2/table/TableFilter org/h2/table/TableView org/h2/tools/RunScript org/h2/tools/Server org/h2/util/BitField org/h2/util/ByteUtils org/h2/util/Cache org/h2/util/CacheObject org/h2/util/CacheObject$CacheComparator org/h2/util/CacheWriter org/h2/util/ClassUtils org/h2/util/HashBase org/h2/util/IOUtils org/h2/util/IntArray org/h2/util/MathUtils org/h2/util/MemoryUtils org/h2/util/New org/h2/util/ObjectArray org/h2/util/ObjectArray$ObjectArrayIterator org/h2/util/ObjectUtils org/h2/util/Permutations org/h2/util/RandomUtils org/h2/util/RandomUtils$1 org/h2/util/Resources org/h2/util/ScriptReader org/h2/util/SmallLRUCache org/h2/util/StatementBuilder org/h2/util/StringCache org/h2/util/StringUtils org/h2/util/TempFileDeleter org/h2/util/Tool org/h2/util/ValueHashMap org/h2/value/CompareMode org/h2/value/DataType org/h2/value/Value org/h2/value/ValueArray org/h2/value/ValueBoolean org/h2/value/ValueDecimal org/h2/value/ValueDouble org/h2/value/ValueInt org/h2/value/ValueLong org/h2/value/ValueNull org/h2/value/ValueShort org/h2/value/ValueString org/h2/value/ValueStringBase org/h2/value/ValueStringFixed org/h2/value/ValueTimestamp org/h2/value/ValueUuid  </instrumented> 
+  <instrumentedNum> 214 </instrumentedNum> 
+  <skipped>  </skipped> 
+  <skippedNum> 0 </skippedNum> 
+  <sanityChecked>  </sanityChecked> 
+  <sanityCheckedNum> 0 </sanityCheckedNum> 
+  <counters>
+
+    <counter><name> "ArrayStateFactory: Size" </name>                    <value> 26,095,237 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>25911.0</total> <count>363</count> <ave>71.3802</ave> </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 27,446,257 </value> </counter>
+
+    <counter><name> "Clone: Count" </name>                               <value> 567,321 </value> </counter>
+
+    <counter><name> "FT: Read Same Epoch" </name>                        <value>          0 </value> </counter>
+    <counter><name> "FT: ReadShared Same Epoch" </name>                  <value>          0 </value> </counter>
+    <counter><name> "FT: Read Exclusive" </name>                         <value>          0 </value> </counter>
+    <counter><name> "FT: Read Share" </name>                             <value>          0 </value> </counter>
+    <counter><name> "FT: Read Shared" </name>                            <value>          0 </value> </counter>
+    <counter><name> "FT: Write-Read Error" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Write Same Epoch" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Write Exclusive" </name>                        <value>          0 </value> </counter>
+    <counter><name> "FT: Write Shared" </name>                           <value>          0 </value> </counter>
+    <counter><name> "FT: Write-Write Error" </name>                      <value>          0 </value> </counter>
+    <counter><name> "FT: Read-Write Error" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Shared-Write Error" </name>                     <value>          0 </value> </counter>
+    <counter><name> "FT: Acquire" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Release" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Fork" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Join" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Barrier" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Wait" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Volatile" </name>                               <value>          0 </value> </counter>
+    <counter><name> "FT: Other" </name>                                  <value>          0 </value> </counter>
+    <counter><name> "FT: Total Reads" </name>                            <value> 0 </value> </counter>
+    <counter><name> "FT: Total Writes" </name>                           <value> 0 </value> </counter>
+    <counter><name> "FT: Total Access Ops" </name>                       <value> 0 </value> </counter>
+    <counter><name> "FT: Total Ops" </name>                              <value> 0 </value> </counter>
+
+    <counter><name> "GCRunner: Max Usage" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "Handler: Count" </name>                             <value> 0 </value> </counter>
+
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 123,116 </value> </counter>
+    <counter><name> "RRBench: Warmup 2" </name>                          <value> 118,747 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 118,381 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 115,253 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 114,923 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 113,700 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 115,734 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 112,673 </value> </counter>
+    <counter><name> "RRBench: Iter 6" </name>                            <value> 113,750 </value> </counter>
+    <counter><name> "RRBench: Iter 7" </name>                            <value> 113,405 </value> </counter>
+    <counter><name> "RRBench: Iter 8" </name>                            <value> 115,121 </value> </counter>
+    <counter><name> "RRBench: Iter 9" </name>                            <value> 113,657 </value> </counter>
+    <counter><name> "RRBench: Iter 10" </name>                           <value> 113,669 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 114,188 </value> </counter>
+
+    <counter><name> "ShadowLock: objects" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "ShadowThread: Count" </name>                        <value> 211 </value> </counter>
+    <counter><name> "ShadowThread: Max Live" </name>                     <value> 18 </value> </counter>
+    <counter><name> "ShadowThread: getCurrentThread() calls" </name>     <value> 0 </value> </counter>
+
+    <counter><name> "ShadowVolatile: objects" </name>                    <value> 0 </value> </counter>
+
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>1430.00</total> <count>214</count> <ave>6.68224</ave> </value> </counter>
+  </counters>
+  <yikes>
+    <message> Concurrent array state creation... </message> <count> 2 </count> 
+    <message> Concurrent array guard state init.. </message> <count> 2 </count> 
+    <message> SafeFieldUpdater: Concurrent update </message> <count> 1 </count> 
+    <message> Bad Update </message>    <count> 2 </count> 
+    <message> Old Version Number in class file. U </message> <count> 14 </count> 
+  </yikes>
+  <tool>
+    <name> tools.fasttrack.FastTrackToolV1 </name> 
+    <thread> [tid=7    C=[(0:1F9E80) (1:C847) (2:555C2) (3:55BD9) (4:53BD6) (5:56025) (6:54E8B) (7:52E9B) (8:53663) (9:55662) (10:55D9D) (11:53591) (12:5624E) (13:5297C) (14:53065) (15:5277A) (16:540E9) (17:48AE5)]   E=(7:52E9B)] </thread> 
+    <thread> [tid=3    C=[(0:1F9E80) (1:C847) (2:55A9A) (3:56187) (4:541DF) (5:56025) (6:5536D) (7:52E9A) (8:538D6) (9:55B6B) (10:56387) (11:53940) (12:565EC) (13:5297C) (14:534E1) (15:52CA1) (16:540E9) (17:48B80)]   E=(3:56187)] </thread> 
+    <thread> [tid=10   C=[(0:1F9E80) (1:C847) (2:55D3D) (3:56186) (4:541F7) (5:56025) (6:553EC) (7:52E9A) (8:538D6) (9:55C7F) (10:56703) (11:53940) (12:568E1) (13:5297C) (14:538CE) (15:53002) (16:540E9) (17:48B80)]   E=(10:56703)] </thread> 
+    <thread> [tid=8    C=[(0:1F9E80) (1:C847) (2:55757) (3:55E4B) (4:53E40) (5:56025) (6:55047) (7:52E9A) (8:538D7) (9:5592E) (10:56015) (11:53891) (12:563DD) (13:5297C) (14:531BF) (15:529F4) (16:540E9) (17:48B80)]   E=(8:538D7)] </thread> 
+    <thread> [tid=4    C=[(0:1F9E80) (1:C847) (2:55AA7) (3:56186) (4:541F8) (5:56025) (6:55383) (7:52E9A) (8:538D6) (9:55B6E) (10:56395) (11:53940) (12:565F6) (13:5297C) (14:534F3) (15:52CA1) (16:540E9) (17:48B80)]   E=(4:541F8)] </thread> 
+    <thread> [tid=16   C=[(0:1F9E80) (1:C847) (2:554F3) (3:55B6E) (4:53B95) (5:55FE3) (6:54DCF) (7:52D40) (8:53593) (9:5559D) (10:55C99) (11:53436) (12:56111) (13:5297C) (14:52F9C) (15:5262C) (16:540EA) (17:4893B)]   E=(16:540EA)] </thread> 
+    <thread> [tid=12   C=[(0:1F9E80) (1:C847) (2:5617D) (3:56186) (4:541F7) (5:56025) (6:553EC) (7:52E9A) (8:538D6) (9:55C7F) (10:56702) (11:53940) (12:56CCD) (13:5297C) (14:538CE) (15:53037) (16:540E9) (17:48B80)]   E=(12:56CCD)] </thread> 
+    <thread> [tid=5    C=[(0:1F9E80) (1:C847) (2:5555E) (3:55B6F) (4:53B97) (5:56026) (6:54E53) (7:52DCB) (8:53609) (9:555D5) (10:55CF8) (11:53495) (12:56155) (13:5297C) (14:52FB6) (15:5269A) (16:540E9) (17:489B9)]   E=(5:56026)] </thread> 
+    <thread> [tid=0    C=[(0:1F9FD9) (1:C847) (2:5685B) (3:56187) (4:541F8) (5:56026) (6:553ED) (7:52E9B) (8:538D7) (9:55C80) (10:56703) (11:53941) (12:56CCD) (13:5297D) (14:538CF) (15:53038) (16:540EA) (17:48B81)]   E=(0:1F9FD9)] </thread> 
+    <thread> [tid=14   C=[(0:1F9E80) (1:C847) (2:55C83) (3:56186) (4:541F7) (5:56025) (6:553EC) (7:52E9A) (8:538D6) (9:55C7F) (10:56604) (11:53940) (12:5681E) (13:5297C) (14:538CF) (15:52EFB) (16:540E9) (17:48B80)]   E=(14:538CF)] </thread> 
+    <thread> [tid=9    C=[(0:1F9E80) (1:C847) (2:55BF0) (3:56186) (4:541F7) (5:56025) (6:553EC) (7:52E9A) (8:538D6) (9:55C80) (10:564AC) (11:53940) (12:567B4) (13:5297C) (14:5373E) (15:52EA9) (16:540E9) (17:48B80)]   E=(9:55C80)] </thread> 
+    <thread> [tid=17   C=[(0:1F9E80) (1:C847) (2:5560E) (3:55C4B) (4:53C1F) (5:56025) (6:54E8D) (7:52E9A) (8:536BC) (9:556CB) (10:55E38) (11:53612) (12:56296) (13:5297C) (14:5309D) (15:527EB) (16:540E9) (17:48B81)]   E=(17:48B81)] </thread> 
+    <thread> [tid=2    C=[(0:1F9E80) (1:C847) (2:5685B) (3:56186) (4:541F7) (5:56025) (6:553EC) (7:52E9A) (8:538D6) (9:55C7F) (10:56702) (11:53940) (12:56CCC) (13:5297C) (14:538CE) (15:53037) (16:540E9) (17:48B80)]   E=(2:5685B)] </thread> 
+    <thread> [tid=1    C=[(0:B) (1:C849) (2:0) (3:0)]   E=(1:C849)] </thread> 
+    <thread> [tid=15   C=[(0:1F9E80) (1:C847) (2:55D8B) (3:56186) (4:541F7) (5:56025) (6:553EC) (7:52E9A) (8:538D6) (9:55C7F) (10:56702) (11:53940) (12:5695C) (13:5297C) (14:538CE) (15:53038) (16:540E9) (17:48B80)]   E=(15:53038)] </thread> 
+    <thread> [tid=13   C=[(0:1F9E80) (1:C847) (2:54C6D) (3:550B5) (4:5322F) (5:555C6) (6:54414) (7:52508) (8:52C85) (9:54B93) (10:55385) (11:52930) (12:554A2) (13:5297D) (14:528CE) (15:51C7A) (16:5379E) (17:47D32)]   E=(13:5297D)] </thread> 
+    <thread> [tid=11   C=[(0:1F9E80) (1:C847) (2:55805) (3:55E92) (4:53EDF) (5:56025) (6:5507F) (7:52E9A) (8:538D6) (9:559DC) (10:560BE) (11:53941) (12:5646A) (13:5297C) (14:5321E) (15:52A77) (16:540E9) (17:48B80)]   E=(11:53941)] </thread> 
+    <thread> [tid=6    C=[(0:1F9E80) (1:C847) (2:55AF3) (3:56186) (4:541F7) (5:56025) (6:553ED) (7:52E9A) (8:538D6) (9:55BA1) (10:563B9) (11:53940) (12:56626) (13:5297C) (14:53566) (15:52CEC) (16:540E9) (17:48B80)]   E=(6:553ED)] </thread> 
+  </tool>
+  <tool>
+    <name> Last </name> 
+  </tool>
+  <threadCount> 18 </threadCount> 
+  <threadMaxActive> 18 </threadMaxActive> 
+  <errorTotal> 12 </errorTotal> 
+  <distinctErrorTotal> 12 </distinctErrorTotal> 
+  <methods>
+  </methods>
+  <fields>
+    <field>
+      <name> org/h2/engine/Session.closed_Z </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/h2/jdbc/JdbcConnection.session_Lorg/h2/engine/SessionInterface; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/h2/index/ScanIndex.rowCount_J </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+  </fields>
+  <arrays>
+    <target>
+      <location> rd_array@org/h2/util/StringCache.java:48:50 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+    <target>
+      <location> wr_array@org/h2/util/StringCache.java:54:73 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+    <target>
+      <location> rd_array@org/h2/message/TraceObject.java:172:5 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+    <target>
+      <location> wr_array@org/h2/value/Value.java:351:105 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+    <target>
+      <location> rd_array@org/h2/value/Value.java:341:70 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+    <target>
+      <location> wr_array@org/h2/value/ValueInt.java:63:57 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+    <target>
+      <location> rd_array@org/h2/util/StringCache.java:83:52 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+    <target>
+      <location> wr_array@org/h2/util/StringCache.java:93:84 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+    <target>
+      <location> rd_array@org/h2/value/ValueInt.java:60:25 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+  </arrays>
+  <locks>
+  </locks>
+  <fieldAccesses>
+  </fieldAccesses>
+  <errorCountPerErrorType>
+    <errorType> <name> FastTrack </name> <count> 12 </count> </errorType>
+  </errorCountPerErrorType>
+  <warningsTotal> 0 </warningsTotal> 
+  <yikesTotal> 21 </yikesTotal> 
+  <failed> false </failed> 
+  <failedReason>  </failedReason> 
+  <time> 1693632 </time> 
+</entry>

@@ -1,0 +1,220 @@
+<entry>
+  <date> Tue Aug 08 22:57:25 EDT 2017 </date> 
+  <mode> FAST </mode> 
+  <timeout> NO </timeout> 
+  <options>
+    <option><name> javaArgs </name>           <value> RRBench 16  </value> </option>
+    <option><name> noDecInline </name>        <value> false </value> </option>
+    <option><name> quiet </name>              <value> true </value> </option>
+    <option><name> logDepth </name>           <value> 100 </value> </option>
+    <option><name> logs </name>               <value> /home/freund/workspace/RoadRunner/benchmarks/Experiments/table-bench </value> </option>
+    <option><name> out </name>                <value>  </value>   </option>
+    <option><name> err </name>                <value>  </value>   </option>
+    <option><name> noinst </name>             <value> false </value> </option>
+    <option><name> inst </name>               <value> INST </value> </option>
+    <option><name> infThreads </name>         <value> 0 </value>  </option>
+    <option><name> benchmark </name>          <value> 10 </value> </option>
+    <option><name> warmup </name>             <value> 3 </value>  </option>
+    <option><name> availableProcessors </name> <value> 16 </value> </option>
+    <option><name> args </name>               <value> [] </value> </option>
+    <option><name> d </name>                  <value> [] </value> </option>
+    <option><name> maxYikes </name>           <value> 5 </value>  </option>
+    <option><name> help </name>               <value> false </value> </option>
+    <option><name> toolpath </name>           <value> /home/freund/workspace/RoadRunner/classes/rr/simple:/home/freund/workspace/RoadRunner/classes/tools </value> </option>
+    <option><name> classpath </name>          <value> original.jar </value> </option>
+    <option><name> tool </name>               <value> FT2 </value> </option>
+    <option><name> tools </name>              <value> false </value> </option>
+    <option><name> noxml </name>              <value> false </value> </option>
+    <option><name> constantGC </name>         <value> false </value> </option>
+    <option><name> noFP </name>               <value> false </value> </option>
+    <option><name> noShutdownHook </name>     <value> false </value> </option>
+    <option><name> noEnter </name>            <value> true </value> </option>
+    <option><name> xml </name>                <value> FastTrack-cryptc-8.out </value> </option>
+    <option><name> pulse </name>              <value>  </value>   </option>
+    <option><name> maxTime </name>            <value> 0 </value>  </option>
+    <option><name> maxMem </name>             <value> 10240 </value> </option>
+    <option><name> maxTid </name>             <value> 16 </value> </option>
+    <option><name> stacks </name>             <value> false </value> </option>
+    <option><name> values </name>             <value> false </value> </option>
+    <option><name> noTidGC </name>            <value> false </value> </option>
+    <option><name> noEventReuse </name>       <value> false </value> </option>
+    <option><name> trackMemoryUsage </name>   <value> false </value> </option>
+    <option><name> repository </name>         <value>  </value>   </option>
+    <option><name> meta </name>               <value> null </value> </option>
+    <option><name> methods </name>            <value> ["-.*Barrier.await\(\)V", "-java.util.concurrent.CyclicBarrier.await\(JLjava/util/concurrent/TimeUnit;\)I", "-java.util.concurrent.CyclicBarrier.await\(\)I", "-.*Barrier.DoBarrier\(I\)V", "-.*TournamentBarrier.DoBarrier\(I\)V", default=ACCEPT] </value> </option>
+    <option><name> fields </name>             <value> ["-.*this\$.*", "-$.*__\$rr.*", default=ACCEPT] </value> </option>
+    <option><name> lines </name>              <value> [default=ACCEPT] </value> </option>
+    <option><name> classes </name>            <value> ["-.*Barrier.*", "-java..*", "-javax..*", "-com.sun..*", "-sun..*", "-rr..*", "-tools..*", "-acme..*", "-.*__\$rr_.*", "-org.xml..*", default=ACCEPT] </value> </option>
+    <option><name> shadowThread </name>       <value> ["-.*", default=ACCEPT] </value> </option>
+    <option><name> noop </name>               <value> [default=ACCEPT] </value> </option>
+    <option><name> noConstructor </name>      <value> false </value> </option>
+    <option><name> noClone </name>            <value> false </value> </option>
+    <option><name> dump </name>               <value>  </value>   </option>
+    <option><name> field </name>              <value> FINE </value> </option>
+    <option><name> fancy </name>              <value> false </value> </option>
+    <option><name> verify </name>             <value> false </value> </option>
+    <option><name> trackReflection </name>    <value> false </value> </option>
+    <option><name> arraySites </name>         <value> false </value> </option>
+    <option><name> Use TestAcquires </name>   <value> false </value> </option>
+    <option><name> sanity </name>             <value> false </value> </option>
+    <option><name> reentrantEvents </name>    <value> false </value> </option>
+    <option><name> nojoin </name>             <value> false </value> </option>
+    <option><name> multiLoader </name>        <value> false </value> </option>
+    <option><name> indices </name>            <value> 2147483647 </value> </option>
+    <option><name> updaters </name>           <value> SAFE </value> </option>
+    <option><name> array </name>              <value> FINE </value> </option>
+    <option><name> userArray </name>          <value> rr.state.ArrayStateCreator$1@4554617c </value> </option>
+    <option><name> nobarrier </name>          <value> false </value> </option>
+    <option><name> arrayCacheType </name>     <value> STRONG </value> </option>
+    <option><name> callSites </name>          <value> false </value> </option>
+    <option><name> maxWarn </name>            <value> 1 </value>  </option>
+    <option><name> noInterrupt </name>        <value> false </value> </option>
+  </options>
+  <system>
+    <host> ubuntu </host> 
+    <name> java.vm.version </name>     <value> 25.121-b13 </value> 
+    <name> java.vm.vendor </name>      <value> Oracle Corporation </value> 
+    <name> java.vm.name </name>        <value> Java HotSpot(TM) 64-Bit Server VM </value> 
+    <name> java.class.path </name>     <value> .:/home/freund/workspace/RoadRunner/build/jar/rragent.jar </value> 
+    <name> os.name </name>             <value> Linux </value> 
+    <name> os.arch </name>             <value> amd64 </value> 
+    <name> os.version </name>          <value> 4.4.0-78-generic </value> 
+    <name> user.name </name>           <value> freund </value> 
+    <name> user.dir </name>            <value> /home/freund/workspace/RoadRunner/benchmarks/crypt </value> 
+    <availableProcs> 16 </availableProcs> 
+    <memCommitted> 27935 </memCommitted> 
+    <memUsed> 17114 </memUsed> 
+    <memTotal> 27935 </memTotal> 
+    <compileTime> 1162070 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 387772 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 600005 </time> </gc>
+  </system>
+  <instrumented> JGFCryptBenchSizeC RRBench crypt/IDEARunner crypt/IDEATest crypt/JGFCryptBench jgfutil/JGFInstrumentor jgfutil/JGFSection2 jgfutil/JGFTimer  </instrumented> 
+  <instrumentedNum> 8 </instrumentedNum> 
+  <skipped>  </skipped> 
+  <skippedNum> 0 </skippedNum> 
+  <sanityChecked>  </sanityChecked> 
+  <sanityCheckedNum> 0 </sanityCheckedNum> 
+  <counters>
+
+    <counter><name> "ArrayStateFactory: Size" </name>                    <value> 299 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>10.0000</total> <count>37</count> <ave>0.270270</ave> </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 49 </value> </counter>
+
+    <counter><name> "Clone: Count" </name>                               <value> 0 </value> </counter>
+
+    <counter><name> "FT: Read Same Epoch" </name>                        <value>          0 </value> </counter>
+    <counter><name> "FT: ReadShared Same Epoch" </name>                  <value>          0 </value> </counter>
+    <counter><name> "FT: Read Exclusive" </name>                         <value>          0 </value> </counter>
+    <counter><name> "FT: Read Share" </name>                             <value>          0 </value> </counter>
+    <counter><name> "FT: Read Shared" </name>                            <value>          0 </value> </counter>
+    <counter><name> "FT: Write-Read Error" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Write Same Epoch" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Write Exclusive" </name>                        <value>          0 </value> </counter>
+    <counter><name> "FT: Write Shared" </name>                           <value>          0 </value> </counter>
+    <counter><name> "FT: Write-Write Error" </name>                      <value>          0 </value> </counter>
+    <counter><name> "FT: Read-Write Error" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Shared-Write Error" </name>                     <value>          0 </value> </counter>
+    <counter><name> "FT: Acquire" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Release" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Fork" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Join" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Barrier" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Wait" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Volatile" </name>                               <value>          0 </value> </counter>
+    <counter><name> "FT: Other" </name>                                  <value>          0 </value> </counter>
+    <counter><name> "FT: Total Reads" </name>                            <value> 0 </value> </counter>
+    <counter><name> "FT: Total Writes" </name>                           <value> 0 </value> </counter>
+    <counter><name> "FT: Total Access Ops" </name>                       <value> 0 </value> </counter>
+    <counter><name> "FT: Total Ops" </name>                              <value> 0 </value> </counter>
+
+    <counter><name> "GCRunner: Max Usage" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "Handler: Count" </name>                             <value> 0 </value> </counter>
+
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 152,069 </value> </counter>
+    <counter><name> "RRBench: Warmup 2" </name>                          <value> 53,488 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 48,272 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 68,765 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 23,134 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 23,094 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 23,069 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 57,038 </value> </counter>
+    <counter><name> "RRBench: Iter 6" </name>                            <value> 51,432 </value> </counter>
+    <counter><name> "RRBench: Iter 7" </name>                            <value> 55,508 </value> </counter>
+    <counter><name> "RRBench: Iter 8" </name>                            <value> 33,092 </value> </counter>
+    <counter><name> "RRBench: Iter 9" </name>                            <value> 31,089 </value> </counter>
+    <counter><name> "RRBench: Iter 10" </name>                           <value> 32,441 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 39,866 </value> </counter>
+
+    <counter><name> "ShadowLock: objects" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "ShadowThread: Count" </name>                        <value> 391 </value> </counter>
+    <counter><name> "ShadowThread: Max Live" </name>                     <value> 16 </value> </counter>
+    <counter><name> "ShadowThread: getCurrentThread() calls" </name>     <value> 0 </value> </counter>
+
+    <counter><name> "ShadowVolatile: objects" </name>                    <value> 0 </value> </counter>
+
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>117.000</total> <count>8</count> <ave>14.6250</ave> </value> </counter>
+  </counters>
+  <yikes>
+    <message> Concurrent array state creation... </message> <count> 167 </count> 
+  </yikes>
+  <tool>
+    <name> tools.fasttrack.FastTrackTool </name> 
+    <thread> [tid=5    C=[(0:1C9) (1:4B) (2:4B) (3:4B) (4:4B) (5:4E) (6:4B) (7:4B) (8:4B) (9:4B) (10:4B) (11:4B) (12:4B) (13:4B) (14:4B) (15:4B)]   E=(5:4E)] </thread> 
+    <thread> [tid=10   C=[(0:1CE) (1:4B) (2:4B) (3:4B) (4:4B) (5:4B) (6:4B) (7:4B) (8:4B) (9:4B) (10:4E) (11:4B) (12:4B) (13:4B) (14:4B) (15:4B)]   E=(10:4E)] </thread> 
+    <thread> [tid=10   C=[(0:1BF) (1:48) (2:48) (3:48) (4:48) (5:48) (6:48) (7:48) (8:48) (9:48) (10:4B) (11:48) (12:48) (13:48) (14:48) (15:48)]   E=(10:4B)] </thread> 
+    <thread> [tid=8    C=[(0:1CC) (1:4B) (2:4B) (3:4B) (4:4B) (5:4B) (6:4B) (7:4B) (8:4E) (9:4B) (10:4B) (11:4B) (12:4B) (13:4B) (14:4B) (15:4B)]   E=(8:4E)] </thread> 
+    <thread> [tid=7    C=[(0:1BC) (1:48) (2:48) (3:48) (4:48) (5:48) (6:48) (7:4B) (8:48) (9:48) (10:48) (11:48) (12:48) (13:48) (14:48) (15:48)]   E=(7:4B)] </thread> 
+    <thread> [tid=14   C=[(0:1C3) (1:48) (2:48) (3:48) (4:48) (5:48) (6:48) (7:48) (8:48) (9:48) (10:48) (11:48) (12:48) (13:48) (14:4B) (15:48)]   E=(14:4B)] </thread> 
+    <thread> [tid=9    C=[(0:1BE) (1:48) (2:48) (3:48) (4:48) (5:48) (6:48) (7:48) (8:48) (9:4B) (10:48) (11:48) (12:48) (13:48) (14:48) (15:48)]   E=(9:4B)] </thread> 
+    <thread> [tid=13   C=[(0:1D1) (1:4B) (2:4B) (3:4B) (4:4B) (5:4B) (6:4B) (7:4B) (8:4B) (9:4B) (10:4B) (11:4B) (12:4B) (13:4E) (14:4B) (15:4B)]   E=(13:4E)] </thread> 
+    <thread> [tid=0    C=[(0:1D7) (1:4E) (2:4E) (3:4E) (4:4E) (5:4E) (6:4E) (7:4E) (8:4E) (9:4E) (10:4E) (11:4E) (12:4E) (13:4E) (14:4E) (15:4E)]   E=(0:1D7)] </thread> 
+    <thread> [tid=1    C=[(0:1B6) (1:4B) (2:48) (3:48) (4:48) (5:48) (6:48) (7:48) (8:48) (9:48) (10:48) (11:48) (12:48) (13:48) (14:48) (15:48)]   E=(1:4B)] </thread> 
+    <thread> [tid=8    C=[(0:1BD) (1:48) (2:48) (3:48) (4:48) (5:48) (6:48) (7:48) (8:4B) (9:48) (10:48) (11:48) (12:48) (13:48) (14:48) (15:48)]   E=(8:4B)] </thread> 
+    <thread> [tid=14   C=[(0:1D2) (1:4B) (2:4B) (3:4B) (4:4B) (5:4B) (6:4B) (7:4B) (8:4B) (9:4B) (10:4B) (11:4B) (12:4B) (13:4B) (14:4E) (15:4B)]   E=(14:4E)] </thread> 
+    <thread> [tid=7    C=[(0:1CB) (1:4B) (2:4B) (3:4B) (4:4B) (5:4B) (6:4B) (7:4E) (8:4B) (9:4B) (10:4B) (11:4B) (12:4B) (13:4B) (14:4B) (15:4B)]   E=(7:4E)] </thread> 
+    <thread> [tid=12   C=[(0:1C1) (1:48) (2:48) (3:48) (4:48) (5:48) (6:48) (7:48) (8:48) (9:48) (10:48) (11:48) (12:4B) (13:48) (14:48) (15:48)]   E=(12:4B)] </thread> 
+    <thread> [tid=5    C=[(0:1BA) (1:48) (2:48) (3:48) (4:48) (5:4B) (6:48) (7:48) (8:48) (9:48) (10:48) (11:48) (12:48) (13:48) (14:48) (15:48)]   E=(5:4B)] </thread> 
+    <thread> [tid=1    C=[(0:1C5) (1:4E) (2:4B) (3:4B) (4:4B) (5:4B) (6:4B) (7:4B) (8:4B) (9:4B) (10:4B) (11:4B) (12:4B) (13:4B) (14:4B) (15:4B)]   E=(1:4E)] </thread> 
+    <thread> [tid=3    C=[(0:1C7) (1:4B) (2:4B) (3:4E) (4:4B) (5:4B) (6:4B) (7:4B) (8:4B) (9:4B) (10:4B) (11:4B) (12:4B) (13:4B) (14:4B) (15:4B)]   E=(3:4E)] </thread> 
+    <thread> [tid=3    C=[(0:1B8) (1:48) (2:48) (3:4B) (4:48) (5:48) (6:48) (7:48) (8:48) (9:48) (10:48) (11:48) (12:48) (13:48) (14:48) (15:48)]   E=(3:4B)] </thread> 
+    <thread> [tid=11   C=[(0:1CF) (1:4B) (2:4B) (3:4B) (4:4B) (5:4B) (6:4B) (7:4B) (8:4B) (9:4B) (10:4B) (11:4E) (12:4B) (13:4B) (14:4B) (15:4B)]   E=(11:4E)] </thread> 
+    <thread> [tid=6    C=[(0:1BB) (1:48) (2:48) (3:48) (4:48) (5:48) (6:4B) (7:48) (8:48) (9:48) (10:48) (11:48) (12:48) (13:48) (14:48) (15:48)]   E=(6:4B)] </thread> 
+    <thread> [tid=4    C=[(0:1C8) (1:4B) (2:4B) (3:4B) (4:4E) (5:4B) (6:4B) (7:4B) (8:4B) (9:4B) (10:4B) (11:4B) (12:4B) (13:4B) (14:4B) (15:4B)]   E=(4:4E)] </thread> 
+    <thread> [tid=2    C=[(0:1B7) (1:48) (2:4B) (3:48) (4:48) (5:48) (6:48) (7:48) (8:48) (9:48) (10:48) (11:48) (12:48) (13:48) (14:48) (15:48)]   E=(2:4B)] </thread> 
+    <thread> [tid=6    C=[(0:1CA) (1:4B) (2:4B) (3:4B) (4:4B) (5:4B) (6:4E) (7:4B) (8:4B) (9:4B) (10:4B) (11:4B) (12:4B) (13:4B) (14:4B) (15:4B)]   E=(6:4E)] </thread> 
+    <thread> [tid=9    C=[(0:1CD) (1:4B) (2:4B) (3:4B) (4:4B) (5:4B) (6:4B) (7:4B) (8:4B) (9:4E) (10:4B) (11:4B) (12:4B) (13:4B) (14:4B) (15:4B)]   E=(9:4E)] </thread> 
+    <thread> [tid=11   C=[(0:1C0) (1:48) (2:48) (3:48) (4:48) (5:48) (6:48) (7:48) (8:48) (9:48) (10:48) (11:4B) (12:48) (13:48) (14:48) (15:48)]   E=(11:4B)] </thread> 
+    <thread> [tid=13   C=[(0:1C2) (1:48) (2:48) (3:48) (4:48) (5:48) (6:48) (7:48) (8:48) (9:48) (10:48) (11:48) (12:48) (13:4B) (14:48) (15:48)]   E=(13:4B)] </thread> 
+    <thread> [tid=15   C=[(0:1D3) (1:4B) (2:4B) (3:4B) (4:4B) (5:4B) (6:4B) (7:4B) (8:4B) (9:4B) (10:4B) (11:4B) (12:4B) (13:4B) (14:4B) (15:4E)]   E=(15:4E)] </thread> 
+    <thread> [tid=12   C=[(0:1D0) (1:4B) (2:4B) (3:4B) (4:4B) (5:4B) (6:4B) (7:4B) (8:4B) (9:4B) (10:4B) (11:4B) (12:4E) (13:4B) (14:4B) (15:4B)]   E=(12:4E)] </thread> 
+    <thread> [tid=4    C=[(0:1B9) (1:48) (2:48) (3:48) (4:4B) (5:48) (6:48) (7:48) (8:48) (9:48) (10:48) (11:48) (12:48) (13:48) (14:48) (15:48)]   E=(4:4B)] </thread> 
+    <thread> [tid=2    C=[(0:1C6) (1:4B) (2:4E) (3:4B) (4:4B) (5:4B) (6:4B) (7:4B) (8:4B) (9:4B) (10:4B) (11:4B) (12:4B) (13:4B) (14:4B) (15:4B)]   E=(2:4E)] </thread> 
+  </tool>
+  <tool>
+    <name> Last </name> 
+  </tool>
+  <threadCount> 30 </threadCount> 
+  <threadMaxActive> 16 </threadMaxActive> 
+  <errorTotal> 0 </errorTotal> 
+  <distinctErrorTotal> 0 </distinctErrorTotal> 
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <arrays>
+  </arrays>
+  <locks>
+  </locks>
+  <fieldAccesses>
+  </fieldAccesses>
+  <errorCountPerErrorType>
+  </errorCountPerErrorType>
+  <warningsTotal> 0 </warningsTotal> 
+  <yikesTotal> 167 </yikesTotal> 
+  <failed> false </failed> 
+  <failedReason>  </failedReason> 
+  <time> 1237824 </time> 
+</entry>

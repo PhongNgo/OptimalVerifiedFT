@@ -1,0 +1,243 @@
+<entry>
+  <date> Sat Aug 12 21:13:30 EDT 2017 </date> 
+  <mode> FAST </mode> 
+  <timeout> NO </timeout> 
+  <options>
+    <option><name> javaArgs </name>           <value> RRBench  </value> </option>
+    <option><name> noDecInline </name>        <value> false </value> </option>
+    <option><name> quiet </name>              <value> true </value> </option>
+    <option><name> logDepth </name>           <value> 100 </value> </option>
+    <option><name> logs </name>               <value> /home/freund/workspace/RoadRunner/benchmarks/Experiments/table-bench </value> </option>
+    <option><name> out </name>                <value>  </value>   </option>
+    <option><name> err </name>                <value>  </value>   </option>
+    <option><name> noinst </name>             <value> false </value> </option>
+    <option><name> inst </name>               <value> INST </value> </option>
+    <option><name> infThreads </name>         <value> 0 </value>  </option>
+    <option><name> benchmark </name>          <value> 10 </value> </option>
+    <option><name> warmup </name>             <value> 3 </value>  </option>
+    <option><name> availableProcessors </name> <value> 16 </value> </option>
+    <option><name> args </name>               <value> [] </value> </option>
+    <option><name> d </name>                  <value> [] </value> </option>
+    <option><name> maxYikes </name>           <value> 5 </value>  </option>
+    <option><name> help </name>               <value> false </value> </option>
+    <option><name> toolpath </name>           <value> /home/freund/workspace/RoadRunner/classes/rr/simple:/home/freund/workspace/RoadRunner/classes/tools </value> </option>
+    <option><name> classpath </name>          <value> original.jar </value> </option>
+    <option><name> tool </name>               <value> tools.old.fasttrack_cas.FastTrackTool </value> </option>
+    <option><name> tools </name>              <value> false </value> </option>
+    <option><name> noxml </name>              <value> false </value> </option>
+    <option><name> constantGC </name>         <value> false </value> </option>
+    <option><name> noFP </name>               <value> false </value> </option>
+    <option><name> noShutdownHook </name>     <value> false </value> </option>
+    <option><name> noEnter </name>            <value> true </value> </option>
+    <option><name> xml </name>                <value> FastTrackCASOld-xalan-7.out </value> </option>
+    <option><name> pulse </name>              <value>  </value>   </option>
+    <option><name> maxTime </name>            <value> 0 </value>  </option>
+    <option><name> maxMem </name>             <value> 10240 </value> </option>
+    <option><name> maxTid </name>             <value> 26 </value> </option>
+    <option><name> stacks </name>             <value> false </value> </option>
+    <option><name> values </name>             <value> false </value> </option>
+    <option><name> noTidGC </name>            <value> false </value> </option>
+    <option><name> noEventReuse </name>       <value> false </value> </option>
+    <option><name> trackMemoryUsage </name>   <value> false </value> </option>
+    <option><name> repository </name>         <value>  </value>   </option>
+    <option><name> meta </name>               <value> null </value> </option>
+    <option><name> methods </name>            <value> ["-.*Barrier.await\(\)V", "-java.util.concurrent.CyclicBarrier.await\(JLjava/util/concurrent/TimeUnit;\)I", "-java.util.concurrent.CyclicBarrier.await\(\)I", "-.*Barrier.DoBarrier\(I\)V", "-.*TournamentBarrier.DoBarrier\(I\)V", default=ACCEPT] </value> </option>
+    <option><name> fields </name>             <value> ["-.*this\$.*", "-$.*__\$rr.*", default=ACCEPT] </value> </option>
+    <option><name> lines </name>              <value> [default=ACCEPT] </value> </option>
+    <option><name> classes </name>            <value> ["-.*Barrier.*", "-java..*", "-javax..*", "-com.sun..*", "-sun..*", "-rr..*", "-tools..*", "-acme..*", "-.*__\$rr_.*", "-org.xml..*", default=ACCEPT] </value> </option>
+    <option><name> shadowThread </name>       <value> ["-.*", default=ACCEPT] </value> </option>
+    <option><name> noop </name>               <value> [default=ACCEPT] </value> </option>
+    <option><name> noConstructor </name>      <value> false </value> </option>
+    <option><name> noClone </name>            <value> false </value> </option>
+    <option><name> dump </name>               <value>  </value>   </option>
+    <option><name> field </name>              <value> FINE </value> </option>
+    <option><name> fancy </name>              <value> false </value> </option>
+    <option><name> verify </name>             <value> false </value> </option>
+    <option><name> trackReflection </name>    <value> false </value> </option>
+    <option><name> arraySites </name>         <value> false </value> </option>
+    <option><name> Use TestAcquires </name>   <value> false </value> </option>
+    <option><name> sanity </name>             <value> false </value> </option>
+    <option><name> reentrantEvents </name>    <value> false </value> </option>
+    <option><name> nojoin </name>             <value> false </value> </option>
+    <option><name> multiLoader </name>        <value> false </value> </option>
+    <option><name> indices </name>            <value> 2147483647 </value> </option>
+    <option><name> updaters </name>           <value> SAFE </value> </option>
+    <option><name> array </name>              <value> FINE </value> </option>
+    <option><name> userArray </name>          <value> rr.state.ArrayStateCreator$1@4554617c </value> </option>
+    <option><name> nobarrier </name>          <value> false </value> </option>
+    <option><name> arrayCacheType </name>     <value> STRONG </value> </option>
+    <option><name> callSites </name>          <value> false </value> </option>
+    <option><name> maxWarn </name>            <value> 1 </value>  </option>
+    <option><name> noInterrupt </name>        <value> false </value> </option>
+  </options>
+  <system>
+    <host> ubuntu </host> 
+    <name> java.vm.version </name>     <value> 25.121-b13 </value> 
+    <name> java.vm.vendor </name>      <value> Oracle Corporation </value> 
+    <name> java.vm.name </name>        <value> Java HotSpot(TM) 64-Bit Server VM </value> 
+    <name> java.class.path </name>     <value> .:/home/freund/workspace/RoadRunner/build/jar/rragent.jar </value> 
+    <name> os.name </name>             <value> Linux </value> 
+    <name> os.arch </name>             <value> amd64 </value> 
+    <name> os.version </name>          <value> 4.4.0-78-generic </value> 
+    <name> user.name </name>           <value> freund </value> 
+    <name> user.dir </name>            <value> /home/freund/workspace/RoadRunner/benchmarks/xalan </value> 
+    <availableProcs> 16 </availableProcs> 
+    <memCommitted> 9311 </memCommitted> 
+    <memUsed> 6678 </memUsed> 
+    <memTotal> 9311 </memTotal> 
+    <compileTime> 166202 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 7925 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 6174 </time> </gc>
+  </system>
+  <instrumented> RRBench XSLTBench XSLTBench$WorkQueue XSLTBench$XalanWorker org/apache/xalan/Version org/apache/xalan/extensions/ExpressionContext org/apache/xalan/extensions/ExpressionVisitor org/apache/xalan/extensions/ExtensionNamespacesManager org/apache/xalan/extensions/ExtensionsTable org/apache/xalan/processor/ProcessorAttributeSet org/apache/xalan/processor/ProcessorCharacters org/apache/xalan/processor/ProcessorDecimalFormat org/apache/xalan/processor/ProcessorExsltFuncResult org/apache/xalan/processor/ProcessorExsltFunction org/apache/xalan/processor/ProcessorGlobalParamDecl org/apache/xalan/processor/ProcessorGlobalVariableDecl org/apache/xalan/processor/ProcessorImport org/apache/xalan/processor/ProcessorInclude org/apache/xalan/processor/ProcessorKey org/apache/xalan/processor/ProcessorLRE org/apache/xalan/processor/ProcessorNamespaceAlias org/apache/xalan/processor/ProcessorOutputElem org/apache/xalan/processor/ProcessorPreserveSpace org/apache/xalan/processor/ProcessorStripSpace org/apache/xalan/processor/ProcessorStylesheetDoc org/apache/xalan/processor/ProcessorStylesheetElement org/apache/xalan/processor/ProcessorTemplate org/apache/xalan/processor/ProcessorTemplateElem org/apache/xalan/processor/ProcessorText org/apache/xalan/processor/ProcessorUnknown org/apache/xalan/processor/StylesheetHandler org/apache/xalan/processor/TransformerFactoryImpl org/apache/xalan/processor/WhitespaceInfoPaths org/apache/xalan/processor/XSLTAttributeDef org/apache/xalan/processor/XSLTElementDef org/apache/xalan/processor/XSLTElementProcessor org/apache/xalan/processor/XSLTSchema org/apache/xalan/serialize/SerializerUtils org/apache/xalan/templates/AVT org/apache/xalan/templates/AVTPart org/apache/xalan/templates/AVTPartSimple org/apache/xalan/templates/AVTPartXPath org/apache/xalan/templates/DecimalFormatProperties org/apache/xalan/templates/ElemApplyImport org/apache/xalan/templates/ElemApplyTemplates org/apache/xalan/templates/ElemAttribute org/apache/xalan/templates/ElemAttributeSet org/apache/xalan/templates/ElemCallTemplate org/apache/xalan/templates/ElemChoose org/apache/xalan/templates/ElemComment org/apache/xalan/templates/ElemCopy org/apache/xalan/templates/ElemCopyOf org/apache/xalan/templates/ElemElement org/apache/xalan/templates/ElemExsltFuncResult org/apache/xalan/templates/ElemExsltFunction org/apache/xalan/templates/ElemExtensionDecl org/apache/xalan/templates/ElemExtensionScript org/apache/xalan/templates/ElemFallback org/apache/xalan/templates/ElemForEach org/apache/xalan/templates/ElemIf org/apache/xalan/templates/ElemLiteralResult org/apache/xalan/templates/ElemMessage org/apache/xalan/templates/ElemNumber org/apache/xalan/templates/ElemNumber$MyPrefixResolver org/apache/xalan/templates/ElemNumber$NumberFormatStringTokenizer org/apache/xalan/templates/ElemOtherwise org/apache/xalan/templates/ElemPI org/apache/xalan/templates/ElemParam org/apache/xalan/templates/ElemSort org/apache/xalan/templates/ElemTemplate org/apache/xalan/templates/ElemTemplateElement org/apache/xalan/templates/ElemText org/apache/xalan/templates/ElemTextLiteral org/apache/xalan/templates/ElemUnknown org/apache/xalan/templates/ElemUse org/apache/xalan/templates/ElemValueOf org/apache/xalan/templates/ElemVariable org/apache/xalan/templates/ElemWhen org/apache/xalan/templates/ElemWithParam org/apache/xalan/templates/FuncDocument org/apache/xalan/templates/FuncFormatNumb org/apache/xalan/templates/FuncKey org/apache/xalan/templates/KeyDeclaration org/apache/xalan/templates/NamespaceAlias org/apache/xalan/templates/OutputProperties org/apache/xalan/templates/Stylesheet org/apache/xalan/templates/StylesheetComposed org/apache/xalan/templates/StylesheetRoot org/apache/xalan/templates/StylesheetRoot$ComposeState org/apache/xalan/templates/TemplateList org/apache/xalan/templates/TemplateSubPatternAssociation org/apache/xalan/templates/WhiteSpaceInfo org/apache/xalan/templates/XMLNSDecl org/apache/xalan/templates/XSLTVisitable org/apache/xalan/templates/XSLTVisitor org/apache/xalan/templates/XUnresolvedVariable org/apache/xalan/trace/TraceManager org/apache/xalan/transformer/ClonerToResultTree org/apache/xalan/transformer/Counter org/apache/xalan/transformer/CountersTable org/apache/xalan/transformer/DecimalToRoman org/apache/xalan/transformer/KeyManager org/apache/xalan/transformer/MsgMgr org/apache/xalan/transformer/StackGuard org/apache/xalan/transformer/TransformSnapshot org/apache/xalan/transformer/TransformerImpl org/apache/xml/dtm/Axis org/apache/xml/dtm/DTM org/apache/xml/dtm/DTMAxisIterator org/apache/xml/dtm/DTMAxisTraverser org/apache/xml/dtm/DTMIterator org/apache/xml/dtm/DTMManager org/apache/xml/dtm/DTMWSFilter org/apache/xml/dtm/ObjectFactory org/apache/xml/dtm/SecuritySupport org/apache/xml/dtm/SecuritySupport12 org/apache/xml/dtm/SecuritySupport12$1 org/apache/xml/dtm/SecuritySupport12$2 org/apache/xml/dtm/SecuritySupport12$3 org/apache/xml/dtm/SecuritySupport12$4 org/apache/xml/dtm/SecuritySupport12$6 org/apache/xml/dtm/SecuritySupport12$7 org/apache/xml/dtm/ref/DTMAxisIteratorBase org/apache/xml/dtm/ref/DTMDefaultBase org/apache/xml/dtm/ref/DTMDefaultBaseIterators org/apache/xml/dtm/ref/DTMDefaultBaseIterators$InternalAxisIteratorBase org/apache/xml/dtm/ref/DTMDefaultBaseIterators$ParentIterator org/apache/xml/dtm/ref/DTMDefaultBaseIterators$PrecedingSiblingIterator org/apache/xml/dtm/ref/DTMDefaultBaseTraversers org/apache/xml/dtm/ref/DTMDefaultBaseTraversers$1 org/apache/xml/dtm/ref/DTMDefaultBaseTraversers$AncestorTraverser org/apache/xml/dtm/ref/DTMDefaultBaseTraversers$AttributeTraverser org/apache/xml/dtm/ref/DTMDefaultBaseTraversers$ChildTraverser org/apache/xml/dtm/ref/DTMDefaultBaseTraversers$ParentTraverser org/apache/xml/dtm/ref/DTMManagerDefault org/apache/xml/dtm/ref/DTMNodeProxy org/apache/xml/dtm/ref/DTMNodeProxy$DTMNodeProxyImplementation org/apache/xml/dtm/ref/DTMStringPool org/apache/xml/dtm/ref/DTMTreeWalker org/apache/xml/dtm/ref/ExpandedNameTable org/apache/xml/dtm/ref/ExpandedNameTable$HashEntry org/apache/xml/dtm/ref/ExtendedType org/apache/xml/dtm/ref/IncrementalSAXSource org/apache/xml/dtm/ref/sax2dtm/SAX2DTM org/apache/xml/dtm/ref/sax2dtm/SAX2RTFDTM org/apache/xml/serializer/AttributesImplSerializer org/apache/xml/serializer/CharInfo org/apache/xml/serializer/CharInfo$1 org/apache/xml/serializer/CharInfo$CharKey org/apache/xml/serializer/DOMSerializer org/apache/xml/serializer/ElemContext org/apache/xml/serializer/ElemDesc org/apache/xml/serializer/EncodingInfo org/apache/xml/serializer/Encodings org/apache/xml/serializer/ExtendedContentHandler org/apache/xml/serializer/ExtendedLexicalHandler org/apache/xml/serializer/NamespaceMappings org/apache/xml/serializer/NamespaceMappings$MappingRecord org/apache/xml/serializer/NamespaceMappings$Stack org/apache/xml/serializer/ObjectFactory org/apache/xml/serializer/OutputPropertiesFactory org/apache/xml/serializer/OutputPropertiesFactory$1 org/apache/xml/serializer/OutputPropertyUtils org/apache/xml/serializer/SecuritySupport org/apache/xml/serializer/SecuritySupport12 org/apache/xml/serializer/SecuritySupport12$1 org/apache/xml/serializer/SecuritySupport12$2 org/apache/xml/serializer/SecuritySupport12$3 org/apache/xml/serializer/SecuritySupport12$4 org/apache/xml/serializer/SecuritySupport12$6 org/apache/xml/serializer/SerializationHandler org/apache/xml/serializer/Serializer org/apache/xml/serializer/SerializerBase org/apache/xml/serializer/SerializerConstants org/apache/xml/serializer/SerializerFactory org/apache/xml/serializer/SerializerTrace org/apache/xml/serializer/ToHTMLStream org/apache/xml/serializer/ToHTMLStream$Trie org/apache/xml/serializer/ToHTMLStream$Trie$Node org/apache/xml/serializer/ToSAXHandler org/apache/xml/serializer/ToStream org/apache/xml/serializer/ToStream$BoolStack org/apache/xml/serializer/ToTextStream org/apache/xml/serializer/ToXMLSAXHandler org/apache/xml/serializer/WriterChain org/apache/xml/serializer/WriterToASCI org/apache/xml/serializer/WriterToUTF8Buffered org/apache/xml/serializer/XSLOutputAttributes org/apache/xml/serializer/utils/StringToIntTable org/apache/xml/utils/BoolStack org/apache/xml/utils/Context2 org/apache/xml/utils/DefaultErrorHandler org/apache/xml/utils/FastStringBuffer org/apache/xml/utils/IntStack org/apache/xml/utils/IntVector org/apache/xml/utils/NamespaceSupport2 org/apache/xml/utils/NodeConsumer org/apache/xml/utils/NodeVector org/apache/xml/utils/ObjectPool org/apache/xml/utils/ObjectStack org/apache/xml/utils/ObjectVector org/apache/xml/utils/PrefixResolver org/apache/xml/utils/QName org/apache/xml/utils/SAXSourceLocator org/apache/xml/utils/StringBufferPool org/apache/xml/utils/StringToIntTable org/apache/xml/utils/StringVector org/apache/xml/utils/SuballocatedIntVector org/apache/xml/utils/SystemIDResolver org/apache/xml/utils/UnImplNode org/apache/xml/utils/XML11Char org/apache/xml/utils/XMLCharacterRecognizer org/apache/xml/utils/XMLReaderManager org/apache/xml/utils/XMLString org/apache/xml/utils/XMLStringFactory org/apache/xml/utils/res/CharArrayWrapper org/apache/xml/utils/res/XResourceBundle org/apache/xml/utils/res/XResources_en org/apache/xpath/Expression org/apache/xpath/ExpressionNode org/apache/xpath/ExpressionOwner org/apache/xpath/ExtensionsProvider org/apache/xpath/NodeSetDTM org/apache/xpath/SourceTreeManager org/apache/xpath/VariableStack org/apache/xpath/WhitespaceStrippingElementMatcher org/apache/xpath/XPath org/apache/xpath/XPathContext org/apache/xpath/XPathContext$XPathExpressionContext org/apache/xpath/XPathVisitable org/apache/xpath/XPathVisitor org/apache/xpath/axes/AttributeIterator org/apache/xpath/axes/AxesWalker org/apache/xpath/axes/BasicTestIterator org/apache/xpath/axes/ChildIterator org/apache/xpath/axes/ChildTestIterator org/apache/xpath/axes/DescendantIterator org/apache/xpath/axes/FilterExprIteratorSimple org/apache/xpath/axes/FilterExprWalker org/apache/xpath/axes/FilterExprWalker$filterExprOwner org/apache/xpath/axes/HasPositionalPredChecker org/apache/xpath/axes/IteratorPool org/apache/xpath/axes/LocPathIterator org/apache/xpath/axes/NodeSequence org/apache/xpath/axes/NodeSequence$IteratorCache org/apache/xpath/axes/OneStepIterator org/apache/xpath/axes/OneStepIteratorForward org/apache/xpath/axes/PathComponent org/apache/xpath/axes/PredicatedNodeTest org/apache/xpath/axes/PredicatedNodeTest$PredOwner org/apache/xpath/axes/ReverseAxesWalker org/apache/xpath/axes/SelfIteratorNoPredicate org/apache/xpath/axes/SubContextList org/apache/xpath/axes/UnionChildIterator org/apache/xpath/axes/UnionPathIterator org/apache/xpath/axes/UnionPathIterator$iterOwner org/apache/xpath/axes/WalkerFactory org/apache/xpath/axes/WalkingIterator org/apache/xpath/axes/WalkingIteratorSorted org/apache/xpath/compiler/Compiler org/apache/xpath/compiler/FunctionTable org/apache/xpath/compiler/Keywords org/apache/xpath/compiler/Lexer org/apache/xpath/compiler/OpMap org/apache/xpath/compiler/OpMapVector org/apache/xpath/compiler/XPathParser org/apache/xpath/functions/FuncBoolean org/apache/xpath/functions/FuncCeiling org/apache/xpath/functions/FuncConcat org/apache/xpath/functions/FuncContains org/apache/xpath/functions/FuncCount org/apache/xpath/functions/FuncCurrent org/apache/xpath/functions/FuncDoclocation org/apache/xpath/functions/FuncExtElementAvailable org/apache/xpath/functions/FuncExtFunction org/apache/xpath/functions/FuncExtFunctionAvailable org/apache/xpath/functions/FuncFalse org/apache/xpath/functions/FuncFloor org/apache/xpath/functions/FuncGenerateId org/apache/xpath/functions/FuncId org/apache/xpath/functions/FuncLang org/apache/xpath/functions/FuncLast org/apache/xpath/functions/FuncLocalPart org/apache/xpath/functions/FuncNamespace org/apache/xpath/functions/FuncNormalizeSpace org/apache/xpath/functions/FuncNot org/apache/xpath/functions/FuncNumber org/apache/xpath/functions/FuncPosition org/apache/xpath/functions/FuncQname org/apache/xpath/functions/FuncRound org/apache/xpath/functions/FuncStartsWith org/apache/xpath/functions/FuncString org/apache/xpath/functions/FuncStringLength org/apache/xpath/functions/FuncSubstring org/apache/xpath/functions/FuncSubstringAfter org/apache/xpath/functions/FuncSubstringBefore org/apache/xpath/functions/FuncSum org/apache/xpath/functions/FuncSystemProperty org/apache/xpath/functions/FuncTranslate org/apache/xpath/functions/FuncTrue org/apache/xpath/functions/FuncUnparsedEntityURI org/apache/xpath/functions/Function org/apache/xpath/functions/Function2Args org/apache/xpath/functions/Function2Args$Arg1Owner org/apache/xpath/functions/Function3Args org/apache/xpath/functions/FunctionDef1Arg org/apache/xpath/functions/FunctionMultiArgs org/apache/xpath/functions/FunctionOneArg org/apache/xpath/objects/Comparator org/apache/xpath/objects/DTMXRTreeFrag org/apache/xpath/objects/EqualComparator org/apache/xpath/objects/GreaterThanComparator org/apache/xpath/objects/GreaterThanOrEqualComparator org/apache/xpath/objects/LessThanComparator org/apache/xpath/objects/LessThanOrEqualComparator org/apache/xpath/objects/NotEqualComparator org/apache/xpath/objects/XBoolean org/apache/xpath/objects/XBooleanStatic org/apache/xpath/objects/XMLStringFactoryImpl org/apache/xpath/objects/XNodeSet org/apache/xpath/objects/XNumber org/apache/xpath/objects/XObject org/apache/xpath/objects/XRTreeFrag org/apache/xpath/objects/XRTreeFragSelectWrapper org/apache/xpath/objects/XString org/apache/xpath/operations/And org/apache/xpath/operations/Div org/apache/xpath/operations/Equals org/apache/xpath/operations/Gt org/apache/xpath/operations/Minus org/apache/xpath/operations/Mod org/apache/xpath/operations/Mult org/apache/xpath/operations/NotEquals org/apache/xpath/operations/Number org/apache/xpath/operations/Operation org/apache/xpath/operations/Operation$LeftExprOwner org/apache/xpath/operations/Or org/apache/xpath/operations/Plus org/apache/xpath/operations/Quo org/apache/xpath/operations/UnaryOperation org/apache/xpath/operations/Variable org/apache/xpath/patterns/NodeTest org/apache/xpath/patterns/StepPattern org/apache/xpath/patterns/StepPattern$PredOwner org/apache/xpath/patterns/UnionPattern org/apache/xpath/patterns/UnionPattern$UnionPathPartOwner  </instrumented> 
+  <instrumentedNum> 346 </instrumentedNum> 
+  <skipped>  </skipped> 
+  <skippedNum> 0 </skippedNum> 
+  <sanityChecked>  </sanityChecked> 
+  <sanityCheckedNum> 0 </sanityCheckedNum> 
+  <counters>
+
+    <counter><name> "ArrayStateFactory: Size" </name>                    <value> 3,431,233 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>2122.00</total> <count>126</count> <ave>16.8413</ave> </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 61,183 </value> </counter>
+
+    <counter><name> "CV: Count" </name>                                  <value> 0 </value> </counter>
+    <counter><name> "CV: Ops" </name>                                    <value> 0 </value> </counter>
+
+    <counter><name> "Clone: Count" </name>                               <value> 4,208,096 </value> </counter>
+
+    <counter><name> "GCRunner: Max Usage" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "Handler: Count" </name>                             <value> 0 </value> </counter>
+
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 14,562 </value> </counter>
+    <counter><name> "RRBench: Warmup 2" </name>                          <value> 7,146 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 6,007 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 6,716 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 5,461 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 6,646 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 5,449 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 5,271 </value> </counter>
+    <counter><name> "RRBench: Iter 6" </name>                            <value> 5,363 </value> </counter>
+    <counter><name> "RRBench: Iter 7" </name>                            <value> 5,350 </value> </counter>
+    <counter><name> "RRBench: Iter 8" </name>                            <value> 5,594 </value> </counter>
+    <counter><name> "RRBench: Iter 9" </name>                            <value> 5,119 </value> </counter>
+    <counter><name> "RRBench: Iter 10" </name>                           <value> 5,413 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 5,638 </value> </counter>
+
+    <counter><name> "ShadowLock: objects" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "ShadowThread: Count" </name>                        <value> 209 </value> </counter>
+    <counter><name> "ShadowThread: Max Live" </name>                     <value> 17 </value> </counter>
+    <counter><name> "ShadowThread: getCurrentThread() calls" </name>     <value> 0 </value> </counter>
+
+    <counter><name> "ShadowVolatile: objects" </name>                    <value> 0 </value> </counter>
+
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>1512.00</total> <count>346</count> <ave>4.36994</ave> </value> </counter>
+  </counters>
+  <yikes>
+    <message> concurrent mod </message> <count> 4 </count> 
+    <message> Concurrent array state creation... </message> <count> 24 </count> 
+    <message> Atomic updated failed. </message> <count> 52 </count> 
+    <message> Concurrent array guard state init.. </message> <count> 1 </count> 
+    <message> SafeFieldUpdater: Concurrent update </message> <count> 85 </count> 
+    <message> Bad Update </message>    <count> 1 </count> 
+  </yikes>
+  <tool>
+    <name> tools.old.fasttrack_cas.FastTrackTool </name> 
+    <thread> [tid=9    cv=[(0:5809) (1:38DDF4) (2:37564A) (3:372F76) (4:36AF58) (5:36EC7C) (6:364B99) (7:36B0EC) (8:36957A) (9:348CC9) (10:354F0E) (11:363ABB) (12:363ECA) (13:35C013) (14:3746BE) (15:3C5961) (16:3C6D4F)]   epoch=(9:348CC9)] </thread> 
+    <thread> [tid=11   cv=[(0:5809) (1:38E062) (2:37564A) (3:372F76) (4:36B9C8) (5:36F50A) (6:364B99) (7:36B0EC) (8:36969F) (9:348CC7) (10:355B97) (11:364651) (12:364ABD) (13:35C9EA) (14:37532E) (15:3C606B) (16:3C6D4F)]   epoch=(11:364651)] </thread> 
+    <thread> [tid=4    cv=[(0:5809) (1:38E062) (2:37564A) (3:372F76) (4:36C509) (5:36F50A) (6:364B99) (7:36B0EC) (8:36969F) (9:348CC7) (10:355B97) (11:36464F) (12:365681) (13:35C9EA) (14:375E3D) (15:3C606B) (16:3C6D4F)]   epoch=(4:36C509)] </thread> 
+    <thread> [tid=12   cv=[(0:5809) (1:38E062) (2:37564A) (3:372F76) (4:36C372) (5:36F50A) (6:364B99) (7:36B0EC) (8:36969F) (9:348CC7) (10:355B97) (11:36464F) (12:365683) (13:35C9EA) (14:375D29) (15:3C606B) (16:3C6D4F)]   epoch=(12:365683)] </thread> 
+    <thread> [tid=14   cv=[(0:5809) (1:38E062) (2:37564A) (3:372F76) (4:36C507) (5:36F50A) (6:364B99) (7:36B0EC) (8:36969F) (9:348CC7) (10:355B97) (11:36464F) (12:365681) (13:35C9EA) (14:37611B) (15:3C606B) (16:3C6D4F)]   epoch=(14:37611B)] </thread> 
+    <thread> [tid=8    cv=[(0:5809) (1:38DEAC) (2:37564A) (3:372F76) (4:36AF58) (5:36ED72) (6:364B99) (7:36B0EC) (8:3696A1) (9:348CC7) (10:354FA1) (11:363B85) (12:363F6B) (13:35C0A0) (14:374819) (15:3C598C) (16:3C6D4F)]   epoch=(8:3696A1)] </thread> 
+    <thread> [tid=3    cv=[(0:5145) (1:34CAC9) (2:3338D8) (3:32F429) (4:325B45) (5:32CE77) (6:322195) (7:3272B5) (8:328833) (9:308AB6) (10:3124BF) (11:321DB4) (12:3232E3) (13:31921B) (14:3327AB) (15:378DB3) (16:3772DB)]   epoch=(3:32F429)] </thread> 
+    <thread> [tid=8    cv=[(0:5145) (1:34BD75) (2:3334FA) (3:32E440) (4:324FD4) (5:32C233) (6:321C03) (7:326EEB) (8:328835) (9:308819) (10:312183) (11:320F37) (12:32223D) (13:31834E) (14:331C2D) (15:378C8E) (16:376EDC)]   epoch=(8:328835)] </thread> 
+    <thread> [tid=1    cv=[(0:5145) (1:34CACB) (2:3338D8) (3:32F034) (4:325825) (5:32CE77) (6:322195) (7:3272B5) (8:328833) (9:308AB6) (10:3124BF) (11:321C09) (12:322F86) (13:318F78) (14:3327AB) (15:378DB3) (16:3772DB)]   epoch=(1:34CACB)] </thread> 
+    <thread> [tid=5    cv=[(0:5809) (1:38E062) (2:37564A) (3:372F76) (4:36B4F1) (5:36F50C) (6:364B99) (7:36B0EC) (8:36969F) (9:348CC7) (10:35557A) (11:3640BC) (12:364569) (13:35C72A) (14:374E52) (15:3C606B) (16:3C6D4F)]   epoch=(5:36F50C)] </thread> 
+    <thread> [tid=16   cv=[(0:5145) (1:34BF35) (2:3335A0) (3:32E559) (4:324FD6) (5:32C46A) (6:321DEF) (7:3270F8) (8:328833) (9:3089B9) (10:312314) (11:3210BA) (12:32228D) (13:3184EC) (14:331DB5) (15:378DB3) (16:3772DD)]   epoch=(16:3772DD)] </thread> 
+    <thread> [tid=2    cv=[(0:5145) (1:34C28E) (2:3338DA) (3:32E8BE) (4:325132) (5:32C856) (6:322195) (7:3272B5) (8:328833) (9:308AB6) (10:3124BF) (11:32141C) (12:3226E4) (13:318784) (14:332140) (15:378DB3) (16:3772DB)]   epoch=(2:3338DA)] </thread> 
+    <thread> [tid=7    cv=[(0:5145) (1:34C0D7) (2:333710) (3:32E6D4) (4:324FD6) (5:32C5DC) (6:321FC4) (7:3272B7) (8:328833) (9:308AB6) (10:3124BF) (11:321218) (12:322438) (13:318643) (14:331F1D) (15:378DB3) (16:3772DB)]   epoch=(7:3272B7)] </thread> 
+    <thread> [tid=14   cv=[(0:5145) (1:34C707) (2:3338D8) (3:32EDB2) (4:325588) (5:32CD90) (6:322195) (7:3272B5) (8:328833) (9:308AB6) (10:3124BF) (11:32195E) (12:322C91) (13:318CB2) (14:3327AD) (15:378DB3) (16:3772DB)]   epoch=(14:3327AD)] </thread> 
+    <thread> [tid=1    cv=[(0:5809) (1:38E064) (2:37564A) (3:372F76) (4:36B0F7) (5:36EFAD) (6:364B99) (7:36B0EC) (8:36969F) (9:348CC7) (10:35510C) (11:363CB5) (12:3640F6) (13:35C20D) (14:374A02) (15:3C5BFE) (16:3C6D4F)]   epoch=(1:38E064)] </thread> 
+    <thread> [tid=6    cv=[(0:5145) (1:34C1D8) (2:33382E) (3:32E831) (4:325089) (5:32C786) (6:322197) (7:3272B5) (8:328833) (9:308AB6) (10:3124BF) (11:3213EB) (12:3225FE) (13:318784) (14:332084) (15:378DB3) (16:3772DB)]   epoch=(6:322197)] </thread> 
+    <thread> [tid=9    cv=[(0:5145) (1:34C089) (2:3336BC) (3:32E691) (4:324FD6) (5:32C595) (6:321F33) (7:32723E) (8:328833) (9:308AB8) (10:3124BF) (11:321205) (12:3223E2) (13:3185FE) (14:331F15) (15:378DB3) (16:3772DB)]   epoch=(9:308AB8)] </thread> 
+    <thread> [tid=7    cv=[(0:5809) (1:38DCF7) (2:3754D3) (3:372EB0) (4:36AF58) (5:36EB22) (6:364B99) (7:36B0EE) (8:3693C4) (9:348B1C) (10:354DF3) (11:363A0A) (12:363DDA) (13:35BEDD) (14:3745CF) (15:3C5819) (16:3C6CCB)]   epoch=(7:36B0EE)] </thread> 
+    <thread> [tid=13   cv=[(0:5809) (1:38E062) (2:37564A) (3:372F76) (4:36B742) (5:36F50A) (6:364B99) (7:36B0EC) (8:36969F) (9:348CC7) (10:3557F0) (11:3642C7) (12:3647B1) (13:35C9EC) (14:3750CF) (15:3C606B) (16:3C6D4F)]   epoch=(13:35C9EC)] </thread> 
+    <thread> [tid=2    cv=[(0:5809) (1:38DDC3) (2:37564C) (3:372F76) (4:36AF58) (5:36EC7C) (6:364B99) (7:36B0EC) (8:369519) (9:348C90) (10:354EEE) (11:363AB5) (12:363E73) (13:35BFF1) (14:3746BE) (15:3C5946) (16:3C6D4F)]   epoch=(2:37564C)] </thread> 
+    <thread> [tid=12   cv=[(0:5145) (1:34CAC9) (2:3338D8) (3:32F427) (4:3263E2) (5:32CE77) (6:322195) (7:3272B5) (8:328833) (9:308AB6) (10:3124BF) (11:321DB4) (12:323D90) (13:319B57) (14:3327AB) (15:378DB3) (16:3772DB)]   epoch=(12:323D90)] </thread> 
+    <thread> [tid=5    cv=[(0:5145) (1:34C7AD) (2:3338D8) (3:32EE29) (4:325647) (5:32CE79) (6:322195) (7:3272B5) (8:328833) (9:308AB6) (10:3124BF) (11:3219DD) (12:322D2B) (13:318D25) (14:3327AB) (15:378DB3) (16:3772DB)]   epoch=(5:32CE79)] </thread> 
+    <thread> [tid=16   cv=[(0:5809) (1:38DD2A) (2:3754FD) (3:372F3F) (4:36AF58) (5:36EBA3) (6:364B99) (7:36B0EC) (8:3693C6) (9:348BCB) (10:354E1D) (11:363A2A) (12:363DFD) (13:35BF19) (14:3745D5) (15:3C585E) (16:3C6D51)]   epoch=(16:3C6D51)] </thread> 
+    <thread> [tid=13   cv=[(0:5145) (1:34CAC9) (2:3338D8) (3:32F427) (4:326585) (5:32CE77) (6:322195) (7:3272B5) (8:328833) (9:308AB6) (10:3124BF) (11:321DB4) (12:323D8E) (13:319E98) (14:3327AB) (15:378DB3) (16:3772DB)]   epoch=(13:319E98)] </thread> 
+    <thread> [tid=3    cv=[(0:5809) (1:38DD5D) (2:3754FD) (3:372F78) (4:36AF58) (5:36EBCA) (6:364B99) (7:36B0EC) (8:3693C6) (9:348BE0) (10:354E44) (11:363A3A) (12:363E17) (13:35BF35) (14:374618) (15:3C589A) (16:3C6D4F)]   epoch=(3:372F78)] </thread> 
+    <thread> [tid=10   cv=[(0:5809) (1:38E062) (2:37564A) (3:372F76) (4:36B96D) (5:36F50A) (6:364B99) (7:36B0EC) (8:36969F) (9:348CC7) (10:355B99) (11:364589) (12:364A1B) (13:35C9EA) (14:375294) (15:3C606B) (16:3C6D4F)]   epoch=(10:355B99)] </thread> 
+    <thread> [tid=11   cv=[(0:5145) (1:34CAC9) (2:3338D8) (3:32F159) (4:325965) (5:32CE77) (6:322195) (7:3272B5) (8:328833) (9:308AB6) (10:3124BF) (11:321DB6) (12:3230A4) (13:319077) (14:3327AB) (15:378DB3) (16:3772DB)]   epoch=(11:321DB6)] </thread> 
+    <thread> [tid=10   cv=[(0:5145) (1:34C089) (2:3336BC) (3:32E691) (4:324FD6) (5:32C595) (6:321F33) (7:32723E) (8:328833) (9:308AA8) (10:3124C1) (11:321201) (12:3223E2) (13:3185FE) (14:331F15) (15:378DB3) (16:3772DB)]   epoch=(10:3124C1)] </thread> 
+    <thread> [tid=15   cv=[(0:5145) (1:34BE62) (2:3334FC) (3:32E49E) (4:324FD6) (5:32C2E7) (6:321C79) (7:326F8D) (8:328833) (9:3088A6) (10:312209) (11:320FBB) (12:32223D) (13:3183ED) (14:331C3A) (15:378DB5) (16:376EDC)]   epoch=(15:378DB5)] </thread> 
+    <thread> [tid=15   cv=[(0:5809) (1:38E062) (2:37564A) (3:372F76) (4:36B49E) (5:36F463) (6:364B99) (7:36B0EC) (8:36969F) (9:348CC7) (10:35552B) (11:36406C) (12:364509) (13:35C6A2) (14:374DE8) (15:3C606D) (16:3C6D4F)]   epoch=(15:3C606D)] </thread> 
+    <thread> [tid=6    cv=[(0:5809) (1:38DC86) (2:37524B) (3:372DE1) (4:36AF56) (5:36E9DF) (6:364B9B) (7:36AFE3) (8:3692DE) (9:348A9E) (10:354D09) (11:36390B) (12:363D47) (13:35BD9D) (14:3745C8) (15:3C573F) (16:3C6BB3)]   epoch=(6:364B9B)] </thread> 
+    <thread> [tid=0    cv=[(0:580A) (1:38E064) (2:37564C) (3:372F78) (4:36C509) (5:36F50C) (6:364B9B) (7:36B0EE) (8:3696A1) (9:348CC9) (10:355B99) (11:364651) (12:365683) (13:35C9EC) (14:37611B) (15:3C606D) (16:3C6D51)]   epoch=(0:580A)] </thread> 
+    <thread> [tid=4    cv=[(0:5145) (1:34CAC9) (2:3338D8) (3:32F427) (4:326587) (5:32CE77) (6:322195) (7:3272B5) (8:328833) (9:308AB6) (10:3124BF) (11:321DB4) (12:323D8E) (13:319CC5) (14:3327AB) (15:378DB3) (16:3772DB)]   epoch=(4:326587)] </thread> 
+  </tool>
+  <tool>
+    <name> Last </name> 
+  </tool>
+  <threadCount> 33 </threadCount> 
+  <threadMaxActive> 17 </threadMaxActive> 
+  <errorTotal> 9 </errorTotal> 
+  <distinctErrorTotal> 9 </distinctErrorTotal> 
+  <methods>
+  </methods>
+  <fields>
+    <field>
+      <name> org/apache/xml/serializer/OutputPropertiesFactory.m_text_properties_Ljava/util/Properties; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xml/serializer/CharInfo.firstWordNotUsed_I </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xml/utils/res/CharArrayWrapper.m_char_\[C </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xml/serializer/CharInfo$CharKey.m_char_C </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xalan/templates/ElemNumber.m_alphaCountTable_Lorg/apache/xml/utils/res/CharArrayWrapper; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xml/serializer/CharInfo.onlyQuotAmpLtGt_Z </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xml/serializer/CharInfo.m_charToString_Ljava/util/HashMap; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+  </fields>
+  <arrays>
+    <target>
+      <location> rd_array@org/apache/xml/utils/res/CharArrayWrapper.java:36:5 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+    <target>
+      <location> wr_array@org/apache/xalan/templates/ElemNumber.java:1640:36 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+  </arrays>
+  <locks>
+  </locks>
+  <fieldAccesses>
+  </fieldAccesses>
+  <errorCountPerErrorType>
+    <errorType> <name> FastTrack </name> <count> 9 </count> </errorType>
+  </errorCountPerErrorType>
+  <warningsTotal> 0 </warningsTotal> 
+  <yikesTotal> 167 </yikesTotal> 
+  <failed> false </failed> 
+  <failedReason>  </failedReason> 
+  <time> 91787 </time> 
+</entry>

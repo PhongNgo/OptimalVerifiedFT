@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+echo "### PERF"
+# Run 1 trial with 10 iterations
+./perf-bench.py all all small 10 1
+cp tables-perf.pdf small-tables-perf.pdf
+
+echo "### STATS"
+./stats-bench.py all all small
+cp tables-stats.pdf small-tables-stats.pdf

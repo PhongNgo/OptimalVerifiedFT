@@ -1,0 +1,5 @@
+# Generate tables and pdfs from data files
+
+./stats-bench.py none none large 10 10
+
+./stats-bench.py none none large 1 1

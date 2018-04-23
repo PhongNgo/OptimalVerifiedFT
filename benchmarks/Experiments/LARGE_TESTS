@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+echo "### PERF"
+# Run 1 trial with 10 iterations
+./perf-bench.py all all large $*
+
+echo "### STATS"
+./stats-bench.py all all large 

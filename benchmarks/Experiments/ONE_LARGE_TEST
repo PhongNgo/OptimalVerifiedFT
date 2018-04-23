@@ -1,0 +1,11 @@
+#!/bin/bash
+
+BM=$1
+shift
+
+echo "### PERF"
+# Run 1 trial with 10 iterations
+./perf-bench.py $BM all large $*
+
+echo "### STATS"
+./stats-bench.py $BM all large 

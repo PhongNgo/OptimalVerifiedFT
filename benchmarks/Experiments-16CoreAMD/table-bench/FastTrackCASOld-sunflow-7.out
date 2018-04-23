@@ -1,0 +1,212 @@
+<entry>
+  <date> Sat Aug 12 19:47:53 EDT 2017 </date> 
+  <mode> FAST </mode> 
+  <timeout> NO </timeout> 
+  <options>
+    <option><name> javaArgs </name>           <value> RRBench  </value> </option>
+    <option><name> noDecInline </name>        <value> false </value> </option>
+    <option><name> quiet </name>              <value> true </value> </option>
+    <option><name> logDepth </name>           <value> 100 </value> </option>
+    <option><name> logs </name>               <value> /home/freund/workspace/RoadRunner/benchmarks/Experiments/table-bench </value> </option>
+    <option><name> out </name>                <value>  </value>   </option>
+    <option><name> err </name>                <value>  </value>   </option>
+    <option><name> noinst </name>             <value> false </value> </option>
+    <option><name> inst </name>               <value> INST </value> </option>
+    <option><name> infThreads </name>         <value> 0 </value>  </option>
+    <option><name> benchmark </name>          <value> 10 </value> </option>
+    <option><name> warmup </name>             <value> 3 </value>  </option>
+    <option><name> availableProcessors </name> <value> 16 </value> </option>
+    <option><name> args </name>               <value> [] </value> </option>
+    <option><name> d </name>                  <value> [] </value> </option>
+    <option><name> maxYikes </name>           <value> 5 </value>  </option>
+    <option><name> help </name>               <value> false </value> </option>
+    <option><name> toolpath </name>           <value> /home/freund/workspace/RoadRunner/classes/rr/simple:/home/freund/workspace/RoadRunner/classes/tools </value> </option>
+    <option><name> classpath </name>          <value> original.jar </value> </option>
+    <option><name> tool </name>               <value> tools.old.fasttrack_cas.FastTrackTool </value> </option>
+    <option><name> tools </name>              <value> false </value> </option>
+    <option><name> noxml </name>              <value> false </value> </option>
+    <option><name> constantGC </name>         <value> false </value> </option>
+    <option><name> noFP </name>               <value> false </value> </option>
+    <option><name> noShutdownHook </name>     <value> false </value> </option>
+    <option><name> noEnter </name>            <value> true </value> </option>
+    <option><name> xml </name>                <value> FastTrackCASOld-sunflow-7.out </value> </option>
+    <option><name> pulse </name>              <value>  </value>   </option>
+    <option><name> maxTime </name>            <value> 0 </value>  </option>
+    <option><name> maxMem </name>             <value> 10240 </value> </option>
+    <option><name> maxTid </name>             <value> 26 </value> </option>
+    <option><name> stacks </name>             <value> false </value> </option>
+    <option><name> values </name>             <value> false </value> </option>
+    <option><name> noTidGC </name>            <value> false </value> </option>
+    <option><name> noEventReuse </name>       <value> false </value> </option>
+    <option><name> trackMemoryUsage </name>   <value> false </value> </option>
+    <option><name> repository </name>         <value>  </value>   </option>
+    <option><name> meta </name>               <value> null </value> </option>
+    <option><name> methods </name>            <value> ["-.*Barrier.await\(\)V", "-java.util.concurrent.CyclicBarrier.await\(JLjava/util/concurrent/TimeUnit;\)I", "-java.util.concurrent.CyclicBarrier.await\(\)I", "-.*Barrier.DoBarrier\(I\)V", "-.*TournamentBarrier.DoBarrier\(I\)V", "-org.sunflow.core.tesselatable.Teapot.*clinit.*", default=ACCEPT] </value> </option>
+    <option><name> fields </name>             <value> ["-.*this\$.*", "-$.*__\$rr.*", default=ACCEPT] </value> </option>
+    <option><name> lines </name>              <value> [default=ACCEPT] </value> </option>
+    <option><name> classes </name>            <value> ["-.*Barrier.*", "-java..*", "-javax..*", "-com.sun..*", "-sun..*", "-rr..*", "-tools..*", "-acme..*", "-.*__\$rr_.*", "-org.xml..*", default=ACCEPT] </value> </option>
+    <option><name> shadowThread </name>       <value> ["-.*", default=ACCEPT] </value> </option>
+    <option><name> noop </name>               <value> [default=ACCEPT] </value> </option>
+    <option><name> noConstructor </name>      <value> false </value> </option>
+    <option><name> noClone </name>            <value> false </value> </option>
+    <option><name> dump </name>               <value>  </value>   </option>
+    <option><name> field </name>              <value> FINE </value> </option>
+    <option><name> fancy </name>              <value> false </value> </option>
+    <option><name> verify </name>             <value> false </value> </option>
+    <option><name> trackReflection </name>    <value> false </value> </option>
+    <option><name> arraySites </name>         <value> false </value> </option>
+    <option><name> Use TestAcquires </name>   <value> false </value> </option>
+    <option><name> sanity </name>             <value> false </value> </option>
+    <option><name> reentrantEvents </name>    <value> false </value> </option>
+    <option><name> nojoin </name>             <value> false </value> </option>
+    <option><name> multiLoader </name>        <value> false </value> </option>
+    <option><name> indices </name>            <value> 2147483647 </value> </option>
+    <option><name> updaters </name>           <value> SAFE </value> </option>
+    <option><name> array </name>              <value> FINE </value> </option>
+    <option><name> userArray </name>          <value> rr.state.ArrayStateCreator$1@4554617c </value> </option>
+    <option><name> nobarrier </name>          <value> false </value> </option>
+    <option><name> arrayCacheType </name>     <value> STRONG </value> </option>
+    <option><name> callSites </name>          <value> false </value> </option>
+    <option><name> maxWarn </name>            <value> 1 </value>  </option>
+    <option><name> noInterrupt </name>        <value> false </value> </option>
+  </options>
+  <system>
+    <host> ubuntu </host> 
+    <name> java.vm.version </name>     <value> 25.121-b13 </value> 
+    <name> java.vm.vendor </name>      <value> Oracle Corporation </value> 
+    <name> java.vm.name </name>        <value> Java HotSpot(TM) 64-Bit Server VM </value> 
+    <name> java.class.path </name>     <value> .:/home/freund/workspace/RoadRunner/build/jar/rragent.jar </value> 
+    <name> os.name </name>             <value> Linux </value> 
+    <name> os.arch </name>             <value> amd64 </value> 
+    <name> os.version </name>          <value> 4.4.0-78-generic </value> 
+    <name> user.name </name>           <value> freund </value> 
+    <name> user.dir </name>            <value> /home/freund/workspace/RoadRunner/benchmarks/sunflow </value> 
+    <availableProcs> 16 </availableProcs> 
+    <memCommitted> 21627 </memCommitted> 
+    <memUsed> 3092 </memUsed> 
+    <memTotal> 21627 </memTotal> 
+    <compileTime> 61532 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 22005 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 2045 </time> </gc>
+  </system>
+  <instrumented> RRBench org/sunflow/Benchmark org/sunflow/Benchmark$BenchmarkScene org/sunflow/RenderObjectMap org/sunflow/RenderObjectMap$1 org/sunflow/RenderObjectMap$RenderObjectHandle org/sunflow/RenderObjectMap$RenderObjectType org/sunflow/SunflowAPI org/sunflow/core/AccelerationStructure org/sunflow/core/AccelerationStructureFactory org/sunflow/core/BucketOrder org/sunflow/core/Camera org/sunflow/core/CameraLens org/sunflow/core/CausticPhotonMapInterface org/sunflow/core/Display org/sunflow/core/Filter org/sunflow/core/GIEngine org/sunflow/core/Geometry org/sunflow/core/ImageSampler org/sunflow/core/Instance org/sunflow/core/InstanceList org/sunflow/core/IntersectionState org/sunflow/core/IntersectionState$StackNode org/sunflow/core/LightSample org/sunflow/core/LightServer org/sunflow/core/LightServer$1 org/sunflow/core/LightServer$CacheEntry org/sunflow/core/LightSource org/sunflow/core/Modifier org/sunflow/core/Options org/sunflow/core/ParameterList org/sunflow/core/ParameterList$1 org/sunflow/core/ParameterList$FloatParameter org/sunflow/core/ParameterList$InterpolationType org/sunflow/core/ParameterList$Parameter org/sunflow/core/ParameterList$ParameterType org/sunflow/core/PhotonStore org/sunflow/core/PrimitiveList org/sunflow/core/Ray org/sunflow/core/RenderObject org/sunflow/core/Scene org/sunflow/core/Shader org/sunflow/core/ShadingState org/sunflow/core/ShadingState$LightSampleIterator org/sunflow/core/Tesselatable org/sunflow/core/accel/BoundingIntervalHierarchy org/sunflow/core/accel/BoundingIntervalHierarchy$BuildStats org/sunflow/core/accel/KDTree org/sunflow/core/accel/KDTree$BuildStats org/sunflow/core/accel/KDTree$BuildTask org/sunflow/core/accel/NullAccelerator org/sunflow/core/bucket/BucketOrderFactory org/sunflow/core/bucket/HilbertBucketOrder org/sunflow/core/camera/PinholeLens org/sunflow/core/filter/FilterFactory org/sunflow/core/filter/TriangleFilter org/sunflow/core/gi/GIEngineFactory org/sunflow/core/gi/InstantGI org/sunflow/core/gi/InstantGI$PointLight org/sunflow/core/gi/InstantGI$PointLightStore org/sunflow/core/light/TriangleMeshLight org/sunflow/core/light/TriangleMeshLight$TriangleLight org/sunflow/core/primitive/Sphere org/sunflow/core/primitive/TriangleMesh org/sunflow/core/primitive/TriangleMesh$1 org/sunflow/core/primitive/TriangleMesh$WaldTriangle org/sunflow/core/renderer/BucketRenderer org/sunflow/core/renderer/BucketRenderer$BucketThread org/sunflow/core/renderer/BucketRenderer$ImageSample org/sunflow/core/renderer/ProgressiveRenderer org/sunflow/core/shader/DiffuseShader org/sunflow/core/shader/GlassShader org/sunflow/core/shader/MirrorShader org/sunflow/core/tesselatable/BezierMesh org/sunflow/core/tesselatable/Teapot org/sunflow/image/Color org/sunflow/image/RGBSpace org/sunflow/math/BoundingBox org/sunflow/math/MathUtils org/sunflow/math/Matrix4 org/sunflow/math/OrthoNormalBasis org/sunflow/math/Point2 org/sunflow/math/Point3 org/sunflow/math/QMC org/sunflow/math/Solvers org/sunflow/math/Vector3 org/sunflow/system/BenchmarkTest org/sunflow/system/Memory org/sunflow/system/SearchPath org/sunflow/system/Timer org/sunflow/system/UI org/sunflow/system/UI$Module org/sunflow/system/UI$PrintLevel org/sunflow/system/UserInterface org/sunflow/system/ui/ConsoleInterface org/sunflow/util/FastHashMap org/sunflow/util/FastHashMap$Entry org/sunflow/util/FastHashMap$EntryIterator org/sunflow/util/IntArray  </instrumented> 
+  <instrumentedNum> 99 </instrumentedNum> 
+  <skipped>  </skipped> 
+  <skippedNum> 0 </skippedNum> 
+  <sanityChecked>  </sanityChecked> 
+  <sanityCheckedNum> 0 </sanityCheckedNum> 
+  <counters>
+
+    <counter><name> "ArrayStateFactory: Size" </name>                    <value> 19,788,754 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>12539.0</total> <count>311</count> <ave>40.3183</ave> </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 8,591 </value> </counter>
+
+    <counter><name> "CV: Count" </name>                                  <value> 0 </value> </counter>
+    <counter><name> "CV: Ops" </name>                                    <value> 0 </value> </counter>
+
+    <counter><name> "Clone: Count" </name>                               <value> 5 </value> </counter>
+
+    <counter><name> "GCRunner: Max Usage" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "Handler: Count" </name>                             <value> 0 </value> </counter>
+
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 41,861 </value> </counter>
+    <counter><name> "RRBench: Warmup 2" </name>                          <value> 38,725 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 40,274 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 40,256 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 42,914 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 43,650 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 43,680 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 43,220 </value> </counter>
+    <counter><name> "RRBench: Iter 6" </name>                            <value> 43,125 </value> </counter>
+    <counter><name> "RRBench: Iter 7" </name>                            <value> 43,966 </value> </counter>
+    <counter><name> "RRBench: Iter 8" </name>                            <value> 41,288 </value> </counter>
+    <counter><name> "RRBench: Iter 9" </name>                            <value> 43,069 </value> </counter>
+    <counter><name> "RRBench: Iter 10" </name>                           <value> 43,793 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 42,896 </value> </counter>
+
+    <counter><name> "ShadowLock: objects" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "ShadowThread: Count" </name>                        <value> 417 </value> </counter>
+    <counter><name> "ShadowThread: Max Live" </name>                     <value> 17 </value> </counter>
+    <counter><name> "ShadowThread: getCurrentThread() calls" </name>     <value> 0 </value> </counter>
+
+    <counter><name> "ShadowVolatile: objects" </name>                    <value> 0 </value> </counter>
+
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>599.000</total> <count>99</count> <ave>6.05051</ave> </value> </counter>
+  </counters>
+  <yikes>
+    <message> concurrent mod </message> <count> 1 </count> 
+    <message> Concurrent array state creation... </message> <count> 5 </count> 
+    <message> Atomic updated failed. </message> <count> 25 </count> 
+    <message> Concurrent array guard state init.. </message> <count> 8 </count> 
+    <message> SafeFieldUpdater: Concurrent update </message> <count> 26 </count> 
+    <message> concurrent initialization of guard  </message> <count> 7 </count> 
+    <message> Bad Update </message>    <count> 8 </count> 
+  </yikes>
+  <tool>
+    <name> tools.old.fasttrack_cas.FastTrackTool </name> 
+    <thread> [tid=7    cv=[(0:6A5) (1:3A2) (2:276) (3:375) (4:211) (5:239) (6:1DE) (7:20A) (8:207) (9:1F5) (10:20F) (11:1EC) (12:224) (13:21C) (14:222) (15:241) (16:43F)]   epoch=(7:20A)] </thread> 
+    <thread> [tid=16   cv=[(0:6A5) (1:3A2) (2:276) (3:375) (4:211) (5:239) (6:1DE) (7:206) (8:207) (9:1F5) (10:20F) (11:1EC) (12:222) (13:21C) (14:222) (15:241) (16:441)]   epoch=(16:441)] </thread> 
+    <thread> [tid=5    cv=[(0:6A5) (1:3A2) (2:276) (3:375) (4:213) (5:23D) (6:1E0) (7:208) (8:207) (9:1F7) (10:211) (11:1EC) (12:224) (13:21E) (14:224) (15:243) (16:43F)]   epoch=(5:23D)] </thread> 
+    <thread> [tid=3    cv=[(0:6A5) (1:3A2) (2:278) (3:379) (4:213) (5:23B) (6:1E0) (7:208) (8:207) (9:1F7) (10:211) (11:1EC) (12:224) (13:21E) (14:224) (15:243) (16:43F)]   epoch=(3:379)] </thread> 
+    <thread> [tid=6    cv=[(0:6A5) (1:3A2) (2:276) (3:375) (4:211) (5:239) (6:1E2) (7:208) (8:207) (9:1F5) (10:20F) (11:1EC) (12:224) (13:21C) (14:222) (15:241) (16:43F)]   epoch=(6:1E2)] </thread> 
+    <thread> [tid=13   cv=[(0:6A5) (1:3A2) (2:276) (3:375) (4:211) (5:239) (6:1E0) (7:208) (8:207) (9:1F7) (10:211) (11:1EC) (12:224) (13:220) (14:222) (15:243) (16:43F)]   epoch=(13:220)] </thread> 
+    <thread> [tid=15   cv=[(0:6A5) (1:3A2) (2:276) (3:375) (4:211) (5:239) (6:1E0) (7:208) (8:207) (9:1F5) (10:20F) (11:1EC) (12:224) (13:21C) (14:222) (15:245) (16:43F)]   epoch=(15:245)] </thread> 
+    <thread> [tid=2    cv=[(0:6A5) (1:3A2) (2:27A) (3:375) (4:213) (5:23B) (6:1E0) (7:208) (8:207) (9:1F7) (10:211) (11:1EC) (12:224) (13:21E) (14:224) (15:243) (16:43F)]   epoch=(2:27A)] </thread> 
+    <thread> [tid=12   cv=[(0:6A5) (1:3A2) (2:276) (3:375) (4:211) (5:239) (6:1DE) (7:206) (8:207) (9:1F5) (10:20F) (11:1EC) (12:226) (13:21C) (14:222) (15:241) (16:43F)]   epoch=(12:226)] </thread> 
+    <thread> [tid=8    cv=[(0:6A5) (1:3A2) (2:276) (3:375) (4:211) (5:239) (6:1DE) (7:206) (8:209) (9:1F5) (10:20F) (11:1EC) (12:222) (13:21C) (14:222) (15:241) (16:43D)]   epoch=(8:209)] </thread> 
+    <thread> [tid=0    cv=[(0:6AA) (1:3A4) (2:27A) (3:379) (4:215) (5:23D) (6:1E2) (7:20A) (8:209) (9:1F9) (10:213) (11:1EE) (12:226) (13:220) (14:226) (15:245) (16:441)]   epoch=(0:6AA)] </thread> 
+    <thread> [tid=11   cv=[(0:6A5) (1:3A0) (2:276) (3:375) (4:211) (5:239) (6:1DE) (7:206) (8:205) (9:1F5) (10:20F) (11:1EE) (12:222) (13:21C) (14:222) (15:241) (16:43D)]   epoch=(11:1EE)] </thread> 
+    <thread> [tid=1    cv=[(0:6A5) (1:3A4) (2:276) (3:375) (4:211) (5:239) (6:1DE) (7:206) (8:205) (9:1F5) (10:20F) (11:1EC) (12:222) (13:21C) (14:222) (15:241) (16:43D)]   epoch=(1:3A4)] </thread> 
+    <thread> [tid=9    cv=[(0:6A5) (1:3A2) (2:276) (3:375) (4:211) (5:239) (6:1E0) (7:208) (8:207) (9:1F9) (10:20F) (11:1EC) (12:224) (13:21C) (14:222) (15:243) (16:43F)]   epoch=(9:1F9)] </thread> 
+    <thread> [tid=10   cv=[(0:6A5) (1:3A2) (2:276) (3:375) (4:211) (5:239) (6:1E0) (7:208) (8:207) (9:1F7) (10:213) (11:1EC) (12:224) (13:21C) (14:222) (15:243) (16:43F)]   epoch=(10:213)] </thread> 
+    <thread> [tid=4    cv=[(0:6A5) (1:3A2) (2:276) (3:375) (4:215) (5:239) (6:1E0) (7:208) (8:207) (9:1F7) (10:211) (11:1EC) (12:224) (13:21E) (14:224) (15:243) (16:43F)]   epoch=(4:215)] </thread> 
+    <thread> [tid=14   cv=[(0:6A5) (1:3A2) (2:276) (3:375) (4:211) (5:239) (6:1E0) (7:208) (8:207) (9:1F7) (10:211) (11:1EC) (12:224) (13:21E) (14:226) (15:243) (16:43F)]   epoch=(14:226)] </thread> 
+  </tool>
+  <tool>
+    <name> Last </name> 
+  </tool>
+  <threadCount> 17 </threadCount> 
+  <threadMaxActive> 17 </threadMaxActive> 
+  <errorTotal> 5 </errorTotal> 
+  <distinctErrorTotal> 5 </distinctErrorTotal> 
+  <methods>
+  </methods>
+  <fields>
+    <field>
+      <name> org/sunflow/core/Geometry.builtTess_I </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/sunflow/core/accel/NullAccelerator.primitives_Lorg/sunflow/core/PrimitiveList; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/sunflow/core/Geometry.accel_Lorg/sunflow/core/AccelerationStructure; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/sunflow/core/accel/NullAccelerator.n_I </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/sunflow/core/Geometry.builtAccel_I </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+  </fields>
+  <arrays>
+  </arrays>
+  <locks>
+  </locks>
+  <fieldAccesses>
+  </fieldAccesses>
+  <errorCountPerErrorType>
+    <errorType> <name> FastTrack </name> <count> 5 </count> </errorType>
+  </errorCountPerErrorType>
+  <warningsTotal> 0 </warningsTotal> 
+  <yikesTotal> 80 </yikesTotal> 
+  <failed> false </failed> 
+  <failedReason>  </failedReason> 
+  <time> 553384 </time> 
+</entry>
