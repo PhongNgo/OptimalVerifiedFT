@@ -211,11 +211,11 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
   }
 
 
-  protected boolean fakeIncEpochAndCheckEq(ShadowThread st, VectorClock other) {
-    final int tid = st.getTid();
-    final VectorClock tV = ts_get_V(st);
-    return other.fakeIncThenCheckEq(tV, tid);
-  }
+//  protected boolean fakeIncEpochAndCheckEq(ShadowThread st, VectorClock other) {
+//    final int tid = st.getTid();
+//    final VectorClock tV = ts_get_V(st);
+//    return other.fakeIncThenCheckEq(tV, tid);
+//  }
   
 
 	static final Decoration<ShadowLock,FTLockState> lockVs = ShadowLock.makeDecoration("FastTrack:ShadowLock", DecorationFactory.Type.MULTIPLE,
@@ -582,17 +582,22 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
       final int tid = st.getTid();
       final VectorClock tV = ts_get_V(st);
 
+      int/*epoch*/ w;
+      int wTid;
+      
 			synchronized(sx) {
-				final int/*epoch*/ w = sx.W;
-				final int wTid = Epoch.tid(w);
-
-				if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
-					ts_set_badVarState(st, sx);
-					return false;
-				}
+//				final int/*epoch*/ w = sx.W;
+//				final int wTid = Epoch.tid(w);
+        w = sx.W;
+        wTid = Epoch.tid(w);
         sx.W = E;
       }
 
+      if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
+        ts_set_badVarState(st, sx);
+        return false;
+      }
+      
       final int/*epoch*/ r = sx.R;
       if (r != Epoch.READ_SHARED) {
         final int rTid = Epoch.tid(r);
