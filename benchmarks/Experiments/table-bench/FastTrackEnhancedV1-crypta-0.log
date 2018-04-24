@@ -3,7 +3,7 @@ java version "1.8.0_101"
 Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
 Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
 
-objc[34383]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/bin/java (0x105fee4c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x1060b64e0). One of the two will be used. Which one is undefined.
+objc[40333]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/bin/java (0x10f01e4c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x10f0e64e0). One of the two will be used. Which one is undefined.
 [premain: Installling RoadRunner Agent...]
 [main: RoadRunner Agent Loaded.]
 [main: Running in FAST Mode]
@@ -29,9 +29,9 @@ Executing on 8 threads
 ## YIKES: Concurrent array state creation...
 ## Suppressing further yikes messages like that one.
 
-Section2:Crypt:Kernel:SizeA	1.797 (s) 	 3338.8982	 (Kbyte/s)
+Section2:Crypt:Kernel:SizeA	2.009 (s) 	 2986.5605	 (Kbyte/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 2397.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 2634.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -46,9 +46,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
-Section2:Crypt:Kernel:SizeA	3.333 (s) 	 3600.36	 (Kbyte/s)
+Section2:Crypt:Kernel:SizeA	3.738 (s) 	 3210.273	 (Kbyte/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 1940.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 2142.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -63,9 +63,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
-Section2:Crypt:Kernel:SizeA	3.854 (s) 	 4670.472	 (Kbyte/s)
+Section2:Crypt:Kernel:SizeA	5.808 (s) 	 3099.1736	 (Kbyte/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 909.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 2558.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -80,9 +80,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
-Section2:Crypt:Kernel:SizeA	5.682 (s) 	 4223.8647	 (Kbyte/s)
+Section2:Crypt:Kernel:SizeA	6.242999999999999 (s) 	 3844.3057	 (Kbyte/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 2248.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 863.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -97,9 +97,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
-Section2:Crypt:Kernel:SizeA	6.003 (s) 	 4997.5015	 (Kbyte/s)
+Section2:Crypt:Kernel:SizeA	6.6499999999999995 (s) 	 4511.2783	 (Kbyte/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 675.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 839.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -114,9 +114,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
-Section2:Crypt:Kernel:SizeA	6.324 (s) 	 5692.5996	 (Kbyte/s)
+Section2:Crypt:Kernel:SizeA	7.052 (s) 	 5104.9346	 (Kbyte/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 680.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 783.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -131,9 +131,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
-Section2:Crypt:Kernel:SizeA	6.6579999999999995 (s) 	 6308.2007	 (Kbyte/s)
+Section2:Crypt:Kernel:SizeA	7.430999999999999 (s) 	 5651.9985	 (Kbyte/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 688.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 744.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -148,9 +148,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
-Section2:Crypt:Kernel:SizeA	6.983999999999999 (s) 	 6872.852	 (Kbyte/s)
+Section2:Crypt:Kernel:SizeA	7.812999999999999 (s) 	 6143.607	 (Kbyte/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 681.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 755.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -165,9 +165,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
-Section2:Crypt:Kernel:SizeA	7.311999999999999 (s) 	 7385.12	 (Kbyte/s)
+Section2:Crypt:Kernel:SizeA	8.175999999999998 (s) 	 6604.697	 (Kbyte/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 688.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 756.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -182,9 +182,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
-Section2:Crypt:Kernel:SizeA	7.638999999999999 (s) 	 7854.431	 (Kbyte/s)
+Section2:Crypt:Kernel:SizeA	8.547999999999998 (s) 	 7019.1855	 (Kbyte/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 675.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 746.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -199,9 +199,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
-Section2:Crypt:Kernel:SizeA	7.970999999999999 (s) 	 8280.015	 (Kbyte/s)
+Section2:Crypt:Kernel:SizeA	8.936999999999998 (s) 	 7385.0283	 (Kbyte/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 710.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 768.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -216,9 +216,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
-Section2:Crypt:Kernel:SizeA	8.348999999999998 (s) 	 8623.787	 (Kbyte/s)
+Section2:Crypt:Kernel:SizeA	9.312999999999997 (s) 	 7731.1284	 (Kbyte/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 735.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 744.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -233,15 +233,15 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:Crypt:Kernel already exists
-Section2:Crypt:Kernel:SizeA	8.767999999999999 (s) 	 8895.985	 (Kbyte/s)
+Section2:Crypt:Kernel:SizeA	9.684999999999997 (s) 	 8053.6914	 (Kbyte/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 769.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 745.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
-[RR: Total Time: 36458]
+[RR: Total Time: 38611]
 <entry>
-  <date> Mon Apr 23 18:07:44 CEST 2018 </date> 
+  <date> Tue Apr 24 17:49:38 CEST 2018 </date> 
   <mode> FAST </mode> 
   <timeout> NO </timeout> 
   <options>
@@ -324,12 +324,12 @@ Section2:Crypt:Kernel:SizeA	8.767999999999999 (s) 	 8895.985	 (Kbyte/s)
     <name> user.name </name>           <value> tuan-phongngo </value> 
     <name> user.dir </name>            <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/crypta </value> 
     <availableProcs> 8 </availableProcs> 
-    <memCommitted> 3503 </memCommitted> 
-    <memUsed> 1388 </memUsed> 
-    <memTotal> 3503 </memTotal> 
-    <compileTime> 36224 </compileTime> 
-    <gc> <name> PS Scavenge </name> <time> 2671 </time> </gc>
-    <gc> <name> PS MarkSweep </name> <time> 23124 </time> </gc>
+    <memCommitted> 2635 </memCommitted> 
+    <memUsed> 1269 </memUsed> 
+    <memTotal> 2635 </memTotal> 
+    <compileTime> 32462 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 2645 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 24219 </time> </gc>
   </system>
   <instrumented> JGFCryptBenchSizeA RRBench crypt/IDEARunner crypt/IDEATest crypt/JGFCryptBench jgfutil/JGFInstrumentor jgfutil/JGFSection2 jgfutil/JGFTimer  </instrumented> 
   <instrumentedNum> 8 </instrumentedNum> 
@@ -339,9 +339,9 @@ Section2:Crypt:Kernel:SizeA	8.767999999999999 (s) 	 8895.985	 (Kbyte/s)
   <sanityCheckedNum> 0 </sanityCheckedNum> 
   <counters>
 
-    <counter><name> "ArrayStateFactory: Size" </name>                    <value> 279 </value> </counter>
-    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>4.00000</total> <count>28</count> <ave>0.142857</ave> </value> </counter>
-    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 13 </value> </counter>
+    <counter><name> "ArrayStateFactory: Size" </name>                    <value> 245 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>5.00000</total> <count>28</count> <ave>0.178571</ave> </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 16 </value> </counter>
 
     <counter><name> "Clone: Count" </name>                               <value> 0 </value> </counter>
 
@@ -375,20 +375,20 @@ Section2:Crypt:Kernel:SizeA	8.767999999999999 (s) 	 8895.985	 (Kbyte/s)
 
     <counter><name> "Handler: Count" </name>                             <value> 0 </value> </counter>
 
-    <counter><name> "RRBench: Warmup 1" </name>                          <value> 2,397 </value> </counter>
-    <counter><name> "RRBench: Warmup 2" </name>                          <value> 1,940 </value> </counter>
-    <counter><name> "RRBench: Warmup 3" </name>                          <value> 909 </value> </counter>
-    <counter><name> "RRBench: Iter 1" </name>                            <value> 2,248 </value> </counter>
-    <counter><name> "RRBench: Iter 2" </name>                            <value> 675 </value> </counter>
-    <counter><name> "RRBench: Iter 3" </name>                            <value> 680 </value> </counter>
-    <counter><name> "RRBench: Iter 4" </name>                            <value> 688 </value> </counter>
-    <counter><name> "RRBench: Iter 5" </name>                            <value> 681 </value> </counter>
-    <counter><name> "RRBench: Iter 6" </name>                            <value> 688 </value> </counter>
-    <counter><name> "RRBench: Iter 7" </name>                            <value> 675 </value> </counter>
-    <counter><name> "RRBench: Iter 8" </name>                            <value> 710 </value> </counter>
-    <counter><name> "RRBench: Iter 9" </name>                            <value> 735 </value> </counter>
-    <counter><name> "RRBench: Iter 10" </name>                           <value> 769 </value> </counter>
-    <counter><name> "RRBench: Average" </name>                           <value> 854 </value> </counter>
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 2,634 </value> </counter>
+    <counter><name> "RRBench: Warmup 2" </name>                          <value> 2,142 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 2,558 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 863 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 839 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 783 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 744 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 755 </value> </counter>
+    <counter><name> "RRBench: Iter 6" </name>                            <value> 756 </value> </counter>
+    <counter><name> "RRBench: Iter 7" </name>                            <value> 746 </value> </counter>
+    <counter><name> "RRBench: Iter 8" </name>                            <value> 768 </value> </counter>
+    <counter><name> "RRBench: Iter 9" </name>                            <value> 744 </value> </counter>
+    <counter><name> "RRBench: Iter 10" </name>                           <value> 745 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 774 </value> </counter>
 
     <counter><name> "ShadowLock: objects" </name>                        <value> 0 </value> </counter>
 
@@ -398,28 +398,28 @@ Section2:Crypt:Kernel:SizeA	8.767999999999999 (s) 	 8895.985	 (Kbyte/s)
 
     <counter><name> "ShadowVolatile: objects" </name>                    <value> 0 </value> </counter>
 
-    <counter><name> "Time: Instrumenter" </name>                         <value> <total>86.0000</total> <count>8</count> <ave>10.7500</ave> </value> </counter>
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>103.000</total> <count>8</count> <ave>12.8750</ave> </value> </counter>
   </counters>
   <yikes>
-    <message> Concurrent array state creation... </message> <count> 149 </count> 
+    <message> Concurrent array state creation... </message> <count> 115 </count> 
   </yikes>
   <tool>
     <name> tools.fasttrack_long.FastTrackToolEnhancedV1 </name> 
     <thread> [tid=5    C=[(0:FA) (1:48) (2:48) (3:48) (4:48) (5:4B) (6:48) (7:48)]   E=(5:4B)] </thread> 
-    <thread> [tid=0    C=[(0:107) (1:4E) (2:4E) (3:4E) (4:4E) (5:4E) (6:4E) (7:4E)]   E=(0:107)] </thread> 
-    <thread> [tid=5    C=[(0:101) (1:4B) (2:4B) (3:4B) (4:4B) (5:4E) (6:4B) (7:4B)]   E=(5:4E)] </thread> 
-    <thread> [tid=3    C=[(0:F8) (1:48) (2:48) (3:4B) (4:48) (5:48) (6:48) (7:48)]   E=(3:4B)] </thread> 
-    <thread> [tid=4    C=[(0:100) (1:4B) (2:4B) (3:4B) (4:4E) (5:4B) (6:4B) (7:4B)]   E=(4:4E)] </thread> 
-    <thread> [tid=7    C=[(0:103) (1:4B) (2:4B) (3:4B) (4:4B) (5:4B) (6:4B) (7:4E)]   E=(7:4E)] </thread> 
     <thread> [tid=4    C=[(0:F9) (1:48) (2:48) (3:48) (4:4B) (5:48) (6:48) (7:48)]   E=(4:4B)] </thread> 
-    <thread> [tid=2    C=[(0:FE) (1:4B) (2:4E) (3:4B) (4:4B) (5:4B) (6:4B) (7:4B)]   E=(2:4E)] </thread> 
     <thread> [tid=6    C=[(0:FB) (1:48) (2:48) (3:48) (4:48) (5:48) (6:4B) (7:48)]   E=(6:4B)] </thread> 
-    <thread> [tid=3    C=[(0:FF) (1:4B) (2:4B) (3:4E) (4:4B) (5:4B) (6:4B) (7:4B)]   E=(3:4E)] </thread> 
     <thread> [tid=2    C=[(0:F7) (1:48) (2:4B) (3:48) (4:48) (5:48) (6:48) (7:48)]   E=(2:4B)] </thread> 
-    <thread> [tid=1    C=[(0:FD) (1:4E) (2:4B) (3:4B) (4:4B) (5:4B) (6:4B) (7:4B)]   E=(1:4E)] </thread> 
-    <thread> [tid=1    C=[(0:F6) (1:4B) (2:48) (3:48) (4:48) (5:48) (6:48) (7:48)]   E=(1:4B)] </thread> 
-    <thread> [tid=6    C=[(0:102) (1:4B) (2:4B) (3:4B) (4:4B) (5:4B) (6:4E) (7:4B)]   E=(6:4E)] </thread> 
     <thread> [tid=7    C=[(0:FC) (1:48) (2:48) (3:48) (4:48) (5:48) (6:48) (7:4B)]   E=(7:4B)] </thread> 
+    <thread> [tid=1    C=[(0:F6) (1:4B) (2:48) (3:48) (4:48) (5:48) (6:48) (7:48)]   E=(1:4B)] </thread> 
+    <thread> [tid=3    C=[(0:FF) (1:4B) (2:4B) (3:4E) (4:4B) (5:4B) (6:4B) (7:4B)]   E=(3:4E)] </thread> 
+    <thread> [tid=2    C=[(0:FE) (1:4B) (2:4E) (3:4B) (4:4B) (5:4B) (6:4B) (7:4B)]   E=(2:4E)] </thread> 
+    <thread> [tid=1    C=[(0:FD) (1:4E) (2:4B) (3:4B) (4:4B) (5:4B) (6:4B) (7:4B)]   E=(1:4E)] </thread> 
+    <thread> [tid=5    C=[(0:101) (1:4B) (2:4B) (3:4B) (4:4B) (5:4E) (6:4B) (7:4B)]   E=(5:4E)] </thread> 
+    <thread> [tid=7    C=[(0:103) (1:4B) (2:4B) (3:4B) (4:4B) (5:4B) (6:4B) (7:4E)]   E=(7:4E)] </thread> 
+    <thread> [tid=4    C=[(0:100) (1:4B) (2:4B) (3:4B) (4:4E) (5:4B) (6:4B) (7:4B)]   E=(4:4E)] </thread> 
+    <thread> [tid=6    C=[(0:102) (1:4B) (2:4B) (3:4B) (4:4B) (5:4B) (6:4E) (7:4B)]   E=(6:4E)] </thread> 
+    <thread> [tid=3    C=[(0:F8) (1:48) (2:48) (3:4B) (4:48) (5:48) (6:48) (7:48)]   E=(3:4B)] </thread> 
+    <thread> [tid=0    C=[(0:107) (1:4E) (2:4E) (3:4E) (4:4E) (5:4E) (6:4E) (7:4E)]   E=(0:107)] </thread> 
   </tool>
   <tool>
     <name> Last </name> 
@@ -441,10 +441,10 @@ Section2:Crypt:Kernel:SizeA	8.767999999999999 (s) 	 8895.985	 (Kbyte/s)
   <errorCountPerErrorType>
   </errorCountPerErrorType>
   <warningsTotal> 0 </warningsTotal> 
-  <yikesTotal> 149 </yikesTotal> 
+  <yikesTotal> 115 </yikesTotal> 
   <failed> false </failed> 
   <failedReason>  </failedReason> 
-  <time> 36458 </time> 
+  <time> 38611 </time> 
 </entry>
-[RR: Time = 36458]
+[RR: Time = 38611]
 [RR: Exiting: 0]

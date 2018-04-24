@@ -1,0 +1,328 @@
+/examples/jsp/jsp2/el/basic-arithmetic.jsp        , success
+/examples/jsp/jsp2/el/basic-comparisons.jsp       , success
+/examples/jsp/jsp2/el/implicit-objects.jsp?foo=bar, success
+/examples/jsp/jsp2/el/functions.jsp?foo=JSP+2.0   , success
+/examples/jsp/jsp2/simpletag/hello.jsp            , success
+/examples/jsp/jsp2/simpletag/repeat.jsp           , success
+/examples/jsp/jsp2/simpletag/book.jsp             , success
+/examples/jsp/jsp2/tagfiles/hello.jsp             , success
+/examples/jsp/jsp2/tagfiles/panel.jsp             , success
+/examples/jsp/jsp2/tagfiles/products.jsp          , success
+/examples/jsp/jsp2/jspx/basic.jspx                , success
+/examples/jsp/jsp2/jspx/svgexample.html           , success
+/examples/jsp/jsp2/jspx/textRotate.jspx?name=JSPX , success
+/examples/jsp/jsp2/jspattribute/jspattribute.jsp  , success
+/examples/jsp/jsp2/jspattribute/shuffle.jsp       , success
+/examples/jsp/jsp2/misc/dynamicattrs.jsp          , success
+/examples/jsp/jsp2/misc/config.jsp                , success
+/examples/jsp/num/numguess.jsp                    , success
+/examples/jsp/dates/date.jsp                      , success
+/examples/jsp/snp/snoop.jsp                       , success
+/examples/jsp/error/error.html                    , success
+/examples/jsp/error/err.jsp?name=audi&submit=Submit, success
+/examples/jsp/error/err.jsp?name=integra&submit=Submit, success
+/examples/jsp/sessions/carts.html                 , success
+/examples/jsp/sessions/carts.jsp?item=NIN+CD&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=JSP+Book&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=Love+life&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=NIN+CD&submit=remove, success
+/examples/jsp/sessions/carts.jsp?item=JSP+Book&submit=remove, success
+/examples/jsp/sessions/carts.jsp?item=Love+life&submit=remove, success
+/examples/jsp/checkbox/check.html                 , success
+/examples/jsp/colors/colors.html                  , success
+/examples/jsp/cal/login.html                      , success
+/examples/jsp/include/include.jsp                 , success
+/examples/jsp/forward/forward.jsp                 , success
+/examples/jsp/plugin/plugin.jsp                   , success
+/examples/jsp/jsptoserv/jsptoservlet.jsp          , success
+/examples/jsp/xml/xml.jsp                         , success
+/examples/jsp/tagplugin/if.jsp                    , success
+/examples/jsp/tagplugin/foreach.jsp               , success
+/examples/jsp/tagplugin/choose.jsp                , success
+/examples/jsp/jsp2/el/basic-arithmetic.jsp        , success
+/examples/jsp/jsp2/el/basic-comparisons.jsp       , success
+/examples/jsp/jsp2/el/implicit-objects.jsp?foo=bar, success
+/examples/jsp/jsp2/el/functions.jsp?foo=JSP+2.0   , success
+/examples/jsp/jsp2/simpletag/hello.jsp            , success
+/examples/jsp/jsp2/simpletag/repeat.jsp           , success
+/examples/jsp/jsp2/simpletag/book.jsp             , success
+/examples/jsp/jsp2/tagfiles/hello.jsp             , success
+/examples/jsp/jsp2/tagfiles/panel.jsp             , success
+/examples/jsp/jsp2/tagfiles/products.jsp          , success
+/examples/jsp/jsp2/jspx/basic.jspx                , success
+/examples/jsp/jsp2/jspx/svgexample.html           , success
+/examples/jsp/jsp2/jspx/textRotate.jspx?name=JSPX , success
+/examples/jsp/jsp2/jspattribute/jspattribute.jsp  , success
+/examples/jsp/jsp2/jspattribute/shuffle.jsp       , success
+/examples/jsp/jsp2/misc/dynamicattrs.jsp          , success
+/examples/jsp/jsp2/misc/config.jsp                , success
+/examples/jsp/num/numguess.jsp                    , success
+/examples/jsp/dates/date.jsp                      , success
+/examples/jsp/snp/snoop.jsp                       , success
+/examples/jsp/error/error.html                    , success
+/examples/jsp/error/err.jsp?name=audi&submit=Submit, success
+/examples/jsp/error/err.jsp?name=integra&submit=Submit, success
+/examples/jsp/sessions/carts.html                 , success
+/examples/jsp/sessions/carts.jsp?item=NIN+CD&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=JSP+Book&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=Love+life&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=NIN+CD&submit=remove, success
+/examples/jsp/sessions/carts.jsp?item=JSP+Book&submit=remove, success
+/examples/jsp/sessions/carts.jsp?item=Love+life&submit=remove, success
+/examples/jsp/checkbox/check.html                 , success
+/examples/jsp/colors/colors.html                  , success
+/examples/jsp/cal/login.html                      , success
+/examples/jsp/include/include.jsp                 , success
+/examples/jsp/forward/forward.jsp                 , success
+/examples/jsp/plugin/plugin.jsp                   , success
+/examples/jsp/jsptoserv/jsptoservlet.jsp          , success
+/examples/jsp/xml/xml.jsp                         , success
+/examples/jsp/tagplugin/if.jsp                    , success
+/examples/jsp/tagplugin/foreach.jsp               , success
+/examples/jsp/tagplugin/choose.jsp                , success
+/examples/jsp/jsp2/el/basic-arithmetic.jsp        , success
+/examples/jsp/jsp2/el/basic-comparisons.jsp       , success
+/examples/jsp/jsp2/el/implicit-objects.jsp?foo=bar, success
+/examples/jsp/jsp2/el/functions.jsp?foo=JSP+2.0   , success
+/examples/jsp/jsp2/simpletag/hello.jsp            , success
+/examples/jsp/jsp2/simpletag/repeat.jsp           , success
+/examples/jsp/jsp2/simpletag/book.jsp             , success
+/examples/jsp/jsp2/tagfiles/hello.jsp             , success
+/examples/jsp/jsp2/tagfiles/panel.jsp             , success
+/examples/jsp/jsp2/tagfiles/products.jsp          , success
+/examples/jsp/jsp2/jspx/basic.jspx                , success
+/examples/jsp/jsp2/jspx/svgexample.html           , success
+/examples/jsp/jsp2/jspx/textRotate.jspx?name=JSPX , success
+/examples/jsp/jsp2/jspattribute/jspattribute.jsp  , success
+/examples/jsp/jsp2/jspattribute/shuffle.jsp       , success
+/examples/jsp/jsp2/misc/dynamicattrs.jsp          , success
+/examples/jsp/jsp2/misc/config.jsp                , success
+/examples/jsp/num/numguess.jsp                    , success
+/examples/jsp/dates/date.jsp                      , success
+/examples/jsp/snp/snoop.jsp                       , success
+/examples/jsp/error/error.html                    , success
+/examples/jsp/error/err.jsp?name=audi&submit=Submit, success
+/examples/jsp/error/err.jsp?name=integra&submit=Submit, success
+/examples/jsp/sessions/carts.html                 , success
+/examples/jsp/sessions/carts.jsp?item=NIN+CD&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=JSP+Book&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=Love+life&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=NIN+CD&submit=remove, success
+/examples/jsp/sessions/carts.jsp?item=JSP+Book&submit=remove, success
+/examples/jsp/sessions/carts.jsp?item=Love+life&submit=remove, success
+/examples/jsp/checkbox/check.html                 , success
+/examples/jsp/colors/colors.html                  , success
+/examples/jsp/cal/login.html                      , success
+/examples/jsp/include/include.jsp                 , success
+/examples/jsp/forward/forward.jsp                 , success
+/examples/jsp/plugin/plugin.jsp                   , success
+/examples/jsp/jsptoserv/jsptoservlet.jsp          , success
+/examples/jsp/xml/xml.jsp                         , success
+/examples/jsp/tagplugin/if.jsp                    , success
+/examples/jsp/tagplugin/foreach.jsp               , success
+/examples/jsp/tagplugin/choose.jsp                , success
+/examples/jsp/jsp2/el/basic-arithmetic.jsp        , success
+/examples/jsp/jsp2/el/basic-comparisons.jsp       , success
+/examples/jsp/jsp2/el/implicit-objects.jsp?foo=bar, success
+/examples/jsp/jsp2/el/functions.jsp?foo=JSP+2.0   , success
+/examples/jsp/jsp2/simpletag/hello.jsp            , success
+/examples/jsp/jsp2/simpletag/repeat.jsp           , success
+/examples/jsp/jsp2/simpletag/book.jsp             , success
+/examples/jsp/jsp2/tagfiles/hello.jsp             , success
+/examples/jsp/jsp2/tagfiles/panel.jsp             , success
+/examples/jsp/jsp2/tagfiles/products.jsp          , success
+/examples/jsp/jsp2/jspx/basic.jspx                , success
+/examples/jsp/jsp2/jspx/svgexample.html           , success
+/examples/jsp/jsp2/jspx/textRotate.jspx?name=JSPX , success
+/examples/jsp/jsp2/jspattribute/jspattribute.jsp  , success
+/examples/jsp/jsp2/jspattribute/shuffle.jsp       , success
+/examples/jsp/jsp2/misc/dynamicattrs.jsp          , success
+/examples/jsp/jsp2/misc/config.jsp                , success
+/examples/jsp/num/numguess.jsp                    , success
+/examples/jsp/dates/date.jsp                      , success
+/examples/jsp/snp/snoop.jsp                       , success
+/examples/jsp/error/error.html                    , success
+/examples/jsp/error/err.jsp?name=audi&submit=Submit, success
+/examples/jsp/error/err.jsp?name=integra&submit=Submit, success
+/examples/jsp/sessions/carts.html                 , success
+/examples/jsp/sessions/carts.jsp?item=NIN+CD&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=JSP+Book&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=Love+life&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=NIN+CD&submit=remove, success
+/examples/jsp/sessions/carts.jsp?item=JSP+Book&submit=remove, success
+/examples/jsp/sessions/carts.jsp?item=Love+life&submit=remove, success
+/examples/jsp/checkbox/check.html                 , success
+/examples/jsp/colors/colors.html                  , success
+/examples/jsp/cal/login.html                      , success
+/examples/jsp/include/include.jsp                 , success
+/examples/jsp/forward/forward.jsp                 , success
+/examples/jsp/plugin/plugin.jsp                   , success
+/examples/jsp/jsptoserv/jsptoservlet.jsp          , success
+/examples/jsp/xml/xml.jsp                         , success
+/examples/jsp/tagplugin/if.jsp                    , success
+/examples/jsp/tagplugin/foreach.jsp               , success
+/examples/jsp/tagplugin/choose.jsp                , success
+/examples/jsp/jsp2/el/basic-arithmetic.jsp        , success
+/examples/jsp/jsp2/el/basic-comparisons.jsp       , success
+/examples/jsp/jsp2/el/implicit-objects.jsp?foo=bar, success
+/examples/jsp/jsp2/el/functions.jsp?foo=JSP+2.0   , success
+/examples/jsp/jsp2/simpletag/hello.jsp            , success
+/examples/jsp/jsp2/simpletag/repeat.jsp           , success
+/examples/jsp/jsp2/simpletag/book.jsp             , success
+/examples/jsp/jsp2/tagfiles/hello.jsp             , success
+/examples/jsp/jsp2/tagfiles/panel.jsp             , success
+/examples/jsp/jsp2/tagfiles/products.jsp          , success
+/examples/jsp/jsp2/jspx/basic.jspx                , success
+/examples/jsp/jsp2/jspx/svgexample.html           , success
+/examples/jsp/jsp2/jspx/textRotate.jspx?name=JSPX , success
+/examples/jsp/jsp2/jspattribute/jspattribute.jsp  , success
+/examples/jsp/jsp2/jspattribute/shuffle.jsp       , success
+/examples/jsp/jsp2/misc/dynamicattrs.jsp          , success
+/examples/jsp/jsp2/misc/config.jsp                , success
+/examples/jsp/num/numguess.jsp                    , success
+/examples/jsp/dates/date.jsp                      , success
+/examples/jsp/snp/snoop.jsp                       , success
+/examples/jsp/error/error.html                    , success
+/examples/jsp/error/err.jsp?name=audi&submit=Submit, success
+/examples/jsp/error/err.jsp?name=integra&submit=Submit, success
+/examples/jsp/sessions/carts.html                 , success
+/examples/jsp/sessions/carts.jsp?item=NIN+CD&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=JSP+Book&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=Love+life&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=NIN+CD&submit=remove, success
+/examples/jsp/sessions/carts.jsp?item=JSP+Book&submit=remove, success
+/examples/jsp/sessions/carts.jsp?item=Love+life&submit=remove, success
+/examples/jsp/checkbox/check.html                 , success
+/examples/jsp/colors/colors.html                  , success
+/examples/jsp/cal/login.html                      , success
+/examples/jsp/include/include.jsp                 , success
+/examples/jsp/forward/forward.jsp                 , success
+/examples/jsp/plugin/plugin.jsp                   , success
+/examples/jsp/jsptoserv/jsptoservlet.jsp          , success
+/examples/jsp/xml/xml.jsp                         , success
+/examples/jsp/tagplugin/if.jsp                    , success
+/examples/jsp/tagplugin/foreach.jsp               , success
+/examples/jsp/tagplugin/choose.jsp                , success
+/examples/jsp/jsp2/el/basic-arithmetic.jsp        , success
+/examples/jsp/jsp2/el/basic-comparisons.jsp       , success
+/examples/jsp/jsp2/el/implicit-objects.jsp?foo=bar, success
+/examples/jsp/jsp2/el/functions.jsp?foo=JSP+2.0   , success
+/examples/jsp/jsp2/simpletag/hello.jsp            , success
+/examples/jsp/jsp2/simpletag/repeat.jsp           , success
+/examples/jsp/jsp2/simpletag/book.jsp             , success
+/examples/jsp/jsp2/tagfiles/hello.jsp             , success
+/examples/jsp/jsp2/tagfiles/panel.jsp             , success
+/examples/jsp/jsp2/tagfiles/products.jsp          , success
+/examples/jsp/jsp2/jspx/basic.jspx                , success
+/examples/jsp/jsp2/jspx/svgexample.html           , success
+/examples/jsp/jsp2/jspx/textRotate.jspx?name=JSPX , success
+/examples/jsp/jsp2/jspattribute/jspattribute.jsp  , success
+/examples/jsp/jsp2/jspattribute/shuffle.jsp       , success
+/examples/jsp/jsp2/misc/dynamicattrs.jsp          , success
+/examples/jsp/jsp2/misc/config.jsp                , success
+/examples/jsp/num/numguess.jsp                    , success
+/examples/jsp/dates/date.jsp                      , success
+/examples/jsp/snp/snoop.jsp                       , success
+/examples/jsp/error/error.html                    , success
+/examples/jsp/error/err.jsp?name=audi&submit=Submit, success
+/examples/jsp/error/err.jsp?name=integra&submit=Submit, success
+/examples/jsp/sessions/carts.html                 , success
+/examples/jsp/sessions/carts.jsp?item=NIN+CD&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=JSP+Book&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=Love+life&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=NIN+CD&submit=remove, success
+/examples/jsp/sessions/carts.jsp?item=JSP+Book&submit=remove, success
+/examples/jsp/sessions/carts.jsp?item=Love+life&submit=remove, success
+/examples/jsp/checkbox/check.html                 , success
+/examples/jsp/colors/colors.html                  , success
+/examples/jsp/cal/login.html                      , success
+/examples/jsp/include/include.jsp                 , success
+/examples/jsp/forward/forward.jsp                 , success
+/examples/jsp/plugin/plugin.jsp                   , success
+/examples/jsp/jsptoserv/jsptoservlet.jsp          , success
+/examples/jsp/xml/xml.jsp                         , success
+/examples/jsp/tagplugin/if.jsp                    , success
+/examples/jsp/tagplugin/foreach.jsp               , success
+/examples/jsp/tagplugin/choose.jsp                , success
+/examples/jsp/jsp2/el/basic-arithmetic.jsp        , success
+/examples/jsp/jsp2/el/basic-comparisons.jsp       , success
+/examples/jsp/jsp2/el/implicit-objects.jsp?foo=bar, success
+/examples/jsp/jsp2/el/functions.jsp?foo=JSP+2.0   , success
+/examples/jsp/jsp2/simpletag/hello.jsp            , success
+/examples/jsp/jsp2/simpletag/repeat.jsp           , success
+/examples/jsp/jsp2/simpletag/book.jsp             , success
+/examples/jsp/jsp2/tagfiles/hello.jsp             , success
+/examples/jsp/jsp2/tagfiles/panel.jsp             , success
+/examples/jsp/jsp2/tagfiles/products.jsp          , success
+/examples/jsp/jsp2/jspx/basic.jspx                , success
+/examples/jsp/jsp2/jspx/svgexample.html           , success
+/examples/jsp/jsp2/jspx/textRotate.jspx?name=JSPX , success
+/examples/jsp/jsp2/jspattribute/jspattribute.jsp  , success
+/examples/jsp/jsp2/jspattribute/shuffle.jsp       , success
+/examples/jsp/jsp2/misc/dynamicattrs.jsp          , success
+/examples/jsp/jsp2/misc/config.jsp                , success
+/examples/jsp/num/numguess.jsp                    , success
+/examples/jsp/dates/date.jsp                      , success
+/examples/jsp/snp/snoop.jsp                       , success
+/examples/jsp/error/error.html                    , success
+/examples/jsp/error/err.jsp?name=audi&submit=Submit, success
+/examples/jsp/error/err.jsp?name=integra&submit=Submit, success
+/examples/jsp/sessions/carts.html                 , success
+/examples/jsp/sessions/carts.jsp?item=NIN+CD&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=JSP+Book&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=Love+life&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=NIN+CD&submit=remove, success
+/examples/jsp/sessions/carts.jsp?item=JSP+Book&submit=remove, success
+/examples/jsp/sessions/carts.jsp?item=Love+life&submit=remove, success
+/examples/jsp/checkbox/check.html                 , success
+/examples/jsp/colors/colors.html                  , success
+/examples/jsp/cal/login.html                      , success
+/examples/jsp/include/include.jsp                 , success
+/examples/jsp/forward/forward.jsp                 , success
+/examples/jsp/plugin/plugin.jsp                   , success
+/examples/jsp/jsptoserv/jsptoservlet.jsp          , success
+/examples/jsp/xml/xml.jsp                         , success
+/examples/jsp/tagplugin/if.jsp                    , success
+/examples/jsp/tagplugin/foreach.jsp               , success
+/examples/jsp/tagplugin/choose.jsp                , success
+/examples/jsp/jsp2/el/basic-arithmetic.jsp        , success
+/examples/jsp/jsp2/el/basic-comparisons.jsp       , success
+/examples/jsp/jsp2/el/implicit-objects.jsp?foo=bar, success
+/examples/jsp/jsp2/el/functions.jsp?foo=JSP+2.0   , success
+/examples/jsp/jsp2/simpletag/hello.jsp            , success
+/examples/jsp/jsp2/simpletag/repeat.jsp           , success
+/examples/jsp/jsp2/simpletag/book.jsp             , success
+/examples/jsp/jsp2/tagfiles/hello.jsp             , success
+/examples/jsp/jsp2/tagfiles/panel.jsp             , success
+/examples/jsp/jsp2/tagfiles/products.jsp          , success
+/examples/jsp/jsp2/jspx/basic.jspx                , success
+/examples/jsp/jsp2/jspx/svgexample.html           , success
+/examples/jsp/jsp2/jspx/textRotate.jspx?name=JSPX , success
+/examples/jsp/jsp2/jspattribute/jspattribute.jsp  , success
+/examples/jsp/jsp2/jspattribute/shuffle.jsp       , success
+/examples/jsp/jsp2/misc/dynamicattrs.jsp          , success
+/examples/jsp/jsp2/misc/config.jsp                , success
+/examples/jsp/num/numguess.jsp                    , success
+/examples/jsp/dates/date.jsp                      , success
+/examples/jsp/snp/snoop.jsp                       , success
+/examples/jsp/error/error.html                    , success
+/examples/jsp/error/err.jsp?name=audi&submit=Submit, success
+/examples/jsp/error/err.jsp?name=integra&submit=Submit, success
+/examples/jsp/sessions/carts.html                 , success
+/examples/jsp/sessions/carts.jsp?item=NIN+CD&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=JSP+Book&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=Love+life&submit=add, success
+/examples/jsp/sessions/carts.jsp?item=NIN+CD&submit=remove, success
+/examples/jsp/sessions/carts.jsp?item=JSP+Book&submit=remove, success
+/examples/jsp/sessions/carts.jsp?item=Love+life&submit=remove, success
+/examples/jsp/checkbox/check.html                 , success
+/examples/jsp/colors/colors.html                  , success
+/examples/jsp/cal/login.html                      , success
+/examples/jsp/include/include.jsp                 , success
+/examples/jsp/forward/forward.jsp                 , success
+/examples/jsp/plugin/plugin.jsp                   , success
+/examples/jsp/jsptoserv/jsptoservlet.jsp          , success
+/examples/jsp/xml/xml.jsp                         , success
+/examples/jsp/tagplugin/if.jsp                    , success
+/examples/jsp/tagplugin/foreach.jsp               , success
+/examples/jsp/tagplugin/choose.jsp                , success

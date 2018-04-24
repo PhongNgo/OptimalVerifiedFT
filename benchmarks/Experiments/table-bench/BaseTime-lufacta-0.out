@@ -1,5 +1,5 @@
 <entry>
-  <date> Mon Apr 23 18:09:37 CEST 2018 </date> 
+  <date> Tue Apr 24 17:50:19 CEST 2018 </date> 
   <mode> FAST </mode> 
   <timeout> NO </timeout> 
   <options>
@@ -84,9 +84,9 @@
     <memCommitted> 982 </memCommitted> 
     <memUsed> 18 </memUsed> 
     <memTotal> 982 </memTotal> 
-    <compileTime> 513 </compileTime> 
-    <gc> <name> PS Scavenge </name> <time> 15 </time> </gc>
-    <gc> <name> PS MarkSweep </name> <time> 139 </time> </gc>
+    <compileTime> 550 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 17 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 162 </time> </gc>
   </system>
   <instrumented>  </instrumented> 
   <instrumentedNum> 0 </instrumentedNum> 
@@ -104,20 +104,20 @@
 
     <counter><name> "GCRunner: Max Usage" </name>                        <value> 0 </value> </counter>
 
-    <counter><name> "RRBench: Warmup 1" </name>                          <value> 102 </value> </counter>
-    <counter><name> "RRBench: Warmup 2" </name>                          <value> 84 </value> </counter>
-    <counter><name> "RRBench: Warmup 3" </name>                          <value> 85 </value> </counter>
-    <counter><name> "RRBench: Iter 1" </name>                            <value> 27 </value> </counter>
-    <counter><name> "RRBench: Iter 2" </name>                            <value> 68 </value> </counter>
-    <counter><name> "RRBench: Iter 3" </name>                            <value> 31 </value> </counter>
-    <counter><name> "RRBench: Iter 4" </name>                            <value> 37 </value> </counter>
-    <counter><name> "RRBench: Iter 5" </name>                            <value> 51 </value> </counter>
-    <counter><name> "RRBench: Iter 6" </name>                            <value> 71 </value> </counter>
-    <counter><name> "RRBench: Iter 7" </name>                            <value> 45 </value> </counter>
-    <counter><name> "RRBench: Iter 8" </name>                            <value> 70 </value> </counter>
-    <counter><name> "RRBench: Iter 9" </name>                            <value> 48 </value> </counter>
-    <counter><name> "RRBench: Iter 10" </name>                           <value> 27 </value> </counter>
-    <counter><name> "RRBench: Average" </name>                           <value> 47 </value> </counter>
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 157 </value> </counter>
+    <counter><name> "RRBench: Warmup 2" </name>                          <value> 96 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 78 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 72 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 75 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 86 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 90 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 88 </value> </counter>
+    <counter><name> "RRBench: Iter 6" </name>                            <value> 88 </value> </counter>
+    <counter><name> "RRBench: Iter 7" </name>                            <value> 65 </value> </counter>
+    <counter><name> "RRBench: Iter 8" </name>                            <value> 80 </value> </counter>
+    <counter><name> "RRBench: Iter 9" </name>                            <value> 72 </value> </counter>
+    <counter><name> "RRBench: Iter 10" </name>                           <value> 77 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 79 </value> </counter>
 
     <counter><name> "ShadowThread: Count" </name>                        <value> 0 </value> </counter>
     <counter><name> "ShadowThread: Max Live" </name>                     <value> 0 </value> </counter>
@@ -153,5 +153,5 @@
   <yikesTotal> 0 </yikesTotal> 
   <failed> false </failed> 
   <failedReason>  </failedReason> 
-  <time> 860 </time> 
+  <time> 1266 </time> 
 </entry>

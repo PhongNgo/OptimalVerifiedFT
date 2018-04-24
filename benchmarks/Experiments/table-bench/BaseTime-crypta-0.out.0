@@ -1,5 +1,5 @@
 <entry>
-  <date> Mon Apr 23 16:22:43 CEST 2018 </date> 
+  <date> Tue Apr 24 15:02:51 CEST 2018 </date> 
   <mode> FAST </mode> 
   <timeout> NO </timeout> 
   <options>
@@ -84,9 +84,9 @@
     <memCommitted> 982 </memCommitted> 
     <memUsed> 18 </memUsed> 
     <memTotal> 982 </memTotal> 
-    <compileTime> 378 </compileTime> 
+    <compileTime> 411 </compileTime> 
     <gc> <name> PS Scavenge </name> <time> 15 </time> </gc>
-    <gc> <name> PS MarkSweep </name> <time> 136 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 143 </time> </gc>
   </system>
   <instrumented>  </instrumented> 
   <instrumentedNum> 0 </instrumentedNum> 
@@ -104,20 +104,20 @@
 
     <counter><name> "GCRunner: Max Usage" </name>                        <value> 0 </value> </counter>
 
-    <counter><name> "RRBench: Warmup 1" </name>                          <value> 120 </value> </counter>
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 132 </value> </counter>
     <counter><name> "RRBench: Warmup 2" </name>                          <value> 33 </value> </counter>
-    <counter><name> "RRBench: Warmup 3" </name>                          <value> 37 </value> </counter>
-    <counter><name> "RRBench: Iter 1" </name>                            <value> 32 </value> </counter>
-    <counter><name> "RRBench: Iter 2" </name>                            <value> 26 </value> </counter>
-    <counter><name> "RRBench: Iter 3" </name>                            <value> 25 </value> </counter>
-    <counter><name> "RRBench: Iter 4" </name>                            <value> 25 </value> </counter>
-    <counter><name> "RRBench: Iter 5" </name>                            <value> 26 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 41 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 33 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 29 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 28 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 32 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 25 </value> </counter>
     <counter><name> "RRBench: Iter 6" </name>                            <value> 28 </value> </counter>
-    <counter><name> "RRBench: Iter 7" </name>                            <value> 25 </value> </counter>
-    <counter><name> "RRBench: Iter 8" </name>                            <value> 26 </value> </counter>
-    <counter><name> "RRBench: Iter 9" </name>                            <value> 28 </value> </counter>
-    <counter><name> "RRBench: Iter 10" </name>                           <value> 25 </value> </counter>
-    <counter><name> "RRBench: Average" </name>                           <value> 26 </value> </counter>
+    <counter><name> "RRBench: Iter 7" </name>                            <value> 26 </value> </counter>
+    <counter><name> "RRBench: Iter 8" </name>                            <value> 25 </value> </counter>
+    <counter><name> "RRBench: Iter 9" </name>                            <value> 26 </value> </counter>
+    <counter><name> "RRBench: Iter 10" </name>                           <value> 26 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 27 </value> </counter>
 
     <counter><name> "ShadowThread: Count" </name>                        <value> 0 </value> </counter>
     <counter><name> "ShadowThread: Max Live" </name>                     <value> 0 </value> </counter>
@@ -153,5 +153,5 @@
   <yikesTotal> 0 </yikesTotal> 
   <failed> false </failed> 
   <failedReason>  </failedReason> 
-  <time> 570 </time> 
+  <time> 602 </time> 
 </entry>

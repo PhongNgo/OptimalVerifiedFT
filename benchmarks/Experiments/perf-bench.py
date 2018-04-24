@@ -165,7 +165,7 @@ def makeErrors(e,name='',title='c|',row='r|'):
 cols = [
     Column("", (lambda row, outDir: row.name), 'Geo Mean', '|l|', '|c|'),
     Column("(sec)", lambda row, outDir: round(baseExperiment.getXMLCounter(row,outDir,'RRBench: Average') / 1000.0, S), '','r|','c|'),
-    makeOverhead(ftExperimentOld,'FTOld'),
+##    makeOverhead(ftExperimentOld,'FTOld'),
     makeOverhead(ftExperimentOldCAS,'FTOldCAS'),
 ##    makeOverhead(ftExperimentV1,'VFT-v1'),
 ##    makeOverhead(ftExperimentV2,'VFT-v1.5'),
@@ -179,7 +179,7 @@ cols = [
 headers = [
     [Header('',1,'|c|'),
      Header('',1),
-     Header('Overhead',5,'c|'),
+     Header('Overhead',4,'c|'),
      ],
     [Header('Program',1,'|c|'),
      Header('Time',1,'c|'),
@@ -190,13 +190,13 @@ headers = [
 
 exps=[
     baseExperiment,
+    ftExperimentOldCAS,
 ##    ftExperimentV1,
 ##    ftExperimentV2,
     ftExperimentV3,
     ftExperimentV4,
     ftExperimentV5,
-    ftExperimentOld,
-    ftExperimentOldCAS,
+##    ftExperimentOld,
 ]
 
 perfTable =      Table('Performance', 'large-perf', headers,  javagrade_rows + dacapo_rows, cols, exps,'bench')
@@ -207,8 +207,8 @@ smallperfTable = Table('Performance', 'small-perf', headers,  rows_small, cols, 
 
 cols = [
     Column("Program", (lambda row, outDir: row.name), 'Total', '|l||', '|c||'),
-    makeErrors(ftExperimentOld,'FTOld', 'c|','r|'),
-    makeErrors(ftExperimentOld,'FTOldCAS', 'c|','r|'),
+##    makeErrors(ftExperimentOld,'FTOld', 'c|','r|'),
+    makeErrors(ftExperimentOldCAS,'FTOldCAS', 'c|','r|'),
 ##    makeErrors(ftExperimentV1,'VFT-v1', 'c|','r|'),
 ##    makeErrors(ftExperimentV2,'VFT-v1.5', 'c|','r|'),
     makeErrors(ftExperimentV3,'VFT-v2', 'c|','r|'),
@@ -217,7 +217,7 @@ cols = [
 ]
 
 headers = [
-    [Header('',1,'|c||'),Header('Warnings',5,'|c|')]
+    [Header('',1,'|c||'),Header('Warnings',4,'|c|')]
 ]
 
 errorTable = Table('Performance', 'large', headers, javagrade_rows + dacapo_rows, cols, [],'bench')

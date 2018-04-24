@@ -1,5 +1,5 @@
 <entry>
-  <date> Mon Apr 23 18:10:44 CEST 2018 </date> 
+  <date> Tue Apr 24 17:51:03 CEST 2018 </date> 
   <mode> FAST </mode> 
   <timeout> NO </timeout> 
   <options>
@@ -83,11 +83,11 @@
     <name> user.dir </name>            <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/lufacta </value> 
     <availableProcs> 8 </availableProcs> 
     <memCommitted> 982 </memCommitted> 
-    <memUsed> 153 </memUsed> 
+    <memUsed> 150 </memUsed> 
     <memTotal> 982 </memTotal> 
-    <compileTime> 9180 </compileTime> 
-    <gc> <name> PS Scavenge </name> <time> 100 </time> </gc>
-    <gc> <name> PS MarkSweep </name> <time> 784 </time> </gc>
+    <compileTime> 10834 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 108 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 913 </time> </gc>
   </system>
   <instrumented> JGFLUFactBenchSizeA RRBench jgfutil/JGFInstrumentor jgfutil/JGFSection2 jgfutil/JGFTimer lufact/JGFLUFactBench lufact/Linpack lufact/LinpackRunner  </instrumented> 
   <instrumentedNum> 8 </instrumentedNum> 
@@ -98,8 +98,8 @@
   <counters>
 
     <counter><name> "ArrayStateFactory: Size" </name>                    <value> 6,617 </value> </counter>
-    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>8.00000</total> <count>25</count> <ave>0.320000</ave> </value> </counter>
-    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 2,730 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>7.00000</total> <count>23</count> <ave>0.304348</ave> </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 2,255 </value> </counter>
 
     <counter><name> "Clone: Count" </name>                               <value> 0 </value> </counter>
 
@@ -132,20 +132,20 @@
 
     <counter><name> "Handler: Count" </name>                             <value> 0 </value> </counter>
 
-    <counter><name> "RRBench: Warmup 1" </name>                          <value> 2,202 </value> </counter>
-    <counter><name> "RRBench: Warmup 2" </name>                          <value> 1,557 </value> </counter>
-    <counter><name> "RRBench: Warmup 3" </name>                          <value> 1,475 </value> </counter>
-    <counter><name> "RRBench: Iter 1" </name>                            <value> 1,232 </value> </counter>
-    <counter><name> "RRBench: Iter 2" </name>                            <value> 1,343 </value> </counter>
-    <counter><name> "RRBench: Iter 3" </name>                            <value> 1,311 </value> </counter>
-    <counter><name> "RRBench: Iter 4" </name>                            <value> 1,383 </value> </counter>
-    <counter><name> "RRBench: Iter 5" </name>                            <value> 1,348 </value> </counter>
-    <counter><name> "RRBench: Iter 6" </name>                            <value> 1,296 </value> </counter>
-    <counter><name> "RRBench: Iter 7" </name>                            <value> 1,304 </value> </counter>
-    <counter><name> "RRBench: Iter 8" </name>                            <value> 1,384 </value> </counter>
-    <counter><name> "RRBench: Iter 9" </name>                            <value> 1,248 </value> </counter>
-    <counter><name> "RRBench: Iter 10" </name>                           <value> 1,491 </value> </counter>
-    <counter><name> "RRBench: Average" </name>                           <value> 1,334 </value> </counter>
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 2,787 </value> </counter>
+    <counter><name> "RRBench: Warmup 2" </name>                          <value> 1,772 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 1,823 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 1,678 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 1,564 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 1,487 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 1,412 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 1,450 </value> </counter>
+    <counter><name> "RRBench: Iter 6" </name>                            <value> 1,341 </value> </counter>
+    <counter><name> "RRBench: Iter 7" </name>                            <value> 1,378 </value> </counter>
+    <counter><name> "RRBench: Iter 8" </name>                            <value> 1,407 </value> </counter>
+    <counter><name> "RRBench: Iter 9" </name>                            <value> 1,494 </value> </counter>
+    <counter><name> "RRBench: Iter 10" </name>                           <value> 1,417 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 1,462 </value> </counter>
 
     <counter><name> "ShadowLock: objects" </name>                        <value> 0 </value> </counter>
 
@@ -155,20 +155,20 @@
 
     <counter><name> "ShadowVolatile: objects" </name>                    <value> 0 </value> </counter>
 
-    <counter><name> "Time: Instrumenter" </name>                         <value> <total>96.0000</total> <count>8</count> <ave>12.0000</ave> </value> </counter>
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>115.000</total> <count>8</count> <ave>14.3750</ave> </value> </counter>
   </counters>
   <yikes>
   </yikes>
   <tool>
     <name> tools.fasttrack.FastTrackTool </name> 
-    <thread> [tid=6    C=[(0:98B2) (1:9830) (2:9830) (3:9830) (4:9830) (5:9830) (6:9831) (7:9830)]   E=(6:9831)] </thread> 
-    <thread> [tid=2    C=[(0:98B2) (1:9830) (2:9831) (3:9830) (4:9830) (5:9830) (6:9830) (7:9830)]   E=(2:9831)] </thread> 
-    <thread> [tid=1    C=[(0:98B2) (1:9831) (2:9830) (3:9830) (4:9830) (5:9830) (6:9830) (7:9830)]   E=(1:9831)] </thread> 
-    <thread> [tid=7    C=[(0:98B2) (1:9830) (2:9830) (3:9830) (4:9830) (5:9830) (6:9830) (7:9831)]   E=(7:9831)] </thread> 
-    <thread> [tid=5    C=[(0:98B2) (1:9830) (2:9830) (3:9830) (4:9830) (5:9831) (6:9830) (7:9830)]   E=(5:9831)] </thread> 
     <thread> [tid=0    C=[(0:98B6) (1:9831) (2:9831) (3:9831) (4:9831) (5:9831) (6:9831) (7:9831)]   E=(0:98B6)] </thread> 
     <thread> [tid=4    C=[(0:98B2) (1:9830) (2:9830) (3:9830) (4:9831) (5:9830) (6:9830) (7:9830)]   E=(4:9831)] </thread> 
+    <thread> [tid=5    C=[(0:98B2) (1:9830) (2:9830) (3:9830) (4:9830) (5:9831) (6:9830) (7:9830)]   E=(5:9831)] </thread> 
+    <thread> [tid=7    C=[(0:98B2) (1:9830) (2:9830) (3:9830) (4:9830) (5:9830) (6:9830) (7:9831)]   E=(7:9831)] </thread> 
     <thread> [tid=3    C=[(0:98B2) (1:9830) (2:9830) (3:9831) (4:9830) (5:9830) (6:9830) (7:9830)]   E=(3:9831)] </thread> 
+    <thread> [tid=6    C=[(0:98B2) (1:9830) (2:9830) (3:9830) (4:9830) (5:9830) (6:9831) (7:9830)]   E=(6:9831)] </thread> 
+    <thread> [tid=1    C=[(0:98B2) (1:9831) (2:9830) (3:9830) (4:9830) (5:9830) (6:9830) (7:9830)]   E=(1:9831)] </thread> 
+    <thread> [tid=2    C=[(0:98B2) (1:9830) (2:9831) (3:9830) (4:9830) (5:9830) (6:9830) (7:9830)]   E=(2:9831)] </thread> 
   </tool>
   <tool>
     <name> Last </name> 
@@ -193,5 +193,5 @@
   <yikesTotal> 0 </yikesTotal> 
   <failed> false </failed> 
   <failedReason>  </failedReason> 
-  <time> 19498 </time> 
+  <time> 22075 </time> 
 </entry>

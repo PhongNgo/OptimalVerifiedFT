@@ -3,7 +3,7 @@ java version "1.8.0_101"
 Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
 Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
 
-objc[34495]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/bin/java (0x1085044c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x1085cc4e0). One of the two will be used. Which one is undefined.
+objc[40392]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/bin/java (0x10f3124c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x10f3da4e0). One of the two will be used. Which one is undefined.
 [premain: Installling RoadRunner Agent...]
 [main: RoadRunner Agent Loaded.]
 [main: Running in SLOW Mode]
@@ -13,23 +13,23 @@ objc[34495]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVir
 Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
-Section2:LUFact:Kernel:SizeA	2.11 (s) 	 39.731438	 (Mflops/s)
+Section2:LUFact:Kernel:SizeA	1.985 (s) 	 42.233418	 (Mflops/s)
 
 
 Write Same Epoch:        0.0103644
-Read with Write Same Epoch:  0.0197792
+Read with Write Same Epoch:  0.0197791
 Read Same Epoch:             0.00774107
 Read Shared Same Epoch:      0.312693
 ------------------------------------
-Delayed Release:             0.666667
-All Fast Paths:              0.350578
+Delayed Release:             0.00000
+All Fast Paths:              0.350577
 
 
 [main: ]
 [main: ----- ----- ----- -----      Thpthpthpth.     ----- ----- ----- -----]
-[RR: Total Time: 2919]
+[RR: Total Time: 2686]
 <entry>
-  <date> Mon Apr 23 18:12:08 CEST 2018 </date> 
+  <date> Tue Apr 24 17:51:57 CEST 2018 </date> 
   <mode> SLOW </mode> 
   <timeout> NO </timeout> 
   <options>
@@ -113,9 +113,9 @@ All Fast Paths:              0.350578
     <name> user.dir </name>            <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/lufacta </value> 
     <availableProcs> 8 </availableProcs> 
     <memCommitted> 982 </memCommitted> 
-    <memUsed> 226 </memUsed> 
+    <memUsed> 221 </memUsed> 
     <memTotal> 982 </memTotal> 
-    <compileTime> 4841 </compileTime> 
+    <compileTime> 4377 </compileTime> 
     <gc> <name> PS Scavenge </name> <time> 0 </time> </gc>
     <gc> <name> PS MarkSweep </name> <time> 0 </time> </gc>
   </system>
@@ -135,12 +135,12 @@ All Fast Paths:              0.350578
 
     <counter><name> "FT: Read Same Epoch" </name>                        <value>  1,028,591 </value> </counter>
     <counter><name> "FT: ReadShared Same Epoch" </name>                  <value> 41,548,944 </value> </counter>
-    <counter><name> "FT: Read Exclusive" </name>                         <value> 42,108,150 </value> </counter>
+    <counter><name> "FT: Read Exclusive" </name>                         <value> 42,108,162 </value> </counter>
     <counter><name> "FT: Read Share" </name>                             <value>    125,751 </value> </counter>
     <counter><name> "FT: Read Shared" </name>                            <value>  2,015,767 </value> </counter>
     <counter><name> "FT: Write-Read Error" </name>                       <value>          0 </value> </counter>
-    <counter><name> "FT: Write Same Epoch" </name>                       <value>  1,377,162 </value> </counter>
-    <counter><name> "FT: Write Exclusive" </name>                        <value> 41,791,097 </value> </counter>
+    <counter><name> "FT: Write Same Epoch" </name>                       <value>  1,377,161 </value> </counter>
+    <counter><name> "FT: Write Exclusive" </name>                        <value> 41,791,098 </value> </counter>
     <counter><name> "FT: Write Shared" </name>                           <value>    250,978 </value> </counter>
     <counter><name> "FT: Write-Write Error" </name>                      <value>          0 </value> </counter>
     <counter><name> "FT: Read-Write Error" </name>                       <value>          0 </value> </counter>
@@ -152,8 +152,8 @@ All Fast Paths:              0.350578
     <counter><name> "FT: Barrier" </name>                                <value>     47,904 </value> </counter>
     <counter><name> "FT: Wait" </name>                                   <value>          0 </value> </counter>
     <counter><name> "FT: Volatile" </name>                               <value>          0 </value> </counter>
-    <counter><name> "FT: Read with Write Same Epoch" </name>             <value>  2,628,150 </value> </counter>
-    <counter><name> "FT: Delayed Release" </name>                        <value>          4 </value> </counter>
+    <counter><name> "FT: Read with Write Same Epoch" </name>             <value>  2,628,138 </value> </counter>
+    <counter><name> "FT: Delayed Release" </name>                        <value>          0 </value> </counter>
     <counter><name> "FT: Other" </name>                                  <value>         10 </value> </counter>
     <counter><name> "FT: Total Reads" </name>                            <value> 89,455,353 </value> </counter>
     <counter><name> "FT: Total Writes" </name>                           <value> 43,419,237 </value> </counter>
@@ -168,7 +168,7 @@ All Fast Paths:              0.350578
 
     <counter><name> "ShadowThread: Count" </name>                        <value> 8 </value> </counter>
     <counter><name> "ShadowThread: Max Live" </name>                     <value> 8 </value> </counter>
-    <counter><name> "ShadowThread: getCurrentThread() calls" </name>     <value> 1,761,407 </value> </counter>
+    <counter><name> "ShadowThread: getCurrentThread() calls" </name>     <value> 1,693,072 </value> </counter>
 
     <counter><name> "ShadowVolatile: objects" </name>                    <value> 0 </value> </counter>
 
@@ -178,14 +178,14 @@ All Fast Paths:              0.350578
   </yikes>
   <tool>
     <name> tools.fasttrack.FastTrackToolEnhanced </name> 
-    <thread> [tid=7    C=[(0:BBC) (1:BB4) (2:BB4) (3:BB4) (4:BB4) (5:BB4) (6:BB4) (7:BB5)]   E=(7:BB5)] </thread> 
-    <thread> [tid=6    C=[(0:BBC) (1:BB4) (2:BB4) (3:BB4) (4:BB4) (5:BB4) (6:BB5) (7:BB4)]   E=(6:BB5)] </thread> 
-    <thread> [tid=0    C=[(0:BBE) (1:BB5) (2:BB5) (3:BB5) (4:BB5) (5:BB5) (6:BB5) (7:BB5)]   E=(0:BBE)] </thread> 
-    <thread> [tid=3    C=[(0:BBC) (1:BB4) (2:BB4) (3:BB5) (4:BB4) (5:BB4) (6:BB4) (7:BB4)]   E=(3:BB5)] </thread> 
-    <thread> [tid=4    C=[(0:BBC) (1:BB4) (2:BB4) (3:BB4) (4:BB5) (5:BB4) (6:BB4) (7:BB4)]   E=(4:BB5)] </thread> 
-    <thread> [tid=2    C=[(0:BBC) (1:BB4) (2:BB5) (3:BB4) (4:BB4) (5:BB4) (6:BB4) (7:BB4)]   E=(2:BB5)] </thread> 
-    <thread> [tid=5    C=[(0:BBC) (1:BB4) (2:BB4) (3:BB4) (4:BB4) (5:BB5) (6:BB4) (7:BB4)]   E=(5:BB5)] </thread> 
-    <thread> [tid=1    C=[(0:BBC) (1:BB5) (2:BB4) (3:BB4) (4:BB4) (5:BB4) (6:BB4) (7:BB4)]   E=(1:BB5)] </thread> 
+    <thread> [tid=7    C=[(0:BBE) (1:BB4) (2:BB4) (3:BB4) (4:BB4) (5:BB4) (6:BB4) (7:BB5)]   E=(7:BB5)] </thread> 
+    <thread> [tid=2    C=[(0:BBE) (1:BB4) (2:BB5) (3:BB4) (4:BB4) (5:BB4) (6:BB4) (7:BB4)]   E=(2:BB5)] </thread> 
+    <thread> [tid=1    C=[(0:BBE) (1:BB5) (2:BB4) (3:BB4) (4:BB4) (5:BB4) (6:BB4) (7:BB4)]   E=(1:BB5)] </thread> 
+    <thread> [tid=5    C=[(0:BBE) (1:BB4) (2:BB4) (3:BB4) (4:BB4) (5:BB5) (6:BB4) (7:BB4)]   E=(5:BB5)] </thread> 
+    <thread> [tid=3    C=[(0:BBE) (1:BB4) (2:BB4) (3:BB5) (4:BB4) (5:BB4) (6:BB4) (7:BB4)]   E=(3:BB5)] </thread> 
+    <thread> [tid=0    C=[(0:BC2) (1:BB5) (2:BB5) (3:BB5) (4:BB5) (5:BB5) (6:BB5) (7:BB5)]   E=(0:BC2)] </thread> 
+    <thread> [tid=4    C=[(0:BBE) (1:BB4) (2:BB4) (3:BB4) (4:BB5) (5:BB4) (6:BB4) (7:BB4)]   E=(4:BB5)] </thread> 
+    <thread> [tid=6    C=[(0:BBE) (1:BB4) (2:BB4) (3:BB4) (4:BB4) (5:BB4) (6:BB5) (7:BB4)]   E=(6:BB5)] </thread> 
   </tool>
   <tool>
     <name> Last </name> 
@@ -210,7 +210,7 @@ All Fast Paths:              0.350578
   <yikesTotal> 0 </yikesTotal> 
   <failed> false </failed> 
   <failedReason>  </failedReason> 
-  <time> 2919 </time> 
+  <time> 2686 </time> 
 </entry>
-[RR: Time = 2919]
+[RR: Time = 2686]
 [RR: Exiting: 0]

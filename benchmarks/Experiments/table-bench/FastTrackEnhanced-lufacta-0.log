@@ -3,7 +3,7 @@ java version "1.8.0_101"
 Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
 Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
 
-objc[34461]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/bin/java (0x109d684c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x10bdeb4e0). One of the two will be used. Which one is undefined.
+objc[40374]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/bin/java (0x100e354c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x100efd4e0). One of the two will be used. Which one is undefined.
 [premain: Installling RoadRunner Agent...]
 [main: RoadRunner Agent Loaded.]
 [main: Running in FAST Mode]
@@ -18,9 +18,9 @@ objc[34461]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVir
 Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
-Section2:LUFact:Kernel:SizeA	1.62 (s) 	 51.74897	 (Mflops/s)
+Section2:LUFact:Kernel:SizeA	1.916 (s) 	 43.75435	 (Mflops/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 2077.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 2410.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -35,9 +35,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:LUFact:Kernel already exists
-Section2:LUFact:Kernel:SizeA	3.037 (s) 	 55.20799	 (Mflops/s)
+Section2:LUFact:Kernel:SizeA	3.604 (s) 	 46.52238	 (Mflops/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 1608.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1893.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -52,9 +52,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:LUFact:Kernel already exists
-Section2:LUFact:Kernel:SizeA	4.186999999999999 (s) 	 60.066875	 (Mflops/s)
+Section2:LUFact:Kernel:SizeA	5.195 (s) 	 48.411934	 (Mflops/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 1299.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1783.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -69,9 +69,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:LUFact:Kernel already exists
-Section2:LUFact:Kernel:SizeA	5.289 (s) 	 63.40203	 (Mflops/s)
+Section2:LUFact:Kernel:SizeA	6.671 (s) 	 50.267326	 (Mflops/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 1231.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1613.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -86,9 +86,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:LUFact:Kernel already exists
-Section2:LUFact:Kernel:SizeA	6.3549999999999995 (s) 	 65.958565	 (Mflops/s)
+Section2:LUFact:Kernel:SizeA	8.055 (s) 	 52.03807	 (Mflops/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 1200.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1521.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -103,9 +103,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:LUFact:Kernel already exists
-Section2:LUFact:Kernel:SizeA	7.332 (s) 	 68.603386	 (Mflops/s)
+Section2:LUFact:Kernel:SizeA	9.507 (s) 	 52.908382	 (Mflops/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 1110.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1586.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -120,9 +120,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:LUFact:Kernel already exists
-Section2:LUFact:Kernel:SizeA	8.298 (s) 	 70.71985	 (Mflops/s)
+Section2:LUFact:Kernel:SizeA	11.052999999999999 (s) 	 53.092674	 (Mflops/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 1106.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1686.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -137,9 +137,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:LUFact:Kernel already exists
-Section2:LUFact:Kernel:SizeA	9.350999999999999 (s) 	 71.72138	 (Mflops/s)
+Section2:LUFact:Kernel:SizeA	12.321 (s) 	 54.43281	 (Mflops/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 1187.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1407.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -154,9 +154,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:LUFact:Kernel already exists
-Section2:LUFact:Kernel:SizeA	10.419999999999998 (s) 	 72.40883	 (Mflops/s)
+Section2:LUFact:Kernel:SizeA	13.85 (s) 	 54.476536	 (Mflops/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 1201.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1659.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -171,9 +171,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:LUFact:Kernel already exists
-Section2:LUFact:Kernel:SizeA	11.390999999999998 (s) 	 73.596115	 (Mflops/s)
+Section2:LUFact:Kernel:SizeA	15.419 (s) 	 54.370148	 (Mflops/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 1107.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1716.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -188,9 +188,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:LUFact:Kernel already exists
-Section2:LUFact:Kernel:SizeA	12.426999999999998 (s) 	 74.2067	 (Mflops/s)
+Section2:LUFact:Kernel:SizeA	16.733 (s) 	 55.11066	 (Mflops/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 1174.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1460.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -205,9 +205,9 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:LUFact:Kernel already exists
-Section2:LUFact:Kernel:SizeA	13.524999999999999 (s) 	 74.380775	 (Mflops/s)
+Section2:LUFact:Kernel:SizeA	18.029 (s) 	 55.798992	 (Mflops/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 1227.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1438.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
@@ -222,15 +222,15 @@ Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 2 - Size A
 Executing on 8 threads
 
 JGFInstrumentor.addTimer: warning -  timer Section2:LUFact:Kernel already exists
-Section2:LUFact:Kernel:SizeA	14.537999999999998 (s) 	 74.96446	 (Mflops/s)
+Section2:LUFact:Kernel:SizeA	19.323 (s) 	 56.400833	 (Mflops/s)
 [main: ]
-[main: ----- ----- -----     Benchmark Thpthpthpth: 1142.    ----- ----- -----]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1437.    ----- ----- -----]
 [main: ]
 [main: ]
 [main: ]
-[RR: Total Time: 17567]
+[RR: Total Time: 22589]
 <entry>
-  <date> Mon Apr 23 18:11:21 CEST 2018 </date> 
+  <date> Tue Apr 24 17:51:49 CEST 2018 </date> 
   <mode> FAST </mode> 
   <timeout> NO </timeout> 
   <options>
@@ -316,9 +316,9 @@ Section2:LUFact:Kernel:SizeA	14.537999999999998 (s) 	 74.96446	 (Mflops/s)
     <memCommitted> 982 </memCommitted> 
     <memUsed> 153 </memUsed> 
     <memTotal> 982 </memTotal> 
-    <compileTime> 7744 </compileTime> 
-    <gc> <name> PS Scavenge </name> <time> 93 </time> </gc>
-    <gc> <name> PS MarkSweep </name> <time> 769 </time> </gc>
+    <compileTime> 11058 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 103 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 835 </time> </gc>
   </system>
   <instrumented> JGFLUFactBenchSizeA RRBench jgfutil/JGFInstrumentor jgfutil/JGFSection2 jgfutil/JGFTimer lufact/JGFLUFactBench lufact/Linpack lufact/LinpackRunner  </instrumented> 
   <instrumentedNum> 8 </instrumentedNum> 
@@ -329,8 +329,8 @@ Section2:LUFact:Kernel:SizeA	14.537999999999998 (s) 	 74.96446	 (Mflops/s)
   <counters>
 
     <counter><name> "ArrayStateFactory: Size" </name>                    <value> 6,617 </value> </counter>
-    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>9.00000</total> <count>23</count> <ave>0.391304</ave> </value> </counter>
-    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 3,073 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>7.00000</total> <count>25</count> <ave>0.280000</ave> </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 3,042 </value> </counter>
 
     <counter><name> "Clone: Count" </name>                               <value> 0 </value> </counter>
 
@@ -365,20 +365,20 @@ Section2:LUFact:Kernel:SizeA	14.537999999999998 (s) 	 74.96446	 (Mflops/s)
 
     <counter><name> "Handler: Count" </name>                             <value> 0 </value> </counter>
 
-    <counter><name> "RRBench: Warmup 1" </name>                          <value> 2,077 </value> </counter>
-    <counter><name> "RRBench: Warmup 2" </name>                          <value> 1,608 </value> </counter>
-    <counter><name> "RRBench: Warmup 3" </name>                          <value> 1,299 </value> </counter>
-    <counter><name> "RRBench: Iter 1" </name>                            <value> 1,231 </value> </counter>
-    <counter><name> "RRBench: Iter 2" </name>                            <value> 1,200 </value> </counter>
-    <counter><name> "RRBench: Iter 3" </name>                            <value> 1,110 </value> </counter>
-    <counter><name> "RRBench: Iter 4" </name>                            <value> 1,106 </value> </counter>
-    <counter><name> "RRBench: Iter 5" </name>                            <value> 1,187 </value> </counter>
-    <counter><name> "RRBench: Iter 6" </name>                            <value> 1,201 </value> </counter>
-    <counter><name> "RRBench: Iter 7" </name>                            <value> 1,107 </value> </counter>
-    <counter><name> "RRBench: Iter 8" </name>                            <value> 1,174 </value> </counter>
-    <counter><name> "RRBench: Iter 9" </name>                            <value> 1,227 </value> </counter>
-    <counter><name> "RRBench: Iter 10" </name>                           <value> 1,142 </value> </counter>
-    <counter><name> "RRBench: Average" </name>                           <value> 1,168 </value> </counter>
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 2,410 </value> </counter>
+    <counter><name> "RRBench: Warmup 2" </name>                          <value> 1,893 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 1,783 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 1,613 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 1,521 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 1,586 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 1,686 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 1,407 </value> </counter>
+    <counter><name> "RRBench: Iter 6" </name>                            <value> 1,659 </value> </counter>
+    <counter><name> "RRBench: Iter 7" </name>                            <value> 1,716 </value> </counter>
+    <counter><name> "RRBench: Iter 8" </name>                            <value> 1,460 </value> </counter>
+    <counter><name> "RRBench: Iter 9" </name>                            <value> 1,438 </value> </counter>
+    <counter><name> "RRBench: Iter 10" </name>                           <value> 1,437 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 1,552 </value> </counter>
 
     <counter><name> "ShadowLock: objects" </name>                        <value> 0 </value> </counter>
 
@@ -388,20 +388,20 @@ Section2:LUFact:Kernel:SizeA	14.537999999999998 (s) 	 74.96446	 (Mflops/s)
 
     <counter><name> "ShadowVolatile: objects" </name>                    <value> 0 </value> </counter>
 
-    <counter><name> "Time: Instrumenter" </name>                         <value> <total>96.0000</total> <count>8</count> <ave>12.0000</ave> </value> </counter>
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>102.000</total> <count>8</count> <ave>12.7500</ave> </value> </counter>
   </counters>
   <yikes>
   </yikes>
   <tool>
     <name> tools.fasttrack.FastTrackToolEnhanced </name> 
-    <thread> [tid=4    C=[(0:9874) (1:9830) (2:9830) (3:9830) (4:9831) (5:9830) (6:9830) (7:9830)]   E=(4:9831)] </thread> 
-    <thread> [tid=5    C=[(0:9874) (1:9830) (2:9830) (3:9830) (4:9830) (5:9831) (6:9830) (7:9830)]   E=(5:9831)] </thread> 
-    <thread> [tid=6    C=[(0:9874) (1:9830) (2:9830) (3:9830) (4:9830) (5:9830) (6:9831) (7:9830)]   E=(6:9831)] </thread> 
-    <thread> [tid=3    C=[(0:9874) (1:9830) (2:9830) (3:9831) (4:9830) (5:9830) (6:9830) (7:9830)]   E=(3:9831)] </thread> 
-    <thread> [tid=1    C=[(0:9874) (1:9831) (2:9830) (3:9830) (4:9830) (5:9830) (6:9830) (7:9830)]   E=(1:9831)] </thread> 
-    <thread> [tid=7    C=[(0:9874) (1:9830) (2:9830) (3:9830) (4:9830) (5:9830) (6:9830) (7:9831)]   E=(7:9831)] </thread> 
-    <thread> [tid=2    C=[(0:9874) (1:9830) (2:9831) (3:9830) (4:9830) (5:9830) (6:9830) (7:9830)]   E=(2:9831)] </thread> 
-    <thread> [tid=0    C=[(0:9876) (1:9831) (2:9831) (3:9831) (4:9831) (5:9831) (6:9831) (7:9831)]   E=(0:9876)] </thread> 
+    <thread> [tid=6    C=[(0:98B2) (1:9830) (2:9830) (3:9830) (4:9830) (5:9830) (6:9831) (7:9830)]   E=(6:9831)] </thread> 
+    <thread> [tid=2    C=[(0:98B2) (1:9830) (2:9831) (3:9830) (4:9830) (5:9830) (6:9830) (7:9830)]   E=(2:9831)] </thread> 
+    <thread> [tid=4    C=[(0:98B2) (1:9830) (2:9830) (3:9830) (4:9831) (5:9830) (6:9830) (7:9830)]   E=(4:9831)] </thread> 
+    <thread> [tid=1    C=[(0:98B2) (1:9831) (2:9830) (3:9830) (4:9830) (5:9830) (6:9830) (7:9830)]   E=(1:9831)] </thread> 
+    <thread> [tid=0    C=[(0:98B6) (1:9831) (2:9831) (3:9831) (4:9831) (5:9831) (6:9831) (7:9831)]   E=(0:98B6)] </thread> 
+    <thread> [tid=3    C=[(0:98B2) (1:9830) (2:9830) (3:9831) (4:9830) (5:9830) (6:9830) (7:9830)]   E=(3:9831)] </thread> 
+    <thread> [tid=7    C=[(0:98B2) (1:9830) (2:9830) (3:9830) (4:9830) (5:9830) (6:9830) (7:9831)]   E=(7:9831)] </thread> 
+    <thread> [tid=5    C=[(0:98B2) (1:9830) (2:9830) (3:9830) (4:9830) (5:9831) (6:9830) (7:9830)]   E=(5:9831)] </thread> 
   </tool>
   <tool>
     <name> Last </name> 
@@ -426,7 +426,7 @@ Section2:LUFact:Kernel:SizeA	14.537999999999998 (s) 	 74.96446	 (Mflops/s)
   <yikesTotal> 0 </yikesTotal> 
   <failed> false </failed> 
   <failedReason>  </failedReason> 
-  <time> 17567 </time> 
+  <time> 22589 </time> 
 </entry>
-[RR: Time = 17567]
+[RR: Time = 22589]
 [RR: Exiting: 0]
