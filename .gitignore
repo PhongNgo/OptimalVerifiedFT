@@ -1,3 +1,7 @@
 *.out.*
 *.html
 .DS_Store
+OptimalVerifiedFT/*
+.DS_Store
+OptimalVerifiedFT/.DS_Store
+*.out
