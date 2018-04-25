@@ -73,7 +73,9 @@ ftExperimentV2 =        MultiExperiment('FastTrackV1.5', standardCmd + " -tool=F
 ftExperimentOld =        MultiExperiment('FastTrackOld', standardCmd + " -tool=tools.old.fasttrack.FastTrackTool", TRIALS, startNum=START)
 ftExperimentOldCAS =        MultiExperiment('FastTrackCASOld', standardCmd + " -tool=tools.old.fasttrack_cas.FastTrackTool", TRIALS, startNum=START)
 ftExperimentV4 =        MultiExperiment('FastTrackEnhancedV1', standardCmd + " -tool=FT2E-V1", TRIALS, startNum=START)
+ftExperimentV4L =       MultiExperiment('FastTrackEnhancedV1L', standardCmd + " -tool=FT2EL-V1", TRIALS, startNum=START)
 ftExperimentV5 =        MultiExperiment('FastTrackEnhanced', standardCmd + " -tool=FT2E", TRIALS, startNum=START)
+ftExperimentV5L =       MultiExperiment('FastTrackEnhancedL', standardCmd + " -tool=FT2EL", TRIALS, startNum=START)
 
 
 def getTime(e,row,outDir): 
@@ -166,12 +168,13 @@ cols = [
     Column("", (lambda row, outDir: row.name), 'Geo Mean', '|l|', '|c|'),
     Column("(sec)", lambda row, outDir: round(baseExperiment.getXMLCounter(row,outDir,'RRBench: Average') / 1000.0, S), '','r|','c|'),
 ##    makeOverhead(ftExperimentOld,'FTOld'),
-    makeOverhead(ftExperimentOldCAS,'FTOldCAS'),
+##    makeOverhead(ftExperimentOldCAS,'FTOldCAS'),
 ##    makeOverhead(ftExperimentV1,'VFT-v1'),
 ##    makeOverhead(ftExperimentV2,'VFT-v1.5'),
-    makeOverhead(ftExperimentV3,'VFT-v2'),
     makeOverhead(ftExperimentV4,'VFT-E-v1'),
     makeOverhead(ftExperimentV5,'VFT-E'),
+    makeOverhead(ftExperimentV3,'VFT-v2'),
+##    makeOverhead(ftExperimentV5,'VFT-E'),
               
 #    Column("(ci)", lambda row, outDir: confidenceIntervalForSlowdownRatios(ftExperimentV3,ftExperimentOldCAS,row, outDir), '','c|','c|')
 ]
@@ -179,23 +182,25 @@ cols = [
 headers = [
     [Header('',1,'|c|'),
      Header('',1),
-     Header('Overhead',4,'c|'),
+     Header('Overhead',3,'c|'),
      ],
     [Header('Program',1,'|c|'),
      Header('Time',1,'c|'),
-     Header('',1),Header('',1),Header('',1), Header('',1),
+     Header('',1),Header('',1),Header('',1),
+     #Header('',1), Header('',1),
 # Header('',1),
      ]
 ]
 
 exps=[
     baseExperiment,
-    ftExperimentOldCAS,
+##    ftExperimentOldCAS,
 ##    ftExperimentV1,
 ##    ftExperimentV2,
-    ftExperimentV3,
     ftExperimentV4,
     ftExperimentV5,
+    ftExperimentV3,
+##    ftExperimentV5,
 ##    ftExperimentOld,
 ]
 
@@ -208,16 +213,17 @@ smallperfTable = Table('Performance', 'small-perf', headers,  rows_small, cols, 
 cols = [
     Column("Program", (lambda row, outDir: row.name), 'Total', '|l||', '|c||'),
 ##    makeErrors(ftExperimentOld,'FTOld', 'c|','r|'),
-    makeErrors(ftExperimentOldCAS,'FTOldCAS', 'c|','r|'),
+##    makeErrors(ftExperimentOldCAS,'FTOldCAS', 'c|','r|'),
 ##    makeErrors(ftExperimentV1,'VFT-v1', 'c|','r|'),
 ##    makeErrors(ftExperimentV2,'VFT-v1.5', 'c|','r|'),
-    makeErrors(ftExperimentV3,'VFT-v2', 'c|','r|'),
     makeErrors(ftExperimentV4,'VFT-E-v1', 'c|','r|'),
     makeErrors(ftExperimentV5,'VFT-E', 'c|','r|'),
+    makeErrors(ftExperimentV3,'VFT-v2', 'c|','r|'),
+##    makeErrors(ftExperimentV5,'VFT-E', 'c|','r|'),
 ]
 
 headers = [
-    [Header('',1,'|c||'),Header('Warnings',4,'|c|')]
+    [Header('',1,'|c||'),Header('Warnings',3,'|c|')]
 ]
 
 errorTable = Table('Performance', 'large', headers, javagrade_rows + dacapo_rows, cols, [],'bench')

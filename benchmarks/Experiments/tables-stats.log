@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.14)  24 APR 2018 17:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.14)  25 APR 2018 17:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -147,7 +147,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-(./small-stats.tex
+(./large-stats.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 1.
 ) [1
@@ -157,7 +157,7 @@ es-stats.aux) )
 Here is how much of TeX's memory you used:
  1583 strings out of 493089
  22891 string characters out of 6134841
- 82705 words of memory out of 5000000
+ 91705 words of memory out of 5000000
  5077 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -165,7 +165,7 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmr5.pfb>
-Output written on tables-stats.pdf (1 page, 22858 bytes).
+Output written on tables-stats.pdf (1 page, 24494 bytes).
 PDF statistics:
  16 PDF objects out of 1000 (max. 8388607)
  10 compressed objects within 1 object stream

@@ -179,34 +179,34 @@ public class LongVectorClock implements Serializable {
 	}
   
   
-  /**
-   * Return true if we do a tick at the index tid for this vector clock,
-   * and then the ticked vector is equal to other vector
-   */
-  final public boolean fakeIncThenCheckEq(LongVectorClock other, int tid) {
-    long/*epoch*/[] thisValues = this.values;
-    long/*epoch*/[] otherValues = other.values;
-    
-    int thisLen = thisValues.length;
-    int otherLen = otherValues.length;
-    
-    if (thisLen != otherLen || thisLen <= tid) return false;
-    
-    
-    for (int i = 0; i < tid; i++) {
-      if (!LongEpoch.equal(thisValues[i], otherValues[i])) return false;
-    }
-    
-    // the tid that we need to do a tick
-    if (!LongEpoch.equal(thisValues[tid]+1, otherValues[tid])) return false;
-    
-    for (int i = tid+1; i < thisLen; i++) {
-      if (!LongEpoch.equal(thisValues[i], otherValues[i])) return false;
-    }
-    
-    return true;
-      
-  }
+//  /**
+//   * Return true if we do a tick at the index tid for this vector clock,
+//   * and then the ticked vector is equal to other vector
+//   */
+//  final public boolean fakeIncThenCheckEq(LongVectorClock other, int tid) {
+//    long/*epoch*/[] thisValues = this.values;
+//    long/*epoch*/[] otherValues = other.values;
+//    
+//    int thisLen = thisValues.length;
+//    int otherLen = otherValues.length;
+//    
+//    if (thisLen != otherLen || thisLen <= tid) return false;
+//    
+//    
+//    for (int i = 0; i < tid; i++) {
+//      if (!LongEpoch.equal(thisValues[i], otherValues[i])) return false;
+//    }
+//    
+//    // the tid that we need to do a tick
+//    if (!LongEpoch.equal(thisValues[tid]+1, otherValues[tid])) return false;
+//    
+//    for (int i = tid+1; i < thisLen; i++) {
+//      if (!LongEpoch.equal(thisValues[i], otherValues[i])) return false;
+//    }
+//    
+//    return true;
+//      
+//  }
   
   
 

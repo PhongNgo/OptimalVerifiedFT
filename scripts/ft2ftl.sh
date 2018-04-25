@@ -50,6 +50,7 @@ sed -i.bak  -e "s/Epoch/LongEpoch/g" auto/tools/fasttrack_long/*.java
 sed -i.bak  -e "s/package tools\.fasttrack/package tools.fasttrack_long/g" auto/tools/fasttrack_long/*.java
 sed -i.bak  -e "s/\"FT2\"/\"FT2L\"/g" auto/tools/fasttrack_long/FastTrackTool.java
 sed -i.bak  -e "s/\"FT2E\"/\"FT2EL\"/g" auto/tools/fasttrack_long/FastTrackToolEnhanced.java
+sed -i.bak  -e "s/\"FT2E-V1\"/\"FT2EL-V1\"/g" auto/tools/fasttrack_long/FastTrackToolEnhancedV1.java
 
 
 for i in `ls auto/tools/fasttrack_long/*.java`; do
