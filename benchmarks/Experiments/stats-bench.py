@@ -60,7 +60,7 @@ defaultRRArgs='%rowextra -quiet -maxWarn=1 -xml=%log -logs=%path %extra '
 standardCmd =  'cd %dir ; gtimeout -s 9 -k 5 2h                                env RR_MODE=SLOW env JVM_ARGS="$JVM_ARGS ' + jvmArgs +'"  ./%command   -classpath=original.jar ' + defaultRRArgs + '  '
 
 # The experiments to run to gather timing measurements.
-ftExperimentV5 =        MultiExperiment('FastTrackV5Counts', standardCmd + " -tool=FT2E-V1", TRIALS)
+ftExperimentV5 =        MultiExperiment('FastTrackV5Counts', standardCmd + " -tool=FT2E", TRIALS)
 
 ##def sameEpochPercent(e,name='',title='c|',rowf='r|'):
 ##    if name=='':
@@ -77,6 +77,14 @@ def delayedReleasePercent(e,name='',title='c|',rowf='r|'):
                   lambda row, outDir: 
 		               round(float((e.getXMLCounter(row,outDir,'FT: Delayed Release'))) / 
                                      float(e.getXMLCounter(row,outDir,'FT: Release')),S), rowf,title,[],scale=3,sideways=True)
+
+def delayedAcquirePercent(e,name='',title='c|',rowf='r|'):
+    if name=='':
+       name = e.abbrev
+    return AverageColumn(name, 
+                  lambda row, outDir: 
+		               round(float((e.getXMLCounter(row,outDir,'FT: Delayed Acquire'))) / 
+                                     float(e.getXMLCounter(row,outDir,'FT: Acquire')),S), rowf,title,[],scale=3,sideways=True)
 
 
 def sameReadEpochPercent(e,name='',title='c|',rowf='r|'):
@@ -128,6 +136,7 @@ cols = [
     sameWriteEpochPercent(ftExperimentV5,'WriteSameEpoch'),
     sameReadSharedEpochPercent(ftExperimentV5,'ReadSharedSameEpoch'),
     delayedReleasePercent(ftExperimentV5,'DelayedRelease'),
+    delayedAcquirePercent(ftExperimentV5,'DelayedAcquire'),
     sameEpochWithRSPercent(ftExperimentV5,'Total'),
 ]
 

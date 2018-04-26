@@ -5,8 +5,13 @@ OptimalVerifiedFT/*
 .DS_Store
 OptimalVerifiedFT/.DS_Store
 *.out
-.DS_Store
 benchmarks/.DS_Store
 OptimalVerifiedFT/.DS_Store
 src/.DS_Store
 src/tools/.DS_Store
+auto/*
+auto/tools/util/LongVectorClock.java
+auto/tools/fasttrack_long/FastTrackToolEnhancedV1.java
+auto/rr/tool/parser/sym.java
+auto/rr/tool/parser/parser.java
+auto/rr/tool/parser/Lexer.java

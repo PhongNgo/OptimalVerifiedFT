@@ -178,6 +178,8 @@ public class ShadowThread extends Decoratable implements ShadowVar {
 	public int invokeId = InvokeInfo.NULL_ID;
 
 
+  public Object lastlockObj;
+  
 	// require ShadowThread.class
 	private static synchronized int allocTid(ShadowThread newThread) {
 		for (int i = 0; i < tidMap.length; i++) {
