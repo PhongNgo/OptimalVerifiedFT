@@ -1,0 +1,214 @@
+<entry>
+  <date> Wed Apr 25 21:05:44 CEST 2018 </date> 
+  <mode> FAST </mode> 
+  <timeout> NO </timeout> 
+  <options>
+    <option><name> javaArgs </name>           <value> RRBench  </value> </option>
+    <option><name> noDecInline </name>        <value> false </value> </option>
+    <option><name> quiet </name>              <value> true </value> </option>
+    <option><name> logDepth </name>           <value> 100 </value> </option>
+    <option><name> logs </name>               <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/Experiments/table-bench </value> </option>
+    <option><name> out </name>                <value>  </value>   </option>
+    <option><name> err </name>                <value>  </value>   </option>
+    <option><name> noinst </name>             <value> false </value> </option>
+    <option><name> inst </name>               <value> INST </value> </option>
+    <option><name> infThreads </name>         <value> 0 </value>  </option>
+    <option><name> benchmark </name>          <value> 5 </value>  </option>
+    <option><name> warmup </name>             <value> 3 </value>  </option>
+    <option><name> availableProcessors </name> <value> 8 </value>  </option>
+    <option><name> args </name>               <value> [] </value> </option>
+    <option><name> d </name>                  <value> [] </value> </option>
+    <option><name> maxYikes </name>           <value> 5 </value>  </option>
+    <option><name> help </name>               <value> false </value> </option>
+    <option><name> toolpath </name>           <value> /Users/tuan-phongngo/OptimalVerifiedFT/classes/rr/simple:/Users/tuan-phongngo/OptimalVerifiedFT/classes/tools </value> </option>
+    <option><name> classpath </name>          <value> original.jar </value> </option>
+    <option><name> tool </name>               <value> FT2 </value> </option>
+    <option><name> tools </name>              <value> false </value> </option>
+    <option><name> noxml </name>              <value> false </value> </option>
+    <option><name> constantGC </name>         <value> false </value> </option>
+    <option><name> noFP </name>               <value> false </value> </option>
+    <option><name> noShutdownHook </name>     <value> false </value> </option>
+    <option><name> noEnter </name>            <value> true </value> </option>
+    <option><name> xml </name>                <value> FastTrackV2-avrora-0.out </value> </option>
+    <option><name> pulse </name>              <value>  </value>   </option>
+    <option><name> maxTime </name>            <value> 0 </value>  </option>
+    <option><name> maxMem </name>             <value> 10240 </value> </option>
+    <option><name> maxTid </name>             <value> 16 </value> </option>
+    <option><name> stacks </name>             <value> true </value> </option>
+    <option><name> values </name>             <value> false </value> </option>
+    <option><name> noTidGC </name>            <value> false </value> </option>
+    <option><name> noEventReuse </name>       <value> false </value> </option>
+    <option><name> trackMemoryUsage </name>   <value> false </value> </option>
+    <option><name> repository </name>         <value>  </value>   </option>
+    <option><name> meta </name>               <value> null </value> </option>
+    <option><name> methods </name>            <value> ["-.*Barrier.await\(\)V", "-java.util.concurrent.CyclicBarrier.await\(JLjava/util/concurrent/TimeUnit;\)I", "-java.util.concurrent.CyclicBarrier.await\(\)I", "-.*Barrier.DoBarrier\(I\)V", "-.*TournamentBarrier.DoBarrier\(I\)V", default=ACCEPT] </value> </option>
+    <option><name> fields </name>             <value> ["-.*this\$.*", "-$.*__\$rr.*", default=ACCEPT] </value> </option>
+    <option><name> lines </name>              <value> [default=ACCEPT] </value> </option>
+    <option><name> classes </name>            <value> ["-.*Barrier.*", "-java..*", "-javax..*", "-com.sun..*", "-sun..*", "-rr..*", "-tools..*", "-acme..*", "-.*__\$rr_.*", "-org.xml..*", default=ACCEPT] </value> </option>
+    <option><name> shadowThread </name>       <value> ["-.*", default=ACCEPT] </value> </option>
+    <option><name> noop </name>               <value> [default=ACCEPT] </value> </option>
+    <option><name> noConstructor </name>      <value> false </value> </option>
+    <option><name> noClone </name>            <value> false </value> </option>
+    <option><name> dump </name>               <value>  </value>   </option>
+    <option><name> field </name>              <value> FINE </value> </option>
+    <option><name> fancy </name>              <value> false </value> </option>
+    <option><name> verify </name>             <value> false </value> </option>
+    <option><name> trackReflection </name>    <value> false </value> </option>
+    <option><name> arraySites </name>         <value> false </value> </option>
+    <option><name> Use TestAcquires </name>   <value> false </value> </option>
+    <option><name> sanity </name>             <value> false </value> </option>
+    <option><name> reentrantEvents </name>    <value> false </value> </option>
+    <option><name> nojoin </name>             <value> false </value> </option>
+    <option><name> multiLoader </name>        <value> false </value> </option>
+    <option><name> indices </name>            <value> 2147483647 </value> </option>
+    <option><name> updaters </name>           <value> SAFE </value> </option>
+    <option><name> array </name>              <value> FINE </value> </option>
+    <option><name> userArray </name>          <value> rr.state.ArrayStateCreator$1@45ee12a7 </value> </option>
+    <option><name> nobarrier </name>          <value> false </value> </option>
+    <option><name> arrayCacheType </name>     <value> STRONG </value> </option>
+    <option><name> callSites </name>          <value> false </value> </option>
+    <option><name> maxWarn </name>            <value> 1 </value>  </option>
+    <option><name> noInterrupt </name>        <value> false </value> </option>
+  </options>
+  <system>
+    <host> dhcp-11-249.it.uu.se </host> 
+    <name> java.vm.version </name>     <value> 25.101-b13 </value> 
+    <name> java.vm.vendor </name>      <value> Oracle Corporation </value> 
+    <name> java.vm.name </name>        <value> Java HotSpot(TM) 64-Bit Server VM </value> 
+    <name> java.class.path </name>     <value> .:/Users/tuan-phongngo/OptimalVerifiedFT/build/jar/rragent.jar </value> 
+    <name> os.name </name>             <value> Mac OS X </value> 
+    <name> os.arch </name>             <value> x86_64 </value> 
+    <name> os.version </name>          <value> 10.12.4 </value> 
+    <name> user.name </name>           <value> tuan-phongngo </value> 
+    <name> user.dir </name>            <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/avrora </value> 
+    <availableProcs> 8 </availableProcs> 
+    <memCommitted> 1238 </memCommitted> 
+    <memUsed> 266 </memUsed> 
+    <memTotal> 1238 </memTotal> 
+    <compileTime> 38139 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 82 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 692 </time> </gc>
+  </system>
+  <instrumented> RRBench avrora/Defaults avrora/Defaults$AutoProgramReader avrora/Main avrora/Version avrora/actions/Action avrora/actions/AnalyzeStackAction avrora/actions/CFGAction avrora/actions/DisassembleAction avrora/actions/ELFDumpAction avrora/actions/ISEAAction avrora/actions/SimAction avrora/actions/SimAction$ShutdownThread avrora/actions/SimAction$TimeoutException avrora/actions/TestAction avrora/arch/AbstractArchitecture avrora/arch/AbstractDisassembler avrora/arch/AbstractInstr avrora/arch/ArchitectureRegistry avrora/arch/avr/AVRArchitecture avrora/arch/avr/AVRProperties avrora/arch/legacy/LegacyArchitecture avrora/arch/legacy/LegacyDisassembler avrora/arch/legacy/LegacyDisassembler$InvalidInstruction avrora/arch/legacy/LegacyInstr avrora/arch/legacy/LegacyInstr$ADC avrora/arch/legacy/LegacyInstr$ADD avrora/arch/legacy/LegacyInstr$ADIW avrora/arch/legacy/LegacyInstr$AND avrora/arch/legacy/LegacyInstr$ANDI avrora/arch/legacy/LegacyInstr$BRCC avrora/arch/legacy/LegacyInstr$BRCS avrora/arch/legacy/LegacyInstr$BREQ avrora/arch/legacy/LegacyInstr$BRGE avrora/arch/legacy/LegacyInstr$BRID avrora/arch/legacy/LegacyInstr$BRLT avrora/arch/legacy/LegacyInstr$BRMI avrora/arch/legacy/LegacyInstr$BRNE avrora/arch/legacy/LegacyInstr$BRPL avrora/arch/legacy/LegacyInstr$BRTC avrora/arch/legacy/LegacyInstr$BRTS avrora/arch/legacy/LegacyInstr$BST avrora/arch/legacy/LegacyInstr$CALL avrora/arch/legacy/LegacyInstr$CBI avrora/arch/legacy/LegacyInstr$CLI avrora/arch/legacy/LegacyInstr$COM avrora/arch/legacy/LegacyInstr$CP avrora/arch/legacy/LegacyInstr$CPC avrora/arch/legacy/LegacyInstr$CPI avrora/arch/legacy/LegacyInstr$CPSE avrora/arch/legacy/LegacyInstr$DEC avrora/arch/legacy/LegacyInstr$ELPMD avrora/arch/legacy/LegacyInstr$ELPMPI avrora/arch/legacy/LegacyInstr$EOR avrora/arch/legacy/LegacyInstr$FMUL avrora/arch/legacy/LegacyInstr$FMULS avrora/arch/legacy/LegacyInstr$ICALL avrora/arch/legacy/LegacyInstr$IMMIMM_class avrora/arch/legacy/LegacyInstr$IMMREG_class avrora/arch/legacy/LegacyInstr$IN avrora/arch/legacy/LegacyInstr$INC avrora/arch/legacy/LegacyInstr$JMP avrora/arch/legacy/LegacyInstr$LD avrora/arch/legacy/LegacyInstr$LDD avrora/arch/legacy/LegacyInstr$LDI avrora/arch/legacy/LegacyInstr$LDPD avrora/arch/legacy/LegacyInstr$LDPI avrora/arch/legacy/LegacyInstr$LDS avrora/arch/legacy/LegacyInstr$LPM avrora/arch/legacy/LegacyInstr$LPMD avrora/arch/legacy/LegacyInstr$LPMPI avrora/arch/legacy/LegacyInstr$LSR avrora/arch/legacy/LegacyInstr$MOV avrora/arch/legacy/LegacyInstr$MOVW avrora/arch/legacy/LegacyInstr$MUL avrora/arch/legacy/LegacyInstr$MULS avrora/arch/legacy/LegacyInstr$NONE_class avrora/arch/legacy/LegacyInstr$NOP avrora/arch/legacy/LegacyInstr$OR avrora/arch/legacy/LegacyInstr$ORI avrora/arch/legacy/LegacyInstr$OUT avrora/arch/legacy/LegacyInstr$POP avrora/arch/legacy/LegacyInstr$PUSH avrora/arch/legacy/LegacyInstr$RCALL avrora/arch/legacy/LegacyInstr$REGIMMREG_class avrora/arch/legacy/LegacyInstr$REGIMM_class avrora/arch/legacy/LegacyInstr$REGREGIMM_class avrora/arch/legacy/LegacyInstr$REGREG_class avrora/arch/legacy/LegacyInstr$REG_class avrora/arch/legacy/LegacyInstr$RET avrora/arch/legacy/LegacyInstr$RETI avrora/arch/legacy/LegacyInstr$RJMP avrora/arch/legacy/LegacyInstr$ROR avrora/arch/legacy/LegacyInstr$SBC avrora/arch/legacy/LegacyInstr$SBCI avrora/arch/legacy/LegacyInstr$SBI avrora/arch/legacy/LegacyInstr$SBIC avrora/arch/legacy/LegacyInstr$SBIS avrora/arch/legacy/LegacyInstr$SBIW avrora/arch/legacy/LegacyInstr$SBRC avrora/arch/legacy/LegacyInstr$SBRS avrora/arch/legacy/LegacyInstr$SEC avrora/arch/legacy/LegacyInstr$SEI avrora/arch/legacy/LegacyInstr$SLEEP avrora/arch/legacy/LegacyInstr$ST avrora/arch/legacy/LegacyInstr$STD avrora/arch/legacy/LegacyInstr$STPD avrora/arch/legacy/LegacyInstr$STPI avrora/arch/legacy/LegacyInstr$STS avrora/arch/legacy/LegacyInstr$SUB avrora/arch/legacy/LegacyInstr$SUBI avrora/arch/legacy/LegacyInstr$SWAP avrora/arch/legacy/LegacyInstr$WORD_class avrora/arch/legacy/LegacyInstrProperties avrora/arch/legacy/LegacyInstrProto avrora/arch/legacy/LegacyInstrVisitor avrora/arch/legacy/LegacyInterpreter avrora/arch/legacy/LegacyInterpreter$Factory avrora/arch/legacy/LegacyRegister avrora/arch/legacy/LegacyRegister$Set avrora/arch/legacy/LegacyState avrora/arch/msp430/MSP430Architecture avrora/core/ControlFlowGraph avrora/core/LoadableProgram avrora/core/Program avrora/core/ProgramReader avrora/core/SourceMapping avrora/core/SourceMapping$1 avrora/core/SourceMapping$Location avrora/monitors/BreakMonitor avrora/monitors/CallMonitor avrora/monitors/CallTimeMonitor avrora/monitors/CallTreeProfiler avrora/monitors/EnergyMonitor avrora/monitors/EnergyProfiler avrora/monitors/GDBServer avrora/monitors/IORegMonitor avrora/monitors/InteractiveMonitor avrora/monitors/InterruptMonitor avrora/monitors/LEDMonitor avrora/monitors/LEDMonitor$Mon avrora/monitors/MemoryMonitor avrora/monitors/Monitor avrora/monitors/MonitorFactory avrora/monitors/PacketMonitor avrora/monitors/PacketMonitor$Mon avrora/monitors/PrintMonitor avrora/monitors/ProfileMonitor avrora/monitors/RealTimeMonitor avrora/monitors/SPIMonitor avrora/monitors/SerialMonitor avrora/monitors/SimPerfMonitor avrora/monitors/SleepMonitor avrora/monitors/SnifferMonitor avrora/monitors/StackMonitor avrora/monitors/TimerMonitor avrora/monitors/TraceMonitor avrora/monitors/TripTimeMonitor avrora/monitors/VirgilMonitor avrora/sim/ActiveRegister avrora/sim/AtmelInterpreter avrora/sim/AtmelInterpreter$IORegBehavior avrora/sim/AtmelInterpreter$SREGBehavior avrora/sim/AtmelInterpreter$StateImpl avrora/sim/CodeSegment avrora/sim/CodeSegment$CodeSharer avrora/sim/CodeSegment$Factory avrora/sim/CodeSegment$NoLegacyInstr avrora/sim/FiniteStateMachine avrora/sim/FiniteStateMachine$Probe avrora/sim/FiniteStateMachine$State avrora/sim/FiniteStateMachine$TransitionEvent avrora/sim/Interpreter avrora/sim/InterpreterFactory avrora/sim/InterruptTable avrora/sim/InterruptTable$Notification avrora/sim/RWRegister avrora/sim/Segment avrora/sim/Segment$Sharer avrora/sim/Simulation avrora/sim/Simulation$Iter avrora/sim/Simulation$Monitor avrora/sim/Simulation$Node avrora/sim/Simulator avrora/sim/Simulator$Event avrora/sim/Simulator$InterruptProbe avrora/sim/Simulator$Probe avrora/sim/Simulator$Watch avrora/sim/SimulatorThread avrora/sim/State avrora/sim/clock/Clock avrora/sim/clock/ClockDomain avrora/sim/clock/DeltaQueue avrora/sim/clock/DeltaQueue$EventList avrora/sim/clock/DeltaQueue$Link avrora/sim/clock/DerivedClock avrora/sim/clock/MainClock avrora/sim/clock/RippleSynchronizer avrora/sim/clock/RippleSynchronizer$NotifyEvent avrora/sim/clock/RippleSynchronizer$WaitLink avrora/sim/clock/Synchronizer avrora/sim/energy/Energy avrora/sim/energy/EnergyControl avrora/sim/mcu/ADC avrora/sim/mcu/ADC$1 avrora/sim/mcu/ADC$2 avrora/sim/mcu/ADC$ADCInput avrora/sim/mcu/ADC$ControlRegister avrora/sim/mcu/ADC$ControlRegister$ConversionEvent avrora/sim/mcu/ADC$MUXRegister avrora/sim/mcu/ATMega128 avrora/sim/mcu/ATMegaFamily avrora/sim/mcu/ATMegaFamily$DirectionRegister avrora/sim/mcu/ATMegaFamily$FlagRegister avrora/sim/mcu/ATMegaFamily$FlagRegister$Notification avrora/sim/mcu/ATMegaFamily$InterruptFlag avrora/sim/mcu/ATMegaFamily$MaskRegister avrora/sim/mcu/ATMegaFamily$PinRegister avrora/sim/mcu/ATMegaFamily$PortRegister avrora/sim/mcu/ATMegaFamily$Timer0 avrora/sim/mcu/ATMegaFamily$Timer0$ASSRRegister avrora/sim/mcu/ATMegaFamily$Timer1 avrora/sim/mcu/ATMegaFamily$Timer2 avrora/sim/mcu/ATMegaFamily$Timer3 avrora/sim/mcu/AtmelInternalDevice avrora/sim/mcu/AtmelMicrocontroller avrora/sim/mcu/DefaultMCU avrora/sim/mcu/DefaultMCU$Pin avrora/sim/mcu/EEPROM avrora/sim/mcu/EEPROM$EEARHReg avrora/sim/mcu/EEPROM$EEARLReg avrora/sim/mcu/EEPROM$EECRReg avrora/sim/mcu/EEPROM$EEPROMTicker avrora/sim/mcu/EEPROM$EEPROMWriteFinishedEvent avrora/sim/mcu/MCUProperties avrora/sim/mcu/Microcontroller avrora/sim/mcu/Microcontroller$Pin avrora/sim/mcu/Microcontroller$Pin$Input avrora/sim/mcu/Microcontroller$Pin$Output avrora/sim/mcu/RegisterLayout avrora/sim/mcu/RegisterLayout$Field avrora/sim/mcu/RegisterLayout$RegisterInfo avrora/sim/mcu/RegisterLayout$SubField avrora/sim/mcu/RegisterSet avrora/sim/mcu/RegisterSet$Field avrora/sim/mcu/RegisterSet$FieldWriter avrora/sim/mcu/RegisterSet$MultiFieldRegister avrora/sim/mcu/RegisterSet$SubFieldWriter avrora/sim/mcu/RegisterSet$SubRegWriter avrora/sim/mcu/RegisterSet$TotalFieldWriter avrora/sim/mcu/RegisterSet$UnusedWriter avrora/sim/mcu/ReprogrammableCodeSegment avrora/sim/mcu/ReprogrammableCodeSegment$Factory avrora/sim/mcu/ReprogrammableCodeSegment$SPMCSR_reg avrora/sim/mcu/ReprogrammableCodeSegment$SPMCSR_reg$ResetEvent avrora/sim/mcu/SPI avrora/sim/mcu/SPI$Frame avrora/sim/mcu/SPI$SPCRReg avrora/sim/mcu/SPI$SPDReg avrora/sim/mcu/SPI$SPDReg$TransmitRegister avrora/sim/mcu/SPI$SPSReg avrora/sim/mcu/SPI$TransferEvent avrora/sim/mcu/SPIDevice avrora/sim/mcu/Timer16Bit avrora/sim/mcu/Timer16Bit$1 avrora/sim/mcu/Timer16Bit$2 avrora/sim/mcu/Timer16Bit$BufferedRegister avrora/sim/mcu/Timer16Bit$InputCapturePin avrora/sim/mcu/Timer16Bit$Mode_CTC avrora/sim/mcu/Timer16Bit$Mode_FastPWM avrora/sim/mcu/Timer16Bit$Mode_Normal avrora/sim/mcu/Timer16Bit$Mode_PWMPhaseCorrect avrora/sim/mcu/Timer16Bit$Mode_PWM_PNF avrora/sim/mcu/Timer16Bit$Mode_Reserved avrora/sim/mcu/Timer16Bit$OCRnxPairedRegister avrora/sim/mcu/Timer16Bit$OCRnxTempHighRegister avrora/sim/mcu/Timer16Bit$OutputCompareUnit avrora/sim/mcu/Timer16Bit$OutputCompareUnit$FOC_Field avrora/sim/mcu/Timer16Bit$PairedRegister avrora/sim/mcu/Timer16Bit$TCNTnRegister avrora/sim/mcu/Timer8Bit avrora/sim/mcu/Timer8Bit$BufferedRegister avrora/sim/mcu/Timer8Bit$ControlRegister avrora/sim/mcu/Timer8Bit$Mode_CTC avrora/sim/mcu/Timer8Bit$Mode_FastPWM avrora/sim/mcu/Timer8Bit$Mode_Normal avrora/sim/mcu/Timer8Bit$Mode_PWM avrora/sim/mcu/Timer8Bit$TCNTnRegister avrora/sim/mcu/USART avrora/sim/mcu/USART$ControlRegisterA avrora/sim/mcu/USART$ControlRegisterB avrora/sim/mcu/USART$ControlRegisterC avrora/sim/mcu/USART$DataRegister avrora/sim/mcu/USART$DataRegister$TwoLevelFIFO avrora/sim/mcu/USART$DataRegister$TwoLevelFIFO$USARTFrameWrapper avrora/sim/mcu/USART$Receiver avrora/sim/mcu/USART$Receiver$Receive avrora/sim/mcu/USART$SerialPrinter avrora/sim/mcu/USART$Transmitter avrora/sim/mcu/USART$Transmitter$Transmit avrora/sim/mcu/USART$UBRRnHReg avrora/sim/mcu/USART$UBRRnLReg avrora/sim/mcu/USART$USARTDevice avrora/sim/mcu/USART$USARTProperties avrora/sim/output/EventBuffer avrora/sim/output/SimPrinter avrora/sim/platform/ExternalFlash avrora/sim/platform/ExternalFlash$Delay avrora/sim/platform/ExternalFlash$Memory avrora/sim/platform/ExternalFlash$PA3Output avrora/sim/platform/ExternalFlash$PD2Input avrora/sim/platform/ExternalFlash$PD3Output avrora/sim/platform/ExternalFlash$PD5Output avrora/sim/platform/ExternalFlash$Page avrora/sim/platform/LED avrora/sim/platform/LED$LEDGroup avrora/sim/platform/LED$LEDProbe avrora/sim/platform/Mica2 avrora/sim/platform/Mica2$Factory avrora/sim/platform/MicaZ$Factory avrora/sim/platform/Platform avrora/sim/platform/PlatformFactory avrora/sim/platform/Seres$Factory avrora/sim/platform/Superbot$Factory avrora/sim/platform/Telos$Factory avrora/sim/platform/sensors/AccelSensor avrora/sim/platform/sensors/AccelSensor$ADCInput avrora/sim/platform/sensors/AccelSensor$OnPin avrora/sim/platform/sensors/LightSensor avrora/sim/platform/sensors/LightSensor$ADCInput avrora/sim/platform/sensors/LightSensor$OnPin avrora/sim/platform/sensors/LightSensor$PowerPin avrora/sim/platform/sensors/Sensor avrora/sim/platform/sensors/SensorBoard avrora/sim/radio/CC1000Radio avrora/sim/radio/CC1000Radio$CALRegister avrora/sim/radio/CC1000Radio$CALRegister$Calibrate avrora/sim/radio/CC1000Radio$CurrentRegister avrora/sim/radio/CC1000Radio$DummyRegister avrora/sim/radio/CC1000Radio$FSCTRLRegister avrora/sim/radio/CC1000Radio$FrequencyRegister avrora/sim/radio/CC1000Radio$FrequencyRegister$FrequencySubRegister avrora/sim/radio/CC1000Radio$FrequencySeparationRegister avrora/sim/radio/CC1000Radio$FrequencySeparationRegister$SubRegister avrora/sim/radio/CC1000Radio$FrontEndRegister avrora/sim/radio/CC1000Radio$LockRegister avrora/sim/radio/CC1000Radio$MainRegister avrora/sim/radio/CC1000Radio$MatchRegister avrora/sim/radio/CC1000Radio$Modem0Register avrora/sim/radio/CC1000Radio$Modem1Register avrora/sim/radio/CC1000Radio$Modem2Register avrora/sim/radio/CC1000Radio$PA_POWRegister avrora/sim/radio/CC1000Radio$PLLRegister avrora/sim/radio/CC1000Radio$PrescalerRegister avrora/sim/radio/CC1000Radio$RSSIOutput avrora/sim/radio/CC1000Radio$RadioRegister avrora/sim/radio/CC1000Radio$Receiver avrora/sim/radio/CC1000Radio$SPITicker avrora/sim/radio/CC1000Radio$SerialConfigurationInterface avrora/sim/radio/CC1000Radio$SerialConfigurationInterface$PALEOutput avrora/sim/radio/CC1000Radio$SerialConfigurationInterface$PCLKOutput avrora/sim/radio/CC1000Radio$SerialConfigurationInterface$PDATAInput avrora/sim/radio/CC1000Radio$SerialConfigurationInterface$PDATAOutput avrora/sim/radio/CC1000Radio$Transmitter avrora/sim/radio/CC2420Radio avrora/sim/radio/LossyModel avrora/sim/radio/Medium avrora/sim/radio/Medium$Arbitrator avrora/sim/radio/Medium$BasicArbitrator avrora/sim/radio/Medium$Probe avrora/sim/radio/Medium$Probe$List avrora/sim/radio/Medium$Receiver avrora/sim/radio/Medium$Receiver$Ticker avrora/sim/radio/Medium$TXRX avrora/sim/radio/Medium$Transmission avrora/sim/radio/Medium$Transmitter avrora/sim/radio/Medium$Transmitter$Ticker avrora/sim/radio/Radio avrora/sim/radio/RadioEnergy avrora/sim/radio/RadiusModel avrora/sim/radio/Topology avrora/sim/radio/noise avrora/sim/state/BooleanView avrora/sim/state/RegisterUtil avrora/sim/state/RegisterUtil$BitRangeView avrora/sim/state/RegisterUtil$BoolView avrora/sim/state/RegisterUtil$PermutedView avrora/sim/state/RegisterView avrora/sim/state/VolatileBehavior avrora/sim/types/SensorSimulation avrora/sim/types/SensorSimulation$SensorNode avrora/sim/types/SingleSimulation avrora/sim/types/WiredSimulation avrora/sim/util/ClockCycleTimeout avrora/sim/util/MulticastFSMProbe avrora/sim/util/MulticastInterruptProbe avrora/sim/util/MulticastProbe avrora/sim/util/MulticastWatch avrora/sim/util/SimUtil avrora/sim/util/TransactionalList avrora/sim/util/TransactionalList$Link avrora/syntax/atmel/AtmelProgramReader avrora/syntax/elf/ELFParser avrora/syntax/objdump/ODPPAction avrora/syntax/objdump/ObjDump2ProgramReader avrora/syntax/objdump/ObjDumpProgramReader avrora/syntax/raw/RAWReader cck/elf/ELFDataInputStream cck/elf/ELFHeader cck/elf/ELFIdentifier cck/elf/ELFLoader cck/elf/ELFProgramHeaderTable cck/elf/ELFProgramHeaderTable$Entry32 cck/elf/ELFSectionHeaderTable cck/elf/ELFSectionHeaderTable$Entry32 cck/elf/ELFStringTable cck/elf/ELFSymbolTable cck/elf/ELFSymbolTable$Entry cck/help/ClassMapValueItem cck/help/HelpCategory cck/help/HelpCategory$1 cck/help/HelpCategory$ListSection cck/help/HelpCategory$OptionsSection cck/help/HelpCategory$ParagraphSection cck/help/HelpCategory$Section cck/help/HelpItem cck/help/HelpSystem cck/text/CharUtil cck/text/Printer cck/text/Status cck/text/Status$Item cck/text/StringUtil cck/text/TermUtil cck/text/Terminal cck/text/Verbose cck/text/Verbose$Printer cck/util/Arithmetic cck/util/ClassMap cck/util/Option cck/util/Option$1 cck/util/Option$Bool cck/util/Option$Double cck/util/Option$Interval cck/util/Option$List cck/util/Option$Long cck/util/Option$Str cck/util/Options cck/util/VersionTag  </instrumented> 
+  <instrumentedNum> 448 </instrumentedNum> 
+  <skipped>  </skipped> 
+  <skippedNum> 0 </skippedNum> 
+  <sanityChecked>  </sanityChecked> 
+  <sanityCheckedNum> 0 </sanityCheckedNum> 
+  <counters>
+
+    <counter><name> "ArrayStateFactory: Size" </name>                    <value> 1,023,768 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>417.000</total> <count>67</count> <ave>6.22388</ave> </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 2,354 </value> </counter>
+
+    <counter><name> "Clone: Count" </name>                               <value> 0 </value> </counter>
+
+    <counter><name> "FT: Read Same Epoch" </name>                        <value>          0 </value> </counter>
+    <counter><name> "FT: ReadShared Same Epoch" </name>                  <value>          0 </value> </counter>
+    <counter><name> "FT: Read Exclusive" </name>                         <value>          0 </value> </counter>
+    <counter><name> "FT: Read Share" </name>                             <value>          0 </value> </counter>
+    <counter><name> "FT: Read Shared" </name>                            <value>          0 </value> </counter>
+    <counter><name> "FT: Write-Read Error" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Write Same Epoch" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Write Exclusive" </name>                        <value>          0 </value> </counter>
+    <counter><name> "FT: Write Shared" </name>                           <value>          0 </value> </counter>
+    <counter><name> "FT: Write-Write Error" </name>                      <value>          0 </value> </counter>
+    <counter><name> "FT: Read-Write Error" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Shared-Write Error" </name>                     <value>          0 </value> </counter>
+    <counter><name> "FT: Acquire" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Release" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Fork" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Join" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Barrier" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Wait" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Volatile" </name>                               <value>          0 </value> </counter>
+    <counter><name> "FT: Other" </name>                                  <value>          0 </value> </counter>
+    <counter><name> "FT: Total Reads" </name>                            <value> 0 </value> </counter>
+    <counter><name> "FT: Total Writes" </name>                           <value> 0 </value> </counter>
+    <counter><name> "FT: Total Access Ops" </name>                       <value> 0 </value> </counter>
+    <counter><name> "FT: Total Ops" </name>                              <value> 0 </value> </counter>
+
+    <counter><name> "GCRunner: Max Usage" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "Handler: Count" </name>                             <value> 0 </value> </counter>
+
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 15,231 </value> </counter>
+    <counter><name> "RRBench: Warmup 2" </name>                          <value> 10,549 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 9,877 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 9,776 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 9,744 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 9,745 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 9,826 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 9,723 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 9,762 </value> </counter>
+
+    <counter><name> "ShadowLock: objects" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "ShadowThread: Count" </name>                        <value> 49 </value> </counter>
+    <counter><name> "ShadowThread: Max Live" </name>                     <value> 7 </value> </counter>
+    <counter><name> "ShadowThread: getCurrentThread() calls" </name>     <value> 0 </value> </counter>
+
+    <counter><name> "ShadowVolatile: objects" </name>                    <value> 0 </value> </counter>
+
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>788.000</total> <count>448</count> <ave>1.75893</ave> </value> </counter>
+  </counters>
+  <yikes>
+    <message> Concurrent array state creation... </message> <count> 1 </count> 
+    <message> Concurrent array guard state init.. </message> <count> 4 </count> 
+    <message> SafeFieldUpdater: Concurrent update </message> <count> 463 </count> 
+    <message> Bad Update </message>    <count> 4 </count> 
+  </yikes>
+  <tool>
+    <name> tools.fasttrack.FastTrackTool </name> 
+    <thread> [tid=1    C=[(0:161) (1:20748F) (2:2125A1) (3:20A017) (4:204607) (5:20B229) (6:20B6FC)]   E=(1:20748F)] </thread> 
+    <thread> [tid=2    C=[(0:182) (1:254005) (2:25B9AE) (3:256EFD) (4:24E6D4) (5:2544FC) (6:255862)]   E=(2:25B9AE)] </thread> 
+    <thread> [tid=4    C=[(0:161) (1:20748D) (2:2125A0) (3:20A016) (4:204608) (5:20B228) (6:20B6FC)]   E=(4:204608)] </thread> 
+    <thread> [tid=0    C=[(0:186) (1:254006) (2:25B9AE) (3:256EFE) (4:24E6D6) (5:2544FD) (6:255864)]   E=(0:186)] </thread> 
+    <thread> [tid=4    C=[(0:182) (1:254005) (2:25B9AD) (3:256EFD) (4:24E6D6) (5:2544FC) (6:255862)]   E=(4:24E6D6)] </thread> 
+    <thread> [tid=5    C=[(0:161) (1:20748D) (2:2125A0) (3:20A016) (4:204607) (5:20B22A) (6:20B6FC)]   E=(5:20B22A)] </thread> 
+    <thread> [tid=5    C=[(0:182) (1:254004) (2:25B9AC) (3:256EFD) (4:24E6D4) (5:2544FD) (6:255862)]   E=(5:2544FD)] </thread> 
+    <thread> [tid=6    C=[(0:161) (1:20748D) (2:2125A0) (3:20A016) (4:204606) (5:20B228) (6:20B6FD)]   E=(6:20B6FD)] </thread> 
+    <thread> [tid=6    C=[(0:182) (1:254005) (2:25B9AD) (3:256EFD) (4:24E6D5) (5:2544FC) (6:255864)]   E=(6:255864)] </thread> 
+    <thread> [tid=2    C=[(0:161) (1:20748D) (2:2125A2) (3:20A017) (4:204607) (5:20B229) (6:20B6FC)]   E=(2:2125A2)] </thread> 
+    <thread> [tid=3    C=[(0:182) (1:254004) (2:25B9AC) (3:256EFE) (4:24E6D4) (5:2544FB) (6:255862)]   E=(3:256EFE)] </thread> 
+    <thread> [tid=1    C=[(0:182) (1:254006) (2:25B9AC) (3:256EFD) (4:24E6D4) (5:2544FC) (6:255862)]   E=(1:254006)] </thread> 
+    <thread> [tid=3    C=[(0:161) (1:20748D) (2:2125A0) (3:20A018) (4:204607) (5:20B229) (6:20B6FC)]   E=(3:20A018)] </thread> 
+  </tool>
+  <tool>
+    <name> Last </name> 
+  </tool>
+  <threadCount> 13 </threadCount> 
+  <threadMaxActive> 7 </threadMaxActive> 
+  <errorTotal> 3 </errorTotal> 
+  <distinctErrorTotal> 3 </distinctErrorTotal> 
+  <methods>
+  </methods>
+  <fields>
+    <field>
+      <name> avrora/sim/radio/Medium$Transmission.lastBit_J </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> avrora/sim/radio/Medium.Pr_D </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> avrora/sim/radio/Medium.Pn_I </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+  </fields>
+  <arrays>
+  </arrays>
+  <locks>
+  </locks>
+  <fieldAccesses>
+  </fieldAccesses>
+  <errorCountPerErrorType>
+    <errorType> <name> FastTrack </name> <count> 3 </count> </errorType>
+  </errorCountPerErrorType>
+  <warningsTotal> 0 </warningsTotal> 
+  <yikesTotal> 472 </yikesTotal> 
+  <failed> false </failed> 
+  <failedReason>  </failedReason> 
+  <time> 85246 </time> 
+</entry>

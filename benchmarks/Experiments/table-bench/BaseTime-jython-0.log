@@ -1,0 +1,2571 @@
+PREP
+Archive:  jython.zip
+  inflating: jython/noop.py          
+  inflating: jython/sieve.py         
+  inflating: jython/pybench/Arithmetic.py  
+  inflating: jython/pybench/Calls.py  
+  inflating: jython/pybench/CommandLine.py  
+  inflating: jython/pybench/Constructs.py  
+  inflating: jython/pybench/Dict.py  
+  inflating: jython/pybench/Exceptions.py  
+  inflating: jython/pybench/Imports.py  
+  inflating: jython/pybench/Instances.py  
+  inflating: jython/pybench/LICENSE  
+  inflating: jython/pybench/Lists.py  
+  inflating: jython/pybench/Lookups.py  
+  inflating: jython/pybench/NewInstances.py  
+  inflating: jython/pybench/Numbers.py  
+  inflating: jython/pybench/README   
+  inflating: jython/pybench/Setup.py  
+  inflating: jython/pybench/Strings.py  
+  inflating: jython/pybench/Tuples.py  
+  inflating: jython/pybench/Unicode.py  
+  inflating: jython/pybench/clockres.py  
+  inflating: jython/pybench/package/__init__.py  
+  inflating: jython/pybench/package/submodule.py  
+  inflating: jython/pybench/pybench.py  
+  inflating: jython/pybench/systimes.py  
+  inflating: jython/Lib/BaseHTTPServer$py.class  
+  inflating: jython/Lib/BaseHTTPServer.py  
+  inflating: jython/Lib/CGIHTTPServer$py.class  
+  inflating: jython/Lib/CGIHTTPServer.py  
+  inflating: jython/Lib/ConfigParser$py.class  
+  inflating: jython/Lib/ConfigParser.py  
+  inflating: jython/Lib/Cookie$py.class  
+  inflating: jython/Lib/Cookie.py    
+  inflating: jython/Lib/DocXMLRPCServer$py.class  
+  inflating: jython/Lib/DocXMLRPCServer.py  
+  inflating: jython/Lib/EastAsianWidth.txt  
+  inflating: jython/Lib/HTMLParser$py.class  
+  inflating: jython/Lib/HTMLParser.py  
+  inflating: jython/Lib/MimeWriter$py.class  
+  inflating: jython/Lib/MimeWriter.py  
+  inflating: jython/Lib/Queue$py.class  
+  inflating: jython/Lib/Queue.py     
+  inflating: jython/Lib/SimpleHTTPServer$py.class  
+  inflating: jython/Lib/SimpleHTTPServer.py  
+  inflating: jython/Lib/SimpleXMLRPCServer$py.class  
+  inflating: jython/Lib/SimpleXMLRPCServer.py  
+  inflating: jython/Lib/SocketServer$py.class  
+  inflating: jython/Lib/SocketServer.py  
+  inflating: jython/Lib/StringIO$py.class  
+  inflating: jython/Lib/StringIO.py  
+  inflating: jython/Lib/UnicodeData.txt  
+  inflating: jython/Lib/UserDict$py.class  
+  inflating: jython/Lib/UserDict.py  
+  inflating: jython/Lib/UserList$py.class  
+  inflating: jython/Lib/UserList.py  
+  inflating: jython/Lib/UserString$py.class  
+  inflating: jython/Lib/UserString.py  
+  inflating: jython/Lib/_LWPCookieJar$py.class  
+  inflating: jython/Lib/_LWPCookieJar.py  
+  inflating: jython/Lib/_MozillaCookieJar$py.class  
+  inflating: jython/Lib/_MozillaCookieJar.py  
+  inflating: jython/Lib/__future__$py.class  
+  inflating: jython/Lib/__future__.py  
+  inflating: jython/Lib/_rawffi$py.class  
+  inflating: jython/Lib/_rawffi.py   
+  inflating: jython/Lib/_strptime$py.class  
+  inflating: jython/Lib/_strptime.py  
+  inflating: jython/Lib/_threading_local$py.class  
+  inflating: jython/Lib/_threading_local.py  
+  inflating: jython/Lib/aifc$py.class  
+  inflating: jython/Lib/aifc.py      
+  inflating: jython/Lib/anydbm$py.class  
+  inflating: jython/Lib/anydbm.py    
+  inflating: jython/Lib/ast$py.class  
+  inflating: jython/Lib/ast.py       
+  inflating: jython/Lib/asynchat$py.class  
+  inflating: jython/Lib/asynchat.py  
+  inflating: jython/Lib/asyncore$py.class  
+  inflating: jython/Lib/asyncore.py  
+  inflating: jython/Lib/atexit$py.class  
+  inflating: jython/Lib/atexit.py    
+  inflating: jython/Lib/base64$py.class  
+  inflating: jython/Lib/base64.py    
+  inflating: jython/Lib/bdb$py.class  
+  inflating: jython/Lib/bdb.py       
+  inflating: jython/Lib/binhex$py.class  
+  inflating: jython/Lib/binhex.py    
+  inflating: jython/Lib/bisect$py.class  
+  inflating: jython/Lib/bisect.py    
+  inflating: jython/Lib/calendar$py.class  
+  inflating: jython/Lib/calendar.py  
+  inflating: jython/Lib/cgi$py.class  
+  inflating: jython/Lib/cgi.py       
+  inflating: jython/Lib/cgitb$py.class  
+  inflating: jython/Lib/cgitb.py     
+  inflating: jython/Lib/chunk$py.class  
+  inflating: jython/Lib/chunk.py     
+  inflating: jython/Lib/cmd$py.class  
+  inflating: jython/Lib/cmd.py       
+  inflating: jython/Lib/code$py.class  
+  inflating: jython/Lib/code.py      
+  inflating: jython/Lib/codecs$py.class  
+  inflating: jython/Lib/codecs.py    
+  inflating: jython/Lib/codeop$py.class  
+  inflating: jython/Lib/codeop.py    
+  inflating: jython/Lib/collections/__init__$py.class  
+  inflating: jython/Lib/collections/__init__.py  
+  inflating: jython/Lib/colorsys$py.class  
+  inflating: jython/Lib/colorsys.py  
+  inflating: jython/Lib/commands$py.class  
+  inflating: jython/Lib/commands.py  
+  inflating: jython/Lib/compileall$py.class  
+  inflating: jython/Lib/compileall.py  
+  inflating: jython/Lib/compiler/__init__$py.class  
+  inflating: jython/Lib/compiler/__init__.py  
+  inflating: jython/Lib/compiler/ast$py.class  
+  inflating: jython/Lib/compiler/ast.py  
+  inflating: jython/Lib/compiler/consts$py.class  
+  inflating: jython/Lib/compiler/consts.py  
+  inflating: jython/Lib/compiler/future$py.class  
+  inflating: jython/Lib/compiler/future.py  
+  inflating: jython/Lib/compiler/misc$py.class  
+  inflating: jython/Lib/compiler/misc.py  
+  inflating: jython/Lib/compiler/pyassem$py.class  
+  inflating: jython/Lib/compiler/pyassem.py  
+  inflating: jython/Lib/compiler/pycodegen$py.class  
+  inflating: jython/Lib/compiler/pycodegen.py  
+  inflating: jython/Lib/compiler/symbols$py.class  
+  inflating: jython/Lib/compiler/symbols.py  
+  inflating: jython/Lib/compiler/syntax$py.class  
+  inflating: jython/Lib/compiler/syntax.py  
+  inflating: jython/Lib/compiler/transformer$py.class  
+  inflating: jython/Lib/compiler/transformer.py  
+  inflating: jython/Lib/compiler/visitor$py.class  
+  inflating: jython/Lib/compiler/visitor.py  
+  inflating: jython/Lib/contextlib$py.class  
+  inflating: jython/Lib/contextlib.py  
+  inflating: jython/Lib/cookielib$py.class  
+  inflating: jython/Lib/cookielib.py  
+  inflating: jython/Lib/copy$py.class  
+  inflating: jython/Lib/copy.py      
+  inflating: jython/Lib/copy_reg$py.class  
+  inflating: jython/Lib/copy_reg.py  
+  inflating: jython/Lib/csv$py.class  
+  inflating: jython/Lib/csv.py       
+  inflating: jython/Lib/datetime$py.class  
+  inflating: jython/Lib/datetime.py  
+  inflating: jython/Lib/dbexts$py.class  
+  inflating: jython/Lib/dbexts.py    
+  inflating: jython/Lib/decimal$py.class  
+  inflating: jython/Lib/decimal.py   
+  inflating: jython/Lib/difflib$py.class  
+  inflating: jython/Lib/difflib.py   
+  inflating: jython/Lib/dircache$py.class  
+  inflating: jython/Lib/dircache.py  
+  inflating: jython/Lib/dis$py.class  
+  inflating: jython/Lib/dis.py       
+  inflating: jython/Lib/distutils/README  
+  inflating: jython/Lib/distutils/__init__$py.class  
+  inflating: jython/Lib/distutils/__init__.py  
+  inflating: jython/Lib/distutils/archive_util$py.class  
+  inflating: jython/Lib/distutils/archive_util.py  
+  inflating: jython/Lib/distutils/bcppcompiler$py.class  
+  inflating: jython/Lib/distutils/bcppcompiler.py  
+  inflating: jython/Lib/distutils/ccompiler$py.class  
+  inflating: jython/Lib/distutils/ccompiler.py  
+  inflating: jython/Lib/distutils/cmd$py.class  
+  inflating: jython/Lib/distutils/cmd.py  
+  inflating: jython/Lib/distutils/command/__init__$py.class  
+  inflating: jython/Lib/distutils/command/__init__.py  
+  inflating: jython/Lib/distutils/command/bdist$py.class  
+  inflating: jython/Lib/distutils/command/bdist.py  
+  inflating: jython/Lib/distutils/command/bdist_dumb$py.class  
+  inflating: jython/Lib/distutils/command/bdist_dumb.py  
+  inflating: jython/Lib/distutils/command/bdist_msi$py.class  
+  inflating: jython/Lib/distutils/command/bdist_msi.py  
+  inflating: jython/Lib/distutils/command/bdist_rpm$py.class  
+  inflating: jython/Lib/distutils/command/bdist_rpm.py  
+  inflating: jython/Lib/distutils/command/bdist_wininst$py.class  
+  inflating: jython/Lib/distutils/command/bdist_wininst.py  
+  inflating: jython/Lib/distutils/command/build$py.class  
+  inflating: jython/Lib/distutils/command/build.py  
+  inflating: jython/Lib/distutils/command/build_clib$py.class  
+  inflating: jython/Lib/distutils/command/build_clib.py  
+  inflating: jython/Lib/distutils/command/build_ext$py.class  
+  inflating: jython/Lib/distutils/command/build_ext.py  
+  inflating: jython/Lib/distutils/command/build_py$py.class  
+  inflating: jython/Lib/distutils/command/build_py.py  
+  inflating: jython/Lib/distutils/command/build_scripts$py.class  
+  inflating: jython/Lib/distutils/command/build_scripts.py  
+  inflating: jython/Lib/distutils/command/clean$py.class  
+  inflating: jython/Lib/distutils/command/clean.py  
+  inflating: jython/Lib/distutils/command/command_template  
+  inflating: jython/Lib/distutils/command/config$py.class  
+  inflating: jython/Lib/distutils/command/config.py  
+  inflating: jython/Lib/distutils/command/install$py.class  
+  inflating: jython/Lib/distutils/command/install.py  
+  inflating: jython/Lib/distutils/command/install_data$py.class  
+  inflating: jython/Lib/distutils/command/install_data.py  
+  inflating: jython/Lib/distutils/command/install_egg_info$py.class  
+  inflating: jython/Lib/distutils/command/install_egg_info.py  
+  inflating: jython/Lib/distutils/command/install_headers$py.class  
+  inflating: jython/Lib/distutils/command/install_headers.py  
+  inflating: jython/Lib/distutils/command/install_lib$py.class  
+  inflating: jython/Lib/distutils/command/install_lib.py  
+  inflating: jython/Lib/distutils/command/install_scripts$py.class  
+  inflating: jython/Lib/distutils/command/install_scripts.py  
+  inflating: jython/Lib/distutils/command/register$py.class  
+  inflating: jython/Lib/distutils/command/register.py  
+  inflating: jython/Lib/distutils/command/sdist$py.class  
+  inflating: jython/Lib/distutils/command/sdist.py  
+  inflating: jython/Lib/distutils/command/upload$py.class  
+  inflating: jython/Lib/distutils/command/upload.py  
+  inflating: jython/Lib/distutils/command/wininst-6.exe  
+  inflating: jython/Lib/distutils/command/wininst-7.1.exe  
+  inflating: jython/Lib/distutils/core$py.class  
+  inflating: jython/Lib/distutils/core.py  
+  inflating: jython/Lib/distutils/cygwinccompiler$py.class  
+  inflating: jython/Lib/distutils/cygwinccompiler.py  
+  inflating: jython/Lib/distutils/debug$py.class  
+  inflating: jython/Lib/distutils/debug.py  
+  inflating: jython/Lib/distutils/dep_util$py.class  
+  inflating: jython/Lib/distutils/dep_util.py  
+  inflating: jython/Lib/distutils/dir_util$py.class  
+  inflating: jython/Lib/distutils/dir_util.py  
+  inflating: jython/Lib/distutils/dist$py.class  
+  inflating: jython/Lib/distutils/dist.py  
+  inflating: jython/Lib/distutils/emxccompiler$py.class  
+  inflating: jython/Lib/distutils/emxccompiler.py  
+  inflating: jython/Lib/distutils/errors$py.class  
+  inflating: jython/Lib/distutils/errors.py  
+  inflating: jython/Lib/distutils/extension$py.class  
+  inflating: jython/Lib/distutils/extension.py  
+  inflating: jython/Lib/distutils/fancy_getopt$py.class  
+  inflating: jython/Lib/distutils/fancy_getopt.py  
+  inflating: jython/Lib/distutils/file_util$py.class  
+  inflating: jython/Lib/distutils/file_util.py  
+  inflating: jython/Lib/distutils/filelist$py.class  
+  inflating: jython/Lib/distutils/filelist.py  
+  inflating: jython/Lib/distutils/jythoncompiler$py.class  
+  inflating: jython/Lib/distutils/jythoncompiler.py  
+  inflating: jython/Lib/distutils/log$py.class  
+  inflating: jython/Lib/distutils/log.py  
+  inflating: jython/Lib/distutils/msvccompiler$py.class  
+  inflating: jython/Lib/distutils/msvccompiler.py  
+  inflating: jython/Lib/distutils/mwerkscompiler$py.class  
+  inflating: jython/Lib/distutils/mwerkscompiler.py  
+  inflating: jython/Lib/distutils/spawn$py.class  
+  inflating: jython/Lib/distutils/spawn.py  
+  inflating: jython/Lib/distutils/sysconfig$py.class  
+  inflating: jython/Lib/distutils/sysconfig.py  
+  inflating: jython/Lib/distutils/tests/__init__$py.class  
+  inflating: jython/Lib/distutils/tests/__init__.py  
+  inflating: jython/Lib/distutils/tests/support$py.class  
+  inflating: jython/Lib/distutils/tests/support.py  
+  inflating: jython/Lib/distutils/tests/test_build_py$py.class  
+  inflating: jython/Lib/distutils/tests/test_build_py.py  
+  inflating: jython/Lib/distutils/tests/test_build_scripts$py.class  
+  inflating: jython/Lib/distutils/tests/test_build_scripts.py  
+  inflating: jython/Lib/distutils/tests/test_dist$py.class  
+  inflating: jython/Lib/distutils/tests/test_dist.py  
+  inflating: jython/Lib/distutils/tests/test_install$py.class  
+  inflating: jython/Lib/distutils/tests/test_install.py  
+  inflating: jython/Lib/distutils/tests/test_install_scripts$py.class  
+  inflating: jython/Lib/distutils/tests/test_install_scripts.py  
+  inflating: jython/Lib/distutils/tests/test_versionpredicate$py.class  
+  inflating: jython/Lib/distutils/tests/test_versionpredicate.py  
+  inflating: jython/Lib/distutils/text_file$py.class  
+  inflating: jython/Lib/distutils/text_file.py  
+  inflating: jython/Lib/distutils/unixccompiler$py.class  
+  inflating: jython/Lib/distutils/unixccompiler.py  
+  inflating: jython/Lib/distutils/util$py.class  
+  inflating: jython/Lib/distutils/util.py  
+  inflating: jython/Lib/distutils/version$py.class  
+  inflating: jython/Lib/distutils/version.py  
+  inflating: jython/Lib/distutils/versionpredicate$py.class  
+  inflating: jython/Lib/distutils/versionpredicate.py  
+  inflating: jython/Lib/doctest$py.class  
+  inflating: jython/Lib/doctest.py   
+  inflating: jython/Lib/dumbdbm$py.class  
+  inflating: jython/Lib/dumbdbm.py   
+  inflating: jython/Lib/dummy_thread$py.class  
+  inflating: jython/Lib/dummy_thread.py  
+  inflating: jython/Lib/dummy_threading$py.class  
+  inflating: jython/Lib/dummy_threading.py  
+  inflating: jython/Lib/email/__init__$py.class  
+  inflating: jython/Lib/email/__init__.py  
+  inflating: jython/Lib/email/_parseaddr$py.class  
+  inflating: jython/Lib/email/_parseaddr.py  
+  inflating: jython/Lib/email/base64mime$py.class  
+  inflating: jython/Lib/email/base64mime.py  
+  inflating: jython/Lib/email/charset$py.class  
+  inflating: jython/Lib/email/charset.py  
+  inflating: jython/Lib/email/encoders$py.class  
+  inflating: jython/Lib/email/encoders.py  
+  inflating: jython/Lib/email/errors$py.class  
+  inflating: jython/Lib/email/errors.py  
+  inflating: jython/Lib/email/feedparser$py.class  
+  inflating: jython/Lib/email/feedparser.py  
+  inflating: jython/Lib/email/generator$py.class  
+  inflating: jython/Lib/email/generator.py  
+  inflating: jython/Lib/email/header$py.class  
+  inflating: jython/Lib/email/header.py  
+  inflating: jython/Lib/email/iterators$py.class  
+  inflating: jython/Lib/email/iterators.py  
+  inflating: jython/Lib/email/message$py.class  
+  inflating: jython/Lib/email/message.py  
+  inflating: jython/Lib/email/mime/__init__$py.class  
+  inflating: jython/Lib/email/mime/__init__.py  
+  inflating: jython/Lib/email/mime/application$py.class  
+  inflating: jython/Lib/email/mime/application.py  
+  inflating: jython/Lib/email/mime/audio$py.class  
+  inflating: jython/Lib/email/mime/audio.py  
+  inflating: jython/Lib/email/mime/base$py.class  
+  inflating: jython/Lib/email/mime/base.py  
+  inflating: jython/Lib/email/mime/image$py.class  
+  inflating: jython/Lib/email/mime/image.py  
+  inflating: jython/Lib/email/mime/message$py.class  
+  inflating: jython/Lib/email/mime/message.py  
+  inflating: jython/Lib/email/mime/multipart$py.class  
+  inflating: jython/Lib/email/mime/multipart.py  
+  inflating: jython/Lib/email/mime/nonmultipart$py.class  
+  inflating: jython/Lib/email/mime/nonmultipart.py  
+  inflating: jython/Lib/email/mime/text$py.class  
+  inflating: jython/Lib/email/mime/text.py  
+  inflating: jython/Lib/email/parser$py.class  
+  inflating: jython/Lib/email/parser.py  
+  inflating: jython/Lib/email/quoprimime$py.class  
+  inflating: jython/Lib/email/quoprimime.py  
+  inflating: jython/Lib/email/test/__init__$py.class  
+  inflating: jython/Lib/email/test/__init__.py  
+  inflating: jython/Lib/email/test/data/PyBanner048.gif  
+  inflating: jython/Lib/email/test/data/audiotest.au  
+  inflating: jython/Lib/email/test/data/msg_01.txt  
+  inflating: jython/Lib/email/test/data/msg_02.txt  
+  inflating: jython/Lib/email/test/data/msg_03.txt  
+  inflating: jython/Lib/email/test/data/msg_04.txt  
+  inflating: jython/Lib/email/test/data/msg_05.txt  
+  inflating: jython/Lib/email/test/data/msg_06.txt  
+  inflating: jython/Lib/email/test/data/msg_07.txt  
+  inflating: jython/Lib/email/test/data/msg_08.txt  
+  inflating: jython/Lib/email/test/data/msg_09.txt  
+  inflating: jython/Lib/email/test/data/msg_10.txt  
+  inflating: jython/Lib/email/test/data/msg_11.txt  
+  inflating: jython/Lib/email/test/data/msg_12.txt  
+  inflating: jython/Lib/email/test/data/msg_12a.txt  
+  inflating: jython/Lib/email/test/data/msg_13.txt  
+  inflating: jython/Lib/email/test/data/msg_14.txt  
+  inflating: jython/Lib/email/test/data/msg_15.txt  
+  inflating: jython/Lib/email/test/data/msg_16.txt  
+  inflating: jython/Lib/email/test/data/msg_17.txt  
+  inflating: jython/Lib/email/test/data/msg_18.txt  
+  inflating: jython/Lib/email/test/data/msg_19.txt  
+  inflating: jython/Lib/email/test/data/msg_20.txt  
+  inflating: jython/Lib/email/test/data/msg_21.txt  
+  inflating: jython/Lib/email/test/data/msg_22.txt  
+  inflating: jython/Lib/email/test/data/msg_23.txt  
+  inflating: jython/Lib/email/test/data/msg_24.txt  
+  inflating: jython/Lib/email/test/data/msg_25.txt  
+  inflating: jython/Lib/email/test/data/msg_26.txt  
+  inflating: jython/Lib/email/test/data/msg_27.txt  
+  inflating: jython/Lib/email/test/data/msg_28.txt  
+  inflating: jython/Lib/email/test/data/msg_29.txt  
+  inflating: jython/Lib/email/test/data/msg_30.txt  
+  inflating: jython/Lib/email/test/data/msg_31.txt  
+  inflating: jython/Lib/email/test/data/msg_32.txt  
+  inflating: jython/Lib/email/test/data/msg_33.txt  
+  inflating: jython/Lib/email/test/data/msg_34.txt  
+  inflating: jython/Lib/email/test/data/msg_35.txt  
+  inflating: jython/Lib/email/test/data/msg_36.txt  
+  inflating: jython/Lib/email/test/data/msg_37.txt  
+  inflating: jython/Lib/email/test/data/msg_38.txt  
+  inflating: jython/Lib/email/test/data/msg_39.txt  
+  inflating: jython/Lib/email/test/data/msg_40.txt  
+  inflating: jython/Lib/email/test/data/msg_41.txt  
+  inflating: jython/Lib/email/test/data/msg_42.txt  
+  inflating: jython/Lib/email/test/data/msg_43.txt  
+  inflating: jython/Lib/email/test/data/msg_44.txt  
+  inflating: jython/Lib/email/test/test_email$py.class  
+  inflating: jython/Lib/email/test/test_email.py  
+  inflating: jython/Lib/email/test/test_email_codecs$py.class  
+  inflating: jython/Lib/email/test/test_email_codecs.py  
+  inflating: jython/Lib/email/test/test_email_codecs_renamed$py.class  
+  inflating: jython/Lib/email/test/test_email_codecs_renamed.py  
+  inflating: jython/Lib/email/test/test_email_renamed$py.class  
+  inflating: jython/Lib/email/test/test_email_renamed.py  
+  inflating: jython/Lib/email/test/test_email_torture$py.class  
+  inflating: jython/Lib/email/test/test_email_torture.py  
+  inflating: jython/Lib/email/utils$py.class  
+  inflating: jython/Lib/email/utils.py  
+  inflating: jython/Lib/encodings/__init__$py.class  
+  inflating: jython/Lib/encodings/__init__.py  
+  inflating: jython/Lib/encodings/aliases$py.class  
+  inflating: jython/Lib/encodings/aliases.py  
+  inflating: jython/Lib/encodings/ascii$py.class  
+  inflating: jython/Lib/encodings/ascii.py  
+  inflating: jython/Lib/encodings/base64_codec$py.class  
+  inflating: jython/Lib/encodings/base64_codec.py  
+  inflating: jython/Lib/encodings/big5$py.class  
+  inflating: jython/Lib/encodings/big5.py  
+  inflating: jython/Lib/encodings/big5hkscs$py.class  
+  inflating: jython/Lib/encodings/big5hkscs.py  
+  inflating: jython/Lib/encodings/bz2_codec$py.class  
+  inflating: jython/Lib/encodings/bz2_codec.py  
+  inflating: jython/Lib/encodings/charmap$py.class  
+  inflating: jython/Lib/encodings/charmap.py  
+  inflating: jython/Lib/encodings/cp037$py.class  
+  inflating: jython/Lib/encodings/cp037.py  
+  inflating: jython/Lib/encodings/cp1006$py.class  
+  inflating: jython/Lib/encodings/cp1006.py  
+  inflating: jython/Lib/encodings/cp1026$py.class  
+  inflating: jython/Lib/encodings/cp1026.py  
+  inflating: jython/Lib/encodings/cp1140$py.class  
+  inflating: jython/Lib/encodings/cp1140.py  
+  inflating: jython/Lib/encodings/cp1250$py.class  
+  inflating: jython/Lib/encodings/cp1250.py  
+  inflating: jython/Lib/encodings/cp1251$py.class  
+  inflating: jython/Lib/encodings/cp1251.py  
+  inflating: jython/Lib/encodings/cp1252$py.class  
+  inflating: jython/Lib/encodings/cp1252.py  
+  inflating: jython/Lib/encodings/cp1253$py.class  
+  inflating: jython/Lib/encodings/cp1253.py  
+  inflating: jython/Lib/encodings/cp1254$py.class  
+  inflating: jython/Lib/encodings/cp1254.py  
+  inflating: jython/Lib/encodings/cp1255$py.class  
+  inflating: jython/Lib/encodings/cp1255.py  
+  inflating: jython/Lib/encodings/cp1256$py.class  
+  inflating: jython/Lib/encodings/cp1256.py  
+  inflating: jython/Lib/encodings/cp1257$py.class  
+  inflating: jython/Lib/encodings/cp1257.py  
+  inflating: jython/Lib/encodings/cp1258$py.class  
+  inflating: jython/Lib/encodings/cp1258.py  
+  inflating: jython/Lib/encodings/cp424$py.class  
+  inflating: jython/Lib/encodings/cp424.py  
+  inflating: jython/Lib/encodings/cp437$py.class  
+  inflating: jython/Lib/encodings/cp437.py  
+  inflating: jython/Lib/encodings/cp500$py.class  
+  inflating: jython/Lib/encodings/cp500.py  
+  inflating: jython/Lib/encodings/cp737$py.class  
+  inflating: jython/Lib/encodings/cp737.py  
+  inflating: jython/Lib/encodings/cp775$py.class  
+  inflating: jython/Lib/encodings/cp775.py  
+  inflating: jython/Lib/encodings/cp850$py.class  
+  inflating: jython/Lib/encodings/cp850.py  
+  inflating: jython/Lib/encodings/cp852$py.class  
+  inflating: jython/Lib/encodings/cp852.py  
+  inflating: jython/Lib/encodings/cp855$py.class  
+  inflating: jython/Lib/encodings/cp855.py  
+  inflating: jython/Lib/encodings/cp856$py.class  
+  inflating: jython/Lib/encodings/cp856.py  
+  inflating: jython/Lib/encodings/cp857$py.class  
+  inflating: jython/Lib/encodings/cp857.py  
+  inflating: jython/Lib/encodings/cp860$py.class  
+  inflating: jython/Lib/encodings/cp860.py  
+  inflating: jython/Lib/encodings/cp861$py.class  
+  inflating: jython/Lib/encodings/cp861.py  
+  inflating: jython/Lib/encodings/cp862$py.class  
+  inflating: jython/Lib/encodings/cp862.py  
+  inflating: jython/Lib/encodings/cp863$py.class  
+  inflating: jython/Lib/encodings/cp863.py  
+  inflating: jython/Lib/encodings/cp864$py.class  
+  inflating: jython/Lib/encodings/cp864.py  
+  inflating: jython/Lib/encodings/cp865$py.class  
+  inflating: jython/Lib/encodings/cp865.py  
+  inflating: jython/Lib/encodings/cp866$py.class  
+  inflating: jython/Lib/encodings/cp866.py  
+  inflating: jython/Lib/encodings/cp869$py.class  
+  inflating: jython/Lib/encodings/cp869.py  
+  inflating: jython/Lib/encodings/cp874$py.class  
+  inflating: jython/Lib/encodings/cp874.py  
+  inflating: jython/Lib/encodings/cp875$py.class  
+  inflating: jython/Lib/encodings/cp875.py  
+  inflating: jython/Lib/encodings/cp932$py.class  
+  inflating: jython/Lib/encodings/cp932.py  
+  inflating: jython/Lib/encodings/cp949$py.class  
+  inflating: jython/Lib/encodings/cp949.py  
+  inflating: jython/Lib/encodings/cp950$py.class  
+  inflating: jython/Lib/encodings/cp950.py  
+  inflating: jython/Lib/encodings/euc_jis_2004$py.class  
+  inflating: jython/Lib/encodings/euc_jis_2004.py  
+  inflating: jython/Lib/encodings/euc_jisx0213$py.class  
+  inflating: jython/Lib/encodings/euc_jisx0213.py  
+  inflating: jython/Lib/encodings/euc_jp$py.class  
+  inflating: jython/Lib/encodings/euc_jp.py  
+  inflating: jython/Lib/encodings/euc_kr$py.class  
+  inflating: jython/Lib/encodings/euc_kr.py  
+  inflating: jython/Lib/encodings/gb18030$py.class  
+  inflating: jython/Lib/encodings/gb18030.py  
+  inflating: jython/Lib/encodings/gb2312$py.class  
+  inflating: jython/Lib/encodings/gb2312.py  
+  inflating: jython/Lib/encodings/gbk$py.class  
+  inflating: jython/Lib/encodings/gbk.py  
+  inflating: jython/Lib/encodings/hex_codec$py.class  
+  inflating: jython/Lib/encodings/hex_codec.py  
+  inflating: jython/Lib/encodings/hp_roman8$py.class  
+  inflating: jython/Lib/encodings/hp_roman8.py  
+  inflating: jython/Lib/encodings/hz$py.class  
+  inflating: jython/Lib/encodings/hz.py  
+  inflating: jython/Lib/encodings/idna$py.class  
+  inflating: jython/Lib/encodings/idna.py  
+  inflating: jython/Lib/encodings/iso2022_jp$py.class  
+  inflating: jython/Lib/encodings/iso2022_jp.py  
+  inflating: jython/Lib/encodings/iso2022_jp_1$py.class  
+  inflating: jython/Lib/encodings/iso2022_jp_1.py  
+  inflating: jython/Lib/encodings/iso2022_jp_2$py.class  
+  inflating: jython/Lib/encodings/iso2022_jp_2.py  
+  inflating: jython/Lib/encodings/iso2022_jp_2004$py.class  
+  inflating: jython/Lib/encodings/iso2022_jp_2004.py  
+  inflating: jython/Lib/encodings/iso2022_jp_3$py.class  
+  inflating: jython/Lib/encodings/iso2022_jp_3.py  
+  inflating: jython/Lib/encodings/iso2022_jp_ext$py.class  
+  inflating: jython/Lib/encodings/iso2022_jp_ext.py  
+  inflating: jython/Lib/encodings/iso2022_kr$py.class  
+  inflating: jython/Lib/encodings/iso2022_kr.py  
+  inflating: jython/Lib/encodings/iso8859_1$py.class  
+  inflating: jython/Lib/encodings/iso8859_1.py  
+  inflating: jython/Lib/encodings/iso8859_10$py.class  
+  inflating: jython/Lib/encodings/iso8859_10.py  
+  inflating: jython/Lib/encodings/iso8859_11$py.class  
+  inflating: jython/Lib/encodings/iso8859_11.py  
+  inflating: jython/Lib/encodings/iso8859_13$py.class  
+  inflating: jython/Lib/encodings/iso8859_13.py  
+  inflating: jython/Lib/encodings/iso8859_14$py.class  
+  inflating: jython/Lib/encodings/iso8859_14.py  
+  inflating: jython/Lib/encodings/iso8859_15$py.class  
+  inflating: jython/Lib/encodings/iso8859_15.py  
+  inflating: jython/Lib/encodings/iso8859_16$py.class  
+  inflating: jython/Lib/encodings/iso8859_16.py  
+  inflating: jython/Lib/encodings/iso8859_2$py.class  
+  inflating: jython/Lib/encodings/iso8859_2.py  
+  inflating: jython/Lib/encodings/iso8859_3$py.class  
+  inflating: jython/Lib/encodings/iso8859_3.py  
+  inflating: jython/Lib/encodings/iso8859_4$py.class  
+  inflating: jython/Lib/encodings/iso8859_4.py  
+  inflating: jython/Lib/encodings/iso8859_5$py.class  
+  inflating: jython/Lib/encodings/iso8859_5.py  
+  inflating: jython/Lib/encodings/iso8859_6$py.class  
+  inflating: jython/Lib/encodings/iso8859_6.py  
+  inflating: jython/Lib/encodings/iso8859_7$py.class  
+  inflating: jython/Lib/encodings/iso8859_7.py  
+  inflating: jython/Lib/encodings/iso8859_8$py.class  
+  inflating: jython/Lib/encodings/iso8859_8.py  
+  inflating: jython/Lib/encodings/iso8859_9$py.class  
+  inflating: jython/Lib/encodings/iso8859_9.py  
+  inflating: jython/Lib/encodings/johab$py.class  
+  inflating: jython/Lib/encodings/johab.py  
+  inflating: jython/Lib/encodings/koi8_r$py.class  
+  inflating: jython/Lib/encodings/koi8_r.py  
+  inflating: jython/Lib/encodings/koi8_u$py.class  
+  inflating: jython/Lib/encodings/koi8_u.py  
+  inflating: jython/Lib/encodings/latin_1$py.class  
+  inflating: jython/Lib/encodings/latin_1.py  
+  inflating: jython/Lib/encodings/mac_arabic$py.class  
+  inflating: jython/Lib/encodings/mac_arabic.py  
+  inflating: jython/Lib/encodings/mac_centeuro$py.class  
+  inflating: jython/Lib/encodings/mac_centeuro.py  
+  inflating: jython/Lib/encodings/mac_croatian$py.class  
+  inflating: jython/Lib/encodings/mac_croatian.py  
+  inflating: jython/Lib/encodings/mac_cyrillic$py.class  
+  inflating: jython/Lib/encodings/mac_cyrillic.py  
+  inflating: jython/Lib/encodings/mac_farsi$py.class  
+  inflating: jython/Lib/encodings/mac_farsi.py  
+  inflating: jython/Lib/encodings/mac_greek$py.class  
+  inflating: jython/Lib/encodings/mac_greek.py  
+  inflating: jython/Lib/encodings/mac_iceland$py.class  
+  inflating: jython/Lib/encodings/mac_iceland.py  
+  inflating: jython/Lib/encodings/mac_latin2$py.class  
+  inflating: jython/Lib/encodings/mac_latin2.py  
+  inflating: jython/Lib/encodings/mac_roman$py.class  
+  inflating: jython/Lib/encodings/mac_roman.py  
+  inflating: jython/Lib/encodings/mac_romanian$py.class  
+  inflating: jython/Lib/encodings/mac_romanian.py  
+  inflating: jython/Lib/encodings/mac_turkish$py.class  
+  inflating: jython/Lib/encodings/mac_turkish.py  
+  inflating: jython/Lib/encodings/mbcs$py.class  
+  inflating: jython/Lib/encodings/mbcs.py  
+  inflating: jython/Lib/encodings/palmos$py.class  
+  inflating: jython/Lib/encodings/palmos.py  
+  inflating: jython/Lib/encodings/ptcp154$py.class  
+  inflating: jython/Lib/encodings/ptcp154.py  
+  inflating: jython/Lib/encodings/punycode$py.class  
+  inflating: jython/Lib/encodings/punycode.py  
+  inflating: jython/Lib/encodings/quopri_codec$py.class  
+  inflating: jython/Lib/encodings/quopri_codec.py  
+  inflating: jython/Lib/encodings/raw_unicode_escape$py.class  
+  inflating: jython/Lib/encodings/raw_unicode_escape.py  
+  inflating: jython/Lib/encodings/rot_13$py.class  
+  inflating: jython/Lib/encodings/rot_13.py  
+  inflating: jython/Lib/encodings/shift_jis$py.class  
+  inflating: jython/Lib/encodings/shift_jis.py  
+  inflating: jython/Lib/encodings/shift_jis_2004$py.class  
+  inflating: jython/Lib/encodings/shift_jis_2004.py  
+  inflating: jython/Lib/encodings/shift_jisx0213$py.class  
+  inflating: jython/Lib/encodings/shift_jisx0213.py  
+  inflating: jython/Lib/encodings/string_escape$py.class  
+  inflating: jython/Lib/encodings/string_escape.py  
+  inflating: jython/Lib/encodings/tis_620$py.class  
+  inflating: jython/Lib/encodings/tis_620.py  
+  inflating: jython/Lib/encodings/undefined$py.class  
+  inflating: jython/Lib/encodings/undefined.py  
+  inflating: jython/Lib/encodings/unicode_escape$py.class  
+  inflating: jython/Lib/encodings/unicode_escape.py  
+  inflating: jython/Lib/encodings/unicode_internal$py.class  
+  inflating: jython/Lib/encodings/unicode_internal.py  
+  inflating: jython/Lib/encodings/utf_16$py.class  
+  inflating: jython/Lib/encodings/utf_16.py  
+  inflating: jython/Lib/encodings/utf_16_be$py.class  
+  inflating: jython/Lib/encodings/utf_16_be.py  
+  inflating: jython/Lib/encodings/utf_16_le$py.class  
+  inflating: jython/Lib/encodings/utf_16_le.py  
+  inflating: jython/Lib/encodings/utf_7$py.class  
+  inflating: jython/Lib/encodings/utf_7.py  
+  inflating: jython/Lib/encodings/utf_8$py.class  
+  inflating: jython/Lib/encodings/utf_8.py  
+  inflating: jython/Lib/encodings/utf_8_sig$py.class  
+  inflating: jython/Lib/encodings/utf_8_sig.py  
+  inflating: jython/Lib/encodings/uu_codec$py.class  
+  inflating: jython/Lib/encodings/uu_codec.py  
+  inflating: jython/Lib/encodings/zlib_codec$py.class  
+  inflating: jython/Lib/encodings/zlib_codec.py  
+  inflating: jython/Lib/filecmp$py.class  
+  inflating: jython/Lib/filecmp.py   
+  inflating: jython/Lib/fileinput$py.class  
+  inflating: jython/Lib/fileinput.py  
+  inflating: jython/Lib/fnmatch$py.class  
+  inflating: jython/Lib/fnmatch.py   
+  inflating: jython/Lib/formatter$py.class  
+  inflating: jython/Lib/formatter.py  
+  inflating: jython/Lib/fpformat$py.class  
+  inflating: jython/Lib/fpformat.py  
+  inflating: jython/Lib/ftplib$py.class  
+  inflating: jython/Lib/ftplib.py    
+  inflating: jython/Lib/functools$py.class  
+  inflating: jython/Lib/functools.py  
+  inflating: jython/Lib/getopt$py.class  
+  inflating: jython/Lib/getopt.py    
+  inflating: jython/Lib/getpass$py.class  
+  inflating: jython/Lib/getpass.py   
+  inflating: jython/Lib/gettext$py.class  
+  inflating: jython/Lib/gettext.py   
+  inflating: jython/Lib/glob$py.class  
+  inflating: jython/Lib/glob.py      
+  inflating: jython/Lib/gopherlib$py.class  
+  inflating: jython/Lib/gopherlib.py  
+  inflating: jython/Lib/grp$py.class  
+  inflating: jython/Lib/grp.py       
+  inflating: jython/Lib/gzip$py.class  
+  inflating: jython/Lib/gzip.py      
+  inflating: jython/Lib/hashlib$py.class  
+  inflating: jython/Lib/hashlib.py   
+  inflating: jython/Lib/heapq$py.class  
+  inflating: jython/Lib/heapq.py     
+  inflating: jython/Lib/hmac$py.class  
+  inflating: jython/Lib/hmac.py      
+  inflating: jython/Lib/htmlentitydefs$py.class  
+  inflating: jython/Lib/htmlentitydefs.py  
+  inflating: jython/Lib/htmllib$py.class  
+  inflating: jython/Lib/htmllib.py   
+  inflating: jython/Lib/httplib$py.class  
+  inflating: jython/Lib/httplib.py   
+  inflating: jython/Lib/ihooks$py.class  
+  inflating: jython/Lib/ihooks.py    
+  inflating: jython/Lib/imaplib$py.class  
+  inflating: jython/Lib/imaplib.py   
+  inflating: jython/Lib/imghdr$py.class  
+  inflating: jython/Lib/imghdr.py    
+  inflating: jython/Lib/inspect$py.class  
+  inflating: jython/Lib/inspect.py   
+  inflating: jython/Lib/isql$py.class  
+  inflating: jython/Lib/isql.py      
+  inflating: jython/Lib/javapath$py.class  
+  inflating: jython/Lib/javapath.py  
+  inflating: jython/Lib/javashell$py.class  
+  inflating: jython/Lib/javashell.py  
+  inflating: jython/Lib/keyword$py.class  
+  inflating: jython/Lib/keyword.py   
+  inflating: jython/Lib/linecache$py.class  
+  inflating: jython/Lib/linecache.py  
+  inflating: jython/Lib/locale$py.class  
+  inflating: jython/Lib/locale.py    
+  inflating: jython/Lib/logging/__init__$py.class  
+  inflating: jython/Lib/logging/__init__.py  
+  inflating: jython/Lib/logging/config$py.class  
+  inflating: jython/Lib/logging/config.py  
+  inflating: jython/Lib/logging/handlers$py.class  
+  inflating: jython/Lib/logging/handlers.py  
+  inflating: jython/Lib/macpath$py.class  
+  inflating: jython/Lib/macpath.py   
+  inflating: jython/Lib/macurl2path$py.class  
+  inflating: jython/Lib/macurl2path.py  
+  inflating: jython/Lib/mailbox$py.class  
+  inflating: jython/Lib/mailbox.py   
+  inflating: jython/Lib/mailcap$py.class  
+  inflating: jython/Lib/mailcap.py   
+  inflating: jython/Lib/markupbase$py.class  
+  inflating: jython/Lib/markupbase.py  
+  inflating: jython/Lib/marshal$py.class  
+  inflating: jython/Lib/marshal.py   
+  inflating: jython/Lib/md5$py.class  
+  inflating: jython/Lib/md5.py       
+  inflating: jython/Lib/mhlib$py.class  
+  inflating: jython/Lib/mhlib.py     
+  inflating: jython/Lib/mimetools$py.class  
+  inflating: jython/Lib/mimetools.py  
+  inflating: jython/Lib/mimetypes$py.class  
+  inflating: jython/Lib/mimetypes.py  
+  inflating: jython/Lib/mimify$py.class  
+  inflating: jython/Lib/mimify.py    
+  inflating: jython/Lib/modjy/__init__$py.class  
+  inflating: jython/Lib/modjy/__init__.py  
+  inflating: jython/Lib/modjy/modjy$py.class  
+  inflating: jython/Lib/modjy/modjy.py  
+  inflating: jython/Lib/modjy/modjy_exceptions$py.class  
+  inflating: jython/Lib/modjy/modjy_exceptions.py  
+  inflating: jython/Lib/modjy/modjy_impl$py.class  
+  inflating: jython/Lib/modjy/modjy_impl.py  
+  inflating: jython/Lib/modjy/modjy_log$py.class  
+  inflating: jython/Lib/modjy/modjy_log.py  
+  inflating: jython/Lib/modjy/modjy_params$py.class  
+  inflating: jython/Lib/modjy/modjy_params.py  
+  inflating: jython/Lib/modjy/modjy_publish$py.class  
+  inflating: jython/Lib/modjy/modjy_publish.py  
+  inflating: jython/Lib/modjy/modjy_response$py.class  
+  inflating: jython/Lib/modjy/modjy_response.py  
+  inflating: jython/Lib/modjy/modjy_write$py.class  
+  inflating: jython/Lib/modjy/modjy_write.py  
+  inflating: jython/Lib/modjy/modjy_wsgi$py.class  
+  inflating: jython/Lib/modjy/modjy_wsgi.py  
+  inflating: jython/Lib/modulefinder$py.class  
+  inflating: jython/Lib/modulefinder.py  
+  inflating: jython/Lib/multifile$py.class  
+  inflating: jython/Lib/multifile.py  
+  inflating: jython/Lib/mutex$py.class  
+  inflating: jython/Lib/mutex.py     
+  inflating: jython/Lib/netrc$py.class  
+  inflating: jython/Lib/netrc.py     
+  inflating: jython/Lib/new$py.class  
+  inflating: jython/Lib/new.py       
+  inflating: jython/Lib/nntplib$py.class  
+  inflating: jython/Lib/nntplib.py   
+  inflating: jython/Lib/ntpath$py.class  
+  inflating: jython/Lib/ntpath.py    
+  inflating: jython/Lib/nturl2path$py.class  
+  inflating: jython/Lib/nturl2path.py  
+  inflating: jython/Lib/opcode$py.class  
+  inflating: jython/Lib/opcode.py    
+  inflating: jython/Lib/optparse$py.class  
+  inflating: jython/Lib/optparse.py  
+  inflating: jython/Lib/os$py.class  
+  inflating: jython/Lib/os.py        
+  inflating: jython/Lib/pawt/__init__$py.class  
+  inflating: jython/Lib/pawt/__init__.py  
+  inflating: jython/Lib/pawt/colors$py.class  
+  inflating: jython/Lib/pawt/colors.py  
+  inflating: jython/Lib/pawt/swing$py.class  
+  inflating: jython/Lib/pawt/swing.py  
+  inflating: jython/Lib/pdb$py.class  
+  inflating: jython/Lib/pdb.py       
+  inflating: jython/Lib/pickle$py.class  
+  inflating: jython/Lib/pickle.py    
+  inflating: jython/Lib/pickletools$py.class  
+  inflating: jython/Lib/pickletools.py  
+  inflating: jython/Lib/pipes$py.class  
+  inflating: jython/Lib/pipes.py     
+  inflating: jython/Lib/pkgutil$py.class  
+  inflating: jython/Lib/pkgutil.py   
+  inflating: jython/Lib/platform$py.class  
+  inflating: jython/Lib/platform.py  
+  inflating: jython/Lib/popen2$py.class  
+  inflating: jython/Lib/popen2.py    
+  inflating: jython/Lib/poplib$py.class  
+  inflating: jython/Lib/poplib.py    
+  inflating: jython/Lib/posix$py.class  
+  inflating: jython/Lib/posix.py     
+  inflating: jython/Lib/posixfile$py.class  
+  inflating: jython/Lib/posixfile.py  
+  inflating: jython/Lib/posixpath$py.class  
+  inflating: jython/Lib/posixpath.py  
+  inflating: jython/Lib/pprint$py.class  
+  inflating: jython/Lib/pprint.py    
+  inflating: jython/Lib/profile$py.class  
+  inflating: jython/Lib/profile.py   
+  inflating: jython/Lib/pstats$py.class  
+  inflating: jython/Lib/pstats.py    
+  inflating: jython/Lib/pwd$py.class  
+  inflating: jython/Lib/pwd.py       
+  inflating: jython/Lib/py_compile$py.class  
+  inflating: jython/Lib/py_compile.py  
+  inflating: jython/Lib/pycimport$py.class  
+  inflating: jython/Lib/pycimport.py  
+  inflating: jython/Lib/pyclbr$py.class  
+  inflating: jython/Lib/pyclbr.py    
+  inflating: jython/Lib/pydoc$py.class  
+  inflating: jython/Lib/pydoc.py     
+  inflating: jython/Lib/pyexpat$py.class  
+  inflating: jython/Lib/pyexpat.py   
+  inflating: jython/Lib/quopri$py.class  
+  inflating: jython/Lib/quopri.py    
+  inflating: jython/Lib/random$py.class  
+  inflating: jython/Lib/random.py    
+  inflating: jython/Lib/re$py.class  
+  inflating: jython/Lib/re.py        
+  inflating: jython/Lib/readline$py.class  
+  inflating: jython/Lib/readline.py  
+  inflating: jython/Lib/repr$py.class  
+  inflating: jython/Lib/repr.py      
+  inflating: jython/Lib/rfc822$py.class  
+  inflating: jython/Lib/rfc822.py    
+  inflating: jython/Lib/rlcompleter$py.class  
+  inflating: jython/Lib/rlcompleter.py  
+  inflating: jython/Lib/robotparser$py.class  
+  inflating: jython/Lib/robotparser.py  
+  inflating: jython/Lib/runpy$py.class  
+  inflating: jython/Lib/runpy.py     
+  inflating: jython/Lib/sched$py.class  
+  inflating: jython/Lib/sched.py     
+  inflating: jython/Lib/select$py.class  
+  inflating: jython/Lib/select.py    
+  inflating: jython/Lib/sets$py.class  
+  inflating: jython/Lib/sets.py      
+  inflating: jython/Lib/sgmllib$py.class  
+  inflating: jython/Lib/sgmllib.py   
+  inflating: jython/Lib/sha$py.class  
+  inflating: jython/Lib/sha.py       
+  inflating: jython/Lib/shelve$py.class  
+  inflating: jython/Lib/shelve.py    
+  inflating: jython/Lib/shlex$py.class  
+  inflating: jython/Lib/shlex.py     
+  inflating: jython/Lib/shutil$py.class  
+  inflating: jython/Lib/shutil.py    
+  inflating: jython/Lib/signal$py.class  
+  inflating: jython/Lib/signal.py    
+  inflating: jython/Lib/site$py.class  
+  inflating: jython/Lib/site-packages/README  
+  inflating: jython/Lib/site.py      
+  inflating: jython/Lib/smtpd$py.class  
+  inflating: jython/Lib/smtpd.py     
+  inflating: jython/Lib/smtplib$py.class  
+  inflating: jython/Lib/smtplib.py   
+  inflating: jython/Lib/sndhdr$py.class  
+  inflating: jython/Lib/sndhdr.py    
+  inflating: jython/Lib/socket$py.class  
+  inflating: jython/Lib/socket.py    
+  inflating: jython/Lib/sre$py.class  
+  inflating: jython/Lib/sre.py       
+  inflating: jython/Lib/sre_compile$py.class  
+  inflating: jython/Lib/sre_compile.py  
+  inflating: jython/Lib/sre_constants$py.class  
+  inflating: jython/Lib/sre_constants.py  
+  inflating: jython/Lib/sre_parse$py.class  
+  inflating: jython/Lib/sre_parse.py  
+  inflating: jython/Lib/stat$py.class  
+  inflating: jython/Lib/stat.py      
+  inflating: jython/Lib/string$py.class  
+  inflating: jython/Lib/string.py    
+  inflating: jython/Lib/subprocess$py.class  
+  inflating: jython/Lib/subprocess.py  
+  inflating: jython/Lib/symbol$py.class  
+  inflating: jython/Lib/symbol.py    
+  inflating: jython/Lib/tabnanny$py.class  
+  inflating: jython/Lib/tabnanny.py  
+  inflating: jython/Lib/tarfile$py.class  
+  inflating: jython/Lib/tarfile.py   
+  inflating: jython/Lib/telnetlib$py.class  
+  inflating: jython/Lib/telnetlib.py  
+  inflating: jython/Lib/tempfile$py.class  
+  inflating: jython/Lib/tempfile.py  
+  inflating: jython/Lib/test/185test.db  
+  inflating: jython/Lib/test/Graph.py  
+  inflating: jython/Lib/test/README  
+  inflating: jython/Lib/test/__init__.py  
+  inflating: jython/Lib/test/access_protected_class.py  
+  inflating: jython/Lib/test/access_protected_field.py  
+  inflating: jython/Lib/test/anygui.py  
+  inflating: jython/Lib/test/audiotest.au  
+  inflating: jython/Lib/test/autotest.py  
+  inflating: jython/Lib/test/bad_coding.py  
+  inflating: jython/Lib/test/bad_coding2.py  
+  inflating: jython/Lib/test/badsyntax_eof1.py  
+  inflating: jython/Lib/test/badsyntax_future3.py  
+  inflating: jython/Lib/test/badsyntax_future4.py  
+  inflating: jython/Lib/test/badsyntax_future5.py  
+  inflating: jython/Lib/test/badsyntax_future6.py  
+  inflating: jython/Lib/test/badsyntax_future7.py  
+  inflating: jython/Lib/test/badsyntax_future8.py  
+  inflating: jython/Lib/test/badsyntax_future9.py  
+  inflating: jython/Lib/test/badsyntax_nocaret.py  
+  inflating: jython/Lib/test/blob.jar  
+  inflating: jython/Lib/test/bug1126/bug1126.jar  
+  inflating: jython/Lib/test/bug1239.jar  
+  inflating: jython/Lib/test/bugs/bugs100.py  
+  inflating: jython/Lib/test/bugs/bugs101.py  
+  inflating: jython/Lib/test/bugs/jdkbugs.py  
+  inflating: jython/Lib/test/bugs/pr101.py  
+  inflating: jython/Lib/test/bugs/pr104.py  
+  inflating: jython/Lib/test/bugs/pr112.py  
+  inflating: jython/Lib/test/bugs/pr119.py  
+  inflating: jython/Lib/test/bugs/pr127.py  
+  inflating: jython/Lib/test/bugs/pr133.py  
+  inflating: jython/Lib/test/bugs/pr133/__init__.py  
+  inflating: jython/Lib/test/bugs/pr133/test.py  
+  inflating: jython/Lib/test/bugs/pr134.py  
+  inflating: jython/Lib/test/bugs/pr139.py  
+  inflating: jython/Lib/test/bugs/pr142.py  
+  inflating: jython/Lib/test/bugs/pr144.py  
+  inflating: jython/Lib/test/bugs/pr148.py  
+  inflating: jython/Lib/test/bugs/pr149.py  
+  inflating: jython/Lib/test/bugs/pr155.py  
+  inflating: jython/Lib/test/bugs/pr170.py  
+  inflating: jython/Lib/test/bugs/pr171.py  
+  inflating: jython/Lib/test/bugs/pr174.py  
+  inflating: jython/Lib/test/bugs/pr178.py  
+  inflating: jython/Lib/test/bugs/pr183.py  
+  inflating: jython/Lib/test/bugs/pr186.py  
+  inflating: jython/Lib/test/bugs/pr191.py  
+  inflating: jython/Lib/test/bugs/pr192.py  
+  inflating: jython/Lib/test/bugs/pr195.py  
+  inflating: jython/Lib/test/bugs/pr208.py  
+  inflating: jython/Lib/test/bugs/pr233.py  
+  inflating: jython/Lib/test/bugs/pr234.py  
+  inflating: jython/Lib/test/bugs/pr235.py  
+  inflating: jython/Lib/test/bugs/pr239.py  
+  inflating: jython/Lib/test/bugs/pr241.py  
+  inflating: jython/Lib/test/bugs/pr242.py  
+  inflating: jython/Lib/test/call_overridden_method.py  
+  inflating: jython/Lib/test/call_protected_method.py  
+  inflating: jython/Lib/test/cfgparser.1  
+  inflating: jython/Lib/test/check_for_initializer_in_syspath.py  
+  inflating: jython/Lib/test/check_soundcard.vbs  
+  inflating: jython/Lib/test/cjkencodings_test.py  
+  inflating: jython/Lib/test/classimport.jar  
+  inflating: jython/Lib/test/classimport_Lib.jar  
+  inflating: jython/Lib/test/crashers/README  
+  inflating: jython/Lib/test/crashers/bogus_code_obj.py  
+  inflating: jython/Lib/test/crashers/borrowed_ref_1.py  
+  inflating: jython/Lib/test/crashers/borrowed_ref_2.py  
+  inflating: jython/Lib/test/crashers/gc_inspection.py  
+  inflating: jython/Lib/test/crashers/infinite_rec_1.py  
+  inflating: jython/Lib/test/crashers/infinite_rec_2.py  
+  inflating: jython/Lib/test/crashers/infinite_rec_4.py  
+  inflating: jython/Lib/test/crashers/infinite_rec_5.py  
+  inflating: jython/Lib/test/crashers/loosing_dict_ref.py  
+  inflating: jython/Lib/test/crashers/nasty_eq_vs_dict.py  
+  inflating: jython/Lib/test/crashers/recursion_limit_too_high.py  
+  inflating: jython/Lib/test/crashers/recursive_call.py  
+  inflating: jython/Lib/test/decimaltestdata/abs.decTest  
+  inflating: jython/Lib/test/decimaltestdata/add.decTest  
+  inflating: jython/Lib/test/decimaltestdata/and.decTest  
+  inflating: jython/Lib/test/decimaltestdata/base.decTest  
+  inflating: jython/Lib/test/decimaltestdata/clamp.decTest  
+  inflating: jython/Lib/test/decimaltestdata/class.decTest  
+  inflating: jython/Lib/test/decimaltestdata/compare.decTest  
+  inflating: jython/Lib/test/decimaltestdata/comparetotal.decTest  
+  inflating: jython/Lib/test/decimaltestdata/comparetotmag.decTest  
+  inflating: jython/Lib/test/decimaltestdata/copy.decTest  
+  inflating: jython/Lib/test/decimaltestdata/copyabs.decTest  
+  inflating: jython/Lib/test/decimaltestdata/copynegate.decTest  
+  inflating: jython/Lib/test/decimaltestdata/copysign.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddAbs.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddAdd.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddAnd.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddBase.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddCanonical.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddClass.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddCompare.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddCompareSig.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddCompareTotal.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddCompareTotalMag.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddCopy.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddCopyAbs.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddCopyNegate.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddCopySign.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddDivide.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddDivideInt.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddEncode.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddFMA.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddInvert.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddLogB.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddMax.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddMaxMag.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddMin.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddMinMag.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddMinus.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddMultiply.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddNextMinus.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddNextPlus.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddNextToward.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddOr.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddPlus.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddQuantize.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddReduce.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddRemainder.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddRemainderNear.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddRotate.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddSameQuantum.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddScaleB.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddShift.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddSubtract.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddToIntegral.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ddXor.decTest  
+  inflating: jython/Lib/test/decimaltestdata/decDouble.decTest  
+  inflating: jython/Lib/test/decimaltestdata/decQuad.decTest  
+  inflating: jython/Lib/test/decimaltestdata/decSingle.decTest  
+  inflating: jython/Lib/test/decimaltestdata/divide.decTest  
+  inflating: jython/Lib/test/decimaltestdata/divideint.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqAbs.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqAdd.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqAnd.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqBase.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqCanonical.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqClass.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqCompare.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqCompareSig.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqCompareTotal.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqCompareTotalMag.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqCopy.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqCopyAbs.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqCopyNegate.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqCopySign.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqDivide.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqDivideInt.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqEncode.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqFMA.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqInvert.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqLogB.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqMax.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqMaxMag.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqMin.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqMinMag.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqMinus.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqMultiply.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqNextMinus.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqNextPlus.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqNextToward.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqOr.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqPlus.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqQuantize.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqReduce.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqRemainder.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqRemainderNear.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqRotate.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqSameQuantum.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqScaleB.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqShift.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqSubtract.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqToIntegral.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dqXor.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dsBase.decTest  
+  inflating: jython/Lib/test/decimaltestdata/dsEncode.decTest  
+  inflating: jython/Lib/test/decimaltestdata/exp.decTest  
+  inflating: jython/Lib/test/decimaltestdata/extra.decTest  
+  inflating: jython/Lib/test/decimaltestdata/fma.decTest  
+  inflating: jython/Lib/test/decimaltestdata/inexact.decTest  
+  inflating: jython/Lib/test/decimaltestdata/invert.decTest  
+  inflating: jython/Lib/test/decimaltestdata/ln.decTest  
+  inflating: jython/Lib/test/decimaltestdata/log10.decTest  
+  inflating: jython/Lib/test/decimaltestdata/logb.decTest  
+  inflating: jython/Lib/test/decimaltestdata/max.decTest  
+  inflating: jython/Lib/test/decimaltestdata/maxmag.decTest  
+  inflating: jython/Lib/test/decimaltestdata/min.decTest  
+  inflating: jython/Lib/test/decimaltestdata/minmag.decTest  
+  inflating: jython/Lib/test/decimaltestdata/minus.decTest  
+  inflating: jython/Lib/test/decimaltestdata/multiply.decTest  
+  inflating: jython/Lib/test/decimaltestdata/nextminus.decTest  
+  inflating: jython/Lib/test/decimaltestdata/nextplus.decTest  
+  inflating: jython/Lib/test/decimaltestdata/nexttoward.decTest  
+  inflating: jython/Lib/test/decimaltestdata/or.decTest  
+  inflating: jython/Lib/test/decimaltestdata/plus.decTest  
+  inflating: jython/Lib/test/decimaltestdata/power.decTest  
+  inflating: jython/Lib/test/decimaltestdata/powersqrt.decTest  
+  inflating: jython/Lib/test/decimaltestdata/quantize.decTest  
+  inflating: jython/Lib/test/decimaltestdata/randomBound32.decTest  
+  inflating: jython/Lib/test/decimaltestdata/randoms.decTest  
+  inflating: jython/Lib/test/decimaltestdata/reduce.decTest  
+  inflating: jython/Lib/test/decimaltestdata/remainder.decTest  
+  inflating: jython/Lib/test/decimaltestdata/remainderNear.decTest  
+  inflating: jython/Lib/test/decimaltestdata/rescale.decTest  
+  inflating: jython/Lib/test/decimaltestdata/rotate.decTest  
+  inflating: jython/Lib/test/decimaltestdata/rounding.decTest  
+  inflating: jython/Lib/test/decimaltestdata/samequantum.decTest  
+  inflating: jython/Lib/test/decimaltestdata/scaleb.decTest  
+  inflating: jython/Lib/test/decimaltestdata/shift.decTest  
+  inflating: jython/Lib/test/decimaltestdata/squareroot.decTest  
+  inflating: jython/Lib/test/decimaltestdata/subtract.decTest  
+  inflating: jython/Lib/test/decimaltestdata/testall.decTest  
+  inflating: jython/Lib/test/decimaltestdata/tointegral.decTest  
+  inflating: jython/Lib/test/decimaltestdata/tointegralx.decTest  
+  inflating: jython/Lib/test/decimaltestdata/xor.decTest  
+  inflating: jython/Lib/test/doctest_aliases.py  
+  inflating: jython/Lib/test/double_const.py  
+  inflating: jython/Lib/test/empty.vbs  
+  inflating: jython/Lib/test/eof_fodder1.py  
+  inflating: jython/Lib/test/eof_fodder2.py  
+  inflating: jython/Lib/test/eof_fodder3.py  
+  inflating: jython/Lib/test/eof_fodder4.py  
+  inflating: jython/Lib/test/eof_fodder5.py  
+  inflating: jython/Lib/test/eof_fodder6.py  
+  inflating: jython/Lib/test/except_in_raising_code.py  
+  inflating: jython/Lib/test/exception_hierarchy.txt  
+  inflating: jython/Lib/test/fork_wait.py  
+  inflating: jython/Lib/test/greyrgb.uue  
+  inflating: jython/Lib/test/import_as_java_class.py  
+  inflating: jython/Lib/test/import_nonexistent.py  
+  inflating: jython/Lib/test/import_star_from_java.py  
+  inflating: jython/Lib/test/infinite_reload.py  
+  inflating: jython/Lib/test/inspect_fodder.py  
+  inflating: jython/Lib/test/inspect_fodder2.py  
+  inflating: jython/Lib/test/invalid_utf_8_declared_encoding.py  
+  inflating: jython/Lib/test/jser2_classes.py  
+  inflating: jython/Lib/test/junit_xml.py  
+  inflating: jython/Lib/test/latin1_no_encoding.py  
+  inflating: jython/Lib/test/leakers/README.txt  
+  inflating: jython/Lib/test/leakers/__init__.py  
+  inflating: jython/Lib/test/leakers/test_ctypes.py  
+  inflating: jython/Lib/test/leakers/test_gestalt.py  
+  inflating: jython/Lib/test/leakers/test_selftype.py  
+  inflating: jython/Lib/test/list_tests.py  
+  inflating: jython/Lib/test/mapping_tests.py  
+  inflating: jython/Lib/test/module_deleter.py  
+  inflating: jython/Lib/test/output/test_MimeWriter  
+  inflating: jython/Lib/test/output/test_cProfile  
+  inflating: jython/Lib/test/output/test_cgi  
+  inflating: jython/Lib/test/output/test_class  
+  inflating: jython/Lib/test/output/test_cookie  
+  inflating: jython/Lib/test/output/test_extcall  
+  inflating: jython/Lib/test/output/test_frozen  
+  inflating: jython/Lib/test/output/test_global  
+  inflating: jython/Lib/test/output/test_grammar  
+  inflating: jython/Lib/test/output/test_httplib  
+  inflating: jython/Lib/test/output/test_janoninner  
+  inflating: jython/Lib/test/output/test_javalist  
+  inflating: jython/Lib/test/output/test_jbasic  
+  inflating: jython/Lib/test/output/test_jser  
+  inflating: jython/Lib/test/output/test_jsubclass  
+  inflating: jython/Lib/test/output/test_linuxaudiodev  
+  inflating: jython/Lib/test/output/test_logging  
+  inflating: jython/Lib/test/output/test_math  
+  inflating: jython/Lib/test/output/test_methods  
+  inflating: jython/Lib/test/output/test_mmap  
+  inflating: jython/Lib/test/output/test_new  
+  inflating: jython/Lib/test/output/test_nis  
+  inflating: jython/Lib/test/output/test_opcodes  
+  inflating: jython/Lib/test/output/test_openpty  
+  inflating: jython/Lib/test/output/test_operations  
+  inflating: jython/Lib/test/output/test_ossaudiodev  
+  inflating: jython/Lib/test/output/test_pep277  
+  inflating: jython/Lib/test/output/test_pkg  
+  inflating: jython/Lib/test/output/test_poll  
+  inflating: jython/Lib/test/output/test_popen  
+  inflating: jython/Lib/test/output/test_popen2  
+  inflating: jython/Lib/test/output/test_profile  
+  inflating: jython/Lib/test/output/test_pty  
+  inflating: jython/Lib/test/output/test_pyexpat  
+  inflating: jython/Lib/test/output/test_regex  
+  inflating: jython/Lib/test/output/test_rgbimg  
+  inflating: jython/Lib/test/output/test_scope  
+  inflating: jython/Lib/test/output/test_signal  
+  inflating: jython/Lib/test/output/test_thread  
+  inflating: jython/Lib/test/output/test_threadedtempfile  
+  inflating: jython/Lib/test/output/test_tokenize  
+  inflating: jython/Lib/test/output/test_types  
+  inflating: jython/Lib/test/output/test_types_pyc  
+  inflating: jython/Lib/test/output/test_winreg  
+  inflating: jython/Lib/test/output/test_xdrlib  
+  inflating: jython/Lib/test/output/xmltests  
+  inflating: jython/Lib/test/outstanding_bugs.py  
+  inflating: jython/Lib/test/pbcvm/test/README  
+  inflating: jython/Lib/test/pbcvm/test/__init__.py  
+  inflating: jython/Lib/test/pbcvm/test/test_builtin_pyc.pyc  
+  inflating: jython/Lib/test/pbcvm/test/test_exceptions_pyc.pyc  
+  inflating: jython/Lib/test/pbcvm/test/test_types_pyc.pyc  
+  inflating: jython/Lib/test/pickletester.py  
+  inflating: jython/Lib/test/pyclbr_input.py  
+  inflating: jython/Lib/test/pydocfodder.py  
+  inflating: jython/Lib/test/pyservlet/__init__.py  
+  inflating: jython/Lib/test/pyservlet/basic.py  
+  inflating: jython/Lib/test/pyservlet/empty.py  
+  inflating: jython/Lib/test/pyservlet/filter.py  
+  inflating: jython/Lib/test/pyservlet/increment.py  
+  inflating: jython/Lib/test/pyservlet/updated_basic.py  
+  inflating: jython/Lib/test/pystone.py  
+  inflating: jython/Lib/test/python_home.policy  
+  inflating: jython/Lib/test/re_tests.py  
+  inflating: jython/Lib/test/regex_tests.py  
+  inflating: jython/Lib/test/regrtest.py  
+  inflating: jython/Lib/test/reperf.py  
+  inflating: jython/Lib/test/sample_doctest.py  
+  inflating: jython/Lib/test/seq_tests.py  
+  inflating: jython/Lib/test/sgml_input.html  
+  inflating: jython/Lib/test/sortperf.py  
+  inflating: jython/Lib/test/static_proxy.py  
+  inflating: jython/Lib/test/string_tests.py  
+  inflating: jython/Lib/test/sys_jy_test_module.py  
+  inflating: jython/Lib/test/syspath_import.jar  
+  inflating: jython/Lib/test/test.xml  
+  inflating: jython/Lib/test/test.xml.out  
+  inflating: jython/Lib/test/test_MimeWriter.py  
+  inflating: jython/Lib/test/test_SimpleXMLRPCServer.py  
+  inflating: jython/Lib/test/test_StringIO.py  
+  inflating: jython/Lib/test/test_StringIO_jy.py  
+  inflating: jython/Lib/test/test___all__.py  
+  inflating: jython/Lib/test/test___future__.py  
+  inflating: jython/Lib/test/test__locale.py  
+  inflating: jython/Lib/test/test__rawffi.py  
+  inflating: jython/Lib/test/test_aepack.py  
+  inflating: jython/Lib/test/test_al.py  
+  inflating: jython/Lib/test/test_anydbm.py  
+  inflating: jython/Lib/test/test_applesingle.py  
+  inflating: jython/Lib/test/test_array.py  
+  inflating: jython/Lib/test/test_array_jy.py  
+  inflating: jython/Lib/test/test_ast.py  
+  inflating: jython/Lib/test/test_ast_jy.py  
+  inflating: jython/Lib/test/test_asynchat.py  
+  inflating: jython/Lib/test/test_atexit.py  
+  inflating: jython/Lib/test/test_audioop.py  
+  inflating: jython/Lib/test/test_augassign.py  
+  inflating: jython/Lib/test/test_base64.py  
+  inflating: jython/Lib/test/test_bastion.py  
+  inflating: jython/Lib/test/test_bigaddrspace.py  
+  inflating: jython/Lib/test/test_bigmem.py  
+  inflating: jython/Lib/test/test_binascii.py  
+  inflating: jython/Lib/test/test_binhex.py  
+  inflating: jython/Lib/test/test_binop.py  
+  inflating: jython/Lib/test/test_bisect.py  
+  inflating: jython/Lib/test/test_bool.py  
+  inflating: jython/Lib/test/test_bsddb.py  
+  inflating: jython/Lib/test/test_bsddb185.py  
+  inflating: jython/Lib/test/test_bsddb3.py  
+  inflating: jython/Lib/test/test_bufio.py  
+  inflating: jython/Lib/test/test_bugfixes.py  
+  inflating: jython/Lib/test/test_builtin.py  
+  inflating: jython/Lib/test/test_builtin_jy.py  
+  inflating: jython/Lib/test/test_bz2.py  
+  inflating: jython/Lib/test/test_cProfile.py  
+  inflating: jython/Lib/test/test_calendar.py  
+  inflating: jython/Lib/test/test_call.py  
+  inflating: jython/Lib/test/test_capi.py  
+  inflating: jython/Lib/test/test_cd.py  
+  inflating: jython/Lib/test/test_cfgparser.py  
+  inflating: jython/Lib/test/test_cgi.py  
+  inflating: jython/Lib/test/test_charmapcodec.py  
+  inflating: jython/Lib/test/test_chdir.py  
+  inflating: jython/Lib/test/test_cl.py  
+  inflating: jython/Lib/test/test_class.py  
+  inflating: jython/Lib/test/test_class_jy.py  
+  inflating: jython/Lib/test/test_classdecorators.py  
+  inflating: jython/Lib/test/test_classpathimporter.py  
+  inflating: jython/Lib/test/test_closuregen.py  
+  inflating: jython/Lib/test/test_cmath.py  
+  inflating: jython/Lib/test/test_cmath_jy.py  
+  inflating: jython/Lib/test/test_cmd_line.py  
+  inflating: jython/Lib/test/test_cmp_jy.py  
+  inflating: jython/Lib/test/test_code.py  
+  inflating: jython/Lib/test/test_codeccallbacks.py  
+  inflating: jython/Lib/test/test_codecencodings_cn.py  
+  inflating: jython/Lib/test/test_codecencodings_hk.py  
+  inflating: jython/Lib/test/test_codecencodings_jp.py  
+  inflating: jython/Lib/test/test_codecencodings_kr.py  
+  inflating: jython/Lib/test/test_codecencodings_tw.py  
+  inflating: jython/Lib/test/test_codecmaps_cn.py  
+  inflating: jython/Lib/test/test_codecmaps_hk.py  
+  inflating: jython/Lib/test/test_codecmaps_jp.py  
+  inflating: jython/Lib/test/test_codecmaps_kr.py  
+  inflating: jython/Lib/test/test_codecmaps_tw.py  
+  inflating: jython/Lib/test/test_codecs.py  
+  inflating: jython/Lib/test/test_codeop.py  
+  inflating: jython/Lib/test/test_codeop_jy.py  
+  inflating: jython/Lib/test/test_coding.py  
+  inflating: jython/Lib/test/test_coerce_jy.py  
+  inflating: jython/Lib/test/test_coercion.py  
+  inflating: jython/Lib/test/test_colorsys.py  
+  inflating: jython/Lib/test/test_commands.py  
+  inflating: jython/Lib/test/test_compare.py  
+  inflating: jython/Lib/test/test_compile.py  
+  inflating: jython/Lib/test/test_compile_jy.py  
+  inflating: jython/Lib/test/test_compiler.py  
+  inflating: jython/Lib/test/test_complex.py  
+  inflating: jython/Lib/test/test_complex_args.py  
+  inflating: jython/Lib/test/test_complex_jy.py  
+  inflating: jython/Lib/test/test_concat_jy.py  
+  inflating: jython/Lib/test/test_contains.py  
+  inflating: jython/Lib/test/test_contextlib.py  
+  inflating: jython/Lib/test/test_cookie.py  
+  inflating: jython/Lib/test/test_cookielib.py  
+  inflating: jython/Lib/test/test_copy.py  
+  inflating: jython/Lib/test/test_copy_reg.py  
+  inflating: jython/Lib/test/test_cpickle.py  
+  inflating: jython/Lib/test/test_cpickle_jy.py  
+  inflating: jython/Lib/test/test_crypt.py  
+  inflating: jython/Lib/test/test_csv.py  
+  inflating: jython/Lib/test/test_ctypes.py  
+  inflating: jython/Lib/test/test_curses.py  
+  inflating: jython/Lib/test/test_datetime.py  
+  inflating: jython/Lib/test/test_dbm.py  
+  inflating: jython/Lib/test/test_decimal.py  
+  inflating: jython/Lib/test/test_decorators.py  
+  inflating: jython/Lib/test/test_decorators_jy.py  
+  inflating: jython/Lib/test/test_defaultdict.py  
+  inflating: jython/Lib/test/test_deque.py  
+  inflating: jython/Lib/test/test_descr.py  
+  inflating: jython/Lib/test/test_descr_jy.py  
+  inflating: jython/Lib/test/test_descrtut.py  
+  inflating: jython/Lib/test/test_dict.py  
+  inflating: jython/Lib/test/test_dict2java.py  
+  inflating: jython/Lib/test/test_dict_jy.py  
+  inflating: jython/Lib/test/test_dictproxy_jy.py  
+  inflating: jython/Lib/test/test_difflib.py  
+  inflating: jython/Lib/test/test_difflib_expect.html  
+  inflating: jython/Lib/test/test_dircache.py  
+  inflating: jython/Lib/test/test_dis.py  
+  inflating: jython/Lib/test/test_distutils.py  
+  inflating: jython/Lib/test/test_dl.py  
+  inflating: jython/Lib/test/test_doctest.py  
+  inflating: jython/Lib/test/test_doctest.txt  
+  inflating: jython/Lib/test/test_doctest2.py  
+  inflating: jython/Lib/test/test_doctest2.txt  
+  inflating: jython/Lib/test/test_doctest3.txt  
+  inflating: jython/Lib/test/test_doctest4.txt  
+  inflating: jython/Lib/test/test_dumbdbm.py  
+  inflating: jython/Lib/test/test_dummy_thread.py  
+  inflating: jython/Lib/test/test_dummy_threading.py  
+  inflating: jython/Lib/test/test_email.py  
+  inflating: jython/Lib/test/test_email_codecs.py  
+  inflating: jython/Lib/test/test_email_renamed.py  
+  inflating: jython/Lib/test/test_enumerate.py  
+  inflating: jython/Lib/test/test_eof.py  
+  inflating: jython/Lib/test/test_eof_jy.py  
+  inflating: jython/Lib/test/test_errno.py  
+  inflating: jython/Lib/test/test_evalorder.py  
+  inflating: jython/Lib/test/test_exception_variations.py  
+  inflating: jython/Lib/test/test_exceptions.py  
+  inflating: jython/Lib/test/test_exceptions_jy.py  
+  inflating: jython/Lib/test/test_extcall.py  
+  inflating: jython/Lib/test/test_fcntl.py  
+  inflating: jython/Lib/test/test_file.py  
+  inflating: jython/Lib/test/test_file_newlines.py  
+  inflating: jython/Lib/test/test_filecmp.py  
+  inflating: jython/Lib/test/test_fileinput.py  
+  inflating: jython/Lib/test/test_fileno.py  
+  inflating: jython/Lib/test/test_float.py  
+  inflating: jython/Lib/test/test_float_jy.py  
+  inflating: jython/Lib/test/test_fnmatch.py  
+  inflating: jython/Lib/test/test_fork1.py  
+  inflating: jython/Lib/test/test_format.py  
+  inflating: jython/Lib/test/test_format_jy.py  
+  inflating: jython/Lib/test/test_fpformat.py  
+  inflating: jython/Lib/test/test_frozen.py  
+  inflating: jython/Lib/test/test_func_jy.py  
+  inflating: jython/Lib/test/test_func_syntax_jy.py  
+  inflating: jython/Lib/test/test_funcattrs.py  
+  inflating: jython/Lib/test/test_functools.py  
+  inflating: jython/Lib/test/test_future.py  
+  inflating: jython/Lib/test/test_future1.py  
+  inflating: jython/Lib/test/test_future2.py  
+  inflating: jython/Lib/test/test_future3.py  
+  inflating: jython/Lib/test/test_gc.py  
+  inflating: jython/Lib/test/test_gdbm.py  
+  inflating: jython/Lib/test/test_generators.py  
+  inflating: jython/Lib/test/test_genexps.py  
+  inflating: jython/Lib/test/test_genexps_jy.py  
+  inflating: jython/Lib/test/test_getargs.py  
+  inflating: jython/Lib/test/test_getargs2.py  
+  inflating: jython/Lib/test/test_getopt.py  
+  inflating: jython/Lib/test/test_gettext.py  
+  inflating: jython/Lib/test/test_gl.py  
+  inflating: jython/Lib/test/test_glob.py  
+  inflating: jython/Lib/test/test_global.py  
+  inflating: jython/Lib/test/test_grammar.py  
+  inflating: jython/Lib/test/test_grammar_jy.py  
+  inflating: jython/Lib/test/test_grp.py  
+  inflating: jython/Lib/test/test_gzip.py  
+  inflating: jython/Lib/test/test_hash.py  
+  inflating: jython/Lib/test/test_hashlib.py  
+  inflating: jython/Lib/test/test_hashlib_jy.py  
+  inflating: jython/Lib/test/test_heapq.py  
+  inflating: jython/Lib/test/test_hexoct.py  
+  inflating: jython/Lib/test/test_hmac.py  
+  inflating: jython/Lib/test/test_hotshot.py  
+  inflating: jython/Lib/test/test_htmllib.py  
+  inflating: jython/Lib/test/test_htmlparser.py  
+  inflating: jython/Lib/test/test_httplib.py  
+  inflating: jython/Lib/test/test_imageop.py  
+  inflating: jython/Lib/test/test_imaplib.py  
+  inflating: jython/Lib/test/test_imgfile.py  
+  inflating: jython/Lib/test/test_imp.py  
+  inflating: jython/Lib/test/test_import.py  
+  inflating: jython/Lib/test/test_import_jy.py  
+  inflating: jython/Lib/test/test_importhooks.py  
+  inflating: jython/Lib/test/test_index.py  
+  inflating: jython/Lib/test/test_inspect.py  
+  inflating: jython/Lib/test/test_int_jy.py  
+  inflating: jython/Lib/test/test_ioctl.py  
+  inflating: jython/Lib/test/test_isatty.py  
+  inflating: jython/Lib/test/test_isinstance.py  
+  inflating: jython/Lib/test/test_iter.py  
+  inflating: jython/Lib/test/test_iter_jy.py  
+  inflating: jython/Lib/test/test_iterlen.py  
+  inflating: jython/Lib/test/test_itertools.py  
+  inflating: jython/Lib/test/test_janoninner.py  
+  inflating: jython/Lib/test/test_java_integration.py  
+  inflating: jython/Lib/test/test_java_list_delegate.py  
+  inflating: jython/Lib/test/test_java_subclasses.py  
+  inflating: jython/Lib/test/test_java_visibility.py  
+  inflating: jython/Lib/test/test_javalist.py  
+  inflating: jython/Lib/test/test_javashell.py  
+  inflating: jython/Lib/test/test_jbasic.py  
+  inflating: jython/Lib/test/test_joverload.py  
+  inflating: jython/Lib/test/test_jser.py  
+  inflating: jython/Lib/test/test_jser2.py  
+  inflating: jython/Lib/test/test_jy_generators.py  
+  inflating: jython/Lib/test/test_jy_internals.py  
+  inflating: jython/Lib/test/test_jython_initializer.py  
+  inflating: jython/Lib/test/test_largefile.py  
+  inflating: jython/Lib/test/test_linuxaudiodev.py  
+  inflating: jython/Lib/test/test_list.py  
+  inflating: jython/Lib/test/test_list_jy.py  
+  inflating: jython/Lib/test/test_listcomp_jy.py  
+  inflating: jython/Lib/test/test_locale.py  
+  inflating: jython/Lib/test/test_logging.py  
+  inflating: jython/Lib/test/test_long.py  
+  inflating: jython/Lib/test/test_long_future.py  
+  inflating: jython/Lib/test/test_long_int_args.py  
+  inflating: jython/Lib/test/test_longexp.py  
+  inflating: jython/Lib/test/test_macfs.py  
+  inflating: jython/Lib/test/test_macostools.py  
+  inflating: jython/Lib/test/test_macpath.py  
+  inflating: jython/Lib/test/test_mailbox.py  
+  inflating: jython/Lib/test/test_marshal.py  
+  inflating: jython/Lib/test/test_math.py  
+  inflating: jython/Lib/test/test_math_jy.py  
+  inflating: jython/Lib/test/test_md5.py  
+  inflating: jython/Lib/test/test_metaclass.py  
+  inflating: jython/Lib/test/test_metaclass_support/__init__.py  
+  inflating: jython/Lib/test/test_metaclass_support/metaclass.py  
+  inflating: jython/Lib/test/test_metaclass_support/simpleclass.py  
+  inflating: jython/Lib/test/test_methods.py  
+  inflating: jython/Lib/test/test_mhlib.py  
+  inflating: jython/Lib/test/test_mimetools.py  
+  inflating: jython/Lib/test/test_mimetypes.py  
+  inflating: jython/Lib/test/test_minidom.py  
+  inflating: jython/Lib/test/test_mmap.py  
+  inflating: jython/Lib/test/test_module.py  
+  inflating: jython/Lib/test/test_multibytecodec.py  
+  inflating: jython/Lib/test/test_multibytecodec_support.py  
+  inflating: jython/Lib/test/test_multifile.py  
+  inflating: jython/Lib/test/test_mutants.py  
+  inflating: jython/Lib/test/test_netrc.py  
+  inflating: jython/Lib/test/test_new.py  
+  inflating: jython/Lib/test/test_nis.py  
+  inflating: jython/Lib/test/test_normalization.py  
+  inflating: jython/Lib/test/test_nt_paths_jy.py  
+  inflating: jython/Lib/test/test_ntpath.py  
+  inflating: jython/Lib/test/test_old_mailbox.py  
+  inflating: jython/Lib/test/test_opcodes.py  
+  inflating: jython/Lib/test/test_openpty.py  
+  inflating: jython/Lib/test/test_operations.py  
+  inflating: jython/Lib/test/test_operator.py  
+  inflating: jython/Lib/test/test_optparse.py  
+  inflating: jython/Lib/test/test_os.py  
+  inflating: jython/Lib/test/test_ossaudiodev.py  
+  inflating: jython/Lib/test/test_parser.py  
+  inflating: jython/Lib/test/test_pbcvm.py  
+  inflating: jython/Lib/test/test_peepholer.py  
+  inflating: jython/Lib/test/test_pep247.py  
+  inflating: jython/Lib/test/test_pep263.py  
+  inflating: jython/Lib/test/test_pep263_jy.py  
+  inflating: jython/Lib/test/test_pep277.py  
+  inflating: jython/Lib/test/test_pep292.py  
+  inflating: jython/Lib/test/test_pep352.py  
+  inflating: jython/Lib/test/test_pickle.py  
+  inflating: jython/Lib/test/test_pickletools.py  
+  inflating: jython/Lib/test/test_pkg.py  
+  inflating: jython/Lib/test/test_pkgimport.py  
+  inflating: jython/Lib/test/test_platform.py  
+  inflating: jython/Lib/test/test_plistlib.py  
+  inflating: jython/Lib/test/test_poll.py  
+  inflating: jython/Lib/test/test_popen.py  
+  inflating: jython/Lib/test/test_popen2.py  
+  inflating: jython/Lib/test/test_posix.py  
+  inflating: jython/Lib/test/test_posixpath.py  
+  inflating: jython/Lib/test/test_pow.py  
+  inflating: jython/Lib/test/test_pprint.py  
+  inflating: jython/Lib/test/test_profile.py  
+  inflating: jython/Lib/test/test_profilehooks.py  
+  inflating: jython/Lib/test/test_pty.py  
+  inflating: jython/Lib/test/test_pwd.py  
+  inflating: jython/Lib/test/test_pyclbr.py  
+  inflating: jython/Lib/test/test_pyexpat.py  
+  inflating: jython/Lib/test/test_pythoninterpreter_jy.py  
+  inflating: jython/Lib/test/test_queue.py  
+  inflating: jython/Lib/test/test_quopri.py  
+  inflating: jython/Lib/test/test_random.py  
+  inflating: jython/Lib/test/test_re.py  
+  inflating: jython/Lib/test/test_re_jy.py  
+  inflating: jython/Lib/test/test_repr.py  
+  inflating: jython/Lib/test/test_resource.py  
+  inflating: jython/Lib/test/test_rfc822.py  
+  inflating: jython/Lib/test/test_rgbimg.py  
+  inflating: jython/Lib/test/test_richcmp.py  
+  inflating: jython/Lib/test/test_robotparser.py  
+  inflating: jython/Lib/test/test_runpy.py  
+  inflating: jython/Lib/test/test_sax.py  
+  inflating: jython/Lib/test/test_sax_jy.py  
+  inflating: jython/Lib/test/test_scope.py  
+  inflating: jython/Lib/test/test_scriptpackages.py  
+  inflating: jython/Lib/test/test_select.py  
+  inflating: jython/Lib/test/test_select_new.py  
+  inflating: jython/Lib/test/test_seq_jy.py  
+  inflating: jython/Lib/test/test_set.py  
+  inflating: jython/Lib/test/test_set_jy.py  
+  inflating: jython/Lib/test/test_sets.py  
+  inflating: jython/Lib/test/test_sgmllib.py  
+  inflating: jython/Lib/test/test_sha.py  
+  inflating: jython/Lib/test/test_shelve.py  
+  inflating: jython/Lib/test/test_shlex.py  
+  inflating: jython/Lib/test/test_shutil.py  
+  inflating: jython/Lib/test/test_signal.py  
+  inflating: jython/Lib/test/test_site.py  
+  inflating: jython/Lib/test/test_slice.py  
+  inflating: jython/Lib/test/test_slots_jy.py  
+  inflating: jython/Lib/test/test_socket.py  
+  inflating: jython/Lib/test/test_socket_ssl.py  
+  inflating: jython/Lib/test/test_socketserver.py  
+  inflating: jython/Lib/test/test_softspace.py  
+  inflating: jython/Lib/test/test_sort.py  
+  inflating: jython/Lib/test/test_sort_jy.py  
+  inflating: jython/Lib/test/test_sqlite.py  
+  inflating: jython/Lib/test/test_startfile.py  
+  inflating: jython/Lib/test/test_str.py  
+  inflating: jython/Lib/test/test_str2unicode.py  
+  inflating: jython/Lib/test/test_str_jy.py  
+  inflating: jython/Lib/test/test_strftime.py  
+  inflating: jython/Lib/test/test_string.py  
+  inflating: jython/Lib/test/test_stringmap.py  
+  inflating: jython/Lib/test/test_stringprep.py  
+  inflating: jython/Lib/test/test_strop.py  
+  inflating: jython/Lib/test/test_strptime.py  
+  inflating: jython/Lib/test/test_struct.py  
+  inflating: jython/Lib/test/test_structmembers.py  
+  inflating: jython/Lib/test/test_structseq.py  
+  inflating: jython/Lib/test/test_subclasses.py  
+  inflating: jython/Lib/test/test_subclasses_jy.py  
+  inflating: jython/Lib/test/test_subprocess.py  
+  inflating: jython/Lib/test/test_subprocess_jy.py  
+  inflating: jython/Lib/test/test_sunaudiodev.py  
+  inflating: jython/Lib/test/test_sundry.py  
+  inflating: jython/Lib/test/test_support.py  
+  inflating: jython/Lib/test/test_symtable.py  
+  inflating: jython/Lib/test/test_syntax.py  
+  inflating: jython/Lib/test/test_sys.py  
+  inflating: jython/Lib/test/test_sys_jy.py  
+  inflating: jython/Lib/test/test_tarfile.py  
+  inflating: jython/Lib/test/test_tcl.py  
+  inflating: jython/Lib/test/test_tempfile.py  
+  inflating: jython/Lib/test/test_textwrap.py  
+  inflating: jython/Lib/test/test_thread.py  
+  inflating: jython/Lib/test/test_thread_jy.py  
+  inflating: jython/Lib/test/test_thread_local.py  
+  inflating: jython/Lib/test/test_threaded_import.py  
+  inflating: jython/Lib/test/test_threadedtempfile.py  
+  inflating: jython/Lib/test/test_threading.py  
+  inflating: jython/Lib/test/test_threading_jy.py  
+  inflating: jython/Lib/test/test_threading_local.py  
+  inflating: jython/Lib/test/test_threadsignals.py  
+  inflating: jython/Lib/test/test_time.py  
+  inflating: jython/Lib/test/test_timeit.py  
+  inflating: jython/Lib/test/test_timeout.py  
+  inflating: jython/Lib/test/test_tokenize.py  
+  inflating: jython/Lib/test/test_trace.py  
+  inflating: jython/Lib/test/test_trace_threaded.py  
+  inflating: jython/Lib/test/test_traceback.py  
+  inflating: jython/Lib/test/test_traceback_jy.py  
+  inflating: jython/Lib/test/test_transformer.py  
+  inflating: jython/Lib/test/test_tuple.py  
+  inflating: jython/Lib/test/test_types.py  
+  inflating: jython/Lib/test/test_ucn.py  
+  inflating: jython/Lib/test/test_unary.py  
+  inflating: jython/Lib/test/test_unicode.py  
+  inflating: jython/Lib/test/test_unicode_file.py  
+  inflating: jython/Lib/test/test_unicode_jy.py  
+  inflating: jython/Lib/test/test_unicodedata.py  
+  inflating: jython/Lib/test/test_unittest.py  
+  inflating: jython/Lib/test/test_univnewlines.py  
+  inflating: jython/Lib/test/test_unpack.py  
+  inflating: jython/Lib/test/test_urllib.py  
+  inflating: jython/Lib/test/test_urllib2.py  
+  inflating: jython/Lib/test/test_urllib2_localnet.py  
+  inflating: jython/Lib/test/test_urllib2net.py  
+  inflating: jython/Lib/test/test_urllibnet.py  
+  inflating: jython/Lib/test/test_urlparse.py  
+  inflating: jython/Lib/test/test_userdict.py  
+  inflating: jython/Lib/test/test_userlist.py  
+  inflating: jython/Lib/test/test_userstring.py  
+  inflating: jython/Lib/test/test_uu.py  
+  inflating: jython/Lib/test/test_uuid.py  
+  inflating: jython/Lib/test/test_wait3.py  
+  inflating: jython/Lib/test/test_wait4.py  
+  inflating: jython/Lib/test/test_warnings.py  
+  inflating: jython/Lib/test/test_wave.py  
+  inflating: jython/Lib/test/test_weakref.py  
+  inflating: jython/Lib/test/test_weakref_jy.py  
+  inflating: jython/Lib/test/test_whichdb.py  
+  inflating: jython/Lib/test/test_winreg.py  
+  inflating: jython/Lib/test/test_winsound.py  
+  inflating: jython/Lib/test/test_with.py  
+  inflating: jython/Lib/test/test_wsgiref.py  
+  inflating: jython/Lib/test/test_xdrlib.py  
+  inflating: jython/Lib/test/test_xml_etree.py  
+  inflating: jython/Lib/test/test_xml_etree_c.py  
+  inflating: jython/Lib/test/test_xml_etree_jy.py  
+  inflating: jython/Lib/test/test_xmllib.py  
+  inflating: jython/Lib/test/test_xmlrpc.py  
+  inflating: jython/Lib/test/test_xpickle.py  
+  inflating: jython/Lib/test/test_xrange.py  
+  inflating: jython/Lib/test/test_zipfile.py  
+  inflating: jython/Lib/test/test_zipfile64.py  
+  inflating: jython/Lib/test/test_zipimport.py  
+  inflating: jython/Lib/test/test_zipimport_jy.py  
+  inflating: jython/Lib/test/test_zlib.py  
+  inflating: jython/Lib/test/testall.py  
+  inflating: jython/Lib/test/testcodec.py  
+  inflating: jython/Lib/test/testimg.uue  
+  inflating: jython/Lib/test/testimgr.uue  
+  inflating: jython/Lib/test/testrgb.uue  
+  inflating: jython/Lib/test/testtar.tar  
+  inflating: jython/Lib/test/tf_inherit_check.py  
+  inflating: jython/Lib/test/threaded_import_hangers.py  
+  inflating: jython/Lib/test/time_hashlib.py  
+  inflating: jython/Lib/test/tokenize_tests.txt  
+  inflating: jython/Lib/test/whrandom.py  
+  inflating: jython/Lib/test/xmltests.py  
+  inflating: jython/Lib/test/zxjdbc/dbextstest.py  
+  inflating: jython/Lib/test/zxjdbc/jndi.py  
+  inflating: jython/Lib/test/zxjdbc/runner.py  
+  inflating: jython/Lib/test/zxjdbc/sptest.py  
+  inflating: jython/Lib/test/zxjdbc/test.xml  
+  inflating: jython/Lib/test/zxjdbc/test_zxjdbc_dbapi20.py  
+  inflating: jython/Lib/test/zxjdbc/zxtest.py  
+  inflating: jython/Lib/textwrap$py.class  
+  inflating: jython/Lib/textwrap.py  
+  inflating: jython/Lib/this$py.class  
+  inflating: jython/Lib/this.py      
+  inflating: jython/Lib/threading$py.class  
+  inflating: jython/Lib/threading.py  
+  inflating: jython/Lib/timeit$py.class  
+  inflating: jython/Lib/timeit.py    
+  inflating: jython/Lib/token$py.class  
+  inflating: jython/Lib/token.py     
+  inflating: jython/Lib/tokenize$py.class  
+  inflating: jython/Lib/tokenize.py  
+  inflating: jython/Lib/trace$py.class  
+  inflating: jython/Lib/trace.py     
+  inflating: jython/Lib/traceback$py.class  
+  inflating: jython/Lib/traceback.py  
+  inflating: jython/Lib/types$py.class  
+  inflating: jython/Lib/types.py     
+  inflating: jython/Lib/unicodedata$py.class  
+  inflating: jython/Lib/unicodedata.py  
+  inflating: jython/Lib/unittest$py.class  
+  inflating: jython/Lib/unittest.py  
+  inflating: jython/Lib/urllib$py.class  
+  inflating: jython/Lib/urllib.py    
+  inflating: jython/Lib/urllib2$py.class  
+  inflating: jython/Lib/urllib2.py   
+  inflating: jython/Lib/urlparse$py.class  
+  inflating: jython/Lib/urlparse.py  
+  inflating: jython/Lib/user$py.class  
+  inflating: jython/Lib/user.py      
+  inflating: jython/Lib/uu$py.class  
+  inflating: jython/Lib/uu.py        
+  inflating: jython/Lib/uuid$py.class  
+  inflating: jython/Lib/uuid.py      
+  inflating: jython/Lib/warnings$py.class  
+  inflating: jython/Lib/warnings.py  
+  inflating: jython/Lib/weakref$py.class  
+  inflating: jython/Lib/weakref.py   
+  inflating: jython/Lib/whichdb$py.class  
+  inflating: jython/Lib/whichdb.py   
+  inflating: jython/Lib/wsgiref.egg-info  
+  inflating: jython/Lib/wsgiref/__init__$py.class  
+  inflating: jython/Lib/wsgiref/__init__.py  
+  inflating: jython/Lib/wsgiref/handlers$py.class  
+  inflating: jython/Lib/wsgiref/handlers.py  
+  inflating: jython/Lib/wsgiref/headers$py.class  
+  inflating: jython/Lib/wsgiref/headers.py  
+  inflating: jython/Lib/wsgiref/simple_server$py.class  
+  inflating: jython/Lib/wsgiref/simple_server.py  
+  inflating: jython/Lib/wsgiref/util$py.class  
+  inflating: jython/Lib/wsgiref/util.py  
+  inflating: jython/Lib/wsgiref/validate$py.class  
+  inflating: jython/Lib/wsgiref/validate.py  
+  inflating: jython/Lib/xdrlib$py.class  
+  inflating: jython/Lib/xdrlib.py    
+  inflating: jython/Lib/xml/FtCore$py.class  
+  inflating: jython/Lib/xml/FtCore.py  
+  inflating: jython/Lib/xml/Uri$py.class  
+  inflating: jython/Lib/xml/Uri.py   
+  inflating: jython/Lib/xml/__init__$py.class  
+  inflating: jython/Lib/xml/__init__.py  
+  inflating: jython/Lib/xml/dom/MessageSource$py.class  
+  inflating: jython/Lib/xml/dom/MessageSource.py  
+  inflating: jython/Lib/xml/dom/NodeFilter$py.class  
+  inflating: jython/Lib/xml/dom/NodeFilter.py  
+  inflating: jython/Lib/xml/dom/__init__$py.class  
+  inflating: jython/Lib/xml/dom/__init__.py  
+  inflating: jython/Lib/xml/dom/domreg$py.class  
+  inflating: jython/Lib/xml/dom/domreg.py  
+  inflating: jython/Lib/xml/dom/minicompat$py.class  
+  inflating: jython/Lib/xml/dom/minicompat.py  
+  inflating: jython/Lib/xml/dom/minidom$py.class  
+  inflating: jython/Lib/xml/dom/minidom.py  
+  inflating: jython/Lib/xml/dom/pulldom$py.class  
+  inflating: jython/Lib/xml/dom/pulldom.py  
+  inflating: jython/Lib/xml/dom/xmlbuilder$py.class  
+  inflating: jython/Lib/xml/dom/xmlbuilder.py  
+  inflating: jython/Lib/xml/etree/ElementInclude$py.class  
+  inflating: jython/Lib/xml/etree/ElementInclude.py  
+  inflating: jython/Lib/xml/etree/ElementPath$py.class  
+  inflating: jython/Lib/xml/etree/ElementPath.py  
+  inflating: jython/Lib/xml/etree/ElementTree$py.class  
+  inflating: jython/Lib/xml/etree/ElementTree.py  
+  inflating: jython/Lib/xml/etree/__init__$py.class  
+  inflating: jython/Lib/xml/etree/__init__.py  
+  inflating: jython/Lib/xml/etree/cElementTree$py.class  
+  inflating: jython/Lib/xml/etree/cElementTree.py  
+  inflating: jython/Lib/xml/parsers/__init__$py.class  
+  inflating: jython/Lib/xml/parsers/__init__.py  
+  inflating: jython/Lib/xml/parsers/expat$py.class  
+  inflating: jython/Lib/xml/parsers/expat.py  
+  inflating: jython/Lib/xml/sax/__init__$py.class  
+  inflating: jython/Lib/xml/sax/__init__.py  
+  inflating: jython/Lib/xml/sax/_exceptions$py.class  
+  inflating: jython/Lib/xml/sax/_exceptions.py  
+  inflating: jython/Lib/xml/sax/drivers2/__init__$py.class  
+  inflating: jython/Lib/xml/sax/drivers2/__init__.py  
+  inflating: jython/Lib/xml/sax/drivers2/drv_javasax$py.class  
+  inflating: jython/Lib/xml/sax/drivers2/drv_javasax.py  
+  inflating: jython/Lib/xml/sax/handler$py.class  
+  inflating: jython/Lib/xml/sax/handler.py  
+  inflating: jython/Lib/xml/sax/saxlib$py.class  
+  inflating: jython/Lib/xml/sax/saxlib.py  
+  inflating: jython/Lib/xml/sax/saxutils$py.class  
+  inflating: jython/Lib/xml/sax/saxutils.py  
+  inflating: jython/Lib/xml/sax/xmlreader$py.class  
+  inflating: jython/Lib/xml/sax/xmlreader.py  
+  inflating: jython/Lib/xmllib$py.class  
+  inflating: jython/Lib/xmllib.py    
+  inflating: jython/Lib/xmlrpclib$py.class  
+  inflating: jython/Lib/xmlrpclib.py  
+  inflating: jython/Lib/zipfile$py.class  
+  inflating: jython/Lib/zipfile.py   
+  inflating: jython/Lib/zlib$py.class  
+  inflating: jython/Lib/zlib.py      
+/Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/jython
+PREP DONE
+rrrun -maxTid=8 -classes=-org.python.antlr.PythonParser.* -classes=-antlr.PreservingFileWriter.* -classes=-antlr.Tool.* -classpath=original.jar -benchmark=5 -classpath=original.jar -quiet -maxWarn=1 -xml=BaseTime-jython-0.out -logs=/Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/Experiments/table-bench -tool=N -noinst RRBench
+java version "1.8.0_101"
+Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
+
+objc[48981]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/bin/java (0x105def4c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x107e5c4e0). One of the two will be used. Which one is undefined.
+[premain: Installling RoadRunner Agent...]
+[main: RoadRunner Agent Loaded.]
+[main: Running in FAST Mode]
+[RR: Creating Fresh Meta Data]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 1.    ----- ----- -----]
+[main: ]
+-------------------------------------------------------------------------------
+PYBENCH 2.0
+-------------------------------------------------------------------------------
+* using Python 2.5.0+
+
+* Internal Error (use --debug to display the traceback)
+
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 2191.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 2.    ----- ----- -----]
+[main: ]
+-------------------------------------------------------------------------------
+PYBENCH 2.0
+-------------------------------------------------------------------------------
+* using Python 2.5.0+
+* system check interval set to maximum: 2147483647
+* using timer: time.time
+
+Calibrating tests. Please wait...
+
+Running 1 round(s) of the suite at warp factor 20:
+
+* Round 1 done in 3.375 seconds.
+
+-------------------------------------------------------------------------------
+Benchmark: 2018-04-25 21:35:46
+-------------------------------------------------------------------------------
+
+    Rounds: 1
+    Warp:   20
+    Timer:  time.time
+
+Test                             minimum  average  operation  overhead
+-------------------------------------------------------------------------------
+          BuiltinFunctionCalls:     50ms     50ms    0.20us    0.000ms
+           BuiltinMethodLookup:     51ms     51ms    0.10us    0.000ms
+                 CompareFloats:     59ms     59ms    0.10us    0.000ms
+         CompareFloatsIntegers:     37ms     37ms    0.08us    0.000ms
+               CompareIntegers:     66ms     66ms    0.07us    0.000ms
+        CompareInternedStrings:     94ms     94ms    0.13us    0.000ms
+                  CompareLongs:     45ms     45ms    0.09us    0.000ms
+                CompareStrings:     60ms     60ms    0.12us    0.000ms
+                CompareUnicode:     50ms     50ms    0.13us    0.000ms
+                 ConcatStrings:     75ms     75ms    0.30us    0.000ms
+                 ConcatUnicode:     50ms     50ms    0.33us    0.000ms
+               CreateInstances:     49ms     49ms    0.88us    0.000ms
+            CreateNewInstances:     52ms     52ms    1.24us    0.000ms
+       CreateStringsWithConcat:     66ms     66ms    0.13us    0.000ms
+       CreateUnicodeWithConcat:     26ms     26ms    0.13us    0.000ms
+                  DictCreation:     67ms     67ms    0.33us    0.000ms
+             DictWithFloatKeys:     46ms     46ms    0.10us    0.000ms
+           DictWithIntegerKeys:     51ms     51ms    0.09us    0.000ms
+            DictWithStringKeys:     50ms     50ms    0.08us    0.000ms
+                      ForLoops:     57ms     57ms    4.56us    0.000ms
+                    IfThenElse:     89ms     89ms    0.13us    0.000ms
+                   ListSlicing:     38ms     38ms    5.43us    0.000ms
+                NestedForLoops:     46ms     46ms    0.06us    0.000ms
+          NormalClassAttribute:     58ms     58ms    0.10us    0.000ms
+       NormalInstanceAttribute:     54ms     54ms    0.09us    0.000ms
+           PythonFunctionCalls:     62ms     62ms    0.38us    0.000ms
+             PythonMethodCalls:     41ms     41ms    0.36us    0.000ms
+                     Recursion:     38ms     38ms    1.52us    0.000ms
+                  SecondImport:     49ms     49ms    0.98us    0.000ms
+           SecondPackageImport:     35ms     35ms    0.70us    0.000ms
+         SecondSubmoduleImport:     47ms     47ms    0.94us    0.000ms
+       SimpleComplexArithmetic:     73ms     73ms    0.17us    0.000ms
+        SimpleDictManipulation:     55ms     55ms    0.09us    0.000ms
+         SimpleFloatArithmetic:     90ms     90ms    0.14us    0.000ms
+      SimpleIntFloatArithmetic:     91ms     91ms    0.14us    0.000ms
+       SimpleIntegerArithmetic:     87ms     87ms    0.13us    0.000ms
+        SimpleListManipulation:     59ms     59ms    0.10us    0.000ms
+          SimpleLongArithmetic:     66ms     66ms    0.20us    0.000ms
+                    SmallLists:     73ms     73ms    0.21us    0.000ms
+                   SmallTuples:    104ms    104ms    0.39us    0.000ms
+         SpecialClassAttribute:     56ms     56ms    0.09us    0.000ms
+      SpecialInstanceAttribute:     51ms     51ms    0.08us    0.000ms
+                StringMappings:     61ms     61ms    0.48us    0.000ms
+              StringPredicates:     72ms     72ms    0.21us    0.000ms
+                 StringSlicing:     33ms     33ms    0.12us    0.000ms
+                     TryExcept:     25ms     25ms    0.02us    0.000ms
+                TryRaiseExcept:    225ms    225ms    7.03us    0.000ms
+                  TupleSlicing:     24ms     24ms    0.18us    0.000ms
+               UnicodeMappings:     94ms     94ms    5.22us    0.000ms
+             UnicodePredicates:     76ms     76ms    0.28us    0.000ms
+             UnicodeProperties:    269ms    269ms    1.35us    0.000ms
+                UnicodeSlicing:     33ms     33ms    0.13us    0.000ms
+-------------------------------------------------------------------------------
+Totals:                           3375ms   3375ms
+
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 3446.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 3.    ----- ----- -----]
+[main: ]
+-------------------------------------------------------------------------------
+PYBENCH 2.0
+-------------------------------------------------------------------------------
+* using Python 2.5.0+
+* system check interval set to maximum: 2147483647
+* using timer: time.time
+
+Calibrating tests. Please wait...
+
+Running 1 round(s) of the suite at warp factor 20:
+
+* Round 1 done in 3.287 seconds.
+
+-------------------------------------------------------------------------------
+Benchmark: 2018-04-25 21:35:50
+-------------------------------------------------------------------------------
+
+    Rounds: 1
+    Warp:   20
+    Timer:  time.time
+
+Test                             minimum  average  operation  overhead
+-------------------------------------------------------------------------------
+          BuiltinFunctionCalls:     34ms     34ms    0.13us    0.000ms
+           BuiltinMethodLookup:     49ms     49ms    0.09us    0.000ms
+                 CompareFloats:     41ms     41ms    0.07us    0.000ms
+         CompareFloatsIntegers:     32ms     32ms    0.07us    0.000ms
+               CompareIntegers:     59ms     59ms    0.07us    0.000ms
+        CompareInternedStrings:     84ms     84ms    0.11us    0.000ms
+                  CompareLongs:     35ms     35ms    0.07us    0.000ms
+                CompareStrings:     58ms     58ms    0.12us    0.000ms
+                CompareUnicode:     45ms     45ms    0.12us    0.000ms
+                 ConcatStrings:     73ms     73ms    0.29us    0.000ms
+                 ConcatUnicode:     41ms     41ms    0.27us    0.000ms
+               CreateInstances:     28ms     28ms    0.50us    0.000ms
+            CreateNewInstances:     28ms     28ms    0.67us    0.000ms
+       CreateStringsWithConcat:     62ms     62ms    0.12us    0.000ms
+       CreateUnicodeWithConcat:     26ms     26ms    0.13us    0.000ms
+                  DictCreation:     69ms     69ms    0.35us    0.000ms
+             DictWithFloatKeys:     41ms     41ms    0.09us    0.000ms
+           DictWithIntegerKeys:     51ms     51ms    0.09us    0.000ms
+            DictWithStringKeys:     65ms     65ms    0.11us    0.000ms
+                      ForLoops:     32ms     32ms    2.56us    0.000ms
+                    IfThenElse:    115ms    115ms    0.17us    0.000ms
+                   ListSlicing:     21ms     21ms    3.00us    0.000ms
+                NestedForLoops:     25ms     25ms    0.03us    0.000ms
+          NormalClassAttribute:     77ms     77ms    0.13us    0.000ms
+       NormalInstanceAttribute:     70ms     70ms    0.12us    0.000ms
+           PythonFunctionCalls:     63ms     63ms    0.38us    0.000ms
+             PythonMethodCalls:     51ms     51ms    0.45us    0.000ms
+                     Recursion:     25ms     25ms    1.00us    0.000ms
+                  SecondImport:     57ms     57ms    1.14us    0.000ms
+           SecondPackageImport:     53ms     53ms    1.06us    0.000ms
+         SecondSubmoduleImport:     70ms     70ms    1.40us    0.000ms
+       SimpleComplexArithmetic:     87ms     87ms    0.20us    0.000ms
+        SimpleDictManipulation:     75ms     75ms    0.13us    0.000ms
+         SimpleFloatArithmetic:    122ms    122ms    0.18us    0.000ms
+      SimpleIntFloatArithmetic:    125ms    125ms    0.19us    0.000ms
+       SimpleIntegerArithmetic:    119ms    119ms    0.18us    0.000ms
+        SimpleListManipulation:     76ms     76ms    0.13us    0.000ms
+          SimpleLongArithmetic:     66ms     66ms    0.20us    0.000ms
+                    SmallLists:     56ms     56ms    0.16us    0.000ms
+                   SmallTuples:     95ms     95ms    0.35us    0.000ms
+         SpecialClassAttribute:     60ms     60ms    0.10us    0.000ms
+      SpecialInstanceAttribute:     53ms     53ms    0.09us    0.000ms
+                StringMappings:     72ms     72ms    0.57us    0.000ms
+              StringPredicates:     60ms     60ms    0.17us    0.000ms
+                 StringSlicing:     34ms     34ms    0.12us    0.000ms
+                     TryExcept:     26ms     26ms    0.02us    0.000ms
+                TryRaiseExcept:    194ms    194ms    6.06us    0.000ms
+                  TupleSlicing:     24ms     24ms    0.18us    0.000ms
+               UnicodeMappings:     46ms     46ms    2.56us    0.000ms
+             UnicodePredicates:     64ms     64ms    0.24us    0.000ms
+             UnicodeProperties:    223ms    223ms    1.12us    0.000ms
+                UnicodeSlicing:     30ms     30ms    0.12us    0.000ms
+-------------------------------------------------------------------------------
+Totals:                           3287ms   3287ms
+
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 3333.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 1.    ----- ----- -----]
+[main: ]
+-------------------------------------------------------------------------------
+PYBENCH 2.0
+-------------------------------------------------------------------------------
+* using Python 2.5.0+
+* system check interval set to maximum: 2147483647
+* using timer: time.time
+
+Calibrating tests. Please wait...
+
+Running 1 round(s) of the suite at warp factor 20:
+
+* Round 1 done in 2.775 seconds.
+
+-------------------------------------------------------------------------------
+Benchmark: 2018-04-25 21:35:53
+-------------------------------------------------------------------------------
+
+    Rounds: 1
+    Warp:   20
+    Timer:  time.time
+
+Test                             minimum  average  operation  overhead
+-------------------------------------------------------------------------------
+          BuiltinFunctionCalls:     42ms     42ms    0.16us    0.000ms
+           BuiltinMethodLookup:     57ms     57ms    0.11us    0.000ms
+                 CompareFloats:     43ms     43ms    0.07us    0.000ms
+         CompareFloatsIntegers:     34ms     34ms    0.08us    0.000ms
+               CompareIntegers:     64ms     64ms    0.07us    0.000ms
+        CompareInternedStrings:     87ms     87ms    0.12us    0.000ms
+                  CompareLongs:     37ms     37ms    0.07us    0.000ms
+                CompareStrings:     62ms     62ms    0.12us    0.000ms
+                CompareUnicode:     46ms     46ms    0.12us    0.000ms
+                 ConcatStrings:     72ms     72ms    0.29us    0.000ms
+                 ConcatUnicode:     41ms     41ms    0.27us    0.000ms
+               CreateInstances:     25ms     25ms    0.45us    0.000ms
+            CreateNewInstances:     32ms     32ms    0.76us    0.000ms
+       CreateStringsWithConcat:     74ms     74ms    0.15us    0.000ms
+       CreateUnicodeWithConcat:     25ms     25ms    0.12us    0.000ms
+                  DictCreation:     67ms     67ms    0.34us    0.000ms
+             DictWithFloatKeys:     42ms     42ms    0.09us    0.000ms
+           DictWithIntegerKeys:     52ms     52ms    0.09us    0.000ms
+            DictWithStringKeys:     49ms     49ms    0.08us    0.000ms
+                      ForLoops:     21ms     21ms    1.68us    0.000ms
+                    IfThenElse:     84ms     84ms    0.12us    0.000ms
+                   ListSlicing:     16ms     16ms    2.29us    0.000ms
+                NestedForLoops:     16ms     16ms    0.02us    0.000ms
+          NormalClassAttribute:     57ms     57ms    0.09us    0.000ms
+       NormalInstanceAttribute:     50ms     50ms    0.08us    0.000ms
+           PythonFunctionCalls:     42ms     42ms    0.25us    0.000ms
+             PythonMethodCalls:     37ms     37ms    0.33us    0.000ms
+                     Recursion:     23ms     23ms    0.92us    0.000ms
+                  SecondImport:     21ms     21ms    0.42us    0.000ms
+           SecondPackageImport:     22ms     22ms    0.44us    0.000ms
+         SecondSubmoduleImport:     36ms     36ms    0.72us    0.000ms
+       SimpleComplexArithmetic:     58ms     58ms    0.13us    0.000ms
+        SimpleDictManipulation:     51ms     51ms    0.08us    0.000ms
+         SimpleFloatArithmetic:     81ms     81ms    0.12us    0.000ms
+      SimpleIntFloatArithmetic:     84ms     84ms    0.13us    0.000ms
+       SimpleIntegerArithmetic:     89ms     89ms    0.13us    0.000ms
+        SimpleListManipulation:     57ms     57ms    0.10us    0.000ms
+          SimpleLongArithmetic:     51ms     51ms    0.15us    0.000ms
+                    SmallLists:     53ms     53ms    0.16us    0.000ms
+                   SmallTuples:     89ms     89ms    0.33us    0.000ms
+         SpecialClassAttribute:     57ms     57ms    0.09us    0.000ms
+      SpecialInstanceAttribute:     50ms     50ms    0.08us    0.000ms
+                StringMappings:     68ms     68ms    0.54us    0.000ms
+              StringPredicates:     51ms     51ms    0.15us    0.000ms
+                 StringSlicing:     33ms     33ms    0.12us    0.000ms
+                     TryExcept:     24ms     24ms    0.02us    0.000ms
+                TryRaiseExcept:    191ms    191ms    5.97us    0.000ms
+                  TupleSlicing:     22ms     22ms    0.17us    0.000ms
+               UnicodeMappings:     39ms     39ms    2.17us    0.000ms
+             UnicodePredicates:     45ms     45ms    0.17us    0.000ms
+             UnicodeProperties:    171ms    171ms    0.86us    0.000ms
+                UnicodeSlicing:     35ms     35ms    0.14us    0.000ms
+-------------------------------------------------------------------------------
+Totals:                           2775ms   2775ms
+
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 2818.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 2.    ----- ----- -----]
+[main: ]
+-------------------------------------------------------------------------------
+PYBENCH 2.0
+-------------------------------------------------------------------------------
+* using Python 2.5.0+
+* system check interval set to maximum: 2147483647
+* using timer: time.time
+
+Calibrating tests. Please wait...
+
+Running 1 round(s) of the suite at warp factor 20:
+
+* Round 1 done in 2.728 seconds.
+
+-------------------------------------------------------------------------------
+Benchmark: 2018-04-25 21:35:56
+-------------------------------------------------------------------------------
+
+    Rounds: 1
+    Warp:   20
+    Timer:  time.time
+
+Test                             minimum  average  operation  overhead
+-------------------------------------------------------------------------------
+          BuiltinFunctionCalls:     35ms     35ms    0.14us    0.000ms
+           BuiltinMethodLookup:     49ms     49ms    0.09us    0.000ms
+                 CompareFloats:     41ms     41ms    0.07us    0.000ms
+         CompareFloatsIntegers:     35ms     35ms    0.08us    0.000ms
+               CompareIntegers:     61ms     61ms    0.07us    0.000ms
+        CompareInternedStrings:     87ms     87ms    0.12us    0.000ms
+                  CompareLongs:     35ms     35ms    0.07us    0.000ms
+                CompareStrings:     61ms     61ms    0.12us    0.000ms
+                CompareUnicode:     46ms     46ms    0.12us    0.000ms
+                 ConcatStrings:     77ms     77ms    0.31us    0.000ms
+                 ConcatUnicode:     44ms     44ms    0.29us    0.000ms
+               CreateInstances:     24ms     24ms    0.43us    0.000ms
+            CreateNewInstances:     32ms     32ms    0.76us    0.000ms
+       CreateStringsWithConcat:     62ms     62ms    0.12us    0.000ms
+       CreateUnicodeWithConcat:     25ms     25ms    0.13us    0.000ms
+                  DictCreation:     67ms     67ms    0.33us    0.000ms
+             DictWithFloatKeys:     43ms     43ms    0.10us    0.000ms
+           DictWithIntegerKeys:     51ms     51ms    0.09us    0.000ms
+            DictWithStringKeys:     50ms     50ms    0.08us    0.000ms
+                      ForLoops:     20ms     20ms    1.60us    0.000ms
+                    IfThenElse:     84ms     84ms    0.12us    0.000ms
+                   ListSlicing:     16ms     16ms    2.29us    0.000ms
+                NestedForLoops:     16ms     16ms    0.02us    0.000ms
+          NormalClassAttribute:     57ms     57ms    0.09us    0.000ms
+       NormalInstanceAttribute:     50ms     50ms    0.08us    0.000ms
+           PythonFunctionCalls:     41ms     41ms    0.25us    0.000ms
+             PythonMethodCalls:     37ms     37ms    0.33us    0.000ms
+                     Recursion:     23ms     23ms    0.92us    0.000ms
+                  SecondImport:     20ms     20ms    0.40us    0.000ms
+           SecondPackageImport:     23ms     23ms    0.46us    0.000ms
+         SecondSubmoduleImport:     35ms     35ms    0.70us    0.000ms
+       SimpleComplexArithmetic:     59ms     59ms    0.13us    0.000ms
+        SimpleDictManipulation:     51ms     51ms    0.09us    0.000ms
+         SimpleFloatArithmetic:     81ms     81ms    0.12us    0.000ms
+      SimpleIntFloatArithmetic:     85ms     85ms    0.13us    0.000ms
+       SimpleIntegerArithmetic:     85ms     85ms    0.13us    0.000ms
+        SimpleListManipulation:     53ms     53ms    0.09us    0.000ms
+          SimpleLongArithmetic:     47ms     47ms    0.14us    0.000ms
+                    SmallLists:     55ms     55ms    0.16us    0.000ms
+                   SmallTuples:     87ms     87ms    0.32us    0.000ms
+         SpecialClassAttribute:     57ms     57ms    0.10us    0.000ms
+      SpecialInstanceAttribute:     50ms     50ms    0.08us    0.000ms
+                StringMappings:     68ms     68ms    0.54us    0.000ms
+              StringPredicates:     51ms     51ms    0.15us    0.000ms
+                 StringSlicing:     32ms     32ms    0.11us    0.000ms
+                     TryExcept:     25ms     25ms    0.02us    0.000ms
+                TryRaiseExcept:    184ms    184ms    5.75us    0.000ms
+                  TupleSlicing:     26ms     26ms    0.20us    0.000ms
+               UnicodeMappings:     39ms     39ms    2.17us    0.000ms
+             UnicodePredicates:     46ms     46ms    0.17us    0.000ms
+             UnicodeProperties:    171ms    171ms    0.86us    0.000ms
+                UnicodeSlicing:     29ms     29ms    0.12us    0.000ms
+-------------------------------------------------------------------------------
+Totals:                           2728ms   2728ms
+
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 2768.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 3.    ----- ----- -----]
+[main: ]
+-------------------------------------------------------------------------------
+PYBENCH 2.0
+-------------------------------------------------------------------------------
+* using Python 2.5.0+
+* system check interval set to maximum: 2147483647
+* using timer: time.time
+
+Calibrating tests. Please wait...
+
+Running 1 round(s) of the suite at warp factor 20:
+
+* Round 1 done in 2.695 seconds.
+
+-------------------------------------------------------------------------------
+Benchmark: 2018-04-25 21:35:59
+-------------------------------------------------------------------------------
+
+    Rounds: 1
+    Warp:   20
+    Timer:  time.time
+
+Test                             minimum  average  operation  overhead
+-------------------------------------------------------------------------------
+          BuiltinFunctionCalls:     36ms     36ms    0.14us    0.000ms
+           BuiltinMethodLookup:     47ms     47ms    0.09us    0.000ms
+                 CompareFloats:     39ms     39ms    0.07us    0.000ms
+         CompareFloatsIntegers:     33ms     33ms    0.07us    0.000ms
+               CompareIntegers:     60ms     60ms    0.07us    0.000ms
+        CompareInternedStrings:     35ms     35ms    0.05us    0.000ms
+                  CompareLongs:     35ms     35ms    0.07us    0.000ms
+                CompareStrings:     60ms     60ms    0.12us    0.000ms
+                CompareUnicode:     45ms     45ms    0.12us    0.000ms
+                 ConcatStrings:     72ms     72ms    0.29us    0.000ms
+                 ConcatUnicode:     42ms     42ms    0.28us    0.000ms
+               CreateInstances:     25ms     25ms    0.45us    0.000ms
+            CreateNewInstances:     28ms     28ms    0.67us    0.000ms
+       CreateStringsWithConcat:     65ms     65ms    0.13us    0.000ms
+       CreateUnicodeWithConcat:     25ms     25ms    0.13us    0.000ms
+                  DictCreation:     67ms     67ms    0.33us    0.000ms
+             DictWithFloatKeys:     42ms     42ms    0.09us    0.000ms
+           DictWithIntegerKeys:     51ms     51ms    0.08us    0.000ms
+            DictWithStringKeys:     49ms     49ms    0.08us    0.000ms
+                      ForLoops:     21ms     21ms    1.68us    0.000ms
+                    IfThenElse:     84ms     84ms    0.12us    0.000ms
+                   ListSlicing:     14ms     14ms    2.00us    0.000ms
+                NestedForLoops:     16ms     16ms    0.02us    0.000ms
+          NormalClassAttribute:     57ms     57ms    0.10us    0.000ms
+       NormalInstanceAttribute:     50ms     50ms    0.08us    0.000ms
+           PythonFunctionCalls:     44ms     44ms    0.27us    0.000ms
+             PythonMethodCalls:     37ms     37ms    0.33us    0.000ms
+                     Recursion:     23ms     23ms    0.92us    0.000ms
+                  SecondImport:     21ms     21ms    0.42us    0.000ms
+           SecondPackageImport:     22ms     22ms    0.44us    0.000ms
+         SecondSubmoduleImport:     36ms     36ms    0.72us    0.000ms
+       SimpleComplexArithmetic:     58ms     58ms    0.13us    0.000ms
+        SimpleDictManipulation:     51ms     51ms    0.08us    0.000ms
+         SimpleFloatArithmetic:     82ms     82ms    0.12us    0.000ms
+      SimpleIntFloatArithmetic:     87ms     87ms    0.13us    0.000ms
+       SimpleIntegerArithmetic:     85ms     85ms    0.13us    0.000ms
+        SimpleListManipulation:     53ms     53ms    0.09us    0.000ms
+          SimpleLongArithmetic:     47ms     47ms    0.14us    0.000ms
+                    SmallLists:     53ms     53ms    0.16us    0.000ms
+                   SmallTuples:     90ms     90ms    0.33us    0.000ms
+         SpecialClassAttribute:     57ms     57ms    0.09us    0.000ms
+      SpecialInstanceAttribute:     50ms     50ms    0.08us    0.000ms
+                StringMappings:     68ms     68ms    0.54us    0.000ms
+              StringPredicates:     55ms     55ms    0.16us    0.000ms
+                 StringSlicing:     32ms     32ms    0.11us    0.000ms
+                     TryExcept:     24ms     24ms    0.02us    0.000ms
+                TryRaiseExcept:    186ms    186ms    5.81us    0.000ms
+                  TupleSlicing:     23ms     23ms    0.18us    0.000ms
+               UnicodeMappings:     47ms     47ms    2.61us    0.000ms
+             UnicodePredicates:     49ms     49ms    0.18us    0.000ms
+             UnicodeProperties:    187ms    187ms    0.94us    0.000ms
+                UnicodeSlicing:     30ms     30ms    0.12us    0.000ms
+-------------------------------------------------------------------------------
+Totals:                           2695ms   2695ms
+
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 2727.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 4.    ----- ----- -----]
+[main: ]
+-------------------------------------------------------------------------------
+PYBENCH 2.0
+-------------------------------------------------------------------------------
+* using Python 2.5.0+
+* system check interval set to maximum: 2147483647
+* using timer: time.time
+
+Calibrating tests. Please wait...
+
+Running 1 round(s) of the suite at warp factor 20:
+
+* Round 1 done in 2.715 seconds.
+
+-------------------------------------------------------------------------------
+Benchmark: 2018-04-25 21:36:02
+-------------------------------------------------------------------------------
+
+    Rounds: 1
+    Warp:   20
+    Timer:  time.time
+
+Test                             minimum  average  operation  overhead
+-------------------------------------------------------------------------------
+          BuiltinFunctionCalls:     43ms     43ms    0.17us    0.000ms
+           BuiltinMethodLookup:     47ms     47ms    0.09us    0.000ms
+                 CompareFloats:     41ms     41ms    0.07us    0.000ms
+         CompareFloatsIntegers:     33ms     33ms    0.07us    0.000ms
+               CompareIntegers:     61ms     61ms    0.07us    0.000ms
+        CompareInternedStrings:     19ms     19ms    0.03us    0.000ms
+                  CompareLongs:     35ms     35ms    0.07us    0.000ms
+                CompareStrings:     59ms     59ms    0.12us    0.000ms
+                CompareUnicode:     45ms     45ms    0.12us    0.000ms
+                 ConcatStrings:     73ms     73ms    0.29us    0.000ms
+                 ConcatUnicode:     41ms     41ms    0.27us    0.000ms
+               CreateInstances:     25ms     25ms    0.45us    0.000ms
+            CreateNewInstances:     29ms     29ms    0.69us    0.000ms
+       CreateStringsWithConcat:     68ms     68ms    0.14us    0.000ms
+       CreateUnicodeWithConcat:     26ms     26ms    0.13us    0.000ms
+                  DictCreation:     67ms     67ms    0.34us    0.000ms
+             DictWithFloatKeys:     46ms     46ms    0.10us    0.000ms
+           DictWithIntegerKeys:     51ms     51ms    0.08us    0.000ms
+            DictWithStringKeys:     50ms     50ms    0.08us    0.000ms
+                      ForLoops:     20ms     20ms    1.60us    0.000ms
+                    IfThenElse:     84ms     84ms    0.12us    0.000ms
+                   ListSlicing:     14ms     14ms    2.00us    0.000ms
+                NestedForLoops:     16ms     16ms    0.02us    0.000ms
+          NormalClassAttribute:     60ms     60ms    0.10us    0.000ms
+       NormalInstanceAttribute:     52ms     52ms    0.09us    0.000ms
+           PythonFunctionCalls:     48ms     48ms    0.29us    0.000ms
+             PythonMethodCalls:     36ms     36ms    0.32us    0.000ms
+                     Recursion:     24ms     24ms    0.96us    0.000ms
+                  SecondImport:     21ms     21ms    0.42us    0.000ms
+           SecondPackageImport:     25ms     25ms    0.50us    0.000ms
+         SecondSubmoduleImport:     37ms     37ms    0.74us    0.000ms
+       SimpleComplexArithmetic:     58ms     58ms    0.13us    0.000ms
+        SimpleDictManipulation:     51ms     51ms    0.08us    0.000ms
+         SimpleFloatArithmetic:     82ms     82ms    0.12us    0.000ms
+      SimpleIntFloatArithmetic:     84ms     84ms    0.13us    0.000ms
+       SimpleIntegerArithmetic:     84ms     84ms    0.13us    0.000ms
+        SimpleListManipulation:     53ms     53ms    0.09us    0.000ms
+          SimpleLongArithmetic:     47ms     47ms    0.14us    0.000ms
+                    SmallLists:     56ms     56ms    0.16us    0.000ms
+                   SmallTuples:     91ms     91ms    0.34us    0.000ms
+         SpecialClassAttribute:     57ms     57ms    0.09us    0.000ms
+      SpecialInstanceAttribute:     50ms     50ms    0.08us    0.000ms
+                StringMappings:     73ms     73ms    0.58us    0.000ms
+              StringPredicates:     53ms     53ms    0.15us    0.000ms
+                 StringSlicing:     32ms     32ms    0.11us    0.000ms
+                     TryExcept:     25ms     25ms    0.02us    0.000ms
+                TryRaiseExcept:    190ms    190ms    5.94us    0.000ms
+                  TupleSlicing:     23ms     23ms    0.18us    0.000ms
+               UnicodeMappings:     46ms     46ms    2.56us    0.000ms
+             UnicodePredicates:     47ms     47ms    0.17us    0.000ms
+             UnicodeProperties:    189ms    189ms    0.94us    0.000ms
+                UnicodeSlicing:     28ms     28ms    0.11us    0.000ms
+-------------------------------------------------------------------------------
+Totals:                           2715ms   2715ms
+
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 2747.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 5.    ----- ----- -----]
+[main: ]
+-------------------------------------------------------------------------------
+PYBENCH 2.0
+-------------------------------------------------------------------------------
+* using Python 2.5.0+
+* system check interval set to maximum: 2147483647
+* using timer: time.time
+
+Calibrating tests. Please wait...
+
+Running 1 round(s) of the suite at warp factor 20:
+
+* Round 1 done in 2.586 seconds.
+
+-------------------------------------------------------------------------------
+Benchmark: 2018-04-25 21:36:04
+-------------------------------------------------------------------------------
+
+    Rounds: 1
+    Warp:   20
+    Timer:  time.time
+
+Test                             minimum  average  operation  overhead
+-------------------------------------------------------------------------------
+          BuiltinFunctionCalls:     39ms     39ms    0.15us    0.000ms
+           BuiltinMethodLookup:     47ms     47ms    0.09us    0.000ms
+                 CompareFloats:     39ms     39ms    0.07us    0.000ms
+         CompareFloatsIntegers:     33ms     33ms    0.07us    0.000ms
+               CompareIntegers:     59ms     59ms    0.07us    0.000ms
+        CompareInternedStrings:     17ms     17ms    0.02us    0.000ms
+                  CompareLongs:     35ms     35ms    0.07us    0.000ms
+                CompareStrings:     31ms     31ms    0.06us    0.000ms
+                CompareUnicode:     46ms     46ms    0.12us    0.000ms
+                 ConcatStrings:     74ms     74ms    0.30us    0.000ms
+                 ConcatUnicode:     41ms     41ms    0.27us    0.000ms
+               CreateInstances:     25ms     25ms    0.45us    0.000ms
+            CreateNewInstances:     29ms     29ms    0.69us    0.000ms
+       CreateStringsWithConcat:     56ms     56ms    0.11us    0.000ms
+       CreateUnicodeWithConcat:     25ms     25ms    0.12us    0.000ms
+                  DictCreation:     67ms     67ms    0.34us    0.000ms
+             DictWithFloatKeys:     43ms     43ms    0.10us    0.000ms
+           DictWithIntegerKeys:     33ms     33ms    0.05us    0.000ms
+            DictWithStringKeys:     28ms     28ms    0.05us    0.000ms
+                      ForLoops:     21ms     21ms    1.68us    0.000ms
+                    IfThenElse:     84ms     84ms    0.12us    0.000ms
+                   ListSlicing:     18ms     18ms    2.57us    0.000ms
+                NestedForLoops:     17ms     17ms    0.02us    0.000ms
+          NormalClassAttribute:     57ms     57ms    0.09us    0.000ms
+       NormalInstanceAttribute:     50ms     50ms    0.08us    0.000ms
+           PythonFunctionCalls:     47ms     47ms    0.28us    0.000ms
+             PythonMethodCalls:     37ms     37ms    0.33us    0.000ms
+                     Recursion:     23ms     23ms    0.92us    0.000ms
+                  SecondImport:     21ms     21ms    0.42us    0.000ms
+           SecondPackageImport:     22ms     22ms    0.44us    0.000ms
+         SecondSubmoduleImport:     36ms     36ms    0.72us    0.000ms
+       SimpleComplexArithmetic:     57ms     57ms    0.13us    0.000ms
+        SimpleDictManipulation:     51ms     51ms    0.09us    0.000ms
+         SimpleFloatArithmetic:     81ms     81ms    0.12us    0.000ms
+      SimpleIntFloatArithmetic:     84ms     84ms    0.13us    0.000ms
+       SimpleIntegerArithmetic:     85ms     85ms    0.13us    0.000ms
+        SimpleListManipulation:     52ms     52ms    0.09us    0.000ms
+          SimpleLongArithmetic:     47ms     47ms    0.14us    0.000ms
+                    SmallLists:     52ms     52ms    0.15us    0.000ms
+                   SmallTuples:     88ms     88ms    0.33us    0.000ms
+         SpecialClassAttribute:     57ms     57ms    0.10us    0.000ms
+      SpecialInstanceAttribute:     49ms     49ms    0.08us    0.000ms
+                StringMappings:     74ms     74ms    0.59us    0.000ms
+              StringPredicates:     52ms     52ms    0.15us    0.000ms
+                 StringSlicing:     32ms     32ms    0.11us    0.000ms
+                     TryExcept:     24ms     24ms    0.02us    0.000ms
+                TryRaiseExcept:    185ms    185ms    5.78us    0.000ms
+                  TupleSlicing:     23ms     23ms    0.18us    0.000ms
+               UnicodeMappings:     39ms     39ms    2.17us    0.000ms
+             UnicodePredicates:     51ms     51ms    0.19us    0.000ms
+             UnicodeProperties:    175ms    175ms    0.87us    0.000ms
+                UnicodeSlicing:     28ms     28ms    0.11us    0.000ms
+-------------------------------------------------------------------------------
+Totals:                           2586ms   2586ms
+
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 2613.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[RR: Total Time: 23347]
+<entry>
+  <date> Wed Apr 25 21:36:07 CEST 2018 </date> 
+  <mode> FAST </mode> 
+  <timeout> NO </timeout> 
+  <options>
+    <option><name> javaArgs </name>           <value> RRBench  </value> </option>
+    <option><name> noDecInline </name>        <value> false </value> </option>
+    <option><name> quiet </name>              <value> true </value> </option>
+    <option><name> logDepth </name>           <value> 100 </value> </option>
+    <option><name> logs </name>               <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/Experiments/table-bench </value> </option>
+    <option><name> out </name>                <value>  </value>   </option>
+    <option><name> err </name>                <value>  </value>   </option>
+    <option><name> noinst </name>             <value> true </value> </option>
+    <option><name> inst </name>               <value> NOINST </value> </option>
+    <option><name> infThreads </name>         <value> 0 </value>  </option>
+    <option><name> benchmark </name>          <value> 5 </value>  </option>
+    <option><name> warmup </name>             <value> 3 </value>  </option>
+    <option><name> availableProcessors </name> <value> 8 </value>  </option>
+    <option><name> args </name>               <value> [] </value> </option>
+    <option><name> d </name>                  <value> [] </value> </option>
+    <option><name> maxYikes </name>           <value> 5 </value>  </option>
+    <option><name> help </name>               <value> false </value> </option>
+    <option><name> toolpath </name>           <value> /Users/tuan-phongngo/OptimalVerifiedFT/classes/rr/simple:/Users/tuan-phongngo/OptimalVerifiedFT/classes/tools </value> </option>
+    <option><name> classpath </name>          <value> original.jar </value> </option>
+    <option><name> tool </name>               <value> N </value>  </option>
+    <option><name> tools </name>              <value> false </value> </option>
+    <option><name> noxml </name>              <value> false </value> </option>
+    <option><name> constantGC </name>         <value> false </value> </option>
+    <option><name> noFP </name>               <value> false </value> </option>
+    <option><name> noShutdownHook </name>     <value> false </value> </option>
+    <option><name> noEnter </name>            <value> true </value> </option>
+    <option><name> xml </name>                <value> BaseTime-jython-0.out </value> </option>
+    <option><name> pulse </name>              <value>  </value>   </option>
+    <option><name> maxTime </name>            <value> 0 </value>  </option>
+    <option><name> maxMem </name>             <value> 10240 </value> </option>
+    <option><name> maxTid </name>             <value> 8 </value>  </option>
+    <option><name> stacks </name>             <value> true </value> </option>
+    <option><name> values </name>             <value> false </value> </option>
+    <option><name> noTidGC </name>            <value> false </value> </option>
+    <option><name> noEventReuse </name>       <value> false </value> </option>
+    <option><name> trackMemoryUsage </name>   <value> false </value> </option>
+    <option><name> repository </name>         <value>  </value>   </option>
+    <option><name> meta </name>               <value> null </value> </option>
+    <option><name> methods </name>            <value> [default=ACCEPT] </value> </option>
+    <option><name> fields </name>             <value> ["-.*this\$.*", "-$.*__\$rr.*", default=ACCEPT] </value> </option>
+    <option><name> lines </name>              <value> [default=ACCEPT] </value> </option>
+    <option><name> classes </name>            <value> ["-org.python.antlr.PythonParser.*", "-antlr.PreservingFileWriter.*", "-antlr.Tool.*", "-java..*", "-javax..*", "-com.sun..*", "-sun..*", "-rr..*", "-tools..*", "-acme..*", "-.*__\$rr_.*", "-org.xml..*", default=ACCEPT] </value> </option>
+    <option><name> shadowThread </name>       <value> ["-.*", default=ACCEPT] </value> </option>
+    <option><name> noop </name>               <value> [default=ACCEPT] </value> </option>
+    <option><name> noConstructor </name>      <value> false </value> </option>
+    <option><name> noClone </name>            <value> false </value> </option>
+    <option><name> dump </name>               <value>  </value>   </option>
+    <option><name> field </name>              <value> FINE </value> </option>
+    <option><name> fancy </name>              <value> false </value> </option>
+    <option><name> verify </name>             <value> false </value> </option>
+    <option><name> trackReflection </name>    <value> false </value> </option>
+    <option><name> arraySites </name>         <value> false </value> </option>
+    <option><name> Use TestAcquires </name>   <value> false </value> </option>
+    <option><name> sanity </name>             <value> false </value> </option>
+    <option><name> reentrantEvents </name>    <value> false </value> </option>
+    <option><name> nojoin </name>             <value> false </value> </option>
+    <option><name> multiLoader </name>        <value> false </value> </option>
+    <option><name> indices </name>            <value> 2147483647 </value> </option>
+    <option><name> updaters </name>           <value> SAFE </value> </option>
+    <option><name> array </name>              <value> FINE </value> </option>
+    <option><name> userArray </name>          <value> rr.state.ArrayStateCreator$1@45ee12a7 </value> </option>
+    <option><name> nobarrier </name>          <value> false </value> </option>
+    <option><name> arrayCacheType </name>     <value> STRONG </value> </option>
+    <option><name> callSites </name>          <value> false </value> </option>
+    <option><name> maxWarn </name>            <value> 1 </value>  </option>
+  </options>
+  <system>
+    <host> dhcp-11-249.it.uu.se </host> 
+    <name> java.vm.version </name>     <value> 25.101-b13 </value> 
+    <name> java.vm.vendor </name>      <value> Oracle Corporation </value> 
+    <name> java.vm.name </name>        <value> Java HotSpot(TM) 64-Bit Server VM </value> 
+    <name> java.class.path </name>     <value> .:/Users/tuan-phongngo/OptimalVerifiedFT/build/jar/rragent.jar </value> 
+    <name> os.name </name>             <value> Mac OS X </value> 
+    <name> os.arch </name>             <value> x86_64 </value> 
+    <name> os.version </name>          <value> 10.12.4 </value> 
+    <name> user.name </name>           <value> tuan-phongngo </value> 
+    <name> user.dir </name>            <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/jython </value> 
+    <availableProcs> 8 </availableProcs> 
+    <memCommitted> 1023 </memCommitted> 
+    <memUsed> 310 </memUsed> 
+    <memTotal> 1023 </memTotal> 
+    <compileTime> 20205 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 127 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 647 </time> </gc>
+  </system>
+  <instrumented>  </instrumented> 
+  <instrumentedNum> 0 </instrumentedNum> 
+  <skipped>  </skipped> 
+  <skippedNum> 0 </skippedNum> 
+  <sanityChecked>  </sanityChecked> 
+  <sanityCheckedNum> 0 </sanityCheckedNum> 
+  <counters>
+
+    <counter><name> "ArrayStateFactory: Size" </name>                    <value> 0 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>0.00000</total> <count>0</count>  </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 0 </value> </counter>
+
+    <counter><name> "Clone: Count" </name>                               <value> 0 </value> </counter>
+
+    <counter><name> "GCRunner: Max Usage" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 2,191 </value> </counter>
+    <counter><name> "RRBench: Warmup 2" </name>                          <value> 3,446 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 3,333 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 2,818 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 2,768 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 2,727 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 2,747 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 2,613 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 2,734 </value> </counter>
+
+    <counter><name> "ShadowThread: Count" </name>                        <value> 0 </value> </counter>
+    <counter><name> "ShadowThread: Max Live" </name>                     <value> 0 </value> </counter>
+    <counter><name> "ShadowThread: getCurrentThread() calls" </name>     <value> 0 </value> </counter>
+
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>0.00000</total> <count>0</count>  </value> </counter>
+  </counters>
+  <yikes>
+  </yikes>
+  <tool>
+    <name> Empty </name> 
+  </tool>
+  <tool>
+    <name> Last </name> 
+  </tool>
+  <threadCount> 0 </threadCount> 
+  <threadMaxActive> 0 </threadMaxActive> 
+  <errorTotal> 0 </errorTotal> 
+  <distinctErrorTotal> 0 </distinctErrorTotal> 
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <arrays>
+  </arrays>
+  <locks>
+  </locks>
+  <fieldAccesses>
+  </fieldAccesses>
+  <errorCountPerErrorType>
+  </errorCountPerErrorType>
+  <warningsTotal> 0 </warningsTotal> 
+  <yikesTotal> 0 </yikesTotal> 
+  <failed> false </failed> 
+  <failedReason>  </failedReason> 
+  <time> 23347 </time> 
+</entry>
+[RR: Time = 23347]
+[RR: Exiting: 0]

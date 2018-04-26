@@ -1,0 +1,526 @@
+PREP
+Archive:  lusearch.zip
+  inflating: lusearch/create-queries.pl  
+  inflating: lusearch/index-default/_0.cfx  
+  inflating: lusearch/index-default/_2.cfs  
+  inflating: lusearch/index-default/segments.gen  
+  inflating: lusearch/index-default/segments_2  
+  inflating: lusearch/query000.txt   
+  inflating: lusearch/query001.txt   
+  inflating: lusearch/query002.txt   
+  inflating: lusearch/query003.txt   
+  inflating: lusearch/query004.txt   
+  inflating: lusearch/query005.txt   
+  inflating: lusearch/query006.txt   
+  inflating: lusearch/query007.txt   
+  inflating: lusearch/query008.txt   
+  inflating: lusearch/query009.txt   
+  inflating: lusearch/query010.txt   
+  inflating: lusearch/query011.txt   
+  inflating: lusearch/query012.txt   
+  inflating: lusearch/query013.txt   
+  inflating: lusearch/query014.txt   
+  inflating: lusearch/query015.txt   
+  inflating: lusearch/query016.txt   
+  inflating: lusearch/query017.txt   
+  inflating: lusearch/query018.txt   
+  inflating: lusearch/query019.txt   
+  inflating: lusearch/query020.txt   
+  inflating: lusearch/query021.txt   
+  inflating: lusearch/query022.txt   
+  inflating: lusearch/query023.txt   
+  inflating: lusearch/query024.txt   
+  inflating: lusearch/query025.txt   
+  inflating: lusearch/query026.txt   
+  inflating: lusearch/query027.txt   
+  inflating: lusearch/query028.txt   
+  inflating: lusearch/query029.txt   
+  inflating: lusearch/query030.txt   
+  inflating: lusearch/query031.txt   
+  inflating: lusearch/query032.txt   
+  inflating: lusearch/query033.txt   
+  inflating: lusearch/query034.txt   
+  inflating: lusearch/query035.txt   
+  inflating: lusearch/query036.txt   
+  inflating: lusearch/query037.txt   
+  inflating: lusearch/query038.txt   
+  inflating: lusearch/query039.txt   
+  inflating: lusearch/query040.txt   
+  inflating: lusearch/query041.txt   
+  inflating: lusearch/query042.txt   
+  inflating: lusearch/query043.txt   
+  inflating: lusearch/query044.txt   
+  inflating: lusearch/query045.txt   
+  inflating: lusearch/query046.txt   
+  inflating: lusearch/query047.txt   
+  inflating: lusearch/query048.txt   
+  inflating: lusearch/query049.txt   
+  inflating: lusearch/query050.txt   
+  inflating: lusearch/query051.txt   
+  inflating: lusearch/query052.txt   
+  inflating: lusearch/query053.txt   
+  inflating: lusearch/query054.txt   
+  inflating: lusearch/query055.txt   
+  inflating: lusearch/query056.txt   
+  inflating: lusearch/query057.txt   
+  inflating: lusearch/query058.txt   
+  inflating: lusearch/query059.txt   
+  inflating: lusearch/query060.txt   
+  inflating: lusearch/query061.txt   
+  inflating: lusearch/query062.txt   
+  inflating: lusearch/query063.txt   
+  inflating: lusearch/query064.txt   
+  inflating: lusearch/query065.txt   
+  inflating: lusearch/query066.txt   
+  inflating: lusearch/query067.txt   
+  inflating: lusearch/query068.txt   
+  inflating: lusearch/query069.txt   
+  inflating: lusearch/query070.txt   
+  inflating: lusearch/query071.txt   
+  inflating: lusearch/query072.txt   
+  inflating: lusearch/query073.txt   
+  inflating: lusearch/query074.txt   
+  inflating: lusearch/query075.txt   
+  inflating: lusearch/query076.txt   
+  inflating: lusearch/query077.txt   
+  inflating: lusearch/query078.txt   
+  inflating: lusearch/query079.txt   
+  inflating: lusearch/query080.txt   
+  inflating: lusearch/query081.txt   
+  inflating: lusearch/query082.txt   
+  inflating: lusearch/query083.txt   
+  inflating: lusearch/query084.txt   
+  inflating: lusearch/query085.txt   
+  inflating: lusearch/query086.txt   
+  inflating: lusearch/query087.txt   
+  inflating: lusearch/query088.txt   
+  inflating: lusearch/query089.txt   
+  inflating: lusearch/query090.txt   
+  inflating: lusearch/query091.txt   
+  inflating: lusearch/query092.txt   
+  inflating: lusearch/query093.txt   
+  inflating: lusearch/query094.txt   
+  inflating: lusearch/query095.txt   
+  inflating: lusearch/query096.txt   
+  inflating: lusearch/query097.txt   
+  inflating: lusearch/query098.txt   
+  inflating: lusearch/query099.txt   
+  inflating: lusearch/query100.txt   
+  inflating: lusearch/query101.txt   
+  inflating: lusearch/query102.txt   
+  inflating: lusearch/query103.txt   
+  inflating: lusearch/query104.txt   
+  inflating: lusearch/query105.txt   
+  inflating: lusearch/query106.txt   
+  inflating: lusearch/query107.txt   
+  inflating: lusearch/query108.txt   
+  inflating: lusearch/query109.txt   
+  inflating: lusearch/query110.txt   
+  inflating: lusearch/query111.txt   
+  inflating: lusearch/query112.txt   
+  inflating: lusearch/query113.txt   
+  inflating: lusearch/query114.txt   
+  inflating: lusearch/query115.txt   
+  inflating: lusearch/query116.txt   
+  inflating: lusearch/query117.txt   
+  inflating: lusearch/query118.txt   
+  inflating: lusearch/query119.txt   
+  inflating: lusearch/query120.txt   
+  inflating: lusearch/query121.txt   
+  inflating: lusearch/query122.txt   
+  inflating: lusearch/query123.txt   
+  inflating: lusearch/query124.txt   
+  inflating: lusearch/query125.txt   
+  inflating: lusearch/query126.txt   
+  inflating: lusearch/query127.txt   
+  inflating: lusearch/words.txt.gz   
+PREP DONE
+rrrun -maxTid=18 -classpath=original.jar -benchmark=5 -classpath=original.jar -quiet -maxWarn=1 -xml=BaseTime-lusearch-0.out -logs=/Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/Experiments/table-bench -tool=N -noinst RRBench
+java version "1.8.0_101"
+Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
+
+objc[49050]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/bin/java (0x102ed74c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x102f9f4e0). One of the two will be used. Which one is undefined.
+[premain: Installling RoadRunner Agent...]
+[main: RoadRunner Agent Loaded.]
+[main: Running in FAST Mode]
+[RR: Creating Fresh Meta Data]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 1.    ----- ----- -----]
+[main: ]
+4 query batches completed
+8 query batches completed
+12 query batches completed
+16 query batches completed
+20 query batches completed
+24 query batches completed
+28 query batches completed
+32 query batches completed
+36 query batches completed
+40 query batches completed
+44 query batches completed
+48 query batches completed
+52 query batches completed
+56 query batches completed
+60 query batches completed
+64 query batches completed
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1825.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 2.    ----- ----- -----]
+[main: ]
+4 query batches completed
+8 query batches completed
+12 query batches completed
+16 query batches completed
+20 query batches completed
+24 query batches completed
+28 query batches completed
+32 query batches completed
+36 query batches completed
+40 query batches completed
+44 query batches completed
+48 query batches completed
+52 query batches completed
+56 query batches completed
+60 query batches completed
+64 query batches completed
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 1112.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 3.    ----- ----- -----]
+[main: ]
+4 query batches completed
+8 query batches completed
+12 query batches completed
+16 query batches completed
+20 query batches completed
+24 query batches completed
+28 query batches completed
+32 query batches completed
+36 query batches completed
+40 query batches completed
+44 query batches completed
+48 query batches completed
+52 query batches completed
+56 query batches completed
+60 query batches completed
+64 query batches completed
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 817.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 1.    ----- ----- -----]
+[main: ]
+4 query batches completed
+8 query batches completed
+12 query batches completed
+16 query batches completed
+20 query batches completed
+24 query batches completed
+28 query batches completed
+32 query batches completed
+36 query batches completed
+40 query batches completed
+44 query batches completed
+48 query batches completed
+52 query batches completed
+56 query batches completed
+60 query batches completed
+64 query batches completed
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 679.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 2.    ----- ----- -----]
+[main: ]
+4 query batches completed
+8 query batches completed
+12 query batches completed
+16 query batches completed
+20 query batches completed
+24 query batches completed
+28 query batches completed
+32 query batches completed
+36 query batches completed
+40 query batches completed
+44 query batches completed
+48 query batches completed
+52 query batches completed
+56 query batches completed
+60 query batches completed
+64 query batches completed
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 649.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 3.    ----- ----- -----]
+[main: ]
+4 query batches completed
+8 query batches completed
+12 query batches completed
+16 query batches completed
+20 query batches completed
+24 query batches completed
+28 query batches completed
+32 query batches completed
+36 query batches completed
+40 query batches completed
+44 query batches completed
+48 query batches completed
+52 query batches completed
+56 query batches completed
+60 query batches completed
+64 query batches completed
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 640.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 4.    ----- ----- -----]
+[main: ]
+4 query batches completed
+8 query batches completed
+12 query batches completed
+16 query batches completed
+20 query batches completed
+24 query batches completed
+28 query batches completed
+32 query batches completed
+36 query batches completed
+40 query batches completed
+44 query batches completed
+48 query batches completed
+52 query batches completed
+56 query batches completed
+60 query batches completed
+64 query batches completed
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 629.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 5.    ----- ----- -----]
+[main: ]
+4 query batches completed
+8 query batches completed
+12 query batches completed
+16 query batches completed
+20 query batches completed
+24 query batches completed
+28 query batches completed
+32 query batches completed
+36 query batches completed
+40 query batches completed
+44 query batches completed
+48 query batches completed
+52 query batches completed
+56 query batches completed
+60 query batches completed
+64 query batches completed
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 623.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[RR: Total Time: 7143]
+<entry>
+  <date> Wed Apr 25 21:52:32 CEST 2018 </date> 
+  <mode> FAST </mode> 
+  <timeout> NO </timeout> 
+  <options>
+    <option><name> javaArgs </name>           <value> RRBench  </value> </option>
+    <option><name> noDecInline </name>        <value> false </value> </option>
+    <option><name> quiet </name>              <value> true </value> </option>
+    <option><name> logDepth </name>           <value> 100 </value> </option>
+    <option><name> logs </name>               <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/Experiments/table-bench </value> </option>
+    <option><name> out </name>                <value>  </value>   </option>
+    <option><name> err </name>                <value>  </value>   </option>
+    <option><name> noinst </name>             <value> true </value> </option>
+    <option><name> inst </name>               <value> NOINST </value> </option>
+    <option><name> infThreads </name>         <value> 0 </value>  </option>
+    <option><name> benchmark </name>          <value> 5 </value>  </option>
+    <option><name> warmup </name>             <value> 3 </value>  </option>
+    <option><name> availableProcessors </name> <value> 8 </value>  </option>
+    <option><name> args </name>               <value> [] </value> </option>
+    <option><name> d </name>                  <value> [] </value> </option>
+    <option><name> maxYikes </name>           <value> 5 </value>  </option>
+    <option><name> help </name>               <value> false </value> </option>
+    <option><name> toolpath </name>           <value> /Users/tuan-phongngo/OptimalVerifiedFT/classes/rr/simple:/Users/tuan-phongngo/OptimalVerifiedFT/classes/tools </value> </option>
+    <option><name> classpath </name>          <value> original.jar </value> </option>
+    <option><name> tool </name>               <value> N </value>  </option>
+    <option><name> tools </name>              <value> false </value> </option>
+    <option><name> noxml </name>              <value> false </value> </option>
+    <option><name> constantGC </name>         <value> false </value> </option>
+    <option><name> noFP </name>               <value> false </value> </option>
+    <option><name> noShutdownHook </name>     <value> false </value> </option>
+    <option><name> noEnter </name>            <value> true </value> </option>
+    <option><name> xml </name>                <value> BaseTime-lusearch-0.out </value> </option>
+    <option><name> pulse </name>              <value>  </value>   </option>
+    <option><name> maxTime </name>            <value> 0 </value>  </option>
+    <option><name> maxMem </name>             <value> 10240 </value> </option>
+    <option><name> maxTid </name>             <value> 18 </value> </option>
+    <option><name> stacks </name>             <value> true </value> </option>
+    <option><name> values </name>             <value> false </value> </option>
+    <option><name> noTidGC </name>            <value> false </value> </option>
+    <option><name> noEventReuse </name>       <value> false </value> </option>
+    <option><name> trackMemoryUsage </name>   <value> false </value> </option>
+    <option><name> repository </name>         <value>  </value>   </option>
+    <option><name> meta </name>               <value> null </value> </option>
+    <option><name> methods </name>            <value> [default=ACCEPT] </value> </option>
+    <option><name> fields </name>             <value> ["-.*this\$.*", "-$.*__\$rr.*", default=ACCEPT] </value> </option>
+    <option><name> lines </name>              <value> [default=ACCEPT] </value> </option>
+    <option><name> classes </name>            <value> ["-java..*", "-javax..*", "-com.sun..*", "-sun..*", "-rr..*", "-tools..*", "-acme..*", "-.*__\$rr_.*", "-org.xml..*", default=ACCEPT] </value> </option>
+    <option><name> shadowThread </name>       <value> ["-.*", default=ACCEPT] </value> </option>
+    <option><name> noop </name>               <value> [default=ACCEPT] </value> </option>
+    <option><name> noConstructor </name>      <value> false </value> </option>
+    <option><name> noClone </name>            <value> false </value> </option>
+    <option><name> dump </name>               <value>  </value>   </option>
+    <option><name> field </name>              <value> FINE </value> </option>
+    <option><name> fancy </name>              <value> false </value> </option>
+    <option><name> verify </name>             <value> false </value> </option>
+    <option><name> trackReflection </name>    <value> false </value> </option>
+    <option><name> arraySites </name>         <value> false </value> </option>
+    <option><name> Use TestAcquires </name>   <value> false </value> </option>
+    <option><name> sanity </name>             <value> false </value> </option>
+    <option><name> reentrantEvents </name>    <value> false </value> </option>
+    <option><name> nojoin </name>             <value> false </value> </option>
+    <option><name> multiLoader </name>        <value> false </value> </option>
+    <option><name> indices </name>            <value> 2147483647 </value> </option>
+    <option><name> updaters </name>           <value> SAFE </value> </option>
+    <option><name> array </name>              <value> FINE </value> </option>
+    <option><name> userArray </name>          <value> rr.state.ArrayStateCreator$1@45ee12a7 </value> </option>
+    <option><name> nobarrier </name>          <value> false </value> </option>
+    <option><name> arrayCacheType </name>     <value> STRONG </value> </option>
+    <option><name> callSites </name>          <value> false </value> </option>
+    <option><name> maxWarn </name>            <value> 1 </value>  </option>
+  </options>
+  <system>
+    <host> dhcp-11-249.it.uu.se </host> 
+    <name> java.vm.version </name>     <value> 25.101-b13 </value> 
+    <name> java.vm.vendor </name>      <value> Oracle Corporation </value> 
+    <name> java.vm.name </name>        <value> Java HotSpot(TM) 64-Bit Server VM </value> 
+    <name> java.class.path </name>     <value> .:/Users/tuan-phongngo/OptimalVerifiedFT/build/jar/rragent.jar </value> 
+    <name> os.name </name>             <value> Mac OS X </value> 
+    <name> os.arch </name>             <value> x86_64 </value> 
+    <name> os.version </name>          <value> 10.12.4 </value> 
+    <name> user.name </name>           <value> tuan-phongngo </value> 
+    <name> user.dir </name>            <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/lusearch </value> 
+    <availableProcs> 8 </availableProcs> 
+    <memCommitted> 1990 </memCommitted> 
+    <memUsed> 1128 </memUsed> 
+    <memTotal> 1990 </memTotal> 
+    <compileTime> 12765 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 68 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 140 </time> </gc>
+  </system>
+  <instrumented>  </instrumented> 
+  <instrumentedNum> 0 </instrumentedNum> 
+  <skipped>  </skipped> 
+  <skippedNum> 0 </skippedNum> 
+  <sanityChecked>  </sanityChecked> 
+  <sanityCheckedNum> 0 </sanityCheckedNum> 
+  <counters>
+
+    <counter><name> "ArrayStateFactory: Size" </name>                    <value> 0 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>0.00000</total> <count>0</count>  </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 0 </value> </counter>
+
+    <counter><name> "Clone: Count" </name>                               <value> 0 </value> </counter>
+
+    <counter><name> "GCRunner: Max Usage" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 1,825 </value> </counter>
+    <counter><name> "RRBench: Warmup 2" </name>                          <value> 1,112 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 817 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 679 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 649 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 640 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 629 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 623 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 644 </value> </counter>
+
+    <counter><name> "ShadowThread: Count" </name>                        <value> 0 </value> </counter>
+    <counter><name> "ShadowThread: Max Live" </name>                     <value> 0 </value> </counter>
+    <counter><name> "ShadowThread: getCurrentThread() calls" </name>     <value> 0 </value> </counter>
+
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>0.00000</total> <count>0</count>  </value> </counter>
+  </counters>
+  <yikes>
+  </yikes>
+  <tool>
+    <name> Empty </name> 
+  </tool>
+  <tool>
+    <name> Last </name> 
+  </tool>
+  <threadCount> 0 </threadCount> 
+  <threadMaxActive> 0 </threadMaxActive> 
+  <errorTotal> 0 </errorTotal> 
+  <distinctErrorTotal> 0 </distinctErrorTotal> 
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <arrays>
+  </arrays>
+  <locks>
+  </locks>
+  <fieldAccesses>
+  </fieldAccesses>
+  <errorCountPerErrorType>
+  </errorCountPerErrorType>
+  <warningsTotal> 0 </warningsTotal> 
+  <yikesTotal> 0 </yikesTotal> 
+  <failed> false </failed> 
+  <failedReason>  </failedReason> 
+  <time> 7143 </time> 
+</entry>
+[RR: Time = 7143]
+[RR: Exiting: 0]
