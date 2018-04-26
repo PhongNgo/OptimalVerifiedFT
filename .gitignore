@@ -1,3 +1,12 @@
 *.out.*
 *.html
 .DS_Store
+OptimalVerifiedFT/*
+.DS_Store
+OptimalVerifiedFT/.DS_Store
+*.out
+.DS_Store
+benchmarks/.DS_Store
+OptimalVerifiedFT/.DS_Store
+src/.DS_Store
+src/tools/.DS_Store
