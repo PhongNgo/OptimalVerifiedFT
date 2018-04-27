@@ -408,33 +408,36 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
         return;
       }
       
-      if (r == Epoch.READ_SHARED && sx.get(st.getTid()) == e) {
-        if (COUNT_OPERATIONS) readSharedSameEpoch.inc(st.getTid());
-        return;
-      }
-      
       if (sx.W == e) { // newly added
         if (COUNT_OPERATIONS) readWriteSameEpoch.inc(st.getTid());
         return;
       }
       
+      if (r == Epoch.READ_SHARED && sx.get(st.getTid()) == e) {
+        if (COUNT_OPERATIONS) readSharedSameEpoch.inc(st.getTid());
+        return;
+      }
+      
+      
+      
     }
     
-    final int tid = st.getTid();
-    final VectorClock tV = ts_get_V(st);
+    
     
     synchronized(sx) {
       
-      /* optional */ {
+      /* optional */ //{
         final int/*epoch*/ w = sx.W;
         final int wTid = Epoch.tid(w);
-        
+        final int tid = st.getTid();
+        final VectorClock tV = ts_get_V(st);
+      
         if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
           if (COUNT_OPERATIONS) writeReadError.inc(tid);
           error(event, sx, "Write-Read Race", "Write by ", wTid, "Read by ", tid);
           return;
         }
-      }
+      //}
       
       final int/*epoch*/ r = sx.R;
       
@@ -472,31 +475,35 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
           if (COUNT_OPERATIONS) readSameEpoch.inc(st.getTid());
           return true;
         }
-        if (r == Epoch.READ_SHARED && sx.get(st.getTid()) == e) {
-          if (COUNT_OPERATIONS) readSharedSameEpoch.inc(st.getTid());
-          return true;
-        }
+        
         if (sx.W == e) { // newly added
           if (COUNT_OPERATIONS) readWriteSameEpoch.inc(st.getTid());
           return true;
         }
         
+        if (r == Epoch.READ_SHARED && sx.get(st.getTid()) == e) {
+          if (COUNT_OPERATIONS) readSharedSameEpoch.inc(st.getTid());
+          return true;
+        }
+        
+        
       }
       
-      final int tid = st.getTid();
-      final VectorClock tV = ts_get_V(st);
+      
       
       synchronized(sx) {
         
-        /* optional */ {
+        /* optional */ //{
           final int/*epoch*/ w = sx.W;
           final int wTid = Epoch.tid(w);
+          final int tid = st.getTid();
+          final VectorClock tV = ts_get_V(st);
           
           if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
             ts_set_badVarState(st, sx);
             return false;
           }
-        }
+        //}
         
         final int/*epoch*/ r = sx.R;
         
@@ -539,10 +546,20 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
     }
     
     
-    final int tid = st.getTid();
-    final VectorClock tV = ts_get_V(st);
     
-    /* optional */ {
+    
+    synchronized(sx) {
+      final int/*epoch*/ w = sx.W;
+      final int wTid = Epoch.tid(w);
+      final int tid = st.getTid();
+      final VectorClock tV = ts_get_V(st);
+      
+      if (wTid != tid /* optimization */ && !Epoch.leq(w, tV.get(wTid))) {
+        if (COUNT_OPERATIONS) writeWriteError.inc(tid);
+        error(event, sx, "Write-Write Race", "Write by ", wTid, "Write by ", tid);
+        return;
+      }
+      
       final int/*epoch*/ r = sx.R;
       
       if (r != Epoch.READ_SHARED) {
@@ -553,39 +570,26 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
           return;
         }
         if (COUNT_OPERATIONS) writeExclusive.inc(tid);
-        
       } else {
         if (sx.anyGt(tV)) {
           if (COUNT_OPERATIONS) sharedWriteError.inc(tid);
+          //for (int prevReader = sx.nextGt(tV, 0); prevReader > -1; prevReader = sx.nextGt(tV, prevReader + 1)) {
+          //	error(event, sx, "Read(Shared)-Write Race", "Read by ", prevReader, "Write by ", tid);
+          //}
           error(event, sx, "Read(Shared)-Write Race", "Read by ", sx.nextGt(tV, 0), "Write by ", tid);
           return;
+          
         }
         if (COUNT_OPERATIONS) writeShared.inc(tid);
       }
-      
-    }
-    
-    synchronized(sx) {
-      final int/*epoch*/ w = sx.W;
-      final int wTid = Epoch.tid(w);
-      
-      if (wTid != tid /* optimization */ && !Epoch.leq(w, tV.get(wTid))) {
-        if (COUNT_OPERATIONS) writeWriteError.inc(tid);
-        error(event, sx, "Write-Write Race", "Write by ", wTid, "Write by ", tid);
-        return;
-      }
       sx.W = e;
     }
-    
   }
-  
-  
   
   // only count events when returning true;
   public static boolean writeFastPath(final ShadowVar shadow, final ShadowThread st) {
     if (shadow instanceof FTVarState) {
       final FTVarState sx = ((FTVarState)shadow);
-      
       final int/*epoch*/ e = ts_get_E(st);
       
       /* optional */ {
@@ -595,12 +599,20 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
         }
       }
       
-      final int tid = st.getTid();
-      final VectorClock tV = ts_get_V(st);
       
-      /* optional */ {
-        final int/*epoch*/ r = sx.R;
+      
+      synchronized(sx) {
+        final int/*epoch*/ w = sx.W;
+        final int wTid = Epoch.tid(w);
+        final int tid = st.getTid();
+        final VectorClock tV = ts_get_V(st);
         
+        if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
+          ts_set_badVarState(st, sx);
+          return false;
+        }
+        
+        final int/*epoch*/ r = sx.R;
         if (r != Epoch.READ_SHARED) {
           final int rTid = Epoch.tid(r);
           if (rTid != tid && !Epoch.leq(r, tV.get(rTid))) {
@@ -615,21 +627,9 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
           }
           if (COUNT_OPERATIONS) writeShared.inc(tid);
         }
-      }
-      
-      synchronized(sx) {
-        final int/*epoch*/ w = sx.W;
-        final int wTid = Epoch.tid(w);
-        
-        if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
-          ts_set_badVarState(st, sx);
-          return false;
-        }
         sx.W = e;
+        return true;
       }
-      
-      return true;
-      
     } else {
       return false;
     }

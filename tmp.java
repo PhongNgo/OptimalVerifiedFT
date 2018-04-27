@@ -399,33 +399,35 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
         return;
       }
       
-      if (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e) {
-        if (COUNT_OPERATIONS) readSharedSameLongEpoch.inc(st.getTid());
-        return;
-      }
-      
       if (sx.W == e) { // newly added
         if (COUNT_OPERATIONS) readWriteSameLongEpoch.inc(st.getTid());
         return;
       }
       
+      if (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e) {
+        if (COUNT_OPERATIONS) readSharedSameLongEpoch.inc(st.getTid());
+        return;
+      }
+      
+      
     }
     
-    final int tid = st.getTid();
-    final LongVectorClock tV = ts_get_V(st);
+    
     
     synchronized(sx) {
       
-      /* optional */ {
+      /* optional */ //{
         final long/*epoch*/ w = sx.W;
         final int wTid = LongEpoch.tid(w);
+        final int tid = st.getTid();
+        final LongVectorClock tV = ts_get_V(st);
         
         if (wTid != tid && !LongEpoch.leq(w, tV.get(wTid))) {
           if (COUNT_OPERATIONS) writeReadError.inc(tid);
           error(event, sx, "Write-Read Race", "Write by ", wTid, "Read by ", tid);
           return;
         }
-      }
+      //}
       
       final long/*epoch*/ r = sx.R;
       
@@ -463,31 +465,35 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
           if (COUNT_OPERATIONS) readSameLongEpoch.inc(st.getTid());
           return true;
         }
-        if (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e) {
-          if (COUNT_OPERATIONS) readSharedSameLongEpoch.inc(st.getTid());
-          return true;
-        }
+        
         if (sx.W == e) { // newly added
           if (COUNT_OPERATIONS) readWriteSameLongEpoch.inc(st.getTid());
           return true;
         }
         
+        if (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e) {
+          if (COUNT_OPERATIONS) readSharedSameLongEpoch.inc(st.getTid());
+          return true;
+        }
+        
+        
       }
       
-      final int tid = st.getTid();
-      final LongVectorClock tV = ts_get_V(st);
+      
       
       synchronized(sx) {
         
-        /* optional */ {
+        /* optional */ //{
           final long/*epoch*/ w = sx.W;
           final int wTid = LongEpoch.tid(w);
+          final int tid = st.getTid();
+          final LongVectorClock tV = ts_get_V(st);
           
           if (wTid != tid && !LongEpoch.leq(w, tV.get(wTid))) {
             ts_set_badVarState(st, sx);
             return false;
           }
-        }
+        //}
         
         final long/*epoch*/ r = sx.R;
         
