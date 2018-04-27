@@ -1,6 +1,7 @@
 *.out.*
 *.html
 *.jar
+*.pyc
 .DS_Store
 OptimalVerifiedFT/*
 .DS_Store
@@ -23,3 +24,8 @@ auto/rr/tool/parser/sym.java
 auto/tools/util/LongVectorClock.java
 *.csv
 *.tex
+*.log
+*.aux
+
+benchmarks/Experiments/small-tables-stats.pdf
+benchmarks/Experiments/small-tables-perf.pdf
