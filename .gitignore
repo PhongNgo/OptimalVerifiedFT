@@ -15,3 +15,8 @@ auto/tools/fasttrack_long/FastTrackToolEnhancedV1.java
 auto/rr/tool/parser/sym.java
 auto/rr/tool/parser/parser.java
 auto/rr/tool/parser/Lexer.java
+auto/bin/rrrun
+auto/rr/tool/parser/Lexer.java
+auto/rr/tool/parser/parser.java
+auto/rr/tool/parser/sym.java
+auto/tools/util/LongVectorClock.java
