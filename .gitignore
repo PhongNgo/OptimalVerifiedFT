@@ -1,5 +1,6 @@
 *.out.*
 *.html
+*.jar
 .DS_Store
 OptimalVerifiedFT/*
 .DS_Store
