@@ -1,0 +1,645 @@
+PREP
+Archive:  lusearch.zip
+  inflating: lusearch/create-queries.pl  
+  inflating: lusearch/index-default/_0.cfx  
+  inflating: lusearch/index-default/_2.cfs  
+  inflating: lusearch/index-default/segments.gen  
+  inflating: lusearch/index-default/segments_2  
+  inflating: lusearch/query000.txt   
+  inflating: lusearch/query001.txt   
+  inflating: lusearch/query002.txt   
+  inflating: lusearch/query003.txt   
+  inflating: lusearch/query004.txt   
+  inflating: lusearch/query005.txt   
+  inflating: lusearch/query006.txt   
+  inflating: lusearch/query007.txt   
+  inflating: lusearch/query008.txt   
+  inflating: lusearch/query009.txt   
+  inflating: lusearch/query010.txt   
+  inflating: lusearch/query011.txt   
+  inflating: lusearch/query012.txt   
+  inflating: lusearch/query013.txt   
+  inflating: lusearch/query014.txt   
+  inflating: lusearch/query015.txt   
+  inflating: lusearch/query016.txt   
+  inflating: lusearch/query017.txt   
+  inflating: lusearch/query018.txt   
+  inflating: lusearch/query019.txt   
+  inflating: lusearch/query020.txt   
+  inflating: lusearch/query021.txt   
+  inflating: lusearch/query022.txt   
+  inflating: lusearch/query023.txt   
+  inflating: lusearch/query024.txt   
+  inflating: lusearch/query025.txt   
+  inflating: lusearch/query026.txt   
+  inflating: lusearch/query027.txt   
+  inflating: lusearch/query028.txt   
+  inflating: lusearch/query029.txt   
+  inflating: lusearch/query030.txt   
+  inflating: lusearch/query031.txt   
+  inflating: lusearch/query032.txt   
+  inflating: lusearch/query033.txt   
+  inflating: lusearch/query034.txt   
+  inflating: lusearch/query035.txt   
+  inflating: lusearch/query036.txt   
+  inflating: lusearch/query037.txt   
+  inflating: lusearch/query038.txt   
+  inflating: lusearch/query039.txt   
+  inflating: lusearch/query040.txt   
+  inflating: lusearch/query041.txt   
+  inflating: lusearch/query042.txt   
+  inflating: lusearch/query043.txt   
+  inflating: lusearch/query044.txt   
+  inflating: lusearch/query045.txt   
+  inflating: lusearch/query046.txt   
+  inflating: lusearch/query047.txt   
+  inflating: lusearch/query048.txt   
+  inflating: lusearch/query049.txt   
+  inflating: lusearch/query050.txt   
+  inflating: lusearch/query051.txt   
+  inflating: lusearch/query052.txt   
+  inflating: lusearch/query053.txt   
+  inflating: lusearch/query054.txt   
+  inflating: lusearch/query055.txt   
+  inflating: lusearch/query056.txt   
+  inflating: lusearch/query057.txt   
+  inflating: lusearch/query058.txt   
+  inflating: lusearch/query059.txt   
+  inflating: lusearch/query060.txt   
+  inflating: lusearch/query061.txt   
+  inflating: lusearch/query062.txt   
+  inflating: lusearch/query063.txt   
+  inflating: lusearch/query064.txt   
+  inflating: lusearch/query065.txt   
+  inflating: lusearch/query066.txt   
+  inflating: lusearch/query067.txt   
+  inflating: lusearch/query068.txt   
+  inflating: lusearch/query069.txt   
+  inflating: lusearch/query070.txt   
+  inflating: lusearch/query071.txt   
+  inflating: lusearch/query072.txt   
+  inflating: lusearch/query073.txt   
+  inflating: lusearch/query074.txt   
+  inflating: lusearch/query075.txt   
+  inflating: lusearch/query076.txt   
+  inflating: lusearch/query077.txt   
+  inflating: lusearch/query078.txt   
+  inflating: lusearch/query079.txt   
+  inflating: lusearch/query080.txt   
+  inflating: lusearch/query081.txt   
+  inflating: lusearch/query082.txt   
+  inflating: lusearch/query083.txt   
+  inflating: lusearch/query084.txt   
+  inflating: lusearch/query085.txt   
+  inflating: lusearch/query086.txt   
+  inflating: lusearch/query087.txt   
+  inflating: lusearch/query088.txt   
+  inflating: lusearch/query089.txt   
+  inflating: lusearch/query090.txt   
+  inflating: lusearch/query091.txt   
+  inflating: lusearch/query092.txt   
+  inflating: lusearch/query093.txt   
+  inflating: lusearch/query094.txt   
+  inflating: lusearch/query095.txt   
+  inflating: lusearch/query096.txt   
+  inflating: lusearch/query097.txt   
+  inflating: lusearch/query098.txt   
+  inflating: lusearch/query099.txt   
+  inflating: lusearch/query100.txt   
+  inflating: lusearch/query101.txt   
+  inflating: lusearch/query102.txt   
+  inflating: lusearch/query103.txt   
+  inflating: lusearch/query104.txt   
+  inflating: lusearch/query105.txt   
+  inflating: lusearch/query106.txt   
+  inflating: lusearch/query107.txt   
+  inflating: lusearch/query108.txt   
+  inflating: lusearch/query109.txt   
+  inflating: lusearch/query110.txt   
+  inflating: lusearch/query111.txt   
+  inflating: lusearch/query112.txt   
+  inflating: lusearch/query113.txt   
+  inflating: lusearch/query114.txt   
+  inflating: lusearch/query115.txt   
+  inflating: lusearch/query116.txt   
+  inflating: lusearch/query117.txt   
+  inflating: lusearch/query118.txt   
+  inflating: lusearch/query119.txt   
+  inflating: lusearch/query120.txt   
+  inflating: lusearch/query121.txt   
+  inflating: lusearch/query122.txt   
+  inflating: lusearch/query123.txt   
+  inflating: lusearch/query124.txt   
+  inflating: lusearch/query125.txt   
+  inflating: lusearch/query126.txt   
+  inflating: lusearch/query127.txt   
+  inflating: lusearch/words.txt.gz   
+PREP DONE
+rrrun -maxTid=18 -classpath=original.jar -benchmark=5 -classpath=original.jar -quiet -maxWarn=1 -xml=FastTrackV2-lusearch-0.out -logs=/Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/Experiments/table-bench -tool=FT2 RRBench
+java version "1.8.0_101"
+Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
+
+objc[57276]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/bin/java (0x102a434c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x103aa84e0). One of the two will be used. Which one is undefined.
+[premain: Installling RoadRunner Agent...]
+[main: RoadRunner Agent Loaded.]
+[main: Running in FAST Mode]
+[RR: Creating Fresh Meta Data]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 1.    ----- ----- -----]
+[main: ]
+## YIKES: Old Version Number in class file. Updating to 49
+
+## YIKES: Old Version Number in class file. Updating to 49
+
+## YIKES: Old Version Number in class file. Updating to 49
+
+## YIKES: Old Version Number in class file. Updating to 49
+
+## YIKES: Old Version Number in class file. Updating to 49
+## Suppressing further yikes messages like that one.
+
+## YIKES: SafeFieldUpdater: Concurrent update.
+
+## YIKES: SafeFieldUpdater: Concurrent update.
+
+## YIKES: concurrent initialization of guard state
+
+## YIKES: concurrent initialization of guard state
+
+## YIKES: SafeFieldUpdater: Concurrent update.
+
+## YIKES: SafeFieldUpdater: Concurrent update.
+
+## YIKES: concurrent initialization of guard state
+
+## YIKES: concurrent initialization of guard state
+
+## YIKES: SafeFieldUpdater: Concurrent update.
+## Suppressing further yikes messages like that one.
+
+## YIKES: concurrent initialization of guard state
+## Suppressing further yikes messages like that one.
+
+## YIKES: Concurrent class rr.state.ShadowVolatile$ByFieldTable$1 resource creation in ResourceManager
+
+## YIKES: Concurrent class rr.state.ShadowVolatile$ByFieldTable$1 resource creation in ResourceManager
+
+## YIKES: Concurrent class rr.state.ShadowVolatile$ByFieldTable$1 resource creation in ResourceManager
+
+## YIKES: Concurrent class rr.state.ShadowVolatile$ByFieldTable$1 resource creation in ResourceManager
+
+## YIKES: Concurrent class rr.state.ShadowVolatile$ByFieldTable$1 resource creation in ResourceManager
+## Suppressing further yikes messages like that one.
+
+4 query batches completed
+8 query batches completed
+12 query batches completed
+16 query batches completed
+20 query batches completed
+24 query batches completed
+28 query batches completed
+32 query batches completed
+36 query batches completed
+40 query batches completed
+44 query batches completed
+48 query batches completed
+52 query batches completed
+56 query batches completed
+60 query batches completed
+64 query batches completed
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 32058.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 2.    ----- ----- -----]
+[main: ]
+## YIKES: Concurrent array state creation...
+
+## YIKES: Bad Update
+
+## YIKES: Concurrent array guard state init...
+
+## YIKES: Concurrent array state creation...
+
+## YIKES: Concurrent array state creation...
+
+## YIKES: Concurrent array state creation...
+
+## YIKES: Concurrent array state creation...
+## Suppressing further yikes messages like that one.
+
+4 query batches completed
+8 query batches completed
+12 query batches completed
+16 query batches completed
+20 query batches completed
+24 query batches completed
+28 query batches completed
+32 query batches completed
+36 query batches completed
+40 query batches completed
+44 query batches completed
+48 query batches completed
+52 query batches completed
+56 query batches completed
+60 query batches completed
+64 query batches completed
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 34795.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 3.    ----- ----- -----]
+[main: ]
+## YIKES: Bad Update
+
+## YIKES: Concurrent array guard state init...
+
+4 query batches completed
+8 query batches completed
+12 query batches completed
+16 query batches completed
+20 query batches completed
+24 query batches completed
+28 query batches completed
+32 query batches completed
+36 query batches completed
+40 query batches completed
+44 query batches completed
+48 query batches completed
+52 query batches completed
+56 query batches completed
+60 query batches completed
+64 query batches completed
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 41276.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 1.    ----- ----- -----]
+[main: ]
+4 query batches completed
+8 query batches completed
+12 query batches completed
+16 query batches completed
+20 query batches completed
+24 query batches completed
+28 query batches completed
+32 query batches completed
+36 query batches completed
+40 query batches completed
+44 query batches completed
+48 query batches completed
+52 query batches completed
+56 query batches completed
+60 query batches completed
+64 query batches completed
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 41893.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 2.    ----- ----- -----]
+[main: ]
+## YIKES: Bad Update
+
+## YIKES: Concurrent array guard state init...
+
+4 query batches completed
+8 query batches completed
+12 query batches completed
+16 query batches completed
+20 query batches completed
+24 query batches completed
+28 query batches completed
+32 query batches completed
+36 query batches completed
+40 query batches completed
+44 query batches completed
+48 query batches completed
+52 query batches completed
+56 query batches completed
+60 query batches completed
+64 query batches completed
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 61543.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 3.    ----- ----- -----]
+[main: ]
+4 query batches completed
+8 query batches completed
+12 query batches completed
+16 query batches completed
+20 query batches completed
+24 query batches completed
+28 query batches completed
+32 query batches completed
+36 query batches completed
+40 query batches completed
+44 query batches completed
+48 query batches completed
+52 query batches completed
+56 query batches completed
+60 query batches completed
+64 query batches completed
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 51010.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 4.    ----- ----- -----]
+[main: ]
+4 query batches completed
+8 query batches completed
+12 query batches completed
+16 query batches completed
+20 query batches completed
+24 query batches completed
+28 query batches completed
+32 query batches completed
+36 query batches completed
+40 query batches completed
+44 query batches completed
+48 query batches completed
+52 query batches completed
+56 query batches completed
+60 query batches completed
+64 query batches completed
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 46652.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 5.    ----- ----- -----]
+[main: ]
+4 query batches completed
+8 query batches completed
+12 query batches completed
+16 query batches completed
+20 query batches completed
+24 query batches completed
+28 query batches completed
+32 query batches completed
+36 query batches completed
+40 query batches completed
+44 query batches completed
+48 query batches completed
+52 query batches completed
+56 query batches completed
+60 query batches completed
+64 query batches completed
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 46690.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[RR: Total Time: 361572]
+<entry>
+  <date> Fri Apr 27 01:19:27 CEST 2018 </date> 
+  <mode> FAST </mode> 
+  <timeout> NO </timeout> 
+  <options>
+    <option><name> javaArgs </name>           <value> RRBench  </value> </option>
+    <option><name> noDecInline </name>        <value> false </value> </option>
+    <option><name> quiet </name>              <value> true </value> </option>
+    <option><name> logDepth </name>           <value> 100 </value> </option>
+    <option><name> logs </name>               <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/Experiments/table-bench </value> </option>
+    <option><name> out </name>                <value>  </value>   </option>
+    <option><name> err </name>                <value>  </value>   </option>
+    <option><name> noinst </name>             <value> false </value> </option>
+    <option><name> inst </name>               <value> INST </value> </option>
+    <option><name> infThreads </name>         <value> 0 </value>  </option>
+    <option><name> benchmark </name>          <value> 5 </value>  </option>
+    <option><name> warmup </name>             <value> 3 </value>  </option>
+    <option><name> availableProcessors </name> <value> 8 </value>  </option>
+    <option><name> args </name>               <value> [] </value> </option>
+    <option><name> d </name>                  <value> [] </value> </option>
+    <option><name> maxYikes </name>           <value> 5 </value>  </option>
+    <option><name> help </name>               <value> false </value> </option>
+    <option><name> toolpath </name>           <value> /Users/tuan-phongngo/OptimalVerifiedFT/classes/rr/simple:/Users/tuan-phongngo/OptimalVerifiedFT/classes/tools </value> </option>
+    <option><name> classpath </name>          <value> original.jar </value> </option>
+    <option><name> tool </name>               <value> FT2 </value> </option>
+    <option><name> tools </name>              <value> false </value> </option>
+    <option><name> noxml </name>              <value> false </value> </option>
+    <option><name> constantGC </name>         <value> false </value> </option>
+    <option><name> noFP </name>               <value> false </value> </option>
+    <option><name> noShutdownHook </name>     <value> false </value> </option>
+    <option><name> noEnter </name>            <value> true </value> </option>
+    <option><name> xml </name>                <value> FastTrackV2-lusearch-0.out </value> </option>
+    <option><name> pulse </name>              <value>  </value>   </option>
+    <option><name> maxTime </name>            <value> 0 </value>  </option>
+    <option><name> maxMem </name>             <value> 10240 </value> </option>
+    <option><name> maxTid </name>             <value> 18 </value> </option>
+    <option><name> stacks </name>             <value> true </value> </option>
+    <option><name> values </name>             <value> false </value> </option>
+    <option><name> noTidGC </name>            <value> false </value> </option>
+    <option><name> noEventReuse </name>       <value> false </value> </option>
+    <option><name> trackMemoryUsage </name>   <value> false </value> </option>
+    <option><name> repository </name>         <value>  </value>   </option>
+    <option><name> meta </name>               <value> null </value> </option>
+    <option><name> methods </name>            <value> ["-.*Barrier.await\(\)V", "-java.util.concurrent.CyclicBarrier.await\(JLjava/util/concurrent/TimeUnit;\)I", "-java.util.concurrent.CyclicBarrier.await\(\)I", "-.*Barrier.DoBarrier\(I\)V", "-.*TournamentBarrier.DoBarrier\(I\)V", default=ACCEPT] </value> </option>
+    <option><name> fields </name>             <value> ["-.*this\$.*", "-$.*__\$rr.*", default=ACCEPT] </value> </option>
+    <option><name> lines </name>              <value> [default=ACCEPT] </value> </option>
+    <option><name> classes </name>            <value> ["-.*Barrier.*", "-java..*", "-javax..*", "-com.sun..*", "-sun..*", "-rr..*", "-tools..*", "-acme..*", "-.*__\$rr_.*", "-org.xml..*", default=ACCEPT] </value> </option>
+    <option><name> shadowThread </name>       <value> ["-.*", default=ACCEPT] </value> </option>
+    <option><name> noop </name>               <value> [default=ACCEPT] </value> </option>
+    <option><name> noConstructor </name>      <value> false </value> </option>
+    <option><name> noClone </name>            <value> false </value> </option>
+    <option><name> dump </name>               <value>  </value>   </option>
+    <option><name> field </name>              <value> FINE </value> </option>
+    <option><name> fancy </name>              <value> false </value> </option>
+    <option><name> verify </name>             <value> false </value> </option>
+    <option><name> trackReflection </name>    <value> false </value> </option>
+    <option><name> arraySites </name>         <value> false </value> </option>
+    <option><name> Use TestAcquires </name>   <value> false </value> </option>
+    <option><name> sanity </name>             <value> false </value> </option>
+    <option><name> reentrantEvents </name>    <value> false </value> </option>
+    <option><name> nojoin </name>             <value> false </value> </option>
+    <option><name> multiLoader </name>        <value> false </value> </option>
+    <option><name> indices </name>            <value> 2147483647 </value> </option>
+    <option><name> updaters </name>           <value> SAFE </value> </option>
+    <option><name> array </name>              <value> FINE </value> </option>
+    <option><name> userArray </name>          <value> rr.state.ArrayStateCreator$1@45ee12a7 </value> </option>
+    <option><name> nobarrier </name>          <value> false </value> </option>
+    <option><name> arrayCacheType </name>     <value> STRONG </value> </option>
+    <option><name> callSites </name>          <value> false </value> </option>
+    <option><name> maxWarn </name>            <value> 1 </value>  </option>
+    <option><name> noInterrupt </name>        <value> false </value> </option>
+  </options>
+  <system>
+    <host> dhcp-11-249.it.uu.se </host> 
+    <name> java.vm.version </name>     <value> 25.101-b13 </value> 
+    <name> java.vm.vendor </name>      <value> Oracle Corporation </value> 
+    <name> java.vm.name </name>        <value> Java HotSpot(TM) 64-Bit Server VM </value> 
+    <name> java.class.path </name>     <value> .:/Users/tuan-phongngo/OptimalVerifiedFT/build/jar/rragent.jar </value> 
+    <name> os.name </name>             <value> Mac OS X </value> 
+    <name> os.arch </name>             <value> x86_64 </value> 
+    <name> os.version </name>          <value> 10.12.4 </value> 
+    <name> user.name </name>           <value> tuan-phongngo </value> 
+    <name> user.dir </name>            <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/lusearch </value> 
+    <availableProcs> 8 </availableProcs> 
+    <memCommitted> 24288 </memCommitted> 
+    <memUsed> 13034 </memUsed> 
+    <memTotal> 24288 </memTotal> 
+    <compileTime> 94501 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 211006 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 16202 </time> </gc>
+  </system>
+  <instrumented> RRBench org/apache/lucene/analysis/Analyzer org/apache/lucene/analysis/CharArraySet org/apache/lucene/analysis/LowerCaseFilter org/apache/lucene/analysis/StopAnalyzer org/apache/lucene/analysis/StopFilter org/apache/lucene/analysis/Token org/apache/lucene/analysis/TokenFilter org/apache/lucene/analysis/TokenStream org/apache/lucene/analysis/Tokenizer org/apache/lucene/analysis/standard/StandardAnalyzer org/apache/lucene/analysis/standard/StandardFilter org/apache/lucene/analysis/standard/StandardTokenizer org/apache/lucene/analysis/standard/StandardTokenizerImpl org/apache/lucene/document/AbstractField org/apache/lucene/document/DateTools$Resolution org/apache/lucene/document/Document org/apache/lucene/document/Field org/apache/lucene/document/Field$Index org/apache/lucene/document/Field$Store org/apache/lucene/document/Field$TermVector org/apache/lucene/document/FieldSelector org/apache/lucene/document/FieldSelectorResult org/apache/lucene/document/Fieldable org/apache/lucene/index/CompoundFileReader org/apache/lucene/index/CompoundFileReader$CSIndexInput org/apache/lucene/index/CompoundFileReader$FileEntry org/apache/lucene/index/DefaultSkipListReader org/apache/lucene/index/DefaultSkipListWriter org/apache/lucene/index/DirectoryIndexReader org/apache/lucene/index/DirectoryIndexReader$1 org/apache/lucene/index/FieldInfo org/apache/lucene/index/FieldInfos org/apache/lucene/index/FieldsReader org/apache/lucene/index/IndexDeletionPolicy org/apache/lucene/index/IndexFileNameFilter org/apache/lucene/index/IndexFileNames org/apache/lucene/index/IndexReader org/apache/lucene/index/MultiLevelSkipListReader org/apache/lucene/index/MultiLevelSkipListWriter org/apache/lucene/index/Payload org/apache/lucene/index/ReadOnlySegmentReader org/apache/lucene/index/SegmentInfo org/apache/lucene/index/SegmentInfos org/apache/lucene/index/SegmentInfos$FindSegmentsFile org/apache/lucene/index/SegmentMergeQueue org/apache/lucene/index/SegmentMerger org/apache/lucene/index/SegmentMerger$CheckAbort org/apache/lucene/index/SegmentReader org/apache/lucene/index/SegmentReader$Norm org/apache/lucene/index/SegmentTermDocs org/apache/lucene/index/SegmentTermEnum org/apache/lucene/index/Term org/apache/lucene/index/TermBuffer org/apache/lucene/index/TermDocs org/apache/lucene/index/TermEnum org/apache/lucene/index/TermInfo org/apache/lucene/index/TermInfosReader org/apache/lucene/index/TermInfosReader$ThreadResources org/apache/lucene/index/TermInfosWriter org/apache/lucene/index/TermVectorsReader org/apache/lucene/queryParser/CharStream org/apache/lucene/queryParser/FastCharStream org/apache/lucene/queryParser/QueryParser org/apache/lucene/queryParser/QueryParser$JJCalls org/apache/lucene/queryParser/QueryParser$LookaheadSuccess org/apache/lucene/queryParser/QueryParser$Operator org/apache/lucene/queryParser/QueryParserConstants org/apache/lucene/queryParser/QueryParserTokenManager org/apache/lucene/queryParser/Token org/apache/lucene/search/BooleanClause org/apache/lucene/search/BooleanClause$Occur org/apache/lucene/search/BooleanQuery org/apache/lucene/search/BooleanQuery$BooleanWeight org/apache/lucene/search/BooleanScorer2 org/apache/lucene/search/BooleanScorer2$Coordinator org/apache/lucene/search/DefaultSimilarity org/apache/lucene/search/DocIdSetIterator org/apache/lucene/search/Filter org/apache/lucene/search/HitCollector org/apache/lucene/search/HitQueue org/apache/lucene/search/IndexSearcher org/apache/lucene/search/NonMatchingScorer org/apache/lucene/search/Query org/apache/lucene/search/ScoreDoc org/apache/lucene/search/Scorer org/apache/lucene/search/Searchable org/apache/lucene/search/Searcher org/apache/lucene/search/Similarity org/apache/lucene/search/TermQuery org/apache/lucene/search/TermQuery$TermWeight org/apache/lucene/search/TermScorer org/apache/lucene/search/TopDocCollector org/apache/lucene/search/TopDocs org/apache/lucene/search/Weight org/apache/lucene/store/BufferedIndexInput org/apache/lucene/store/ChecksumIndexInput org/apache/lucene/store/ChecksumIndexOutput org/apache/lucene/store/Directory org/apache/lucene/store/FSDirectory org/apache/lucene/store/FSDirectory$FSIndexInput org/apache/lucene/store/FSDirectory$FSIndexInput$Descriptor org/apache/lucene/store/IndexInput org/apache/lucene/store/IndexOutput org/apache/lucene/store/Lock org/apache/lucene/store/LockFactory org/apache/lucene/store/SimpleFSLockFactory org/apache/lucene/util/BitVector org/apache/lucene/util/CloseableThreadLocal org/apache/lucene/util/Parameter org/apache/lucene/util/PriorityQueue org/apache/lucene/util/SmallFloat org/apache/lucene/util/ToStringUtils org/apache/lucene/util/UnicodeUtil org/apache/lucene/util/UnicodeUtil$UTF16Result org/apache/lucene/util/UnicodeUtil$UTF8Result org/apache/lucene/util/cache/Cache org/apache/lucene/util/cache/SimpleLRUCache org/apache/lucene/util/cache/SimpleLRUCache$1 org/apache/lucene/util/cache/SimpleMapCache org/dacapo/lusearch/Search org/dacapo/lusearch/Search$QueryProcessor org/dacapo/lusearch/Search$QueryThread  </instrumented> 
+  <instrumentedNum> 123 </instrumentedNum> 
+  <skipped>  </skipped> 
+  <skippedNum> 0 </skippedNum> 
+  <sanityChecked>  </sanityChecked> 
+  <sanityCheckedNum> 0 </sanityCheckedNum> 
+  <counters>
+
+    <counter><name> "ArrayStateFactory: Size" </name>                    <value> 6,969,753 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>4289.00</total> <count>172</count> <ave>24.9360</ave> </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 10,366 </value> </counter>
+
+    <counter><name> "Clone: Count" </name>                               <value> 19,832,527 </value> </counter>
+
+    <counter><name> "FT: Read Same Epoch" </name>                        <value>          0 </value> </counter>
+    <counter><name> "FT: ReadShared Same Epoch" </name>                  <value>          0 </value> </counter>
+    <counter><name> "FT: Read Exclusive" </name>                         <value>          0 </value> </counter>
+    <counter><name> "FT: Read Share" </name>                             <value>          0 </value> </counter>
+    <counter><name> "FT: Read Shared" </name>                            <value>          0 </value> </counter>
+    <counter><name> "FT: Write-Read Error" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Write Same Epoch" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Write Exclusive" </name>                        <value>          0 </value> </counter>
+    <counter><name> "FT: Write Shared" </name>                           <value>          0 </value> </counter>
+    <counter><name> "FT: Write-Write Error" </name>                      <value>          0 </value> </counter>
+    <counter><name> "FT: Read-Write Error" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Shared-Write Error" </name>                     <value>          0 </value> </counter>
+    <counter><name> "FT: Acquire" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Release" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Fork" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Join" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Barrier" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Wait" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Volatile" </name>                               <value>          0 </value> </counter>
+    <counter><name> "FT: Other" </name>                                  <value>          0 </value> </counter>
+    <counter><name> "FT: Total Reads" </name>                            <value> 0 </value> </counter>
+    <counter><name> "FT: Total Writes" </name>                           <value> 0 </value> </counter>
+    <counter><name> "FT: Total Access Ops" </name>                       <value> 0 </value> </counter>
+    <counter><name> "FT: Total Ops" </name>                              <value> 0 </value> </counter>
+
+    <counter><name> "GCRunner: Max Usage" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "Handler: Count" </name>                             <value> 0 </value> </counter>
+
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 32,058 </value> </counter>
+    <counter><name> "RRBench: Warmup 2" </name>                          <value> 34,795 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 41,276 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 41,893 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 61,543 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 51,010 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 46,652 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 46,690 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 49,557 </value> </counter>
+
+    <counter><name> "ShadowLock: objects" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "ShadowThread: Count" </name>                        <value> 66 </value> </counter>
+    <counter><name> "ShadowThread: Max Live" </name>                     <value> 10 </value> </counter>
+    <counter><name> "ShadowThread: getCurrentThread() calls" </name>     <value> 0 </value> </counter>
+
+    <counter><name> "ShadowVolatile: objects" </name>                    <value> 0 </value> </counter>
+
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>638.000</total> <count>123</count> <ave>5.18699</ave> </value> </counter>
+  </counters>
+  <yikes>
+    <message> Concurrent array state creation... </message> <count> 25 </count> 
+    <message> Concurrent array guard state init.. </message> <count> 3 </count> 
+    <message> SafeFieldUpdater: Concurrent update </message> <count> 7 </count> 
+    <message> concurrent initialization of guard  </message> <count> 7 </count> 
+    <message> Bad Update </message>    <count> 3 </count> 
+    <message> Concurrent class rr.state.ShadowVol </message> <count> 10 </count> 
+    <message> Old Version Number in class file. U </message> <count> 111 </count> 
+  </yikes>
+  <tool>
+    <name> tools.fasttrack.FastTrackTool </name> 
+    <thread> [tid=4    C=[(0:240) (1:141841) (2:13EB3B) (3:143FD4) (4:145846) (5:13F1D9) (6:144A7A) (7:14470F) (8:14023B)]   E=(4:145846)] </thread> 
+    <thread> [tid=3    C=[(0:1FA) (1:11DB7C) (2:11B28A) (3:11B7DB) (4:11CD3D) (5:11B9CC) (6:1171DE) (7:11BE2E) (8:11C700)]   E=(3:11B7DB)] </thread> 
+    <thread> [tid=2    C=[(0:241) (1:141841) (2:1439C3) (3:143FD4) (4:145845) (5:13F1D9) (6:144A7A) (7:14470F) (8:14023B)]   E=(2:1439C3)] </thread> 
+    <thread> [tid=6    C=[(0:23F) (1:141841) (2:13EB3B) (3:143FD4) (4:14061B) (5:13F1D9) (6:144A7B) (7:14470F) (8:14023B)]   E=(6:144A7B)] </thread> 
+    <thread> [tid=3    C=[(0:23D) (1:141841) (2:13EB3B) (3:143FD5) (4:14061B) (5:13F1D9) (6:13FB2E) (7:13F541) (8:14023B)]   E=(3:143FD5)] </thread> 
+    <thread> [tid=1    C=[(0:244) (1:146890) (2:1439C2) (3:143FD4) (4:145845) (5:14420D) (6:144A7A) (7:14470F) (8:145124)]   E=(1:146890)] </thread> 
+    <thread> [tid=8    C=[(0:243) (1:141841) (2:1439C2) (3:143FD4) (4:145845) (5:14420D) (6:144A7A) (7:14470F) (8:145125)]   E=(8:145125)] </thread> 
+    <thread> [tid=0    C=[(0:246) (1:14688F) (2:1439C2) (3:143FD4) (4:145845) (5:14420D) (6:144A7A) (7:14470F) (8:145124)]   E=(0:246)] </thread> 
+    <thread> [tid=7    C=[(0:23E) (1:141841) (2:13EB3B) (3:143FD4) (4:14061B) (5:13F1D9) (6:13FB2E) (7:144710) (8:14023B)]   E=(7:144710)] </thread> 
+    <thread> [tid=8    C=[(0:1F9) (1:11DB7C) (2:11B28A) (3:116736) (4:11CD3D) (5:11B9CC) (6:1171DE) (7:11BE2E) (8:11C701)]   E=(8:11C701)] </thread> 
+    <thread> [tid=6    C=[(0:1FB) (1:11DB7C) (2:11B28A) (3:11B7DA) (4:11CD3D) (5:11B9CC) (6:11C12D) (7:11BE2E) (8:11C700)]   E=(6:11C12D)] </thread> 
+    <thread> [tid=9    C=[(0:0) (1:0) (2:0) (3:0) (4:0) (5:0) (6:0) (7:0) (8:0) (9:2)]   E=(9:2)] </thread> 
+    <thread> [tid=5    C=[(0:242) (1:141841) (2:1439C2) (3:143FD4) (4:145845) (5:14420E) (6:144A7A) (7:14470F) (8:14023B)]   E=(5:14420E)] </thread> 
+  </tool>
+  <tool>
+    <name> Last </name> 
+  </tool>
+  <threadCount> 13 </threadCount> 
+  <threadMaxActive> 10 </threadMaxActive> 
+  <errorTotal> 0 </errorTotal> 
+  <distinctErrorTotal> 0 </distinctErrorTotal> 
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <arrays>
+  </arrays>
+  <locks>
+  </locks>
+  <fieldAccesses>
+  </fieldAccesses>
+  <errorCountPerErrorType>
+  </errorCountPerErrorType>
+  <warningsTotal> 0 </warningsTotal> 
+  <yikesTotal> 166 </yikesTotal> 
+  <failed> false </failed> 
+  <failedReason>  </failedReason> 
+  <time> 361572 </time> 
+</entry>
+[RR: Time = 361572]
+[RR: Exiting: 0]

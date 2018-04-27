@@ -1,0 +1,315 @@
+rrrun -classpath=original.jar -benchmark=5 -classpath=original.jar -quiet -maxWarn=1 -xml=BaseTime-moldynb-0.out -logs=/Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/Experiments/table-bench -tool=N -noinst RRBench 8
+java version "1.8.0_101"
+Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
+
+objc[56527]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/bin/java (0x10cda24c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x10ce6a4e0). One of the two will be used. Which one is undefined.
+[premain: Installling RoadRunner Agent...]
+[main: RoadRunner Agent Loaded.]
+[main: Running in FAST Mode]
+[RR: Creating Fresh Meta Data]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 1.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 3 - Size B
+Executing on 8 threads
+
+Section3:MolDyn:Run:SizeB	3.348 (s) 	 8050166.0	 (Interactions/s)
+Section3:MolDyn:Total:SizeB	3.388 (s) 	 0.2951594	 (Solutions/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 3394.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 2.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 3 - Size B
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section3:MolDyn:Total already exists
+JGFInstrumentor.addTimer: warning -  timer Section3:MolDyn:Run already exists
+Section3:MolDyn:Run:SizeB	6.545 (s) 	 1.2353837E7	 (Interactions/s)
+Section3:MolDyn:Total:SizeB	6.604 (s) 	 0.30284676	 (Solutions/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 3216.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 3.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 3 - Size B
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section3:MolDyn:Total already exists
+JGFInstrumentor.addTimer: warning -  timer Section3:MolDyn:Run already exists
+Section3:MolDyn:Run:SizeB	9.655 (s) 	 1.6749014E7	 (Interactions/s)
+Section3:MolDyn:Total:SizeB	9.722 (s) 	 0.3085785	 (Solutions/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 3118.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 1.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 3 - Size B
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section3:MolDyn:Total already exists
+JGFInstrumentor.addTimer: warning -  timer Section3:MolDyn:Run already exists
+Section3:MolDyn:Run:SizeB	12.724 (s) 	 2.1181982E7	 (Interactions/s)
+Section3:MolDyn:Total:SizeB	12.798 (s) 	 0.31254885	 (Solutions/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 3077.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 2.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 3 - Size B
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section3:MolDyn:Total already exists
+JGFInstrumentor.addTimer: warning -  timer Section3:MolDyn:Run already exists
+Section3:MolDyn:Run:SizeB	15.793 (s) 	 2.559864E7	 (Interactions/s)
+Section3:MolDyn:Total:SizeB	15.875 (s) 	 0.31496063	 (Solutions/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 3078.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 3.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 3 - Size B
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section3:MolDyn:Total already exists
+JGFInstrumentor.addTimer: warning -  timer Section3:MolDyn:Run already exists
+Section3:MolDyn:Run:SizeB	18.864 (s) 	 3.0003766E7	 (Interactions/s)
+Section3:MolDyn:Total:SizeB	18.954 (s) 	 0.31655586	 (Solutions/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 3080.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 4.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 3 - Size B
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section3:MolDyn:Total already exists
+JGFInstrumentor.addTimer: warning -  timer Section3:MolDyn:Run already exists
+Section3:MolDyn:Run:SizeB	21.938000000000002 (s) 	 3.4399432E7	 (Interactions/s)
+Section3:MolDyn:Total:SizeB	22.035 (s) 	 0.31767642	 (Solutions/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 3081.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 5.    ----- ----- -----]
+[main: ]
+Java Grande Forum Thread Benchmark Suite - Version 1.0 - Section 3 - Size B
+Executing on 8 threads
+
+JGFInstrumentor.addTimer: warning -  timer Section3:MolDyn:Total already exists
+JGFInstrumentor.addTimer: warning -  timer Section3:MolDyn:Run already exists
+Section3:MolDyn:Run:SizeB	25.025000000000002 (s) 	 3.8772044E7	 (Interactions/s)
+Section3:MolDyn:Total:SizeB	25.129 (s) 	 0.3183573	 (Solutions/s)
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 3094.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[RR: Total Time: 25214]
+<entry>
+  <date> Thu Apr 26 20:22:58 CEST 2018 </date> 
+  <mode> FAST </mode> 
+  <timeout> NO </timeout> 
+  <options>
+    <option><name> javaArgs </name>           <value> RRBench 8  </value> </option>
+    <option><name> noDecInline </name>        <value> false </value> </option>
+    <option><name> quiet </name>              <value> true </value> </option>
+    <option><name> logDepth </name>           <value> 100 </value> </option>
+    <option><name> logs </name>               <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/Experiments/table-bench </value> </option>
+    <option><name> out </name>                <value>  </value>   </option>
+    <option><name> err </name>                <value>  </value>   </option>
+    <option><name> noinst </name>             <value> true </value> </option>
+    <option><name> inst </name>               <value> NOINST </value> </option>
+    <option><name> infThreads </name>         <value> 0 </value>  </option>
+    <option><name> benchmark </name>          <value> 5 </value>  </option>
+    <option><name> warmup </name>             <value> 3 </value>  </option>
+    <option><name> availableProcessors </name> <value> 8 </value>  </option>
+    <option><name> args </name>               <value> [] </value> </option>
+    <option><name> d </name>                  <value> [] </value> </option>
+    <option><name> maxYikes </name>           <value> 5 </value>  </option>
+    <option><name> help </name>               <value> false </value> </option>
+    <option><name> toolpath </name>           <value> /Users/tuan-phongngo/OptimalVerifiedFT/classes/rr/simple:/Users/tuan-phongngo/OptimalVerifiedFT/classes/tools </value> </option>
+    <option><name> classpath </name>          <value> original.jar </value> </option>
+    <option><name> tool </name>               <value> N </value>  </option>
+    <option><name> tools </name>              <value> false </value> </option>
+    <option><name> noxml </name>              <value> false </value> </option>
+    <option><name> constantGC </name>         <value> false </value> </option>
+    <option><name> noFP </name>               <value> false </value> </option>
+    <option><name> noShutdownHook </name>     <value> false </value> </option>
+    <option><name> noEnter </name>            <value> true </value> </option>
+    <option><name> xml </name>                <value> BaseTime-moldynb-0.out </value> </option>
+    <option><name> pulse </name>              <value>  </value>   </option>
+    <option><name> maxTime </name>            <value> 0 </value>  </option>
+    <option><name> maxMem </name>             <value> 10240 </value> </option>
+    <option><name> maxTid </name>             <value> 16 </value> </option>
+    <option><name> stacks </name>             <value> true </value> </option>
+    <option><name> values </name>             <value> false </value> </option>
+    <option><name> noTidGC </name>            <value> false </value> </option>
+    <option><name> noEventReuse </name>       <value> false </value> </option>
+    <option><name> trackMemoryUsage </name>   <value> false </value> </option>
+    <option><name> repository </name>         <value>  </value>   </option>
+    <option><name> meta </name>               <value> null </value> </option>
+    <option><name> methods </name>            <value> [default=ACCEPT] </value> </option>
+    <option><name> fields </name>             <value> ["-.*this\$.*", "-$.*__\$rr.*", default=ACCEPT] </value> </option>
+    <option><name> lines </name>              <value> [default=ACCEPT] </value> </option>
+    <option><name> classes </name>            <value> ["-java..*", "-javax..*", "-com.sun..*", "-sun..*", "-rr..*", "-tools..*", "-acme..*", "-.*__\$rr_.*", "-org.xml..*", default=ACCEPT] </value> </option>
+    <option><name> shadowThread </name>       <value> ["-.*", default=ACCEPT] </value> </option>
+    <option><name> noop </name>               <value> [default=ACCEPT] </value> </option>
+    <option><name> noConstructor </name>      <value> false </value> </option>
+    <option><name> noClone </name>            <value> false </value> </option>
+    <option><name> dump </name>               <value>  </value>   </option>
+    <option><name> field </name>              <value> FINE </value> </option>
+    <option><name> fancy </name>              <value> false </value> </option>
+    <option><name> verify </name>             <value> false </value> </option>
+    <option><name> trackReflection </name>    <value> false </value> </option>
+    <option><name> arraySites </name>         <value> false </value> </option>
+    <option><name> Use TestAcquires </name>   <value> false </value> </option>
+    <option><name> sanity </name>             <value> false </value> </option>
+    <option><name> reentrantEvents </name>    <value> false </value> </option>
+    <option><name> nojoin </name>             <value> false </value> </option>
+    <option><name> multiLoader </name>        <value> false </value> </option>
+    <option><name> indices </name>            <value> 2147483647 </value> </option>
+    <option><name> updaters </name>           <value> SAFE </value> </option>
+    <option><name> array </name>              <value> FINE </value> </option>
+    <option><name> userArray </name>          <value> rr.state.ArrayStateCreator$1@45ee12a7 </value> </option>
+    <option><name> nobarrier </name>          <value> false </value> </option>
+    <option><name> arrayCacheType </name>     <value> STRONG </value> </option>
+    <option><name> callSites </name>          <value> false </value> </option>
+    <option><name> maxWarn </name>            <value> 1 </value>  </option>
+  </options>
+  <system>
+    <host> dhcp-11-249.it.uu.se </host> 
+    <name> java.vm.version </name>     <value> 25.101-b13 </value> 
+    <name> java.vm.vendor </name>      <value> Oracle Corporation </value> 
+    <name> java.vm.name </name>        <value> Java HotSpot(TM) 64-Bit Server VM </value> 
+    <name> java.class.path </name>     <value> .:/Users/tuan-phongngo/OptimalVerifiedFT/build/jar/rragent.jar </value> 
+    <name> os.name </name>             <value> Mac OS X </value> 
+    <name> os.arch </name>             <value> x86_64 </value> 
+    <name> os.version </name>          <value> 10.12.4 </value> 
+    <name> user.name </name>           <value> tuan-phongngo </value> 
+    <name> user.dir </name>            <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/moldyn </value> 
+    <availableProcs> 8 </availableProcs> 
+    <memCommitted> 982 </memCommitted> 
+    <memUsed> 18 </memUsed> 
+    <memTotal> 982 </memTotal> 
+    <compileTime> 1227 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 9 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 91 </time> </gc>
+  </system>
+  <instrumented>  </instrumented> 
+  <instrumentedNum> 0 </instrumentedNum> 
+  <skipped>  </skipped> 
+  <skippedNum> 0 </skippedNum> 
+  <sanityChecked>  </sanityChecked> 
+  <sanityCheckedNum> 0 </sanityCheckedNum> 
+  <counters>
+
+    <counter><name> "ArrayStateFactory: Size" </name>                    <value> 0 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>0.00000</total> <count>0</count>  </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 0 </value> </counter>
+
+    <counter><name> "Clone: Count" </name>                               <value> 0 </value> </counter>
+
+    <counter><name> "GCRunner: Max Usage" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 3,394 </value> </counter>
+    <counter><name> "RRBench: Warmup 2" </name>                          <value> 3,216 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 3,118 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 3,077 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 3,078 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 3,080 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 3,081 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 3,094 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 3,082 </value> </counter>
+
+    <counter><name> "ShadowThread: Count" </name>                        <value> 0 </value> </counter>
+    <counter><name> "ShadowThread: Max Live" </name>                     <value> 0 </value> </counter>
+    <counter><name> "ShadowThread: getCurrentThread() calls" </name>     <value> 0 </value> </counter>
+
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>0.00000</total> <count>0</count>  </value> </counter>
+  </counters>
+  <yikes>
+  </yikes>
+  <tool>
+    <name> Empty </name> 
+  </tool>
+  <tool>
+    <name> Last </name> 
+  </tool>
+  <threadCount> 0 </threadCount> 
+  <threadMaxActive> 0 </threadMaxActive> 
+  <errorTotal> 0 </errorTotal> 
+  <distinctErrorTotal> 0 </distinctErrorTotal> 
+  <methods>
+  </methods>
+  <fields>
+  </fields>
+  <arrays>
+  </arrays>
+  <locks>
+  </locks>
+  <fieldAccesses>
+  </fieldAccesses>
+  <errorCountPerErrorType>
+  </errorCountPerErrorType>
+  <warningsTotal> 0 </warningsTotal> 
+  <yikesTotal> 0 </yikesTotal> 
+  <failed> false </failed> 
+  <failedReason>  </failedReason> 
+  <time> 25214 </time> 
+</entry>
+[RR: Time = 25214]
+[RR: Exiting: 0]

@@ -1,0 +1,1004 @@
+rrrun -maxTid=18 -classpath=original.jar -benchmark=5 -classpath=original.jar -quiet -maxWarn=1 -xml=FastTrackEnhancedV1-h2-0.out -logs=/Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/Experiments/table-bench -tool=FT2E-V1 RRBench
+java version "1.8.0_101"
+Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
+
+objc[57093]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/bin/java (0x104f1a4c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x104fe24e0). One of the two will be used. Which one is undefined.
+[premain: Installling RoadRunner Agent...]
+[main: RoadRunner Agent Loaded.]
+[main: Running in FAST Mode]
+[RR: Creating Fresh Meta Data]
+## YIKES: Old Version Number in class file. Updating to 49
+
+## YIKES: Old Version Number in class file. Updating to 49
+
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 1.    ----- ----- -----]
+[main: ]
+Creating Schema
+Generating Data
+## YIKES: Old Version Number in class file. Updating to 49
+
+## YIKES: Old Version Number in class file. Updating to 49
+
+Generate Indexes
+Generate Foreign Key constraints
+Calculate checksum of initial data
+## YIKES: Old Version Number in class file. Updating to 49
+## Suppressing further yikes messages like that one.
+
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 2    
+##           Blame: rd_array@org/h2/message/TraceObject.java:172:5
+##           Count: 1    (max: 1)
+##      Alloc Site: null
+##    Shadow State: [W=(3:4) R=(3:4) V=[]]
+##  Current Thread: [tid=2    C=[(0:1F7DDA) (1:8) (2:4) (3:0)]   E=(2:4)]
+##           Array: @02[3]
+##         Message: Write-Read Race
+##     Previous Op: Write by  OE_Thread:2[tid = 3]
+##     Currrent Op: Read by  OE_Thread:1[tid = 2]
+##           Stack: tools.fasttrack.FastTrackToolEnhancedV1.arrayError(FastTrackToolEnhancedV1.java:791)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.error(FastTrackToolEnhancedV1.java:773)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.read(FastTrackToolEnhancedV1.java:413)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.access(FastTrackToolEnhancedV1.java:327)
+##                  rr.tool.RREventGenerator.arrayRead(RREventGenerator.java:540)
+##                  org.h2.message.TraceObject.__$rr_getNextId__$rr__Original_(TraceObject.java:172)
+##                  org.h2.message.TraceObject.getNextId(TraceObject.java:171)
+##                  org.h2.jdbc.JdbcConnection.__$rr_prepareStatement__$rr__Original_(JdbcConnection.java:954)
+##                  org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:953)
+##                  org.apache.derbyTesting.system.oe.direct.StatementHelper.__$rr_prepareStatement__$rr__Original_(StatementHelper.java:76)
+##                  org.apache.derbyTesting.system.oe.direct.StatementHelper.prepareStatement(StatementHelper.java:70)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.__$rr_newOrder__$rr__Original_(Standard.java:598)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.newOrder(Standard.java:593)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.__$rr_runNewOrder__$rr__Original_(Submitter.java:429)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.runNewOrder(Submitter.java:388)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransaction__$rr__Original_(TPCCSubmitter.java:113)
+##                  org.dacapo.h2.TPCCSubmitter.runTransaction(TPCCSubmitter.java:92)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransactions__$rr__Original_(TPCCSubmitter.java:71)
+##                  org.dacapo.h2.TPCCSubmitter.runTransactions(TPCCSubmitter.java:63)
+##                  org.dacapo.h2.TPCC$3.__$rr_run__$rr__Original_(TPCC.java:725)
+##                  org.dacapo.h2.TPCC$3.run(TPCC.java:724)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 4    
+##           Blame: rd_array@org/h2/util/StringCache.java:83:52
+##           Count: 1    (max: 1)
+##      Alloc Site: null
+##    Shadow State: [W=(8:6) R=(8:6) V=[]]
+##  Current Thread: [tid=4    C=[(0:1F7DE0) (1:8) (2:3) (3:5) (4:6) (5:4) (6:3) (7:5) (8:5)]   E=(4:6)]
+##           Array: @03[931]
+##         Message: Write-Read Race
+##     Previous Op: Write by  OE_Thread:7[tid = 8]
+##     Currrent Op: Read by  OE_Thread:3[tid = 4]
+##           Stack: tools.fasttrack.FastTrackToolEnhancedV1.arrayError(FastTrackToolEnhancedV1.java:791)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.error(FastTrackToolEnhancedV1.java:773)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.read(FastTrackToolEnhancedV1.java:413)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.access(FastTrackToolEnhancedV1.java:327)
+##                  rr.tool.RREventGenerator.arrayRead(RREventGenerator.java:540)
+##                  org.h2.util.StringCache.__$rr_getNew__$rr__Original_(StringCache.java:83)
+##                  org.h2.util.StringCache.getNew(StringCache.java:68)
+##                  org.h2.command.Parser.__$rr_read__$rr__Original_(Parser.java:2579)
+##                  org.h2.command.Parser.read(Parser.java:2554)
+##                  org.h2.command.Parser.__$rr_readIf__$rr__Original_(Parser.java:2532)
+##                  org.h2.command.Parser.readIf(Parser.java:2530)
+##                  org.h2.command.Parser.__$rr_parseSelectSimple__$rr__Original_(Parser.java:1581)
+##                  org.h2.command.Parser.parseSelectSimple(Parser.java:1580)
+##                  org.h2.command.Parser.__$rr_parseSelectSub__$rr__Original_(Parser.java:1503)
+##                  org.h2.command.Parser.parseSelectSub(Parser.java:1497)
+##                  org.h2.command.Parser.__$rr_parseSelectUnion__$rr__Original_(Parser.java:1348)
+##                  org.h2.command.Parser.parseSelectUnion(Parser.java:1346)
+##                  org.h2.command.Parser.__$rr_parseSelect__$rr__Original_(Parser.java:1336)
+##                  org.h2.command.Parser.parseSelect(Parser.java:1334)
+##                  org.h2.command.Parser.__$rr_parsePrepared__$rr__Original_(Parser.java:395)
+##                  org.h2.command.Parser.parsePrepared(Parser.java:294)
+##                  org.h2.command.Parser.__$rr_parse__$rr__Original_(Parser.java:291)
+##                  org.h2.command.Parser.parse(Parser.java:277)
+##                  org.h2.command.Parser.__$rr_parse__$rr__Original_(Parser.java:263)
+##                  org.h2.command.Parser.parse(Parser.java:262)
+##                  org.h2.command.Parser.__$rr_prepareCommand__$rr__Original_(Parser.java:235)
+##                  org.h2.command.Parser.prepareCommand(Parser.java:234)
+##                  org.h2.engine.Session.__$rr_prepareLocal__$rr__Original_(Session.java:416)
+##                  org.h2.engine.Session.prepareLocal(Session.java:411)
+##                  org.h2.engine.Session.__$rr_prepareCommand__$rr__Original_(Session.java:377)
+##                  org.h2.engine.Session.prepareCommand(Session.java:376)
+##                  org.h2.jdbc.JdbcConnection.__$rr_prepareCommand__$rr__Original_(JdbcConnection.java:1049)
+##                  org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1048)
+##                  org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+##                  org.h2.jdbc.JdbcConnection.__$rr_prepareStatement__$rr__Original_(JdbcConnection.java:964)
+##                  org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:953)
+##                  org.apache.derbyTesting.system.oe.direct.StatementHelper.__$rr_prepareStatement__$rr__Original_(StatementHelper.java:76)
+##                  org.apache.derbyTesting.system.oe.direct.StatementHelper.prepareStatement(StatementHelper.java:70)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.__$rr_newOrder__$rr__Original_(Standard.java:598)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.newOrder(Standard.java:593)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.__$rr_runNewOrder__$rr__Original_(Submitter.java:429)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.runNewOrder(Submitter.java:388)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransaction__$rr__Original_(TPCCSubmitter.java:113)
+##                  org.dacapo.h2.TPCCSubmitter.runTransaction(TPCCSubmitter.java:92)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransactions__$rr__Original_(TPCCSubmitter.java:71)
+##                  org.dacapo.h2.TPCCSubmitter.runTransactions(TPCCSubmitter.java:63)
+##                  org.dacapo.h2.TPCC$3.__$rr_run__$rr__Original_(TPCC.java:725)
+##                  org.dacapo.h2.TPCC$3.run(TPCC.java:724)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 7    
+##           Blame: org/h2/index/ScanIndex.rowCount_J
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(6:3A) R=SHARED V=[(0:0) (1:29) (2:2D) (3:F) (4:3B) (5:32) (6:3A) (7:3A)]]
+##  Current Thread: [tid=7    C=[(0:1F7DE0) (1:3F) (2:3F) (3:36) (4:3A) (5:47) (6:42) (7:3A) (8:26)]   E=(7:3A)]
+##           Class: class org.h2.index.ScanIndex
+##           Field: @04.org/h2/index/ScanIndex.rowCount_J
+##         Message: Read(Shared)-Write Race
+##     Previous Op: Read by  OE_Thread:3[tid = 4]
+##     Currrent Op: Write by  OE_Thread:6[tid = 7]
+##           Stack: tools.fasttrack.FastTrackToolEnhancedV1.fieldError(FastTrackToolEnhancedV1.java:817)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.error(FastTrackToolEnhancedV1.java:771)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.write(FastTrackToolEnhancedV1.java:552)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.access(FastTrackToolEnhancedV1.java:325)
+##                  rr.tool.RREventGenerator.writeAccess(RREventGenerator.java:157)
+##                  org.h2.index.ScanIndex.__$rr_put_rowCount(ScanIndex.java)
+##                  org.h2.index.ScanIndex.__$rr_remove__$rr__Original_(ScanIndex.java:206)
+##                  org.h2.index.ScanIndex.remove(ScanIndex.java:169)
+##                  org.h2.table.TableData.__$rr_removeRow__$rr__Original_(TableData.java:371)
+##                  org.h2.table.TableData.removeRow(TableData.java:353)
+##                  org.h2.table.Table.__$rr_updateRows__$rr__Original_(Table.java:391)
+##                  org.h2.table.Table.updateRows(Table.java:383)
+##                  org.h2.command.dml.Update.__$rr_update__$rr__Original_(Update.java:123)
+##                  org.h2.command.dml.Update.update(Update.java:74)
+##                  org.h2.command.CommandContainer.__$rr_update__$rr__Original_(CommandContainer.java:72)
+##                  org.h2.command.CommandContainer.update(CommandContainer.java:67)
+##                  org.h2.command.Command.__$rr_executeUpdate__$rr__Original_(Command.java:209)
+##                  org.h2.command.Command.executeUpdate(Command.java:196)
+##                  org.h2.jdbc.JdbcPreparedStatement.__$rr_executeUpdateInternal__$rr__Original_(JdbcPreparedStatement.java:139)
+##                  org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:134)
+##                  org.h2.jdbc.JdbcPreparedStatement.__$rr_executeUpdate__$rr__Original_(JdbcPreparedStatement.java:128)
+##                  org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:125)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.__$rr_paymentById__$rr__Original_(Standard.java:463)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.paymentById(Standard.java:409)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.__$rr_payment__$rr__Original_(Standard.java:377)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.payment(Standard.java:342)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.__$rr_runPayment__$rr__Original_(Submitter.java:448)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.runPayment(Submitter.java:445)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransaction__$rr__Original_(TPCCSubmitter.java:104)
+##                  org.dacapo.h2.TPCCSubmitter.runTransaction(TPCCSubmitter.java:92)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransactions__$rr__Original_(TPCCSubmitter.java:71)
+##                  org.dacapo.h2.TPCCSubmitter.runTransactions(TPCCSubmitter.java:63)
+##                  org.dacapo.h2.TPCC$3.__$rr_run__$rr__Original_(TPCC.java:725)
+##                  org.dacapo.h2.TPCC$3.run(TPCC.java:724)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 6    
+##           Blame: wr_array@org/h2/util/StringCache.java:54:73
+##           Count: 1    (max: 1)
+##      Alloc Site: null
+##    Shadow State: [W=(0:1F7BBD) R=SHARED V=[(0:0) (1:1A) (2:33) (3:15) (4:47) (5:15) (6:47) (7:30) (8:15)]]
+##  Current Thread: [tid=6    C=[(0:1F7DE0) (1:46) (2:45) (3:3D) (4:46) (5:55) (6:47) (7:42) (8:26)]   E=(6:47)]
+##           Array: @03[910]
+##         Message: Read(Shared)-Write Race
+##     Previous Op: Read by  OE_Thread:3[tid = 4]
+##     Currrent Op: Write by  OE_Thread:5[tid = 6]
+##           Stack: tools.fasttrack.FastTrackToolEnhancedV1.arrayError(FastTrackToolEnhancedV1.java:791)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.error(FastTrackToolEnhancedV1.java:773)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.write(FastTrackToolEnhancedV1.java:552)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.access(FastTrackToolEnhancedV1.java:325)
+##                  rr.tool.RREventGenerator.arrayWrite(RREventGenerator.java:584)
+##                  org.h2.util.StringCache.__$rr_get__$rr__Original_(StringCache.java:54)
+##                  org.h2.util.StringCache.get(StringCache.java:35)
+##                  org.h2.value.ValueString.__$rr_get__$rr__Original_(ValueString.java:87)
+##                  org.h2.value.ValueString.get(ValueString.java:83)
+##                  org.h2.jdbc.JdbcPreparedStatement.__$rr_setString__$rr__Original_(JdbcPreparedStatement.java:313)
+##                  org.h2.jdbc.JdbcPreparedStatement.setString(JdbcPreparedStatement.java:309)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.__$rr_payment__$rr__Original_(Standard.java:355)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.payment(Standard.java:342)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.__$rr_runPayment__$rr__Original_(Submitter.java:448)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.runPayment(Submitter.java:445)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransaction__$rr__Original_(TPCCSubmitter.java:104)
+##                  org.dacapo.h2.TPCCSubmitter.runTransaction(TPCCSubmitter.java:92)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransactions__$rr__Original_(TPCCSubmitter.java:71)
+##                  org.dacapo.h2.TPCCSubmitter.runTransactions(TPCCSubmitter.java:63)
+##                  org.dacapo.h2.TPCC$3.__$rr_run__$rr__Original_(TPCC.java:725)
+##                  org.dacapo.h2.TPCC$3.run(TPCC.java:724)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 6    
+##           Blame: rd_array@org/h2/value/ValueInt.java:60:25
+##           Count: 1    (max: 1)
+##      Alloc Site: null
+##    Shadow State: [W=(3:62) R=(3:62) V=[]]
+##  Current Thread: [tid=6    C=[(0:1F7DE0) (1:71) (2:6B) (3:60) (4:65) (5:82) (6:70) (7:75) (8:3D)]   E=(6:70)]
+##           Array: @05[98]
+##         Message: Write-Read Race
+##     Previous Op: Write by  OE_Thread:2[tid = 3]
+##     Currrent Op: Read by  OE_Thread:5[tid = 6]
+##           Stack: tools.fasttrack.FastTrackToolEnhancedV1.arrayError(FastTrackToolEnhancedV1.java:791)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.error(FastTrackToolEnhancedV1.java:773)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.read(FastTrackToolEnhancedV1.java:413)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.access(FastTrackToolEnhancedV1.java:327)
+##                  rr.tool.RREventGenerator.arrayRead(RREventGenerator.java:540)
+##                  org.h2.value.ValueInt.__$rr_get__$rr__Original_(ValueInt.java:60)
+##                  org.h2.value.ValueInt.get(ValueInt.java:56)
+##                  org.h2.jdbc.JdbcPreparedStatement.__$rr_setInt__$rr__Original_(JdbcPreparedStatement.java:295)
+##                  org.h2.jdbc.JdbcPreparedStatement.setInt(JdbcPreparedStatement.java:291)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.__$rr_paymentById__$rr__Original_(Standard.java:462)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.paymentById(Standard.java:409)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.__$rr_payment__$rr__Original_(Standard.java:377)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.payment(Standard.java:342)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.__$rr_runPayment__$rr__Original_(Submitter.java:448)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.runPayment(Submitter.java:445)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransaction__$rr__Original_(TPCCSubmitter.java:104)
+##                  org.dacapo.h2.TPCCSubmitter.runTransaction(TPCCSubmitter.java:92)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransactions__$rr__Original_(TPCCSubmitter.java:71)
+##                  org.dacapo.h2.TPCCSubmitter.runTransactions(TPCCSubmitter.java:63)
+##                  org.dacapo.h2.TPCC$3.__$rr_run__$rr__Original_(TPCC.java:725)
+##                  org.dacapo.h2.TPCC$3.run(TPCC.java:724)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 6    
+##           Blame: wr_array@org/h2/value/ValueInt.java:63:57
+##           Count: 1    (max: 1)
+##      Alloc Site: null
+##    Shadow State: [W=(8:63) R=SHARED V=[(0:0) (1:0) (2:0) (3:0) (4:0) (5:0) (6:8B) (7:0) (8:70)]]
+##  Current Thread: [tid=6    C=[(0:1F7DE0) (1:9E) (2:83) (3:7F) (4:7D) (5:A6) (6:8B) (7:8A) (8:6F)]   E=(6:8B)]
+##           Array: @05[177]
+##         Message: Read(Shared)-Write Race
+##     Previous Op: Read by  OE_Thread:7[tid = 8]
+##     Currrent Op: Write by  OE_Thread:5[tid = 6]
+##           Stack: tools.fasttrack.FastTrackToolEnhancedV1.arrayError(FastTrackToolEnhancedV1.java:791)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.error(FastTrackToolEnhancedV1.java:773)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.write(FastTrackToolEnhancedV1.java:552)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.access(FastTrackToolEnhancedV1.java:325)
+##                  rr.tool.RREventGenerator.arrayWrite(RREventGenerator.java:584)
+##                  org.h2.value.ValueInt.__$rr_get__$rr__Original_(ValueInt.java:63)
+##                  org.h2.value.ValueInt.get(ValueInt.java:56)
+##                  org.h2.jdbc.JdbcPreparedStatement.__$rr_setInt__$rr__Original_(JdbcPreparedStatement.java:295)
+##                  org.h2.jdbc.JdbcPreparedStatement.setInt(JdbcPreparedStatement.java:291)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.__$rr_paymentById__$rr__Original_(Standard.java:462)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.paymentById(Standard.java:409)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.__$rr_payment__$rr__Original_(Standard.java:377)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.payment(Standard.java:342)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.__$rr_runPayment__$rr__Original_(Submitter.java:448)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.runPayment(Submitter.java:445)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransaction__$rr__Original_(TPCCSubmitter.java:104)
+##                  org.dacapo.h2.TPCCSubmitter.runTransaction(TPCCSubmitter.java:92)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransactions__$rr__Original_(TPCCSubmitter.java:71)
+##                  org.dacapo.h2.TPCCSubmitter.runTransactions(TPCCSubmitter.java:63)
+##                  org.dacapo.h2.TPCC$3.__$rr_run__$rr__Original_(TPCC.java:725)
+##                  org.dacapo.h2.TPCC$3.run(TPCC.java:724)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 8    
+##           Blame: wr_array@org/h2/value/Value.java:351:105
+##           Count: 1    (max: 1)
+##      Alloc Site: null
+##    Shadow State: [W=(4:90) R=SHARED V=[(0:0) (1:0) (2:0) (3:0) (4:99) (5:0) (6:0) (7:0) (8:86)]]
+##  Current Thread: [tid=8    C=[(0:1F7DE0) (1:BC) (2:83) (3:98) (4:98) (5:B5) (6:9F) (7:94) (8:86)]   E=(8:86)]
+##           Array: @06[435]
+##         Message: Read(Shared)-Write Race
+##     Previous Op: Read by  OE_Thread:3[tid = 4]
+##     Currrent Op: Write by  OE_Thread:7[tid = 8]
+##           Stack: tools.fasttrack.FastTrackToolEnhancedV1.arrayError(FastTrackToolEnhancedV1.java:791)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.error(FastTrackToolEnhancedV1.java:773)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.write(FastTrackToolEnhancedV1.java:552)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.access(FastTrackToolEnhancedV1.java:325)
+##                  rr.tool.RREventGenerator.arrayWrite(RREventGenerator.java:584)
+##                  org.h2.value.Value.__$rr_cache__$rr__Original_(Value.java:351)
+##                  org.h2.value.Value.cache(Value.java:329)
+##                  org.h2.value.ValueDecimal.__$rr_get__$rr__Original_(ValueDecimal.java:198)
+##                  org.h2.value.ValueDecimal.get(ValueDecimal.java:192)
+##                  org.h2.value.DataType.__$rr_convertToValue__$rr__Original_(DataType.java:835)
+##                  org.h2.value.DataType.convertToValue(DataType.java:825)
+##                  org.h2.jdbc.JdbcPreparedStatement.__$rr_setObject__$rr__Original_(JdbcPreparedStatement.java:437)
+##                  org.h2.jdbc.JdbcPreparedStatement.setObject(JdbcPreparedStatement.java:429)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.__$rr_newOrder__$rr__Original_(Standard.java:728)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.newOrder(Standard.java:593)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.__$rr_runNewOrder__$rr__Original_(Submitter.java:429)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.runNewOrder(Submitter.java:388)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransaction__$rr__Original_(TPCCSubmitter.java:113)
+##                  org.dacapo.h2.TPCCSubmitter.runTransaction(TPCCSubmitter.java:92)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransactions__$rr__Original_(TPCCSubmitter.java:71)
+##                  org.dacapo.h2.TPCCSubmitter.runTransactions(TPCCSubmitter.java:63)
+##                  org.dacapo.h2.TPCC$3.__$rr_run__$rr__Original_(TPCC.java:725)
+##                  org.dacapo.h2.TPCC$3.run(TPCC.java:724)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 3    
+##           Blame: rd_array@org/h2/value/Value.java:341:70
+##           Count: 1    (max: 1)
+##      Alloc Site: null
+##    Shadow State: [W=(5:CC) R=(5:CC) V=[]]
+##  Current Thread: [tid=3    C=[(0:1F7DE0) (1:E6) (2:83) (3:CE) (4:C5) (5:CA) (6:CC) (7:BD) (8:B2)]   E=(3:CE)]
+##           Array: @06[634]
+##         Message: Write-Read Race
+##     Previous Op: Write by  OE_Thread:4[tid = 5]
+##     Currrent Op: Read by  OE_Thread:2[tid = 3]
+##           Stack: tools.fasttrack.FastTrackToolEnhancedV1.arrayError(FastTrackToolEnhancedV1.java:791)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.error(FastTrackToolEnhancedV1.java:773)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.read(FastTrackToolEnhancedV1.java:413)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.access(FastTrackToolEnhancedV1.java:327)
+##                  rr.tool.RREventGenerator.arrayRead(RREventGenerator.java:540)
+##                  org.h2.value.Value.__$rr_cache__$rr__Original_(Value.java:341)
+##                  org.h2.value.Value.cache(Value.java:329)
+##                  org.h2.value.ValueString.__$rr_get__$rr__Original_(ValueString.java:91)
+##                  org.h2.value.ValueString.get(ValueString.java:83)
+##                  org.h2.jdbc.JdbcPreparedStatement.__$rr_setString__$rr__Original_(JdbcPreparedStatement.java:313)
+##                  org.h2.jdbc.JdbcPreparedStatement.setString(JdbcPreparedStatement.java:309)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.__$rr_newOrder__$rr__Original_(Standard.java:730)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.newOrder(Standard.java:593)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.__$rr_runNewOrder__$rr__Original_(Submitter.java:429)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.runNewOrder(Submitter.java:388)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransaction__$rr__Original_(TPCCSubmitter.java:113)
+##                  org.dacapo.h2.TPCCSubmitter.runTransaction(TPCCSubmitter.java:92)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransactions__$rr__Original_(TPCCSubmitter.java:71)
+##                  org.dacapo.h2.TPCCSubmitter.runTransactions(TPCCSubmitter.java:63)
+##                  org.dacapo.h2.TPCC$3.__$rr_run__$rr__Original_(TPCC.java:725)
+##                  org.dacapo.h2.TPCC$3.run(TPCC.java:724)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 6    
+##           Blame: rd_array@org/h2/util/StringCache.java:48:50
+##           Count: 1    (max: 1)
+##      Alloc Site: null
+##    Shadow State: [W=(4:2A1) R=SHARED V=[(0:0) (1:63) (2:153) (3:303) (4:2A1) (5:0) (6:254) (7:1DA) (8:2DC)]]
+##  Current Thread: [tid=6    C=[(0:1F7DE0) (1:2A0) (2:203) (3:31D) (4:29F) (5:2A0) (6:2C0) (7:2D4) (8:331)]   E=(6:2C0)]
+##           Array: @03[814]
+##         Message: Write-Read Race
+##     Previous Op: Write by  OE_Thread:3[tid = 4]
+##     Currrent Op: Read by  OE_Thread:5[tid = 6]
+##           Stack: tools.fasttrack.FastTrackToolEnhancedV1.arrayError(FastTrackToolEnhancedV1.java:791)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.error(FastTrackToolEnhancedV1.java:773)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.read(FastTrackToolEnhancedV1.java:413)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.access(FastTrackToolEnhancedV1.java:327)
+##                  rr.tool.RREventGenerator.arrayRead(RREventGenerator.java:540)
+##                  org.h2.util.StringCache.__$rr_get__$rr__Original_(StringCache.java:48)
+##                  org.h2.util.StringCache.get(StringCache.java:35)
+##                  org.h2.value.ValueString.__$rr_get__$rr__Original_(ValueString.java:87)
+##                  org.h2.value.ValueString.get(ValueString.java:83)
+##                  org.h2.jdbc.JdbcPreparedStatement.__$rr_setString__$rr__Original_(JdbcPreparedStatement.java:313)
+##                  org.h2.jdbc.JdbcPreparedStatement.setString(JdbcPreparedStatement.java:309)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.__$rr_newOrder__$rr__Original_(Standard.java:730)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.newOrder(Standard.java:593)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.__$rr_runNewOrder__$rr__Original_(Submitter.java:429)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.runNewOrder(Submitter.java:388)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransaction__$rr__Original_(TPCCSubmitter.java:116)
+##                  org.dacapo.h2.TPCCSubmitter.runTransaction(TPCCSubmitter.java:92)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransactions__$rr__Original_(TPCCSubmitter.java:71)
+##                  org.dacapo.h2.TPCCSubmitter.runTransactions(TPCCSubmitter.java:63)
+##                  org.dacapo.h2.TPCC$3.__$rr_run__$rr__Original_(TPCC.java:725)
+##                  org.dacapo.h2.TPCC$3.run(TPCC.java:724)
+##                  
+## =====================================================================
+## 
+....
+Completed 4000 transactions
+	Stock level .............   155 ( 3.9%)
+	Order status by name ....   108 ( 2.7%)
+	Order status by ID ......    65 ( 1.6%)
+	Payment by name .........  1050 (26.2%)
+	Payment by ID ...........   661 (16.5%)
+	Delivery schedule .......   167 ( 4.2%)
+	New order ...............  1774 (44.4%)
+	New order rollback ......    20 ( 0.5%)
+Resetting database to initial state
+Time to perform pre-iteration phase: 113823 msec
+Time to reset data to initial state: 14295 msec
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 57402.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 2.    ----- ----- -----]
+[main: ]
+## YIKES: Concurrent array state creation...
+
+## YIKES: Bad Update
+
+## YIKES: Concurrent array guard state init...
+
+## YIKES: Concurrent array state creation...
+
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 6    
+##           Blame: wr_array@org/h2/util/StringCache.java:93:84
+##           Count: 1    (max: 1)
+##      Alloc Site: null
+##    Shadow State: [W=(6:D023) R=SHARED V=[(0:0) (1:BF82) (2:0) (3:0) (4:0) (5:0) (6:D02F)]]
+##  Current Thread: [tid=6    C=[(0:1F7F9A) (1:BF81) (2:E4BF) (3:CE43) (4:CBCA) (5:D0D5) (6:D02F) (7:D160) (8:CD7D)]   E=(6:D02F)]
+##           Array: @03[422]
+##         Message: Read(Shared)-Write Race
+##     Previous Op: Read by  OE_Thread:0[tid = 1]
+##     Currrent Op: Write by  OE_Thread:5[tid = 6]
+##           Stack: tools.fasttrack.FastTrackToolEnhancedV1.arrayError(FastTrackToolEnhancedV1.java:791)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.error(FastTrackToolEnhancedV1.java:773)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.write(FastTrackToolEnhancedV1.java:552)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.access(FastTrackToolEnhancedV1.java:325)
+##                  rr.tool.RREventGenerator.arrayWrite(RREventGenerator.java:584)
+##                  org.h2.util.StringCache.__$rr_getNew__$rr__Original_(StringCache.java:93)
+##                  org.h2.util.StringCache.getNew(StringCache.java:68)
+##                  org.h2.command.Parser.__$rr_read__$rr__Original_(Parser.java:2579)
+##                  org.h2.command.Parser.read(Parser.java:2554)
+##                  org.h2.command.Parser.__$rr_readIf__$rr__Original_(Parser.java:2532)
+##                  org.h2.command.Parser.readIf(Parser.java:2530)
+##                  org.h2.command.Parser.__$rr_parseSelectSimple__$rr__Original_(Parser.java:1581)
+##                  org.h2.command.Parser.parseSelectSimple(Parser.java:1580)
+##                  org.h2.command.Parser.__$rr_parseSelectSub__$rr__Original_(Parser.java:1503)
+##                  org.h2.command.Parser.parseSelectSub(Parser.java:1497)
+##                  org.h2.command.Parser.__$rr_parseSelectUnion__$rr__Original_(Parser.java:1348)
+##                  org.h2.command.Parser.parseSelectUnion(Parser.java:1346)
+##                  org.h2.command.Parser.__$rr_parseSelect__$rr__Original_(Parser.java:1336)
+##                  org.h2.command.Parser.parseSelect(Parser.java:1334)
+##                  org.h2.command.Parser.__$rr_parsePrepared__$rr__Original_(Parser.java:395)
+##                  org.h2.command.Parser.parsePrepared(Parser.java:294)
+##                  org.h2.command.Parser.__$rr_parse__$rr__Original_(Parser.java:291)
+##                  org.h2.command.Parser.parse(Parser.java:277)
+##                  org.h2.command.Parser.__$rr_parse__$rr__Original_(Parser.java:263)
+##                  org.h2.command.Parser.parse(Parser.java:262)
+##                  org.h2.command.Parser.__$rr_prepareCommand__$rr__Original_(Parser.java:235)
+##                  org.h2.command.Parser.prepareCommand(Parser.java:234)
+##                  org.h2.engine.Session.__$rr_prepareLocal__$rr__Original_(Session.java:416)
+##                  org.h2.engine.Session.prepareLocal(Session.java:411)
+##                  org.h2.engine.Session.__$rr_prepareCommand__$rr__Original_(Session.java:377)
+##                  org.h2.engine.Session.prepareCommand(Session.java:376)
+##                  org.h2.jdbc.JdbcConnection.__$rr_prepareCommand__$rr__Original_(JdbcConnection.java:1049)
+##                  org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1048)
+##                  org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+##                  org.h2.jdbc.JdbcConnection.__$rr_prepareStatement__$rr__Original_(JdbcConnection.java:964)
+##                  org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:953)
+##                  org.apache.derbyTesting.system.oe.direct.StatementHelper.__$rr_prepareStatement__$rr__Original_(StatementHelper.java:76)
+##                  org.apache.derbyTesting.system.oe.direct.StatementHelper.prepareStatement(StatementHelper.java:70)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.__$rr_paymentById__$rr__Original_(Standard.java:437)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.paymentById(Standard.java:409)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.__$rr_payment__$rr__Original_(Standard.java:377)
+##                  org.apache.derbyTesting.system.oe.direct.Standard.payment(Standard.java:342)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.__$rr_runPayment__$rr__Original_(Submitter.java:448)
+##                  org.apache.derbyTesting.system.oe.client.Submitter.runPayment(Submitter.java:445)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransaction__$rr__Original_(TPCCSubmitter.java:104)
+##                  org.dacapo.h2.TPCCSubmitter.runTransaction(TPCCSubmitter.java:92)
+##                  org.dacapo.h2.TPCCSubmitter.__$rr_runTransactions__$rr__Original_(TPCCSubmitter.java:71)
+##                  org.dacapo.h2.TPCCSubmitter.runTransactions(TPCCSubmitter.java:63)
+##                  org.dacapo.h2.TPCC$3.__$rr_run__$rr__Original_(TPCC.java:725)
+##                  org.dacapo.h2.TPCC$3.run(TPCC.java:724)
+##                  
+## =====================================================================
+## 
+....
+Completed 4000 transactions
+	Stock level .............   155 ( 3.9%)
+	Order status by name ....   108 ( 2.7%)
+	Order status by ID ......    65 ( 1.6%)
+	Payment by name .........  1050 (26.2%)
+	Payment by ID ...........   661 (16.5%)
+	Delivery schedule .......   167 ( 4.2%)
+	New order ...............  1774 (44.4%)
+	New order rollback ......    20 ( 0.5%)
+Resetting database to initial state
+Time to reset data to initial state: 14841 msec
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 54056.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Warmup 3.    ----- ----- -----]
+[main: ]
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 1    
+##           Blame: org/h2/jdbc/JdbcConnection.session_Lorg/h2/engine/SessionInterface;
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(0:1F7EB1) R=(0:1F7EAD) V=[]]
+##  Current Thread: [tid=1    C=[(0:B) (1:1876C) (2:0) (3:0)]   E=(1:1876C)]
+##           Class: class org.h2.jdbc.JdbcConnection
+##           Field: @07.org/h2/jdbc/JdbcConnection.session_Lorg/h2/engine/SessionInterface;
+##         Message: Write-Read Race
+##     Previous Op: Write by  main[tid = 0]
+##     Currrent Op: Read by  Finalizer[tid = 1]
+##           Stack: tools.fasttrack.FastTrackToolEnhancedV1.fieldError(FastTrackToolEnhancedV1.java:817)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.error(FastTrackToolEnhancedV1.java:771)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.read(FastTrackToolEnhancedV1.java:413)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.access(FastTrackToolEnhancedV1.java:327)
+##                  rr.tool.RREventGenerator.readAccess(RREventGenerator.java:146)
+##                  org.h2.jdbc.JdbcConnection.__$rr_get_session(JdbcConnection.java)
+##                  org.h2.jdbc.JdbcConnection.__$rr_finalize__$rr__Original_(JdbcConnection.java:1354)
+##                  org.h2.jdbc.JdbcConnection.finalize(JdbcConnection.java:1347)
+##                  java.lang.System$2.invokeFinalize(System.java:1270)
+##                  java.lang.ref.Finalizer.runFinalizer(Finalizer.java:98)
+##                  java.lang.ref.Finalizer.access$100(Finalizer.java:34)
+##                  java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:210)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 1    
+##           Blame: org/h2/engine/Session.closed_Z
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(0:1F7EC2) R=(0:1F7EBF) V=[]]
+##  Current Thread: [tid=1    C=[(0:B) (1:1876C) (2:0) (3:0)]   E=(1:1876C)]
+##           Class: class org.h2.engine.Session
+##           Field: @08.org/h2/engine/Session.closed_Z
+##         Message: Write-Read Race
+##     Previous Op: Write by  main[tid = 0]
+##     Currrent Op: Read by  Finalizer[tid = 1]
+##           Stack: tools.fasttrack.FastTrackToolEnhancedV1.fieldError(FastTrackToolEnhancedV1.java:817)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.error(FastTrackToolEnhancedV1.java:771)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.read(FastTrackToolEnhancedV1.java:413)
+##                  tools.fasttrack.FastTrackToolEnhancedV1.access(FastTrackToolEnhancedV1.java:327)
+##                  rr.tool.RREventGenerator.readAccess(RREventGenerator.java:146)
+##                  org.h2.engine.Session.__$rr_get_closed(Session.java)
+##                  org.h2.engine.Session.__$rr_finalize__$rr__Original_(Session.java:346)
+##                  org.h2.engine.Session.finalize(Session.java:342)
+##                  java.lang.System$2.invokeFinalize(System.java:1270)
+##                  java.lang.ref.Finalizer.runFinalizer(Finalizer.java:98)
+##                  java.lang.ref.Finalizer.access$100(Finalizer.java:34)
+##                  java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:210)
+##                  
+## =====================================================================
+## 
+## YIKES: Concurrent array state creation...
+
+....
+Completed 4000 transactions
+	Stock level .............   155 ( 3.9%)
+	Order status by name ....   108 ( 2.7%)
+	Order status by ID ......    65 ( 1.6%)
+	Payment by name .........  1050 (26.2%)
+	Payment by ID ...........   661 (16.5%)
+	Delivery schedule .......   167 ( 4.2%)
+	New order ...............  1774 (44.4%)
+	New order rollback ......    20 ( 0.5%)
+Resetting database to initial state
+Time to reset data to initial state: 15020 msec
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 53940.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 1.    ----- ----- -----]
+[main: ]
+## YIKES: Bad Update
+
+## YIKES: Concurrent array guard state init...
+
+....
+Completed 4000 transactions
+	Stock level .............   155 ( 3.9%)
+	Order status by name ....   108 ( 2.7%)
+	Order status by ID ......    65 ( 1.6%)
+	Payment by name .........  1050 (26.2%)
+	Payment by ID ...........   661 (16.5%)
+	Delivery schedule .......   167 ( 4.2%)
+	New order ...............  1774 (44.4%)
+	New order rollback ......    20 ( 0.5%)
+Resetting database to initial state
+Time to reset data to initial state: 13727 msec
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 52637.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 2.    ----- ----- -----]
+[main: ]
+## YIKES: Concurrent array state creation...
+
+....
+Completed 4000 transactions
+	Stock level .............   155 ( 3.9%)
+	Order status by name ....   108 ( 2.7%)
+	Order status by ID ......    65 ( 1.6%)
+	Payment by name .........  1050 (26.2%)
+	Payment by ID ...........   661 (16.5%)
+	Delivery schedule .......   167 ( 4.2%)
+	New order ...............  1774 (44.4%)
+	New order rollback ......    20 ( 0.5%)
+Resetting database to initial state
+Time to reset data to initial state: 13781 msec
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 52410.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 3.    ----- ----- -----]
+[main: ]
+## YIKES: Bad Update
+
+## YIKES: Concurrent array guard state init...
+
+....
+Completed 4000 transactions
+	Stock level .............   155 ( 3.9%)
+	Order status by name ....   108 ( 2.7%)
+	Order status by ID ......    65 ( 1.6%)
+	Payment by name .........  1050 (26.2%)
+	Payment by ID ...........   661 (16.5%)
+	Delivery schedule .......   167 ( 4.2%)
+	New order ...............  1774 (44.4%)
+	New order rollback ......    20 ( 0.5%)
+Resetting database to initial state
+Time to reset data to initial state: 14955 msec
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 53686.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 4.    ----- ----- -----]
+[main: ]
+## YIKES: Concurrent array state creation...
+## Suppressing further yikes messages like that one.
+
+....
+Completed 4000 transactions
+	Stock level .............   155 ( 3.9%)
+	Order status by name ....   108 ( 2.7%)
+	Order status by ID ......    65 ( 1.6%)
+	Payment by name .........  1050 (26.2%)
+	Payment by ID ...........   661 (16.5%)
+	Delivery schedule .......   167 ( 4.2%)
+	New order ...............  1774 (44.4%)
+	New order rollback ......    20 ( 0.5%)
+Resetting database to initial state
+Time to reset data to initial state: 13735 msec
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 52457.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ]
+[main: ----- ----- -----     Pre-Benchmark GC    ----- ----- -----]
+[main: ]
+[main: ----- ----- -----     Benchmark Meep Meep: Iter 5.    ----- ----- -----]
+[main: ]
+....
+Completed 4000 transactions
+	Stock level .............   155 ( 3.9%)
+	Order status by name ....   108 ( 2.7%)
+	Order status by ID ......    65 ( 1.6%)
+	Payment by name .........  1050 (26.2%)
+	Payment by ID ...........   661 (16.5%)
+	Delivery schedule .......   167 ( 4.2%)
+	New order ...............  1774 (44.4%)
+	New order rollback ......    20 ( 0.5%)
+Resetting database to initial state
+Time to reset data to initial state: 13729 msec
+[main: ]
+[main: ----- ----- -----     Benchmark Thpthpthpth: 52391.    ----- ----- -----]
+[main: ]
+[main: ]
+[main: ]
+[RR: Total Time: 552495]
+<entry>
+  <date> Fri Apr 27 00:09:03 CEST 2018 </date> 
+  <mode> FAST </mode> 
+  <timeout> NO </timeout> 
+  <options>
+    <option><name> javaArgs </name>           <value> RRBench  </value> </option>
+    <option><name> noDecInline </name>        <value> false </value> </option>
+    <option><name> quiet </name>              <value> true </value> </option>
+    <option><name> logDepth </name>           <value> 100 </value> </option>
+    <option><name> logs </name>               <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/Experiments/table-bench </value> </option>
+    <option><name> out </name>                <value>  </value>   </option>
+    <option><name> err </name>                <value>  </value>   </option>
+    <option><name> noinst </name>             <value> false </value> </option>
+    <option><name> inst </name>               <value> INST </value> </option>
+    <option><name> infThreads </name>         <value> 0 </value>  </option>
+    <option><name> benchmark </name>          <value> 5 </value>  </option>
+    <option><name> warmup </name>             <value> 3 </value>  </option>
+    <option><name> availableProcessors </name> <value> 8 </value>  </option>
+    <option><name> args </name>               <value> [] </value> </option>
+    <option><name> d </name>                  <value> [] </value> </option>
+    <option><name> maxYikes </name>           <value> 5 </value>  </option>
+    <option><name> help </name>               <value> false </value> </option>
+    <option><name> toolpath </name>           <value> /Users/tuan-phongngo/OptimalVerifiedFT/classes/rr/simple:/Users/tuan-phongngo/OptimalVerifiedFT/classes/tools </value> </option>
+    <option><name> classpath </name>          <value> original.jar </value> </option>
+    <option><name> tool </name>               <value> FT2E-V1 </value> </option>
+    <option><name> tools </name>              <value> false </value> </option>
+    <option><name> noxml </name>              <value> false </value> </option>
+    <option><name> constantGC </name>         <value> false </value> </option>
+    <option><name> noFP </name>               <value> false </value> </option>
+    <option><name> noShutdownHook </name>     <value> false </value> </option>
+    <option><name> noEnter </name>            <value> true </value> </option>
+    <option><name> xml </name>                <value> FastTrackEnhancedV1-h2-0.out </value> </option>
+    <option><name> pulse </name>              <value>  </value>   </option>
+    <option><name> maxTime </name>            <value> 0 </value>  </option>
+    <option><name> maxMem </name>             <value> 10240 </value> </option>
+    <option><name> maxTid </name>             <value> 18 </value> </option>
+    <option><name> stacks </name>             <value> true </value> </option>
+    <option><name> values </name>             <value> false </value> </option>
+    <option><name> noTidGC </name>            <value> false </value> </option>
+    <option><name> noEventReuse </name>       <value> false </value> </option>
+    <option><name> trackMemoryUsage </name>   <value> false </value> </option>
+    <option><name> repository </name>         <value>  </value>   </option>
+    <option><name> meta </name>               <value> null </value> </option>
+    <option><name> methods </name>            <value> ["-.*Barrier.await\(\)V", "-java.util.concurrent.CyclicBarrier.await\(JLjava/util/concurrent/TimeUnit;\)I", "-java.util.concurrent.CyclicBarrier.await\(\)I", "-.*Barrier.DoBarrier\(I\)V", "-.*TournamentBarrier.DoBarrier\(I\)V", default=ACCEPT] </value> </option>
+    <option><name> fields </name>             <value> ["-.*this\$.*", "-$.*__\$rr.*", default=ACCEPT] </value> </option>
+    <option><name> lines </name>              <value> [default=ACCEPT] </value> </option>
+    <option><name> classes </name>            <value> ["-.*Barrier.*", "-java..*", "-javax..*", "-com.sun..*", "-sun..*", "-rr..*", "-tools..*", "-acme..*", "-.*__\$rr_.*", "-org.xml..*", default=ACCEPT] </value> </option>
+    <option><name> shadowThread </name>       <value> ["-.*", default=ACCEPT] </value> </option>
+    <option><name> noop </name>               <value> [default=ACCEPT] </value> </option>
+    <option><name> noConstructor </name>      <value> false </value> </option>
+    <option><name> noClone </name>            <value> false </value> </option>
+    <option><name> dump </name>               <value>  </value>   </option>
+    <option><name> field </name>              <value> FINE </value> </option>
+    <option><name> fancy </name>              <value> false </value> </option>
+    <option><name> verify </name>             <value> false </value> </option>
+    <option><name> trackReflection </name>    <value> false </value> </option>
+    <option><name> arraySites </name>         <value> false </value> </option>
+    <option><name> Use TestAcquires </name>   <value> false </value> </option>
+    <option><name> sanity </name>             <value> false </value> </option>
+    <option><name> reentrantEvents </name>    <value> false </value> </option>
+    <option><name> nojoin </name>             <value> false </value> </option>
+    <option><name> multiLoader </name>        <value> false </value> </option>
+    <option><name> indices </name>            <value> 2147483647 </value> </option>
+    <option><name> updaters </name>           <value> SAFE </value> </option>
+    <option><name> array </name>              <value> FINE </value> </option>
+    <option><name> userArray </name>          <value> rr.state.ArrayStateCreator$1@45ee12a7 </value> </option>
+    <option><name> nobarrier </name>          <value> false </value> </option>
+    <option><name> arrayCacheType </name>     <value> STRONG </value> </option>
+    <option><name> callSites </name>          <value> false </value> </option>
+    <option><name> maxWarn </name>            <value> 1 </value>  </option>
+    <option><name> noInterrupt </name>        <value> false </value> </option>
+  </options>
+  <system>
+    <host> dhcp-11-249.it.uu.se </host> 
+    <name> java.vm.version </name>     <value> 25.101-b13 </value> 
+    <name> java.vm.vendor </name>      <value> Oracle Corporation </value> 
+    <name> java.vm.name </name>        <value> Java HotSpot(TM) 64-Bit Server VM </value> 
+    <name> java.class.path </name>     <value> .:/Users/tuan-phongngo/OptimalVerifiedFT/build/jar/rragent.jar </value> 
+    <name> os.name </name>             <value> Mac OS X </value> 
+    <name> os.arch </name>             <value> x86_64 </value> 
+    <name> os.version </name>          <value> 10.12.4 </value> 
+    <name> user.name </name>           <value> tuan-phongngo </value> 
+    <name> user.dir </name>            <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/h2 </value> 
+    <availableProcs> 8 </availableProcs> 
+    <memCommitted> 6479 </memCommitted> 
+    <memUsed> 3435 </memUsed> 
+    <memTotal> 6479 </memTotal> 
+    <compileTime> 63492 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 8080 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 13355 </time> </gc>
+  </system>
+  <instrumented> RRBench org/apache/derbyTesting/system/oe/client/Display org/apache/derbyTesting/system/oe/client/Load org/apache/derbyTesting/system/oe/client/Operations org/apache/derbyTesting/system/oe/client/Submitter org/apache/derbyTesting/system/oe/direct/OrderItem4Sort org/apache/derbyTesting/system/oe/direct/Standard org/apache/derbyTesting/system/oe/direct/StatementHelper org/apache/derbyTesting/system/oe/load/SimpleInsert org/apache/derbyTesting/system/oe/load/ThreadInsert org/apache/derbyTesting/system/oe/model/Address org/apache/derbyTesting/system/oe/model/Customer org/apache/derbyTesting/system/oe/model/District org/apache/derbyTesting/system/oe/model/Order org/apache/derbyTesting/system/oe/model/OrderLine org/apache/derbyTesting/system/oe/model/Warehouse org/apache/derbyTesting/system/oe/routines/Data org/apache/derbyTesting/system/oe/util/OERandom org/dacapo/h2/TPCC org/dacapo/h2/TPCC$1 org/dacapo/h2/TPCC$2 org/dacapo/h2/TPCC$3 org/dacapo/h2/TPCCDataSource org/dacapo/h2/TPCCDataSource$NullWriter org/dacapo/h2/TPCCReporter org/dacapo/h2/TPCCSubmitter org/h2/Driver org/h2/api/DatabaseEventListener org/h2/command/Command org/h2/command/CommandContainer org/h2/command/CommandInterface org/h2/command/Parser org/h2/command/Prepared org/h2/command/ddl/AlterTableAddConstraint org/h2/command/ddl/CreateIndex org/h2/command/ddl/CreateTable org/h2/command/ddl/CreateTableData org/h2/command/ddl/CreateView org/h2/command/ddl/DefineCommand org/h2/command/ddl/DropTable org/h2/command/ddl/SchemaCommand org/h2/command/dml/Call org/h2/command/dml/Delete org/h2/command/dml/Insert org/h2/command/dml/NoOperation org/h2/command/dml/Optimizer org/h2/command/dml/Query org/h2/command/dml/Select org/h2/command/dml/SelectOrderBy org/h2/command/dml/Set org/h2/command/dml/SetTypes org/h2/command/dml/TransactionCommand org/h2/command/dml/Update org/h2/constant/ErrorCode org/h2/constant/SysProperties org/h2/constraint/Constraint org/h2/constraint/ConstraintReferential org/h2/constraint/ConstraintUnique org/h2/engine/ConnectionInfo org/h2/engine/Database org/h2/engine/DatabaseCloser org/h2/engine/DbObject org/h2/engine/DbObjectBase org/h2/engine/Engine org/h2/engine/MetaRecord org/h2/engine/MetaRecord$1 org/h2/engine/Mode org/h2/engine/RightOwner org/h2/engine/Role org/h2/engine/Session org/h2/engine/SessionFactory org/h2/engine/SessionFactoryEmbedded org/h2/engine/SessionInterface org/h2/engine/SessionRemote org/h2/engine/SessionWithState org/h2/engine/Setting org/h2/engine/User org/h2/expression/Aggregate org/h2/expression/AggregateData org/h2/expression/Alias org/h2/expression/Comparison org/h2/expression/Condition org/h2/expression/ConditionAndOr org/h2/expression/ConditionExists org/h2/expression/ConditionIn org/h2/expression/ConditionNot org/h2/expression/Expression org/h2/expression/ExpressionColumn org/h2/expression/ExpressionVisitor org/h2/expression/Function org/h2/expression/FunctionCall org/h2/expression/FunctionInfo org/h2/expression/Operation org/h2/expression/Parameter org/h2/expression/ParameterInterface org/h2/expression/SequenceValue org/h2/expression/ValueExpression org/h2/expression/Wildcard org/h2/index/BaseIndex org/h2/index/Cursor org/h2/index/Index org/h2/index/IndexCondition org/h2/index/IndexCursor org/h2/index/IndexType org/h2/index/MetaIndex org/h2/index/MultiVersionCursor org/h2/index/MultiVersionIndex org/h2/index/PageDataIndex org/h2/index/PageIndex org/h2/index/RowIndex org/h2/index/ScanCursor org/h2/index/ScanIndex org/h2/index/TreeCursor org/h2/index/TreeIndex org/h2/index/TreeNode org/h2/index/ViewCursor org/h2/index/ViewIndex org/h2/index/ViewIndex$CostElement org/h2/jdbc/JdbcConnection org/h2/jdbc/JdbcPreparedStatement org/h2/jdbc/JdbcResultSet org/h2/jdbc/JdbcSQLException org/h2/jdbc/JdbcStatement org/h2/log/LogFile org/h2/log/LogSystem org/h2/log/UndoLog org/h2/log/UndoLogRecord org/h2/message/Message org/h2/message/Trace org/h2/message/TraceObject org/h2/message/TraceSystem org/h2/message/TraceWriter org/h2/result/LocalResult org/h2/result/ResultExternal org/h2/result/ResultInterface org/h2/result/Row org/h2/result/RowList org/h2/result/SearchRow org/h2/result/SimpleRow org/h2/result/SortOrder org/h2/schema/Schema org/h2/schema/SchemaObject org/h2/schema/SchemaObjectBase org/h2/schema/Sequence org/h2/security/SHA256 org/h2/server/ShutdownHandler org/h2/store/DataHandler org/h2/store/DataPage org/h2/store/DiskFile org/h2/store/FileLock org/h2/store/FileStore org/h2/store/PageStore org/h2/store/Record org/h2/store/RecordReader org/h2/store/Storage org/h2/store/WriterThread org/h2/table/Column org/h2/table/ColumnResolver org/h2/table/IndexColumn org/h2/table/MetaTable org/h2/table/Plan org/h2/table/PlanItem org/h2/table/SingleColumnResolver org/h2/table/Table org/h2/table/TableData org/h2/table/TableData$1 org/h2/table/TableFilter org/h2/table/TableView org/h2/tools/RunScript org/h2/tools/Server org/h2/util/BitField org/h2/util/ByteUtils org/h2/util/Cache org/h2/util/CacheObject org/h2/util/CacheObject$CacheComparator org/h2/util/CacheWriter org/h2/util/ClassUtils org/h2/util/HashBase org/h2/util/IOUtils org/h2/util/IntArray org/h2/util/MathUtils org/h2/util/MemoryUtils org/h2/util/New org/h2/util/ObjectArray org/h2/util/ObjectArray$ObjectArrayIterator org/h2/util/ObjectUtils org/h2/util/Permutations org/h2/util/RandomUtils org/h2/util/RandomUtils$1 org/h2/util/Resources org/h2/util/ScriptReader org/h2/util/SmallLRUCache org/h2/util/StatementBuilder org/h2/util/StringCache org/h2/util/StringUtils org/h2/util/TempFileDeleter org/h2/util/Tool org/h2/util/ValueHashMap org/h2/value/CompareMode org/h2/value/DataType org/h2/value/Value org/h2/value/ValueArray org/h2/value/ValueBoolean org/h2/value/ValueDecimal org/h2/value/ValueDouble org/h2/value/ValueInt org/h2/value/ValueLong org/h2/value/ValueNull org/h2/value/ValueShort org/h2/value/ValueString org/h2/value/ValueStringBase org/h2/value/ValueStringFixed org/h2/value/ValueTimestamp org/h2/value/ValueUuid  </instrumented> 
+  <instrumentedNum> 214 </instrumentedNum> 
+  <skipped>  </skipped> 
+  <skippedNum> 0 </skippedNum> 
+  <sanityChecked>  </sanityChecked> 
+  <sanityCheckedNum> 0 </sanityCheckedNum> 
+  <counters>
+
+    <counter><name> "ArrayStateFactory: Size" </name>                    <value> 18,745,354 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>18089.0</total> <count>287</count> <ave>63.0279</ave> </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 17,743,226 </value> </counter>
+
+    <counter><name> "Clone: Count" </name>                               <value> 533,856 </value> </counter>
+
+    <counter><name> "FT: Read Same Epoch" </name>                        <value>          0 </value> </counter>
+    <counter><name> "FT: ReadShared Same Epoch" </name>                  <value>          0 </value> </counter>
+    <counter><name> "FT: Read Exclusive" </name>                         <value>          0 </value> </counter>
+    <counter><name> "FT: Read Share" </name>                             <value>          0 </value> </counter>
+    <counter><name> "FT: Read Shared" </name>                            <value>          0 </value> </counter>
+    <counter><name> "FT: Write-Read Error" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Write Same Epoch" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Write Exclusive" </name>                        <value>          0 </value> </counter>
+    <counter><name> "FT: Write Shared" </name>                           <value>          0 </value> </counter>
+    <counter><name> "FT: Write-Write Error" </name>                      <value>          0 </value> </counter>
+    <counter><name> "FT: Read-Write Error" </name>                       <value>          0 </value> </counter>
+    <counter><name> "FT: Shared-Write Error" </name>                     <value>          0 </value> </counter>
+    <counter><name> "FT: Acquire" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Release" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Fork" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Join" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Barrier" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Wait" </name>                                   <value>          0 </value> </counter>
+    <counter><name> "FT: Volatile" </name>                               <value>          0 </value> </counter>
+    <counter><name> "FT: Read with Write Same Epoch" </name>             <value>          0 </value> </counter>
+    <counter><name> "FT: Other" </name>                                  <value>          0 </value> </counter>
+    <counter><name> "FT: Total Reads" </name>                            <value> 0 </value> </counter>
+    <counter><name> "FT: Total Writes" </name>                           <value> 0 </value> </counter>
+    <counter><name> "FT: Total Access Ops" </name>                       <value> 0 </value> </counter>
+    <counter><name> "FT: Total Ops" </name>                              <value> 0 </value> </counter>
+
+    <counter><name> "GCRunner: Max Usage" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "Handler: Count" </name>                             <value> 0 </value> </counter>
+
+    <counter><name> "RRBench: Warmup 1" </name>                          <value> 57,402 </value> </counter>
+    <counter><name> "RRBench: Warmup 2" </name>                          <value> 54,056 </value> </counter>
+    <counter><name> "RRBench: Warmup 3" </name>                          <value> 53,940 </value> </counter>
+    <counter><name> "RRBench: Iter 1" </name>                            <value> 52,637 </value> </counter>
+    <counter><name> "RRBench: Iter 2" </name>                            <value> 52,410 </value> </counter>
+    <counter><name> "RRBench: Iter 3" </name>                            <value> 53,686 </value> </counter>
+    <counter><name> "RRBench: Iter 4" </name>                            <value> 52,457 </value> </counter>
+    <counter><name> "RRBench: Iter 5" </name>                            <value> 52,391 </value> </counter>
+    <counter><name> "RRBench: Average" </name>                           <value> 52,716 </value> </counter>
+
+    <counter><name> "ShadowLock: objects" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "ShadowThread: Count" </name>                        <value> 67 </value> </counter>
+    <counter><name> "ShadowThread: Max Live" </name>                     <value> 10 </value> </counter>
+    <counter><name> "ShadowThread: getCurrentThread() calls" </name>     <value> 0 </value> </counter>
+
+    <counter><name> "ShadowVolatile: objects" </name>                    <value> 0 </value> </counter>
+
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>1220.00</total> <count>214</count> <ave>5.70093</ave> </value> </counter>
+  </counters>
+  <yikes>
+    <message> Concurrent array state creation... </message> <count> 5 </count> 
+    <message> Concurrent array guard state init.. </message> <count> 3 </count> 
+    <message> Bad Update </message>    <count> 3 </count> 
+    <message> Old Version Number in class file. U </message> <count> 14 </count> 
+  </yikes>
+  <tool>
+    <name> tools.fasttrack.FastTrackToolEnhancedV1 </name> 
+    <thread> [tid=4    C=[(0:1F89F6) (1:1876A) (2:6916C) (3:65BF4) (4:67D11) (5:65DDE) (6:66452) (7:6716D) (8:6A088) (9:4EAD6)]   E=(4:67D11)] </thread> 
+    <thread> [tid=8    C=[(0:1F89F6) (1:1876A) (2:69729) (3:6683E) (4:67D10) (5:6625B) (6:67129) (7:6716D) (8:6AB98) (9:4EC6E)]   E=(8:6AB98)] </thread> 
+    <thread> [tid=0    C=[(0:1F8B07) (1:1876A) (2:6972A) (3:66D91) (4:67D11) (5:6625C) (6:67332) (7:6716E) (8:6AB98) (9:4EC6F)]   E=(0:1F8B07)] </thread> 
+    <thread> [tid=6    C=[(0:1F89F6) (1:1876A) (2:69729) (3:66A3B) (4:67D10) (5:6625B) (6:67332) (7:6716D) (8:6AB97) (9:4EC6E)]   E=(6:67332)] </thread> 
+    <thread> [tid=5    C=[(0:1F89F6) (1:1876A) (2:69584) (3:66115) (4:67D10) (5:6625C) (6:66741) (7:6716D) (8:6A2FB) (9:4EC6E)]   E=(5:6625C)] </thread> 
+    <thread> [tid=3    C=[(0:1F89F6) (1:1876A) (2:69729) (3:66D91) (4:67D10) (5:6625B) (6:67331) (7:6716D) (8:6AB97) (9:4EC6E)]   E=(3:66D91)] </thread> 
+    <thread> [tid=7    C=[(0:1F89F6) (1:1876A) (2:68D80) (3:655C5) (4:676D1) (5:6580F) (6:65FFF) (7:6716E) (8:69B1A) (9:4E550)]   E=(7:6716E)] </thread> 
+    <thread> [tid=1    C=[(0:B) (1:1876C) (2:0) (3:0)]   E=(1:1876C)] </thread> 
+    <thread> [tid=9    C=[(0:1F89F6) (1:1876A) (2:69449) (3:65F6D) (4:67D10) (5:660C5) (6:66618) (7:6716D) (8:6A281) (9:4EC6F)]   E=(9:4EC6F)] </thread> 
+    <thread> [tid=2    C=[(0:1F89F6) (1:1876A) (2:6972A) (3:66346) (4:67D10) (5:6625B) (6:6693C) (7:6716D) (8:6A518) (9:4EC6E)]   E=(2:6972A)] </thread> 
+  </tool>
+  <tool>
+    <name> Last </name> 
+  </tool>
+  <threadCount> 10 </threadCount> 
+  <threadMaxActive> 10 </threadMaxActive> 
+  <errorTotal> 12 </errorTotal> 
+  <distinctErrorTotal> 12 </distinctErrorTotal> 
+  <methods>
+  </methods>
+  <fields>
+    <field>
+      <name> org/h2/engine/Session.closed_Z </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/h2/jdbc/JdbcConnection.session_Lorg/h2/engine/SessionInterface; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/h2/index/ScanIndex.rowCount_J </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+  </fields>
+  <arrays>
+    <target>
+      <location> rd_array@org/h2/util/StringCache.java:48:50 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+    <target>
+      <location> wr_array@org/h2/util/StringCache.java:54:73 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+    <target>
+      <location> rd_array@org/h2/message/TraceObject.java:172:5 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+    <target>
+      <location> wr_array@org/h2/value/Value.java:351:105 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+    <target>
+      <location> rd_array@org/h2/value/Value.java:341:70 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+    <target>
+      <location> wr_array@org/h2/value/ValueInt.java:63:57 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+    <target>
+      <location> rd_array@org/h2/util/StringCache.java:83:52 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+    <target>
+      <location> wr_array@org/h2/util/StringCache.java:93:84 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+    <target>
+      <location> rd_array@org/h2/value/ValueInt.java:60:25 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+  </arrays>
+  <locks>
+  </locks>
+  <fieldAccesses>
+  </fieldAccesses>
+  <errorCountPerErrorType>
+    <errorType> <name> FastTrack </name> <count> 12 </count> </errorType>
+  </errorCountPerErrorType>
+  <warningsTotal> 0 </warningsTotal> 
+  <yikesTotal> 25 </yikesTotal> 
+  <failed> false </failed> 
+  <failedReason>  </failedReason> 
+  <time> 552495 </time> 
+</entry>
+[RR: Time = 552495]
+[RR: Exiting: 0]
+[Thread-0: New Thread Thread-0 with tid=0.]
+[Thread-0: Initial E for 0: (0:1F8B09)]

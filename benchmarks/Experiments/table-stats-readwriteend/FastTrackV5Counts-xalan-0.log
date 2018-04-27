@@ -1,0 +1,1508 @@
+PREP
+Archive:  xalan.zip
+  inflating: xalan/acks.xml          
+  inflating: xalan/binding.xml       
+  inflating: xalan/changes.xml       
+  inflating: xalan/concepts.xml      
+  inflating: xalan/controls.xml      
+  inflating: xalan/datatypes.xml     
+  inflating: xalan/expr.xml          
+  inflating: xalan/index.xml         
+  inflating: xalan/intro.xml         
+  inflating: xalan/model.xml         
+  inflating: xalan/prod-notes.xml    
+  inflating: xalan/references.xml    
+  inflating: xalan/rpm.xml           
+  inflating: xalan/schema.xml        
+  inflating: xalan/structure.xml     
+  inflating: xalan/template.xml      
+  inflating: xalan/terms.xml         
+  inflating: xalan/ui.xml            
+  inflating: xalan/xmlspec.xsl       
+PREP DONE
+rrrun -maxTid=18 -classpath=original.jar -classpath=original.jar -quiet -maxWarn=1 -xml=FastTrackV5Counts-xalan-0.out -logs=/Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/Experiments/table-stats -tool=FT2E RRBench
+java version "1.8.0_101"
+Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
+
+objc[57990]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/bin/java (0x10b6044c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x10b6cc4e0). One of the two will be used. Which one is undefined.
+[premain: Installling RoadRunner Agent...]
+[main: RoadRunner Agent Loaded.]
+[main: Running in SLOW Mode]
+[RR: Creating Fresh Meta Data]
+[main: ----- ----- ----- -----       Meep Meep.      ----- ----- ----- -----]
+[main: ]
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 2    
+##           Blame: org/apache/xml/serializer/OutputPropertiesFactory.m_text_properties_Ljava/util/Properties;
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(0:A) R=SHARED V=[(0:0) (1:6) (2:6) (3:6) (4:6) (5:6) (6:5) (7:5) (8:5)]]
+##  Current Thread: [tid=2    C=[(0:1D) (1:5) (2:6) (3:4) (4:4) (5:4) (6:4) (7:0) (8:4)]   E=(2:6)]
+##           Class: org/apache/xml/serializer/OutputPropertiesFactory
+##           Field: null.org/apache/xml/serializer/OutputPropertiesFactory.m_text_properties_Ljava/util/Properties;
+##         Message: Read(Shared)-Write Race
+##     Previous Op: Read by  Thread-0[tid = 1]
+##     Currrent Op: Write by  Thread-1[tid = 2]
+##           Stack: tools.fasttrack.FastTrackToolEnhanced.fieldError(FastTrackToolEnhanced.java:845)
+##                  tools.fasttrack.FastTrackToolEnhanced.error(FastTrackToolEnhanced.java:799)
+##                  tools.fasttrack.FastTrackToolEnhanced.write(FastTrackToolEnhanced.java:560)
+##                  tools.fasttrack.FastTrackToolEnhanced.access(FastTrackToolEnhanced.java:341)
+##                  rr.tool.RREventGenerator.writeAccess(RREventGenerator.java:157)
+##                  org.apache.xml.serializer.OutputPropertiesFactory.__$rr_put_m_text_properties(OutputPropertiesFactory.java)
+##                  org.apache.xml.serializer.OutputPropertiesFactory.__$rr_getDefaultMethodProperties__$rr__Original_(OutputPropertiesFactory.java:289)
+##                  org.apache.xml.serializer.OutputPropertiesFactory.getDefaultMethodProperties(OutputPropertiesFactory.java:253)
+##                  org.apache.xalan.templates.OutputProperties.<init>(OutputProperties.java:83)
+##                  org.apache.xalan.transformer.TransformerImpl.<init>(TransformerImpl.java:182)
+##                  org.apache.xalan.templates.StylesheetRoot.__$rr_newTransformer__$rr__Original_(StylesheetRoot.java:200)
+##                  org.apache.xalan.templates.StylesheetRoot.newTransformer(StylesheetRoot.java:199)
+##                  XSLTBench$XalanWorker.__$rr_run__$rr__Original_(XSLTBench.java:97)
+##                  XSLTBench$XalanWorker.run(XSLTBench.java:89)
+##                  
+## =====================================================================
+## 
+## YIKES: SafeFieldUpdater: Concurrent update.
+
+## YIKES: SafeFieldUpdater: Concurrent update.
+
+## YIKES: SafeFieldUpdater: Concurrent update.
+
+## YIKES: SafeFieldUpdater: Concurrent update.
+
+## YIKES: SafeFieldUpdater: Concurrent update.
+## Suppressing further yikes messages like that one.
+
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 2    
+##           Blame: org/apache/xml/serializer/CharInfo.firstWordNotUsed_I
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(7:7) R=(0:0) V=[]]
+##  Current Thread: [tid=2    C=[(0:1D) (1:B) (2:B) (3:6) (4:6) (5:9) (6:5) (7:5) (8:6)]   E=(2:B)]
+##           Class: class org.apache.xml.serializer.CharInfo
+##           Field: @02.org/apache/xml/serializer/CharInfo.firstWordNotUsed_I
+##         Message: Write-Read Race
+##     Previous Op: Write by  Thread-6[tid = 7]
+##     Currrent Op: Read by  Thread-1[tid = 2]
+##           Stack: tools.fasttrack.FastTrackToolEnhanced.fieldError(FastTrackToolEnhanced.java:845)
+##                  tools.fasttrack.FastTrackToolEnhanced.error(FastTrackToolEnhanced.java:799)
+##                  tools.fasttrack.FastTrackToolEnhanced.read(FastTrackToolEnhanced.java:434)
+##                  tools.fasttrack.FastTrackToolEnhanced.access(FastTrackToolEnhanced.java:343)
+##                  rr.tool.RREventGenerator.readAccess(RREventGenerator.java:146)
+##                  org.apache.xml.serializer.CharInfo.__$rr_get_firstWordNotUsed(CharInfo.java)
+##                  org.apache.xml.serializer.CharInfo.__$rr_mutableCopyOf__$rr__Original_(CharInfo.java:541)
+##                  org.apache.xml.serializer.CharInfo.mutableCopyOf(CharInfo.java:535)
+##                  org.apache.xml.serializer.CharInfo.__$rr_getCharInfo__$rr__Original_(CharInfo.java:493)
+##                  org.apache.xml.serializer.CharInfo.getCharInfo(CharInfo.java:490)
+##                  org.apache.xml.serializer.ToHTMLStream.<init>(ToHTMLStream.java:57)
+##                  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+##                  sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+##                  sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+##                  java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+##                  java.lang.Class.newInstance(Class.java:442)
+##                  org.apache.xml.serializer.SerializerFactory.__$rr_getSerializer__$rr__Original_(SerializerFactory.java:138)
+##                  org.apache.xml.serializer.SerializerFactory.getSerializer(SerializerFactory.java:95)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_createSerializationHandler__$rr__Original_(TransformerImpl.java:1171)
+##                  org.apache.xalan.transformer.TransformerImpl.createSerializationHandler(TransformerImpl.java:1086)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_createSerializationHandler__$rr__Original_(TransformerImpl.java:1060)
+##                  org.apache.xalan.transformer.TransformerImpl.createSerializationHandler(TransformerImpl.java:1059)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1268)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1265)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1251)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1250)
+##                  XSLTBench$XalanWorker.__$rr_run__$rr__Original_(XSLTBench.java:101)
+##                  XSLTBench$XalanWorker.run(XSLTBench.java:89)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 2    
+##           Blame: org/apache/xml/serializer/CharInfo.m_charToString_Ljava/util/HashMap;
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(7:7) R=(0:0) V=[]]
+##  Current Thread: [tid=2    C=[(0:1D) (1:B) (2:B) (3:6) (4:6) (5:9) (6:5) (7:5) (8:6)]   E=(2:B)]
+##           Class: class org.apache.xml.serializer.CharInfo
+##           Field: @02.org/apache/xml/serializer/CharInfo.m_charToString_Ljava/util/HashMap;
+##         Message: Write-Read Race
+##     Previous Op: Write by  Thread-6[tid = 7]
+##     Currrent Op: Read by  Thread-1[tid = 2]
+##           Stack: tools.fasttrack.FastTrackToolEnhanced.fieldError(FastTrackToolEnhanced.java:845)
+##                  tools.fasttrack.FastTrackToolEnhanced.error(FastTrackToolEnhanced.java:799)
+##                  tools.fasttrack.FastTrackToolEnhanced.read(FastTrackToolEnhanced.java:434)
+##                  tools.fasttrack.FastTrackToolEnhanced.access(FastTrackToolEnhanced.java:343)
+##                  rr.tool.RREventGenerator.readAccess(RREventGenerator.java:146)
+##                  org.apache.xml.serializer.CharInfo.__$rr_get_m_charToString(CharInfo.java)
+##                  org.apache.xml.serializer.CharInfo.__$rr_mutableCopyOf__$rr__Original_(CharInfo.java:551)
+##                  org.apache.xml.serializer.CharInfo.mutableCopyOf(CharInfo.java:535)
+##                  org.apache.xml.serializer.CharInfo.__$rr_getCharInfo__$rr__Original_(CharInfo.java:493)
+##                  org.apache.xml.serializer.CharInfo.getCharInfo(CharInfo.java:490)
+##                  org.apache.xml.serializer.ToHTMLStream.<init>(ToHTMLStream.java:57)
+##                  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+##                  sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+##                  sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+##                  java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+##                  java.lang.Class.newInstance(Class.java:442)
+##                  org.apache.xml.serializer.SerializerFactory.__$rr_getSerializer__$rr__Original_(SerializerFactory.java:138)
+##                  org.apache.xml.serializer.SerializerFactory.getSerializer(SerializerFactory.java:95)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_createSerializationHandler__$rr__Original_(TransformerImpl.java:1171)
+##                  org.apache.xalan.transformer.TransformerImpl.createSerializationHandler(TransformerImpl.java:1086)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_createSerializationHandler__$rr__Original_(TransformerImpl.java:1060)
+##                  org.apache.xalan.transformer.TransformerImpl.createSerializationHandler(TransformerImpl.java:1059)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1268)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1265)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1251)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1250)
+##                  XSLTBench$XalanWorker.__$rr_run__$rr__Original_(XSLTBench.java:101)
+##                  XSLTBench$XalanWorker.run(XSLTBench.java:89)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 2    
+##           Blame: org/apache/xml/serializer/CharInfo$CharKey.m_char_C
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(7:7) R=(0:0) V=[]]
+##  Current Thread: [tid=2    C=[(0:1D) (1:B) (2:B) (3:6) (4:6) (5:9) (6:5) (7:5) (8:6)]   E=(2:B)]
+##           Class: class org.apache.xml.serializer.CharInfo$CharKey
+##           Field: @03.org/apache/xml/serializer/CharInfo$CharKey.m_char_C
+##         Message: Write-Read Race
+##     Previous Op: Write by  Thread-6[tid = 7]
+##     Currrent Op: Read by  Thread-1[tid = 2]
+##           Stack: tools.fasttrack.FastTrackToolEnhanced.fieldError(FastTrackToolEnhanced.java:845)
+##                  tools.fasttrack.FastTrackToolEnhanced.error(FastTrackToolEnhanced.java:799)
+##                  tools.fasttrack.FastTrackToolEnhanced.read(FastTrackToolEnhanced.java:434)
+##                  tools.fasttrack.FastTrackToolEnhanced.access(FastTrackToolEnhanced.java:343)
+##                  rr.tool.RREventGenerator.readAccess(RREventGenerator.java:146)
+##                  org.apache.xml.serializer.CharInfo$CharKey.__$rr_get_m_char(CharInfo.java)
+##                  org.apache.xml.serializer.CharInfo$CharKey.__$rr_hashCode__$rr__Original_(CharInfo.java:790)
+##                  org.apache.xml.serializer.CharInfo$CharKey.hashCode(CharInfo.java:789)
+##                  java.util.HashMap.hash(HashMap.java:338)
+##                  java.util.HashMap.putMapEntries(HashMap.java:514)
+##                  java.util.HashMap.clone(HashMap.java:1332)
+##                  org.apache.xml.serializer.CharInfo.__$rr_mutableCopyOf__$rr__Original_(CharInfo.java:551)
+##                  org.apache.xml.serializer.CharInfo.mutableCopyOf(CharInfo.java:535)
+##                  org.apache.xml.serializer.CharInfo.__$rr_getCharInfo__$rr__Original_(CharInfo.java:493)
+##                  org.apache.xml.serializer.CharInfo.getCharInfo(CharInfo.java:490)
+##                  org.apache.xml.serializer.ToHTMLStream.<init>(ToHTMLStream.java:57)
+##                  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+##                  sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+##                  sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+##                  java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+##                  java.lang.Class.newInstance(Class.java:442)
+##                  org.apache.xml.serializer.SerializerFactory.__$rr_getSerializer__$rr__Original_(SerializerFactory.java:138)
+##                  org.apache.xml.serializer.SerializerFactory.getSerializer(SerializerFactory.java:95)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_createSerializationHandler__$rr__Original_(TransformerImpl.java:1171)
+##                  org.apache.xalan.transformer.TransformerImpl.createSerializationHandler(TransformerImpl.java:1086)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_createSerializationHandler__$rr__Original_(TransformerImpl.java:1060)
+##                  org.apache.xalan.transformer.TransformerImpl.createSerializationHandler(TransformerImpl.java:1059)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1268)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1265)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1251)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1250)
+##                  XSLTBench$XalanWorker.__$rr_run__$rr__Original_(XSLTBench.java:101)
+##                  XSLTBench$XalanWorker.run(XSLTBench.java:89)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 5    
+##           Blame: org/apache/xml/serializer/CharInfo.onlyQuotAmpLtGt_Z
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(7:7) R=(0:0) V=[]]
+##  Current Thread: [tid=5    C=[(0:1D) (1:B) (2:A) (3:6) (4:6) (5:A) (6:5) (7:5) (8:6)]   E=(5:A)]
+##           Class: class org.apache.xml.serializer.CharInfo
+##           Field: @02.org/apache/xml/serializer/CharInfo.onlyQuotAmpLtGt_Z
+##         Message: Write-Read Race
+##     Previous Op: Write by  Thread-6[tid = 7]
+##     Currrent Op: Read by  Thread-4[tid = 5]
+##           Stack: tools.fasttrack.FastTrackToolEnhanced.fieldError(FastTrackToolEnhanced.java:845)
+##                  tools.fasttrack.FastTrackToolEnhanced.error(FastTrackToolEnhanced.java:799)
+##                  tools.fasttrack.FastTrackToolEnhanced.read(FastTrackToolEnhanced.java:434)
+##                  tools.fasttrack.FastTrackToolEnhanced.access(FastTrackToolEnhanced.java:343)
+##                  rr.tool.RREventGenerator.readAccess(RREventGenerator.java:146)
+##                  org.apache.xml.serializer.CharInfo.__$rr_get_onlyQuotAmpLtGt(CharInfo.java)
+##                  org.apache.xml.serializer.CharInfo.__$rr_mutableCopyOf__$rr__Original_(CharInfo.java:553)
+##                  org.apache.xml.serializer.CharInfo.mutableCopyOf(CharInfo.java:535)
+##                  org.apache.xml.serializer.CharInfo.__$rr_getCharInfo__$rr__Original_(CharInfo.java:493)
+##                  org.apache.xml.serializer.CharInfo.getCharInfo(CharInfo.java:490)
+##                  org.apache.xml.serializer.ToHTMLStream.<init>(ToHTMLStream.java:57)
+##                  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+##                  sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+##                  sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+##                  java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+##                  java.lang.Class.newInstance(Class.java:442)
+##                  org.apache.xml.serializer.SerializerFactory.__$rr_getSerializer__$rr__Original_(SerializerFactory.java:138)
+##                  org.apache.xml.serializer.SerializerFactory.getSerializer(SerializerFactory.java:95)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_createSerializationHandler__$rr__Original_(TransformerImpl.java:1171)
+##                  org.apache.xalan.transformer.TransformerImpl.createSerializationHandler(TransformerImpl.java:1086)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_createSerializationHandler__$rr__Original_(TransformerImpl.java:1060)
+##                  org.apache.xalan.transformer.TransformerImpl.createSerializationHandler(TransformerImpl.java:1059)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1268)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1265)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1251)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1250)
+##                  XSLTBench$XalanWorker.__$rr_run__$rr__Original_(XSLTBench.java:101)
+##                  XSLTBench$XalanWorker.run(XSLTBench.java:89)
+##                  
+## =====================================================================
+## 
+## YIKES: Concurrent array state creation...
+
+## YIKES: Concurrent array state creation...
+
+## YIKES: Concurrent array state creation...
+
+## YIKES: concurrent initialization of guard state
+
+## YIKES: concurrent initialization of guard state
+
+## YIKES: concurrent initialization of guard state
+
+## YIKES: Concurrent array state creation...
+
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 3    
+##           Blame: org/apache/xalan/templates/ElemNumber.m_alphaCountTable_Lorg/apache/xml/utils/res/CharArrayWrapper;
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(0:F) R=SHARED V=[(0:0) (1:0) (2:21) (3:21)]]
+##  Current Thread: [tid=3    C=[(0:1D) (1:19) (2:20) (3:21) (4:11) (5:18) (6:1B) (7:1F) (8:19)]   E=(3:21)]
+##           Class: class org.apache.xalan.templates.ElemNumber
+##           Field: @04.org/apache/xalan/templates/ElemNumber.m_alphaCountTable_Lorg/apache/xml/utils/res/CharArrayWrapper;
+##         Message: Read(Shared)-Write Race
+##     Previous Op: Read by  Thread-1[tid = 2]
+##     Currrent Op: Write by  Thread-2[tid = 3]
+##           Stack: tools.fasttrack.FastTrackToolEnhanced.fieldError(FastTrackToolEnhanced.java:845)
+##                  tools.fasttrack.FastTrackToolEnhanced.error(FastTrackToolEnhanced.java:799)
+##                  tools.fasttrack.FastTrackToolEnhanced.write(FastTrackToolEnhanced.java:560)
+##                  tools.fasttrack.FastTrackToolEnhanced.access(FastTrackToolEnhanced.java:341)
+##                  rr.tool.RREventGenerator.writeAccess(RREventGenerator.java:157)
+##                  org.apache.xalan.templates.ElemNumber.__$rr_put_m_alphaCountTable(ElemNumber.java)
+##                  org.apache.xalan.templates.ElemNumber.__$rr_getFormattedNumber__$rr__Original_(ElemNumber.java:1349)
+##                  org.apache.xalan.templates.ElemNumber.getFormattedNumber(ElemNumber.java:1329)
+##                  org.apache.xalan.templates.ElemNumber.__$rr_formatNumberList__$rr__Original_(ElemNumber.java:1272)
+##                  org.apache.xalan.templates.ElemNumber.formatNumberList(ElemNumber.java:1170)
+##                  org.apache.xalan.templates.ElemNumber.__$rr_getCountString__$rr__Original_(ElemNumber.java:846)
+##                  org.apache.xalan.templates.ElemNumber.getCountString(ElemNumber.java:798)
+##                  org.apache.xalan.templates.ElemNumber.__$rr_execute__$rr__Original_(ElemNumber.java:564)
+##                  org.apache.xalan.templates.ElemNumber.execute(ElemNumber.java:559)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_applyTemplateToNode__$rr__Original_(TransformerImpl.java:2270)
+##                  org.apache.xalan.transformer.TransformerImpl.applyTemplateToNode(TransformerImpl.java:2132)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transformNode__$rr__Original_(TransformerImpl.java:1356)
+##                  org.apache.xalan.transformer.TransformerImpl.transformNode(TransformerImpl.java:1311)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:709)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:638)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1273)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1265)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1251)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1250)
+##                  XSLTBench$XalanWorker.__$rr_run__$rr__Original_(XSLTBench.java:101)
+##                  XSLTBench$XalanWorker.run(XSLTBench.java:89)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 2    
+##           Blame: org/apache/xml/utils/res/CharArrayWrapper.m_char_\[C
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(3:21) R=(0:0) V=[]]
+##  Current Thread: [tid=2    C=[(0:1D) (1:10) (2:21) (3:1D) (4:A) (5:A) (6:9) (7:B) (8:8)]   E=(2:21)]
+##           Class: class org.apache.xml.utils.res.CharArrayWrapper
+##           Field: @05.org/apache/xml/utils/res/CharArrayWrapper.m_char_\[C
+##         Message: Write-Read Race
+##     Previous Op: Write by  Thread-2[tid = 3]
+##     Currrent Op: Read by  Thread-1[tid = 2]
+##           Stack: tools.fasttrack.FastTrackToolEnhanced.fieldError(FastTrackToolEnhanced.java:845)
+##                  tools.fasttrack.FastTrackToolEnhanced.error(FastTrackToolEnhanced.java:799)
+##                  tools.fasttrack.FastTrackToolEnhanced.read(FastTrackToolEnhanced.java:434)
+##                  tools.fasttrack.FastTrackToolEnhanced.access(FastTrackToolEnhanced.java:343)
+##                  rr.tool.RREventGenerator.readAccess(RREventGenerator.java:146)
+##                  org.apache.xml.utils.res.CharArrayWrapper.__$rr_get_m_char(CharArrayWrapper.java)
+##                  org.apache.xml.utils.res.CharArrayWrapper.__$rr_getLength__$rr__Original_(CharArrayWrapper.java:40)
+##                  org.apache.xml.utils.res.CharArrayWrapper.getLength(CharArrayWrapper.java:39)
+##                  org.apache.xalan.templates.ElemNumber.__$rr_int2alphaCount__$rr__Original_(ElemNumber.java:1632)
+##                  org.apache.xalan.templates.ElemNumber.int2alphaCount(ElemNumber.java:1631)
+##                  org.apache.xalan.templates.ElemNumber.__$rr_getFormattedNumber__$rr__Original_(ElemNumber.java:1351)
+##                  org.apache.xalan.templates.ElemNumber.getFormattedNumber(ElemNumber.java:1329)
+##                  org.apache.xalan.templates.ElemNumber.__$rr_formatNumberList__$rr__Original_(ElemNumber.java:1272)
+##                  org.apache.xalan.templates.ElemNumber.formatNumberList(ElemNumber.java:1170)
+##                  org.apache.xalan.templates.ElemNumber.__$rr_getCountString__$rr__Original_(ElemNumber.java:846)
+##                  org.apache.xalan.templates.ElemNumber.getCountString(ElemNumber.java:798)
+##                  org.apache.xalan.templates.ElemNumber.__$rr_execute__$rr__Original_(ElemNumber.java:564)
+##                  org.apache.xalan.templates.ElemNumber.execute(ElemNumber.java:559)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_applyTemplateToNode__$rr__Original_(TransformerImpl.java:2270)
+##                  org.apache.xalan.transformer.TransformerImpl.applyTemplateToNode(TransformerImpl.java:2132)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transformNode__$rr__Original_(TransformerImpl.java:1356)
+##                  org.apache.xalan.transformer.TransformerImpl.transformNode(TransformerImpl.java:1311)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:709)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:638)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1273)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1265)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1251)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1250)
+##                  XSLTBench$XalanWorker.__$rr_run__$rr__Original_(XSLTBench.java:101)
+##                  XSLTBench$XalanWorker.run(XSLTBench.java:89)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 2    
+##           Blame: rd_array@org/apache/xml/utils/res/CharArrayWrapper.java:36:5
+##           Count: 1    (max: 1)
+##      Alloc Site: null
+##    Shadow State: [W=(3:21) R=(0:0) V=[]]
+##  Current Thread: [tid=2    C=[(0:1D) (1:10) (2:21) (3:1D) (4:A) (5:A) (6:9) (7:B) (8:8)]   E=(2:21)]
+##           Array: @06[0]
+##         Message: Write-Read Race
+##     Previous Op: Write by  Thread-2[tid = 3]
+##     Currrent Op: Read by  Thread-1[tid = 2]
+##           Stack: tools.fasttrack.FastTrackToolEnhanced.arrayError(FastTrackToolEnhanced.java:819)
+##                  tools.fasttrack.FastTrackToolEnhanced.error(FastTrackToolEnhanced.java:801)
+##                  tools.fasttrack.FastTrackToolEnhanced.read(FastTrackToolEnhanced.java:434)
+##                  tools.fasttrack.FastTrackToolEnhanced.access(FastTrackToolEnhanced.java:343)
+##                  rr.tool.RREventGenerator.arrayRead(RREventGenerator.java:540)
+##                  org.apache.xml.utils.res.CharArrayWrapper.__$rr_getChar__$rr__Original_(CharArrayWrapper.java:36)
+##                  org.apache.xml.utils.res.CharArrayWrapper.getChar(CharArrayWrapper.java:35)
+##                  org.apache.xalan.templates.ElemNumber.__$rr_int2alphaCount__$rr__Original_(ElemNumber.java:1640)
+##                  org.apache.xalan.templates.ElemNumber.int2alphaCount(ElemNumber.java:1631)
+##                  org.apache.xalan.templates.ElemNumber.__$rr_getFormattedNumber__$rr__Original_(ElemNumber.java:1351)
+##                  org.apache.xalan.templates.ElemNumber.getFormattedNumber(ElemNumber.java:1329)
+##                  org.apache.xalan.templates.ElemNumber.__$rr_formatNumberList__$rr__Original_(ElemNumber.java:1272)
+##                  org.apache.xalan.templates.ElemNumber.formatNumberList(ElemNumber.java:1170)
+##                  org.apache.xalan.templates.ElemNumber.__$rr_getCountString__$rr__Original_(ElemNumber.java:846)
+##                  org.apache.xalan.templates.ElemNumber.getCountString(ElemNumber.java:798)
+##                  org.apache.xalan.templates.ElemNumber.__$rr_execute__$rr__Original_(ElemNumber.java:564)
+##                  org.apache.xalan.templates.ElemNumber.execute(ElemNumber.java:559)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_applyTemplateToNode__$rr__Original_(TransformerImpl.java:2270)
+##                  org.apache.xalan.transformer.TransformerImpl.applyTemplateToNode(TransformerImpl.java:2132)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transformNode__$rr__Original_(TransformerImpl.java:1356)
+##                  org.apache.xalan.transformer.TransformerImpl.transformNode(TransformerImpl.java:1311)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:709)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:638)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1273)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1265)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1251)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1250)
+##                  XSLTBench$XalanWorker.__$rr_run__$rr__Original_(XSLTBench.java:101)
+##                  XSLTBench$XalanWorker.run(XSLTBench.java:89)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 3    
+##           Blame: org/apache/xpath/axes/LocPathIterator.m_context_I
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(1:8BA0) R=(1:8B8C) V=[]]
+##  Current Thread: [tid=3    C=[(0:1D) (1:8B9F) (2:8ABD) (3:8742) (4:8C39) (5:8778) (6:8E1B) (7:811E) (8:7FE9)]   E=(3:8742)]
+##           Class: class org.apache.xpath.axes.ChildIterator
+##           Field: @07.org/apache/xpath/axes/LocPathIterator.m_context_I
+##         Message: Write-Write Race
+##     Previous Op: Write by  Thread-0[tid = 1]
+##     Currrent Op: Write by  Thread-2[tid = 3]
+##           Stack: tools.fasttrack.FastTrackToolEnhanced.fieldError(FastTrackToolEnhanced.java:845)
+##                  tools.fasttrack.FastTrackToolEnhanced.error(FastTrackToolEnhanced.java:799)
+##                  tools.fasttrack.FastTrackToolEnhanced.write(FastTrackToolEnhanced.java:574)
+##                  tools.fasttrack.FastTrackToolEnhanced.access(FastTrackToolEnhanced.java:341)
+##                  rr.tool.RREventGenerator.writeAccess(RREventGenerator.java:157)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_put_m_context(LocPathIterator.java)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_setRoot__$rr__Original_(LocPathIterator.java:360)
+##                  org.apache.xpath.axes.LocPathIterator.setRoot(LocPathIterator.java:359)
+##                  org.apache.xpath.axes.NodeSequence.__$rr_setRoot__$rr__Original_(NodeSequence.java:265)
+##                  org.apache.xpath.axes.NodeSequence.setRoot(NodeSequence.java:260)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_asIterator__$rr__Original_(LocPathIterator.java:269)
+##                  org.apache.xpath.axes.LocPathIterator.asIterator(LocPathIterator.java:266)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:207)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_applyTemplateToNode__$rr__Original_(TransformerImpl.java:2270)
+##                  org.apache.xalan.transformer.TransformerImpl.applyTemplateToNode(TransformerImpl.java:2132)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transformNode__$rr__Original_(TransformerImpl.java:1356)
+##                  org.apache.xalan.transformer.TransformerImpl.transformNode(TransformerImpl.java:1311)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:709)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:638)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1273)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1265)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1251)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1250)
+##                  XSLTBench$XalanWorker.__$rr_run__$rr__Original_(XSLTBench.java:101)
+##                  XSLTBench$XalanWorker.run(XSLTBench.java:89)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 3    
+##           Blame: org/apache/xpath/axes/LocPathIterator.m_execContext_Lorg/apache/xpath/XPathContext;
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(1:8BA0) R=(0:0) V=[]]
+##  Current Thread: [tid=3    C=[(0:1D) (1:8B9F) (2:8ABD) (3:8742) (4:8C39) (5:8778) (6:8E1B) (7:811E) (8:7FE9)]   E=(3:8742)]
+##           Class: class org.apache.xpath.axes.ChildIterator
+##           Field: @07.org/apache/xpath/axes/LocPathIterator.m_execContext_Lorg/apache/xpath/XPathContext;
+##         Message: Write-Write Race
+##     Previous Op: Write by  Thread-0[tid = 1]
+##     Currrent Op: Write by  Thread-2[tid = 3]
+##           Stack: tools.fasttrack.FastTrackToolEnhanced.fieldError(FastTrackToolEnhanced.java:845)
+##                  tools.fasttrack.FastTrackToolEnhanced.error(FastTrackToolEnhanced.java:799)
+##                  tools.fasttrack.FastTrackToolEnhanced.write(FastTrackToolEnhanced.java:574)
+##                  tools.fasttrack.FastTrackToolEnhanced.access(FastTrackToolEnhanced.java:341)
+##                  rr.tool.RREventGenerator.writeAccess(RREventGenerator.java:157)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_put_m_execContext(LocPathIterator.java)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_setRoot__$rr__Original_(LocPathIterator.java:363)
+##                  org.apache.xpath.axes.LocPathIterator.setRoot(LocPathIterator.java:359)
+##                  org.apache.xpath.axes.NodeSequence.__$rr_setRoot__$rr__Original_(NodeSequence.java:265)
+##                  org.apache.xpath.axes.NodeSequence.setRoot(NodeSequence.java:260)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_asIterator__$rr__Original_(LocPathIterator.java:269)
+##                  org.apache.xpath.axes.LocPathIterator.asIterator(LocPathIterator.java:266)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:207)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_applyTemplateToNode__$rr__Original_(TransformerImpl.java:2270)
+##                  org.apache.xalan.transformer.TransformerImpl.applyTemplateToNode(TransformerImpl.java:2132)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transformNode__$rr__Original_(TransformerImpl.java:1356)
+##                  org.apache.xalan.transformer.TransformerImpl.transformNode(TransformerImpl.java:1311)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:709)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:638)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1273)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1265)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1251)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1250)
+##                  XSLTBench$XalanWorker.__$rr_run__$rr__Original_(XSLTBench.java:101)
+##                  XSLTBench$XalanWorker.run(XSLTBench.java:89)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 3    
+##           Blame: org/apache/xpath/axes/LocPathIterator.m_cdtm_Lorg/apache/xml/dtm/DTM;
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(1:8BA0) R=(1:8BA0) V=[]]
+##  Current Thread: [tid=3    C=[(0:1D) (1:8B9F) (2:8ABD) (3:8743) (4:8C39) (5:8778) (6:8E1B) (7:811E) (8:7FE9)]   E=(3:8743)]
+##           Class: class org.apache.xpath.axes.ChildIterator
+##           Field: @07.org/apache/xpath/axes/LocPathIterator.m_cdtm_Lorg/apache/xml/dtm/DTM;
+##         Message: Read-Write Race
+##     Previous Op: Read by  Thread-0[tid = 1]
+##     Currrent Op: Write by  Thread-2[tid = 3]
+##           Stack: tools.fasttrack.FastTrackToolEnhanced.fieldError(FastTrackToolEnhanced.java:845)
+##                  tools.fasttrack.FastTrackToolEnhanced.error(FastTrackToolEnhanced.java:799)
+##                  tools.fasttrack.FastTrackToolEnhanced.write(FastTrackToolEnhanced.java:552)
+##                  tools.fasttrack.FastTrackToolEnhanced.access(FastTrackToolEnhanced.java:341)
+##                  rr.tool.RREventGenerator.writeAccess(RREventGenerator.java:157)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_put_m_cdtm(LocPathIterator.java)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_setRoot__$rr__Original_(LocPathIterator.java:364)
+##                  org.apache.xpath.axes.LocPathIterator.setRoot(LocPathIterator.java:359)
+##                  org.apache.xpath.axes.NodeSequence.__$rr_setRoot__$rr__Original_(NodeSequence.java:265)
+##                  org.apache.xpath.axes.NodeSequence.setRoot(NodeSequence.java:260)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_asIterator__$rr__Original_(LocPathIterator.java:269)
+##                  org.apache.xpath.axes.LocPathIterator.asIterator(LocPathIterator.java:266)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:207)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_applyTemplateToNode__$rr__Original_(TransformerImpl.java:2270)
+##                  org.apache.xalan.transformer.TransformerImpl.applyTemplateToNode(TransformerImpl.java:2132)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transformNode__$rr__Original_(TransformerImpl.java:1356)
+##                  org.apache.xalan.transformer.TransformerImpl.transformNode(TransformerImpl.java:1311)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:709)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:638)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1273)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1265)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1251)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1250)
+##                  XSLTBench$XalanWorker.__$rr_run__$rr__Original_(XSLTBench.java:101)
+##                  XSLTBench$XalanWorker.run(XSLTBench.java:89)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 3    
+##           Blame: org/apache/xpath/axes/LocPathIterator.m_currentContextNode_I
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(1:8BA0) R=(0:0) V=[]]
+##  Current Thread: [tid=3    C=[(0:1D) (1:8B9F) (2:8ABD) (3:8743) (4:8C39) (5:8778) (6:8E1B) (7:811E) (8:7FE9)]   E=(3:8743)]
+##           Class: class org.apache.xpath.axes.ChildIterator
+##           Field: @07.org/apache/xpath/axes/LocPathIterator.m_currentContextNode_I
+##         Message: Write-Write Race
+##     Previous Op: Write by  Thread-0[tid = 1]
+##     Currrent Op: Write by  Thread-2[tid = 3]
+##           Stack: tools.fasttrack.FastTrackToolEnhanced.fieldError(FastTrackToolEnhanced.java:845)
+##                  tools.fasttrack.FastTrackToolEnhanced.error(FastTrackToolEnhanced.java:799)
+##                  tools.fasttrack.FastTrackToolEnhanced.write(FastTrackToolEnhanced.java:574)
+##                  tools.fasttrack.FastTrackToolEnhanced.access(FastTrackToolEnhanced.java:341)
+##                  rr.tool.RREventGenerator.writeAccess(RREventGenerator.java:157)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_put_m_currentContextNode(LocPathIterator.java)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_setRoot__$rr__Original_(LocPathIterator.java:366)
+##                  org.apache.xpath.axes.LocPathIterator.setRoot(LocPathIterator.java:359)
+##                  org.apache.xpath.axes.NodeSequence.__$rr_setRoot__$rr__Original_(NodeSequence.java:265)
+##                  org.apache.xpath.axes.NodeSequence.setRoot(NodeSequence.java:260)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_asIterator__$rr__Original_(LocPathIterator.java:269)
+##                  org.apache.xpath.axes.LocPathIterator.asIterator(LocPathIterator.java:266)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:207)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_applyTemplateToNode__$rr__Original_(TransformerImpl.java:2270)
+##                  org.apache.xalan.transformer.TransformerImpl.applyTemplateToNode(TransformerImpl.java:2132)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transformNode__$rr__Original_(TransformerImpl.java:1356)
+##                  org.apache.xalan.transformer.TransformerImpl.transformNode(TransformerImpl.java:1311)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:709)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:638)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1273)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1265)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1251)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1250)
+##                  XSLTBench$XalanWorker.__$rr_run__$rr__Original_(XSLTBench.java:101)
+##                  XSLTBench$XalanWorker.run(XSLTBench.java:89)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 3    
+##           Blame: org/apache/xpath/axes/LocPathIterator.m_lastFetched_I
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(1:8BA0) R=(1:8BA0) V=[]]
+##  Current Thread: [tid=3    C=[(0:1D) (1:8B9F) (2:8ABD) (3:8743) (4:8C39) (5:8778) (6:8E1B) (7:811E) (8:7FE9)]   E=(3:8743)]
+##           Class: class org.apache.xpath.axes.ChildIterator
+##           Field: @07.org/apache/xpath/axes/LocPathIterator.m_lastFetched_I
+##         Message: Read-Write Race
+##     Previous Op: Read by  Thread-0[tid = 1]
+##     Currrent Op: Write by  Thread-2[tid = 3]
+##           Stack: tools.fasttrack.FastTrackToolEnhanced.fieldError(FastTrackToolEnhanced.java:845)
+##                  tools.fasttrack.FastTrackToolEnhanced.error(FastTrackToolEnhanced.java:799)
+##                  tools.fasttrack.FastTrackToolEnhanced.write(FastTrackToolEnhanced.java:552)
+##                  tools.fasttrack.FastTrackToolEnhanced.access(FastTrackToolEnhanced.java:341)
+##                  rr.tool.RREventGenerator.writeAccess(RREventGenerator.java:157)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_put_m_lastFetched(LocPathIterator.java)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_setRoot__$rr__Original_(LocPathIterator.java:372)
+##                  org.apache.xpath.axes.LocPathIterator.setRoot(LocPathIterator.java:359)
+##                  org.apache.xpath.axes.NodeSequence.__$rr_setRoot__$rr__Original_(NodeSequence.java:265)
+##                  org.apache.xpath.axes.NodeSequence.setRoot(NodeSequence.java:260)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_asIterator__$rr__Original_(LocPathIterator.java:269)
+##                  org.apache.xpath.axes.LocPathIterator.asIterator(LocPathIterator.java:266)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:207)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_applyTemplateToNode__$rr__Original_(TransformerImpl.java:2270)
+##                  org.apache.xalan.transformer.TransformerImpl.applyTemplateToNode(TransformerImpl.java:2132)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transformNode__$rr__Original_(TransformerImpl.java:1356)
+##                  org.apache.xalan.transformer.TransformerImpl.transformNode(TransformerImpl.java:1311)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:709)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:638)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1273)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1265)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1251)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1250)
+##                  XSLTBench$XalanWorker.__$rr_run__$rr__Original_(XSLTBench.java:101)
+##                  XSLTBench$XalanWorker.run(XSLTBench.java:89)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 3    
+##           Blame: org/apache/xpath/axes/PredicatedNodeTest.m_foundLast_Z
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(1:8BA0) R=(1:8BA0) V=[]]
+##  Current Thread: [tid=3    C=[(0:1D) (1:8B9F) (2:8ABD) (3:8743) (4:8C39) (5:8778) (6:8E1B) (7:811E) (8:7FE9)]   E=(3:8743)]
+##           Class: class org.apache.xpath.axes.ChildIterator
+##           Field: @07.org/apache/xpath/axes/PredicatedNodeTest.m_foundLast_Z
+##         Message: Read-Write Race
+##     Previous Op: Read by  Thread-0[tid = 1]
+##     Currrent Op: Write by  Thread-2[tid = 3]
+##           Stack: tools.fasttrack.FastTrackToolEnhanced.fieldError(FastTrackToolEnhanced.java:845)
+##                  tools.fasttrack.FastTrackToolEnhanced.error(FastTrackToolEnhanced.java:799)
+##                  tools.fasttrack.FastTrackToolEnhanced.write(FastTrackToolEnhanced.java:552)
+##                  tools.fasttrack.FastTrackToolEnhanced.access(FastTrackToolEnhanced.java:341)
+##                  rr.tool.RREventGenerator.writeAccess(RREventGenerator.java:157)
+##                  org.apache.xpath.axes.PredicatedNodeTest.__$rr_put_m_foundLast(PredicatedNodeTest.java)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_setRoot__$rr__Original_(LocPathIterator.java:373)
+##                  org.apache.xpath.axes.LocPathIterator.setRoot(LocPathIterator.java:359)
+##                  org.apache.xpath.axes.NodeSequence.__$rr_setRoot__$rr__Original_(NodeSequence.java:265)
+##                  org.apache.xpath.axes.NodeSequence.setRoot(NodeSequence.java:260)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_asIterator__$rr__Original_(LocPathIterator.java:269)
+##                  org.apache.xpath.axes.LocPathIterator.asIterator(LocPathIterator.java:266)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:207)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_applyTemplateToNode__$rr__Original_(TransformerImpl.java:2270)
+##                  org.apache.xalan.transformer.TransformerImpl.applyTemplateToNode(TransformerImpl.java:2132)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transformNode__$rr__Original_(TransformerImpl.java:1356)
+##                  org.apache.xalan.transformer.TransformerImpl.transformNode(TransformerImpl.java:1311)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:709)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:638)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1273)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1265)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1251)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1250)
+##                  XSLTBench$XalanWorker.__$rr_run__$rr__Original_(XSLTBench.java:101)
+##                  XSLTBench$XalanWorker.run(XSLTBench.java:89)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 3    
+##           Blame: org/apache/xpath/axes/LocPathIterator.m_pos_I
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(1:8BA0) R=(1:8B99) V=[]]
+##  Current Thread: [tid=3    C=[(0:1D) (1:8B9F) (2:8ABD) (3:8743) (4:8C39) (5:8778) (6:8E1B) (7:811E) (8:7FE9)]   E=(3:8743)]
+##           Class: class org.apache.xpath.axes.ChildIterator
+##           Field: @07.org/apache/xpath/axes/LocPathIterator.m_pos_I
+##         Message: Write-Write Race
+##     Previous Op: Write by  Thread-0[tid = 1]
+##     Currrent Op: Write by  Thread-2[tid = 3]
+##           Stack: tools.fasttrack.FastTrackToolEnhanced.fieldError(FastTrackToolEnhanced.java:845)
+##                  tools.fasttrack.FastTrackToolEnhanced.error(FastTrackToolEnhanced.java:799)
+##                  tools.fasttrack.FastTrackToolEnhanced.write(FastTrackToolEnhanced.java:574)
+##                  tools.fasttrack.FastTrackToolEnhanced.access(FastTrackToolEnhanced.java:341)
+##                  rr.tool.RREventGenerator.writeAccess(RREventGenerator.java:157)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_put_m_pos(LocPathIterator.java)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_setRoot__$rr__Original_(LocPathIterator.java:374)
+##                  org.apache.xpath.axes.LocPathIterator.setRoot(LocPathIterator.java:359)
+##                  org.apache.xpath.axes.NodeSequence.__$rr_setRoot__$rr__Original_(NodeSequence.java:265)
+##                  org.apache.xpath.axes.NodeSequence.setRoot(NodeSequence.java:260)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_asIterator__$rr__Original_(LocPathIterator.java:269)
+##                  org.apache.xpath.axes.LocPathIterator.asIterator(LocPathIterator.java:266)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:207)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_applyTemplateToNode__$rr__Original_(TransformerImpl.java:2270)
+##                  org.apache.xalan.transformer.TransformerImpl.applyTemplateToNode(TransformerImpl.java:2132)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transformNode__$rr__Original_(TransformerImpl.java:1356)
+##                  org.apache.xalan.transformer.TransformerImpl.transformNode(TransformerImpl.java:1311)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:709)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:638)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1273)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1265)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1251)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1250)
+##                  XSLTBench$XalanWorker.__$rr_run__$rr__Original_(XSLTBench.java:101)
+##                  XSLTBench$XalanWorker.run(XSLTBench.java:89)
+##                  
+## =====================================================================
+## 
+## 
+## =====================================================================
+## FastTrack Error
+## 
+##          Thread: 3    
+##           Blame: org/apache/xpath/axes/LocPathIterator.m_length_I
+##           Count: 1    (max: 1)
+##    Shadow State: [W=(1:8BA0) R=(0:0) V=[]]
+##  Current Thread: [tid=3    C=[(0:1D) (1:8B9F) (2:8ABD) (3:8743) (4:8C39) (5:8778) (6:8E1B) (7:811E) (8:7FE9)]   E=(3:8743)]
+##           Class: class org.apache.xpath.axes.ChildIterator
+##           Field: @07.org/apache/xpath/axes/LocPathIterator.m_length_I
+##         Message: Write-Write Race
+##     Previous Op: Write by  Thread-0[tid = 1]
+##     Currrent Op: Write by  Thread-2[tid = 3]
+##           Stack: tools.fasttrack.FastTrackToolEnhanced.fieldError(FastTrackToolEnhanced.java:845)
+##                  tools.fasttrack.FastTrackToolEnhanced.error(FastTrackToolEnhanced.java:799)
+##                  tools.fasttrack.FastTrackToolEnhanced.write(FastTrackToolEnhanced.java:574)
+##                  tools.fasttrack.FastTrackToolEnhanced.access(FastTrackToolEnhanced.java:341)
+##                  rr.tool.RREventGenerator.writeAccess(RREventGenerator.java:157)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_put_m_length(LocPathIterator.java)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_setRoot__$rr__Original_(LocPathIterator.java:375)
+##                  org.apache.xpath.axes.LocPathIterator.setRoot(LocPathIterator.java:359)
+##                  org.apache.xpath.axes.NodeSequence.__$rr_setRoot__$rr__Original_(NodeSequence.java:265)
+##                  org.apache.xpath.axes.NodeSequence.setRoot(NodeSequence.java:260)
+##                  org.apache.xpath.axes.LocPathIterator.__$rr_asIterator__$rr__Original_(LocPathIterator.java:269)
+##                  org.apache.xpath.axes.LocPathIterator.asIterator(LocPathIterator.java:266)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:207)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemCopy.__$rr_execute__$rr__Original_(ElemCopy.java:116)
+##                  org.apache.xalan.templates.ElemCopy.execute(ElemCopy.java:91)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.templates.ElemLiteralResult.__$rr_execute__$rr__Original_(ElemLiteralResult.java:1376)
+##                  org.apache.xalan.templates.ElemLiteralResult.execute(ElemLiteralResult.java:1302)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_transformSelectedNodes__$rr__Original_(ElemApplyTemplates.java:395)
+##                  org.apache.xalan.templates.ElemApplyTemplates.transformSelectedNodes(ElemApplyTemplates.java:204)
+##                  org.apache.xalan.templates.ElemApplyTemplates.__$rr_execute__$rr__Original_(ElemApplyTemplates.java:178)
+##                  org.apache.xalan.templates.ElemApplyTemplates.execute(ElemApplyTemplates.java:152)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_executeChildTemplates__$rr__Original_(TransformerImpl.java:2400)
+##                  org.apache.xalan.transformer.TransformerImpl.executeChildTemplates(TransformerImpl.java:2351)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_applyTemplateToNode__$rr__Original_(TransformerImpl.java:2270)
+##                  org.apache.xalan.transformer.TransformerImpl.applyTemplateToNode(TransformerImpl.java:2132)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transformNode__$rr__Original_(TransformerImpl.java:1356)
+##                  org.apache.xalan.transformer.TransformerImpl.transformNode(TransformerImpl.java:1311)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:709)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:638)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1273)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1265)
+##                  org.apache.xalan.transformer.TransformerImpl.__$rr_transform__$rr__Original_(TransformerImpl.java:1251)
+##                  org.apache.xalan.transformer.TransformerImpl.transform(TransformerImpl.java:1250)
+##                  XSLTBench$XalanWorker.__$rr_run__$rr__Original_(XSLTBench.java:101)
+##                  XSLTBench$XalanWorker.run(XSLTBench.java:89)
+##                  
+## =====================================================================
+## 
+
+
+Write Same Epoch:        0.0776518
+Read with Write Same Epoch:  0.173843
+Read Same Epoch:             0.465007
+Read Shared Same Epoch:      0.0240693
+------------------------------------
+Delayed Release:             0.512463
+Delayed Acquire:             0.515934
+All Fast Paths:              0.740571
+
+
+[main: ]
+[main: ----- ----- ----- -----      Thpthpthpth.     ----- ----- ----- -----]
+[RR: Total Time: 18616]
+<entry>
+  <date> Fri Apr 27 02:14:53 CEST 2018 </date> 
+  <mode> SLOW </mode> 
+  <timeout> NO </timeout> 
+  <options>
+    <option><name> javaArgs </name>           <value> RRBench  </value> </option>
+    <option><name> noDecInline </name>        <value> false </value> </option>
+    <option><name> quiet </name>              <value> true </value> </option>
+    <option><name> logDepth </name>           <value> 100 </value> </option>
+    <option><name> logs </name>               <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/Experiments/table-stats </value> </option>
+    <option><name> out </name>                <value>  </value>   </option>
+    <option><name> err </name>                <value>  </value>   </option>
+    <option><name> noinst </name>             <value> false </value> </option>
+    <option><name> inst </name>               <value> INST </value> </option>
+    <option><name> infThreads </name>         <value> 0 </value>  </option>
+    <option><name> benchmark </name>          <value> 0 </value>  </option>
+    <option><name> warmup </name>             <value> 3 </value>  </option>
+    <option><name> availableProcessors </name> <value> 8 </value>  </option>
+    <option><name> args </name>               <value> [] </value> </option>
+    <option><name> d </name>                  <value> [] </value> </option>
+    <option><name> maxYikes </name>           <value> 5 </value>  </option>
+    <option><name> help </name>               <value> false </value> </option>
+    <option><name> toolpath </name>           <value> /Users/tuan-phongngo/OptimalVerifiedFT/classes/rr/simple:/Users/tuan-phongngo/OptimalVerifiedFT/classes/tools </value> </option>
+    <option><name> classpath </name>          <value> original.jar </value> </option>
+    <option><name> tool </name>               <value> FT2E </value> </option>
+    <option><name> tools </name>              <value> false </value> </option>
+    <option><name> noxml </name>              <value> false </value> </option>
+    <option><name> constantGC </name>         <value> false </value> </option>
+    <option><name> noFP </name>               <value> false </value> </option>
+    <option><name> noShutdownHook </name>     <value> false </value> </option>
+    <option><name> noEnter </name>            <value> true </value> </option>
+    <option><name> xml </name>                <value> FastTrackV5Counts-xalan-0.out </value> </option>
+    <option><name> pulse </name>              <value>  </value>   </option>
+    <option><name> maxTime </name>            <value> 0 </value>  </option>
+    <option><name> maxMem </name>             <value> 10240 </value> </option>
+    <option><name> maxTid </name>             <value> 18 </value> </option>
+    <option><name> stacks </name>             <value> true </value> </option>
+    <option><name> values </name>             <value> false </value> </option>
+    <option><name> noTidGC </name>            <value> false </value> </option>
+    <option><name> noEventReuse </name>       <value> false </value> </option>
+    <option><name> trackMemoryUsage </name>   <value> false </value> </option>
+    <option><name> repository </name>         <value>  </value>   </option>
+    <option><name> meta </name>               <value> null </value> </option>
+    <option><name> methods </name>            <value> ["-.*Barrier.await\(\)V", "-java.util.concurrent.CyclicBarrier.await\(JLjava/util/concurrent/TimeUnit;\)I", "-java.util.concurrent.CyclicBarrier.await\(\)I", "-.*Barrier.DoBarrier\(I\)V", "-.*TournamentBarrier.DoBarrier\(I\)V", default=ACCEPT] </value> </option>
+    <option><name> fields </name>             <value> ["-.*this\$.*", "-$.*__\$rr.*", default=ACCEPT] </value> </option>
+    <option><name> lines </name>              <value> [default=ACCEPT] </value> </option>
+    <option><name> classes </name>            <value> ["-.*Barrier.*", "-java..*", "-javax..*", "-com.sun..*", "-sun..*", "-rr..*", "-tools..*", "-acme..*", "-.*__\$rr_.*", "-org.xml..*", default=ACCEPT] </value> </option>
+    <option><name> shadowThread </name>       <value> ["-.*", default=ACCEPT] </value> </option>
+    <option><name> noop </name>               <value> [default=ACCEPT] </value> </option>
+    <option><name> noConstructor </name>      <value> false </value> </option>
+    <option><name> noClone </name>            <value> false </value> </option>
+    <option><name> dump </name>               <value>  </value>   </option>
+    <option><name> field </name>              <value> FINE </value> </option>
+    <option><name> fancy </name>              <value> false </value> </option>
+    <option><name> verify </name>             <value> false </value> </option>
+    <option><name> trackReflection </name>    <value> false </value> </option>
+    <option><name> arraySites </name>         <value> false </value> </option>
+    <option><name> Use TestAcquires </name>   <value> false </value> </option>
+    <option><name> sanity </name>             <value> false </value> </option>
+    <option><name> reentrantEvents </name>    <value> false </value> </option>
+    <option><name> nojoin </name>             <value> false </value> </option>
+    <option><name> multiLoader </name>        <value> false </value> </option>
+    <option><name> indices </name>            <value> 2147483647 </value> </option>
+    <option><name> updaters </name>           <value> SAFE </value> </option>
+    <option><name> array </name>              <value> FINE </value> </option>
+    <option><name> userArray </name>          <value> rr.state.ArrayStateCreator$1@45ee12a7 </value> </option>
+    <option><name> nobarrier </name>          <value> false </value> </option>
+    <option><name> arrayCacheType </name>     <value> STRONG </value> </option>
+    <option><name> callSites </name>          <value> false </value> </option>
+    <option><name> maxWarn </name>            <value> 1 </value>  </option>
+    <option><name> noInterrupt </name>        <value> false </value> </option>
+  </options>
+  <system>
+    <host> dhcp-11-249.it.uu.se </host> 
+    <name> java.vm.version </name>     <value> 25.101-b13 </value> 
+    <name> java.vm.vendor </name>      <value> Oracle Corporation </value> 
+    <name> java.vm.name </name>        <value> Java HotSpot(TM) 64-Bit Server VM </value> 
+    <name> java.class.path </name>     <value> .:/Users/tuan-phongngo/OptimalVerifiedFT/build/jar/rragent.jar </value> 
+    <name> os.name </name>             <value> Mac OS X </value> 
+    <name> os.arch </name>             <value> x86_64 </value> 
+    <name> os.version </name>          <value> 10.12.4 </value> 
+    <name> user.name </name>           <value> tuan-phongngo </value> 
+    <name> user.dir </name>            <value> /Users/tuan-phongngo/OptimalVerifiedFT/benchmarks/xalan </value> 
+    <availableProcs> 8 </availableProcs> 
+    <memCommitted> 3622 </memCommitted> 
+    <memUsed> 2229 </memUsed> 
+    <memTotal> 3622 </memTotal> 
+    <compileTime> 60491 </compileTime> 
+    <gc> <name> PS Scavenge </name> <time> 1187 </time> </gc>
+    <gc> <name> PS MarkSweep </name> <time> 996 </time> </gc>
+  </system>
+  <instrumented> RRBench XSLTBench XSLTBench$WorkQueue XSLTBench$XalanWorker org/apache/xalan/Version org/apache/xalan/extensions/ExpressionContext org/apache/xalan/extensions/ExpressionVisitor org/apache/xalan/extensions/ExtensionNamespacesManager org/apache/xalan/extensions/ExtensionsTable org/apache/xalan/processor/ProcessorAttributeSet org/apache/xalan/processor/ProcessorCharacters org/apache/xalan/processor/ProcessorDecimalFormat org/apache/xalan/processor/ProcessorExsltFuncResult org/apache/xalan/processor/ProcessorExsltFunction org/apache/xalan/processor/ProcessorGlobalParamDecl org/apache/xalan/processor/ProcessorGlobalVariableDecl org/apache/xalan/processor/ProcessorImport org/apache/xalan/processor/ProcessorInclude org/apache/xalan/processor/ProcessorKey org/apache/xalan/processor/ProcessorLRE org/apache/xalan/processor/ProcessorNamespaceAlias org/apache/xalan/processor/ProcessorOutputElem org/apache/xalan/processor/ProcessorPreserveSpace org/apache/xalan/processor/ProcessorStripSpace org/apache/xalan/processor/ProcessorStylesheetDoc org/apache/xalan/processor/ProcessorStylesheetElement org/apache/xalan/processor/ProcessorTemplate org/apache/xalan/processor/ProcessorTemplateElem org/apache/xalan/processor/ProcessorText org/apache/xalan/processor/ProcessorUnknown org/apache/xalan/processor/StylesheetHandler org/apache/xalan/processor/TransformerFactoryImpl org/apache/xalan/processor/WhitespaceInfoPaths org/apache/xalan/processor/XSLTAttributeDef org/apache/xalan/processor/XSLTElementDef org/apache/xalan/processor/XSLTElementProcessor org/apache/xalan/processor/XSLTSchema org/apache/xalan/serialize/SerializerUtils org/apache/xalan/templates/AVT org/apache/xalan/templates/AVTPart org/apache/xalan/templates/AVTPartSimple org/apache/xalan/templates/AVTPartXPath org/apache/xalan/templates/DecimalFormatProperties org/apache/xalan/templates/ElemApplyImport org/apache/xalan/templates/ElemApplyTemplates org/apache/xalan/templates/ElemAttribute org/apache/xalan/templates/ElemAttributeSet org/apache/xalan/templates/ElemCallTemplate org/apache/xalan/templates/ElemChoose org/apache/xalan/templates/ElemComment org/apache/xalan/templates/ElemCopy org/apache/xalan/templates/ElemCopyOf org/apache/xalan/templates/ElemElement org/apache/xalan/templates/ElemExsltFuncResult org/apache/xalan/templates/ElemExsltFunction org/apache/xalan/templates/ElemExtensionDecl org/apache/xalan/templates/ElemExtensionScript org/apache/xalan/templates/ElemFallback org/apache/xalan/templates/ElemForEach org/apache/xalan/templates/ElemIf org/apache/xalan/templates/ElemLiteralResult org/apache/xalan/templates/ElemMessage org/apache/xalan/templates/ElemNumber org/apache/xalan/templates/ElemNumber$MyPrefixResolver org/apache/xalan/templates/ElemNumber$NumberFormatStringTokenizer org/apache/xalan/templates/ElemOtherwise org/apache/xalan/templates/ElemPI org/apache/xalan/templates/ElemParam org/apache/xalan/templates/ElemSort org/apache/xalan/templates/ElemTemplate org/apache/xalan/templates/ElemTemplateElement org/apache/xalan/templates/ElemText org/apache/xalan/templates/ElemTextLiteral org/apache/xalan/templates/ElemUnknown org/apache/xalan/templates/ElemUse org/apache/xalan/templates/ElemValueOf org/apache/xalan/templates/ElemVariable org/apache/xalan/templates/ElemWhen org/apache/xalan/templates/ElemWithParam org/apache/xalan/templates/FuncDocument org/apache/xalan/templates/FuncFormatNumb org/apache/xalan/templates/FuncKey org/apache/xalan/templates/KeyDeclaration org/apache/xalan/templates/NamespaceAlias org/apache/xalan/templates/OutputProperties org/apache/xalan/templates/Stylesheet org/apache/xalan/templates/StylesheetComposed org/apache/xalan/templates/StylesheetRoot org/apache/xalan/templates/StylesheetRoot$ComposeState org/apache/xalan/templates/TemplateList org/apache/xalan/templates/TemplateSubPatternAssociation org/apache/xalan/templates/WhiteSpaceInfo org/apache/xalan/templates/XMLNSDecl org/apache/xalan/templates/XSLTVisitable org/apache/xalan/templates/XSLTVisitor org/apache/xalan/templates/XUnresolvedVariable org/apache/xalan/trace/TraceManager org/apache/xalan/transformer/ClonerToResultTree org/apache/xalan/transformer/Counter org/apache/xalan/transformer/CountersTable org/apache/xalan/transformer/DecimalToRoman org/apache/xalan/transformer/KeyManager org/apache/xalan/transformer/MsgMgr org/apache/xalan/transformer/StackGuard org/apache/xalan/transformer/TransformSnapshot org/apache/xalan/transformer/TransformerImpl org/apache/xml/dtm/Axis org/apache/xml/dtm/DTM org/apache/xml/dtm/DTMAxisIterator org/apache/xml/dtm/DTMAxisTraverser org/apache/xml/dtm/DTMIterator org/apache/xml/dtm/DTMManager org/apache/xml/dtm/DTMWSFilter org/apache/xml/dtm/ObjectFactory org/apache/xml/dtm/SecuritySupport org/apache/xml/dtm/SecuritySupport12 org/apache/xml/dtm/SecuritySupport12$1 org/apache/xml/dtm/SecuritySupport12$2 org/apache/xml/dtm/SecuritySupport12$3 org/apache/xml/dtm/SecuritySupport12$4 org/apache/xml/dtm/SecuritySupport12$6 org/apache/xml/dtm/SecuritySupport12$7 org/apache/xml/dtm/ref/DTMAxisIteratorBase org/apache/xml/dtm/ref/DTMDefaultBase org/apache/xml/dtm/ref/DTMDefaultBaseIterators org/apache/xml/dtm/ref/DTMDefaultBaseIterators$InternalAxisIteratorBase org/apache/xml/dtm/ref/DTMDefaultBaseIterators$ParentIterator org/apache/xml/dtm/ref/DTMDefaultBaseIterators$PrecedingSiblingIterator org/apache/xml/dtm/ref/DTMDefaultBaseTraversers org/apache/xml/dtm/ref/DTMDefaultBaseTraversers$AncestorTraverser org/apache/xml/dtm/ref/DTMDefaultBaseTraversers$AttributeTraverser org/apache/xml/dtm/ref/DTMDefaultBaseTraversers$ChildTraverser org/apache/xml/dtm/ref/DTMDefaultBaseTraversers$ParentTraverser org/apache/xml/dtm/ref/DTMManagerDefault org/apache/xml/dtm/ref/DTMNodeProxy org/apache/xml/dtm/ref/DTMNodeProxy$DTMNodeProxyImplementation org/apache/xml/dtm/ref/DTMStringPool org/apache/xml/dtm/ref/DTMTreeWalker org/apache/xml/dtm/ref/ExpandedNameTable org/apache/xml/dtm/ref/ExpandedNameTable$HashEntry org/apache/xml/dtm/ref/ExtendedType org/apache/xml/dtm/ref/IncrementalSAXSource org/apache/xml/dtm/ref/sax2dtm/SAX2DTM org/apache/xml/dtm/ref/sax2dtm/SAX2RTFDTM org/apache/xml/serializer/AttributesImplSerializer org/apache/xml/serializer/CharInfo org/apache/xml/serializer/CharInfo$1 org/apache/xml/serializer/CharInfo$CharKey org/apache/xml/serializer/DOMSerializer org/apache/xml/serializer/ElemContext org/apache/xml/serializer/ElemDesc org/apache/xml/serializer/EncodingInfo org/apache/xml/serializer/Encodings org/apache/xml/serializer/ExtendedContentHandler org/apache/xml/serializer/ExtendedLexicalHandler org/apache/xml/serializer/NamespaceMappings org/apache/xml/serializer/NamespaceMappings$MappingRecord org/apache/xml/serializer/NamespaceMappings$Stack org/apache/xml/serializer/ObjectFactory org/apache/xml/serializer/OutputPropertiesFactory org/apache/xml/serializer/OutputPropertiesFactory$1 org/apache/xml/serializer/OutputPropertyUtils org/apache/xml/serializer/SecuritySupport org/apache/xml/serializer/SecuritySupport12 org/apache/xml/serializer/SecuritySupport12$1 org/apache/xml/serializer/SecuritySupport12$2 org/apache/xml/serializer/SecuritySupport12$3 org/apache/xml/serializer/SecuritySupport12$4 org/apache/xml/serializer/SecuritySupport12$6 org/apache/xml/serializer/SerializationHandler org/apache/xml/serializer/Serializer org/apache/xml/serializer/SerializerBase org/apache/xml/serializer/SerializerConstants org/apache/xml/serializer/SerializerFactory org/apache/xml/serializer/SerializerTrace org/apache/xml/serializer/ToHTMLStream org/apache/xml/serializer/ToHTMLStream$Trie org/apache/xml/serializer/ToHTMLStream$Trie$Node org/apache/xml/serializer/ToSAXHandler org/apache/xml/serializer/ToStream org/apache/xml/serializer/ToStream$BoolStack org/apache/xml/serializer/ToTextStream org/apache/xml/serializer/ToXMLSAXHandler org/apache/xml/serializer/WriterChain org/apache/xml/serializer/WriterToASCI org/apache/xml/serializer/WriterToUTF8Buffered org/apache/xml/serializer/XSLOutputAttributes org/apache/xml/serializer/utils/StringToIntTable org/apache/xml/utils/BoolStack org/apache/xml/utils/Context2 org/apache/xml/utils/DefaultErrorHandler org/apache/xml/utils/FastStringBuffer org/apache/xml/utils/IntStack org/apache/xml/utils/IntVector org/apache/xml/utils/NamespaceSupport2 org/apache/xml/utils/NodeConsumer org/apache/xml/utils/NodeVector org/apache/xml/utils/ObjectPool org/apache/xml/utils/ObjectStack org/apache/xml/utils/ObjectVector org/apache/xml/utils/PrefixResolver org/apache/xml/utils/QName org/apache/xml/utils/SAXSourceLocator org/apache/xml/utils/StringBufferPool org/apache/xml/utils/StringToIntTable org/apache/xml/utils/StringVector org/apache/xml/utils/SuballocatedIntVector org/apache/xml/utils/SystemIDResolver org/apache/xml/utils/UnImplNode org/apache/xml/utils/XML11Char org/apache/xml/utils/XMLCharacterRecognizer org/apache/xml/utils/XMLReaderManager org/apache/xml/utils/XMLString org/apache/xml/utils/XMLStringFactory org/apache/xml/utils/res/CharArrayWrapper org/apache/xml/utils/res/XResourceBundle org/apache/xml/utils/res/XResources_en org/apache/xpath/Expression org/apache/xpath/ExpressionNode org/apache/xpath/ExpressionOwner org/apache/xpath/ExtensionsProvider org/apache/xpath/NodeSetDTM org/apache/xpath/SourceTreeManager org/apache/xpath/VariableStack org/apache/xpath/WhitespaceStrippingElementMatcher org/apache/xpath/XPath org/apache/xpath/XPathContext org/apache/xpath/XPathContext$XPathExpressionContext org/apache/xpath/XPathVisitable org/apache/xpath/XPathVisitor org/apache/xpath/axes/AttributeIterator org/apache/xpath/axes/AxesWalker org/apache/xpath/axes/BasicTestIterator org/apache/xpath/axes/ChildIterator org/apache/xpath/axes/ChildTestIterator org/apache/xpath/axes/DescendantIterator org/apache/xpath/axes/FilterExprIteratorSimple org/apache/xpath/axes/FilterExprWalker org/apache/xpath/axes/FilterExprWalker$filterExprOwner org/apache/xpath/axes/HasPositionalPredChecker org/apache/xpath/axes/IteratorPool org/apache/xpath/axes/LocPathIterator org/apache/xpath/axes/NodeSequence org/apache/xpath/axes/NodeSequence$IteratorCache org/apache/xpath/axes/OneStepIterator org/apache/xpath/axes/OneStepIteratorForward org/apache/xpath/axes/PathComponent org/apache/xpath/axes/PredicatedNodeTest org/apache/xpath/axes/PredicatedNodeTest$PredOwner org/apache/xpath/axes/ReverseAxesWalker org/apache/xpath/axes/SelfIteratorNoPredicate org/apache/xpath/axes/SubContextList org/apache/xpath/axes/UnionChildIterator org/apache/xpath/axes/UnionPathIterator org/apache/xpath/axes/UnionPathIterator$iterOwner org/apache/xpath/axes/WalkerFactory org/apache/xpath/axes/WalkingIterator org/apache/xpath/axes/WalkingIteratorSorted org/apache/xpath/compiler/Compiler org/apache/xpath/compiler/FunctionTable org/apache/xpath/compiler/Keywords org/apache/xpath/compiler/Lexer org/apache/xpath/compiler/OpMap org/apache/xpath/compiler/OpMapVector org/apache/xpath/compiler/XPathParser org/apache/xpath/functions/FuncBoolean org/apache/xpath/functions/FuncCeiling org/apache/xpath/functions/FuncConcat org/apache/xpath/functions/FuncContains org/apache/xpath/functions/FuncCount org/apache/xpath/functions/FuncCurrent org/apache/xpath/functions/FuncDoclocation org/apache/xpath/functions/FuncExtElementAvailable org/apache/xpath/functions/FuncExtFunction org/apache/xpath/functions/FuncExtFunctionAvailable org/apache/xpath/functions/FuncFalse org/apache/xpath/functions/FuncFloor org/apache/xpath/functions/FuncGenerateId org/apache/xpath/functions/FuncId org/apache/xpath/functions/FuncLang org/apache/xpath/functions/FuncLast org/apache/xpath/functions/FuncLocalPart org/apache/xpath/functions/FuncNamespace org/apache/xpath/functions/FuncNormalizeSpace org/apache/xpath/functions/FuncNot org/apache/xpath/functions/FuncNumber org/apache/xpath/functions/FuncPosition org/apache/xpath/functions/FuncQname org/apache/xpath/functions/FuncRound org/apache/xpath/functions/FuncStartsWith org/apache/xpath/functions/FuncString org/apache/xpath/functions/FuncStringLength org/apache/xpath/functions/FuncSubstring org/apache/xpath/functions/FuncSubstringAfter org/apache/xpath/functions/FuncSubstringBefore org/apache/xpath/functions/FuncSum org/apache/xpath/functions/FuncSystemProperty org/apache/xpath/functions/FuncTranslate org/apache/xpath/functions/FuncTrue org/apache/xpath/functions/FuncUnparsedEntityURI org/apache/xpath/functions/Function org/apache/xpath/functions/Function2Args org/apache/xpath/functions/Function2Args$Arg1Owner org/apache/xpath/functions/Function3Args org/apache/xpath/functions/FunctionDef1Arg org/apache/xpath/functions/FunctionMultiArgs org/apache/xpath/functions/FunctionOneArg org/apache/xpath/objects/Comparator org/apache/xpath/objects/DTMXRTreeFrag org/apache/xpath/objects/EqualComparator org/apache/xpath/objects/GreaterThanComparator org/apache/xpath/objects/GreaterThanOrEqualComparator org/apache/xpath/objects/LessThanComparator org/apache/xpath/objects/LessThanOrEqualComparator org/apache/xpath/objects/NotEqualComparator org/apache/xpath/objects/XBoolean org/apache/xpath/objects/XBooleanStatic org/apache/xpath/objects/XMLStringFactoryImpl org/apache/xpath/objects/XNodeSet org/apache/xpath/objects/XNumber org/apache/xpath/objects/XObject org/apache/xpath/objects/XRTreeFrag org/apache/xpath/objects/XRTreeFragSelectWrapper org/apache/xpath/objects/XString org/apache/xpath/operations/And org/apache/xpath/operations/Div org/apache/xpath/operations/Equals org/apache/xpath/operations/Gt org/apache/xpath/operations/Minus org/apache/xpath/operations/Mod org/apache/xpath/operations/Mult org/apache/xpath/operations/NotEquals org/apache/xpath/operations/Number org/apache/xpath/operations/Operation org/apache/xpath/operations/Operation$LeftExprOwner org/apache/xpath/operations/Or org/apache/xpath/operations/Plus org/apache/xpath/operations/Quo org/apache/xpath/operations/UnaryOperation org/apache/xpath/operations/Variable org/apache/xpath/patterns/NodeTest org/apache/xpath/patterns/StepPattern org/apache/xpath/patterns/StepPattern$PredOwner org/apache/xpath/patterns/UnionPattern org/apache/xpath/patterns/UnionPattern$UnionPathPartOwner  </instrumented> 
+  <instrumentedNum> 345 </instrumentedNum> 
+  <skipped>  </skipped> 
+  <skippedNum> 0 </skippedNum> 
+  <sanityChecked>  </sanityChecked> 
+  <sanityCheckedNum> 0 </sanityCheckedNum> 
+  <counters>
+
+    <counter><name> "ArrayStateFactory: Size" </name>                    <value> 268,332 </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Move Time" </name>         <value> <total>216.000</total> <count>29</count> <ave>7.44828</ave> </value> </counter>
+    <counter><name> "ArrayStateFactory: Attic Hits" </name>              <value> 9,881 </value> </counter>
+
+    <counter><name> "Clone: Count" </name>                               <value> 324,374 </value> </counter>
+
+    <counter><name> "FT: Read Same Epoch" </name>                        <value> 286,637,900 </value> </counter>
+    <counter><name> "FT: ReadShared Same Epoch" </name>                  <value> 14,836,707 </value> </counter>
+    <counter><name> "FT: Read Exclusive" </name>                         <value> 104,516,878 </value> </counter>
+    <counter><name> "FT: Read Share" </name>                             <value>      2,956 </value> </counter>
+    <counter><name> "FT: Read Shared" </name>                            <value> 24,484,147 </value> </counter>
+    <counter><name> "FT: Write-Read Error" </name>                       <value>        279 </value> </counter>
+    <counter><name> "FT: Write Same Epoch" </name>                       <value> 47,865,809 </value> </counter>
+    <counter><name> "FT: Write Exclusive" </name>                        <value> 30,912,121 </value> </counter>
+    <counter><name> "FT: Write Shared" </name>                           <value>          0 </value> </counter>
+    <counter><name> "FT: Write-Write Error" </name>                      <value>         40 </value> </counter>
+    <counter><name> "FT: Read-Write Error" </name>                       <value>         24 </value> </counter>
+    <counter><name> "FT: Shared-Write Error" </name>                     <value>         10 </value> </counter>
+    <counter><name> "FT: Acquire" </name>                                <value>  4,464,124 </value> </counter>
+    <counter><name> "FT: Release" </name>                                <value>  4,464,124 </value> </counter>
+    <counter><name> "FT: Fork" </name>                                   <value>          8 </value> </counter>
+    <counter><name> "FT: Join" </name>                                   <value>          8 </value> </counter>
+    <counter><name> "FT: Barrier" </name>                                <value>          0 </value> </counter>
+    <counter><name> "FT: Wait" </name>                                   <value>         10 </value> </counter>
+    <counter><name> "FT: Volatile" </name>                               <value>          0 </value> </counter>
+    <counter><name> "FT: Read with Write Same Epoch" </name>             <value> 107,159,391 </value> </counter>
+    <counter><name> "FT: Delayed Release" </name>                        <value>  2,287,698 </value> </counter>
+    <counter><name> "FT: Delayed Acquire" </name>                        <value>  2,303,193 </value> </counter>
+    <counter><name> "FT: Other" </name>                                  <value>        172 </value> </counter>
+    <counter><name> "FT: Total Reads" </name>                            <value> 537,638,258 </value> </counter>
+    <counter><name> "FT: Total Writes" </name>                           <value> 78,778,004 </value> </counter>
+    <counter><name> "FT: Total Access Ops" </name>                       <value> 616,416,262 </value> </counter>
+    <counter><name> "FT: Total Ops" </name>                              <value> 625,344,708 </value> </counter>
+
+    <counter><name> "GCRunner: Max Usage" </name>                        <value> 0 </value> </counter>
+
+    <counter><name> "Handler: Count" </name>                             <value> 0 </value> </counter>
+
+    <counter><name> "ShadowLock: objects" </name>                        <value> 8,624 </value> </counter>
+
+    <counter><name> "ShadowThread: Count" </name>                        <value> 9 </value> </counter>
+    <counter><name> "ShadowThread: Max Live" </name>                     <value> 9 </value> </counter>
+    <counter><name> "ShadowThread: getCurrentThread() calls" </name>     <value> 289,280,861 </value> </counter>
+
+    <counter><name> "ShadowVolatile: objects" </name>                    <value> 0 </value> </counter>
+
+    <counter><name> "Time: Instrumenter" </name>                         <value> <total>1191.00</total> <count>345</count> <ave>3.45217</ave> </value> </counter>
+  </counters>
+  <yikes>
+    <message> Concurrent array state creation... </message> <count> 4 </count> 
+    <message> SafeFieldUpdater: Concurrent update </message> <count> 68 </count> 
+    <message> concurrent initialization of guard  </message> <count> 3 </count> 
+  </yikes>
+  <tool>
+    <name> tools.fasttrack.FastTrackToolEnhanced </name> 
+    <thread> [tid=3    C=[(0:1D) (1:41F52) (2:41F7B) (3:42028) (4:42A4B) (5:41E37) (6:4262F) (7:4263D) (8:41742)]   E=(3:42028)] </thread> 
+    <thread> [tid=8    C=[(0:1D) (1:42425) (2:421CF) (3:42027) (4:42E69) (5:4225E) (6:4262F) (7:42C84) (8:41B81)]   E=(8:41B81)] </thread> 
+    <thread> [tid=5    C=[(0:1D) (1:427BD) (2:421CF) (3:42027) (4:42E69) (5:4282E) (6:4262F) (7:433D3) (8:41B80)]   E=(5:4282E)] </thread> 
+    <thread> [tid=4    C=[(0:1D) (1:42314) (2:421CF) (3:42027) (4:42E6A) (5:420B2) (6:4262F) (7:42B19) (8:41A34)]   E=(4:42E6A)] </thread> 
+    <thread> [tid=6    C=[(0:1D) (1:41EE6) (2:41F7B) (3:41F62) (4:42A00) (5:41E37) (6:42630) (7:4261A) (8:41742)]   E=(6:42630)] </thread> 
+    <thread> [tid=1    C=[(0:1D) (1:427BE) (2:421CF) (3:42027) (4:42E69) (5:4252F) (6:4262F) (7:4308E) (8:41B80)]   E=(1:427BE)] </thread> 
+    <thread> [tid=0    C=[(0:1E) (1:427BE) (2:421D0) (3:42028) (4:42E6A) (5:4282E) (6:42630) (7:433D4) (8:41B81)]   E=(0:1E)] </thread> 
+    <thread> [tid=2    C=[(0:1D) (1:421BC) (2:421D0) (3:42027) (4:42CFD) (5:41F36) (6:4262F) (7:429A1) (8:418D4)]   E=(2:421D0)] </thread> 
+    <thread> [tid=7    C=[(0:1D) (1:427BD) (2:421CF) (3:42027) (4:42E69) (5:427CE) (6:4262F) (7:433D4) (8:41B80)]   E=(7:433D4)] </thread> 
+  </tool>
+  <tool>
+    <name> Last </name> 
+  </tool>
+  <threadCount> 9 </threadCount> 
+  <threadMaxActive> 9 </threadMaxActive> 
+  <errorTotal> 16 </errorTotal> 
+  <distinctErrorTotal> 16 </distinctErrorTotal> 
+  <methods>
+  </methods>
+  <fields>
+    <field>
+      <name> org/apache/xpath/axes/PredicatedNodeTest.m_foundLast_Z </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xpath/axes/LocPathIterator.m_cdtm_Lorg/apache/xml/dtm/DTM; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xml/serializer/OutputPropertiesFactory.m_text_properties_Ljava/util/Properties; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xpath/axes/LocPathIterator.m_currentContextNode_I </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xpath/axes/LocPathIterator.m_execContext_Lorg/apache/xpath/XPathContext; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xml/serializer/CharInfo.firstWordNotUsed_I </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xml/serializer/CharInfo$CharKey.m_char_C </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xpath/axes/LocPathIterator.m_length_I </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xalan/templates/ElemNumber.m_alphaCountTable_Lorg/apache/xml/utils/res/CharArrayWrapper; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xpath/axes/LocPathIterator.m_context_I </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xpath/axes/LocPathIterator.m_pos_I </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xml/serializer/CharInfo.onlyQuotAmpLtGt_Z </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xml/serializer/CharInfo.m_charToString_Ljava/util/HashMap; </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xpath/axes/LocPathIterator.m_lastFetched_I </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+    <field>
+      <name> org/apache/xml/utils/res/CharArrayWrapper.m_char_\[C </name> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </field>
+  </fields>
+  <arrays>
+    <target>
+      <location> rd_array@org/apache/xml/utils/res/CharArrayWrapper.java:36:5 </location> 
+      <error> <name> FastTrack </name> <count> 1 </count> </error>
+    </target>
+  </arrays>
+  <locks>
+  </locks>
+  <fieldAccesses>
+  </fieldAccesses>
+  <errorCountPerErrorType>
+    <errorType> <name> FastTrack </name> <count> 16 </count> </errorType>
+  </errorCountPerErrorType>
+  <warningsTotal> 0 </warningsTotal> 
+  <yikesTotal> 75 </yikesTotal> 
+  <failed> false </failed> 
+  <failedReason>  </failedReason> 
+  <time> 18616 </time> 
+</entry>
+[RR: Time = 18616]
+[RR: Exiting: 0]
