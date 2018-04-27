@@ -20,3 +20,5 @@ auto/rr/tool/parser/Lexer.java
 auto/rr/tool/parser/parser.java
 auto/rr/tool/parser/sym.java
 auto/tools/util/LongVectorClock.java
+*.csv
+*.tex
