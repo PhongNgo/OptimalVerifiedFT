@@ -60,7 +60,7 @@ defaultRRArgs='%rowextra -quiet -maxWarn=1 -xml=%log -logs=%path %extra '
 standardCmd =  'cd %dir ; gtimeout -s 9 -k 5 2h                                env RR_MODE=SLOW env JVM_ARGS="$JVM_ARGS ' + jvmArgs +'"  ./%command   -classpath=original.jar ' + defaultRRArgs + '  '
 
 # The experiments to run to gather timing measurements.
-ftExperimentV5 =        MultiExperiment('FastTrackV5Counts', standardCmd + " -tool=FT2E", TRIALS)
+ftExperimentV5 =        MultiExperiment('FastTrackV5Counts', standardCmd + " -tool=FT2E-V1", TRIALS)
 
 ##def sameEpochPercent(e,name='',title='c|',rowf='r|'):
 ##    if name=='':

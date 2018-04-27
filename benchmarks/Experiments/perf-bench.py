@@ -77,6 +77,7 @@ ftExperimentV4L =       MultiExperiment('FastTrackEnhancedV1L', standardCmd + " 
 ftExperimentV5 =        MultiExperiment('FastTrackEnhanced', standardCmd + " -tool=FT2E", TRIALS, startNum=START)
 ftExperimentV5L =       MultiExperiment('FastTrackEnhancedL', standardCmd + " -tool=FT2EL", TRIALS, startNum=START)
 ftExperimentV6 =        MultiExperiment('FastTrackEnhancedV2', standardCmd + " -tool=FT2E-V2", TRIALS, startNum=START)
+ftExperimentV7 =        MultiExperiment('FastTrackEnhancedV3', standardCmd + " -tool=FT2E-V3", TRIALS, startNum=START)
 
 def getTime(e,row,outDir): 
     return e.getXMLCounter(row,outDir,'RRBench: Average')
@@ -173,6 +174,7 @@ cols = [
 ##    makeOverhead(ftExperimentV2,'VFT-v1.5'),
     makeOverhead(ftExperimentV4,'VFT-E-v1'),
     makeOverhead(ftExperimentV6,'VFT-E-v2'),
+    makeOverhead(ftExperimentV7,'VFT-E-v3'),
     makeOverhead(ftExperimentV5,'VFT-E'),
     makeOverhead(ftExperimentV3,'VFT-v2'),
 ##    makeOverhead(ftExperimentV5,'VFT-E'),
@@ -183,13 +185,13 @@ cols = [
 headers = [
     [Header('',1,'|c|'),
      Header('',1),
-     Header('Overhead',4,'c|'),
+     Header('Overhead',5,'c|'),
      ],
     [Header('Program',1,'|c|'),
      Header('Time',1,'c|'),
      Header('',1),Header('',1), 
      Header('',1), Header('',1),
-# Header('',1),
+     Header('',1),
      ]
 ]
 
@@ -200,6 +202,7 @@ exps=[
 ##    ftExperimentV2,
     ftExperimentV4,
     ftExperimentV6,
+    ftExperimentV7,
     ftExperimentV5,
     ftExperimentV3,
 ##    ftExperimentV5,
@@ -220,13 +223,14 @@ cols = [
 ##    makeErrors(ftExperimentV2,'VFT-v1.5', 'c|','r|'),
     makeErrors(ftExperimentV4,'VFT-E-v1', 'c|','r|'),
     makeErrors(ftExperimentV6,'VFT-E-v2', 'c|','r|'),
+    makeErrors(ftExperimentV7,'VFT-E-v3', 'c|','r|'),
     makeErrors(ftExperimentV5,'VFT-E', 'c|','r|'),
     makeErrors(ftExperimentV3,'VFT-v2', 'c|','r|'),
 ##    makeErrors(ftExperimentV5,'VFT-E', 'c|','r|'),
 ]
 
 headers = [
-    [Header('',1,'|c||'),Header('Warnings',4,'|c|')]
+    [Header('',1,'|c||'),Header('Warnings',5,'|c|')]
 ]
 
 errorTable = Table('Performance', 'large', headers, javagrade_rows + dacapo_rows, cols, [],'bench')

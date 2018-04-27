@@ -123,8 +123,8 @@ import acme.util.option.CommandLine;
  * The performance over the JavaGrande and DaCapo benchmarks is more or less
  * identical to the old implementation (within ~1% overall in our tests).
  */
-@Abbrev("FT2E-V2")
-public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTBarrierState>  {
+@Abbrev("FT2EL-V3")
+public class FastTrackToolEnhancedV3 extends Tool implements BarrierListener<FTBarrierState>  {
   
   private static final boolean COUNT_OPERATIONS = RRMain.slowMode();
   private static final int INIT_VECTOR_CLOCK_SIZE = 4;
@@ -148,7 +148,7 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
     }
   }
   
-  public FastTrackToolEnhancedV2(final String name, final Tool next, CommandLine commandLine) {
+  public FastTrackToolEnhancedV3(final String name, final Tool next, CommandLine commandLine) {
     super(name, next, commandLine);
     new BarrierMonitor<FTBarrierState>(this, new DefaultValue<Object,FTBarrierState>() {
       public FTBarrierState get(Object k) {
@@ -211,11 +211,11 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
   }
   
   
-  //  protected boolean fakeIncLongEpochAndCheckEq(ShadowThread st, LongVectorClock other) {
-  //    final int tid = st.getTid();
-  //    final LongVectorClock tV = ts_get_V(st);
-  //    return other.fakeIncThenCheckEq(tV, tid);
-  //  }
+//  protected boolean fakeIncLongEpochAndCheckEq(ShadowThread st, LongVectorClock other) {
+//    final int tid = st.getTid();
+//    final LongVectorClock tV = ts_get_V(st);
+//    return other.fakeIncThenCheckEq(tV, tid);
+//  }
   
   
   static final Decoration<ShadowLock,FTLockState> lockVs = ShadowLock.makeDecoration("FastTrack:ShadowLock", DecorationFactory.Type.MULTIPLE,
@@ -274,9 +274,17 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
   @Override
   public void acquire(final AcquireEvent event) {
     final ShadowThread st = event.getThread();
-    final FTLockState lockV = getV(event.getLock());
+    final ShadowLock currLock = event.getLock();
+    final FTLockState lockV = getV(currLock);
+    final int tidLast = lockV.tidLast;
+    final int tid = st.getTid();
     
-    maxLongEpochAndCV(st, lockV, event.getInfo());
+    //if (!fakeIncLongEpochAndCheckEq(st, lockV))
+    if (tid != tidLast) {
+        maxLongEpochAndCV(st, lockV, event.getInfo());
+    } else if (COUNT_OPERATIONS) delayedAcquire.inc(st.getTid());
+    
+    st.n += 1;
     
     super.acquire(event);
     if (COUNT_OPERATIONS) acquire.inc(st.getTid());
@@ -288,12 +296,22 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
   public void release(final ReleaseEvent event) {
     final ShadowThread st = event.getThread();
     final LongVectorClock tV = ts_get_V(st);
-    final LongVectorClock lockV = getV(event.getLock());
+    final ShadowLock currLock = event.getLock();
+    final FTLockState lockV = getV(currLock);
+    final Object lastLockObj = st.lastlockObj;
+    final Object currLockObj = currLock.getLock();
+    final int n = st.n;
+    final int tid = st.getTid();
     
-    //if (!fakeIncLongEpochAndCheckEq(st, lockV)) { // newly added
-    lockV.max(tV);
-    incLongEpochAndCV(st, event.getInfo());
-    //} else if (COUNT_OPERATIONS) delayedRelease.inc(st.getTid());
+    //if (!fakeIncLongEpochAndCheckEq(st, lockV) || lastLockObj != currLockObj) { // newly added
+    if (lastLockObj != currLockObj || n != 1) {
+      lockV.copy(tV); // changed here
+      incLongEpochAndCV(st, event.getInfo());
+      st.lastlockObj = currLockObj;
+    } else if (COUNT_OPERATIONS) delayedRelease.inc(tid);
+    
+    lockV.tidLast = tid;
+    st.n = 0;
     
     super.release(event);
     if (COUNT_OPERATIONS) release.inc(st.getTid());
@@ -364,6 +382,7 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
   // new added variables
   private static final ThreadLocalCounter readWriteSameLongEpoch = new ThreadLocalCounter("FT", "Read with Write Same LongEpoch", RR.maxTidOption.get());
   private static final ThreadLocalCounter delayedRelease = new ThreadLocalCounter("FT", "Delayed Release", RR.maxTidOption.get());
+  private static final ThreadLocalCounter delayedAcquire = new ThreadLocalCounter("FT", "Delayed Acquire", RR.maxTidOption.get());
   
   
   private static final ThreadLocalCounter other = new ThreadLocalCounter("FT", "Other", RR.maxTidOption.get());
@@ -382,6 +401,7 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
       Util.printf("Read Same LongEpoch:             %g\n", ((double)readSameLongEpoch.getCount()) / accesses.getCount());
       Util.printf("Read Shared Same LongEpoch:      %g\n------------------------------------\n", ((double)readSharedSameLongEpoch.getCount()) / accesses.getCount());
       Util.printf("Delayed Release:             %g\n", ((double)delayedRelease.getCount()) / release.getCount());
+      Util.printf("Delayed Acquire:             %g\n", ((double)delayedAcquire.getCount()) / acquire.getCount());
       Util.printf("All Fast Paths:              %g\n\n\n", ((double)(writeSameLongEpoch.getCount() + readWriteSameLongEpoch.getCount() + readSameLongEpoch.getCount() + readSharedSameLongEpoch.getCount())) / accesses.getCount());
     }
   }
@@ -389,48 +409,33 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
   protected void read(final AccessEvent event, final ShadowThread st, final FTVarState sx) {
     final long/*epoch*/ e = ts_get_E(st);
     
-    
     /* optional */ {
-      
       final long/*epoch*/ r = sx.R;
-      
-      if (r == e) {
-        if (COUNT_OPERATIONS) readSameLongEpoch.inc(st.getTid());
+      final long/*epoch*/ w = sx.W;
+      if (r == e || w == e || (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e)) {
+        if (COUNT_OPERATIONS) {
+          if (r == e) readSameLongEpoch.inc(st.getTid());
+          else if (w == e) readWriteSameLongEpoch.inc(st.getTid());
+          else readSharedSameLongEpoch.inc(st.getTid());
+        }
         return;
       }
-      
-      if (sx.W == e) { // newly added
-        if (COUNT_OPERATIONS) readWriteSameLongEpoch.inc(st.getTid());
-        return;
-      }
-      
-      if (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e) {
-        if (COUNT_OPERATIONS) readSharedSameLongEpoch.inc(st.getTid());
-        return;
-      }
-      
-      
     }
     
-    
+    final LongVectorClock tV = ts_get_V(st);
+    final int tid = st.getTid();
     
     synchronized(sx) {
+      final long/*epoch*/ w = sx.W;
+      final int wTid = LongEpoch.tid(w);
       
-      /* optional */ //{
-        final long/*epoch*/ w = sx.W;
-        final int wTid = LongEpoch.tid(w);
-        final int tid = st.getTid();
-        final LongVectorClock tV = ts_get_V(st);
-        
-        if (wTid != tid && !LongEpoch.leq(w, tV.get(wTid))) {
-          if (COUNT_OPERATIONS) writeReadError.inc(tid);
-          error(event, sx, "Write-Read Race", "Write by ", wTid, "Read by ", tid);
-          return;
-        }
-      //}
+      if (wTid != tid && !LongEpoch.leq(w, tV.get(wTid))) {
+        if (COUNT_OPERATIONS) writeReadError.inc(tid);
+        error(event, sx, "Write-Read Race", "Write by ", wTid, "Read by ", tid);
+        return;
+      }
       
       final long/*epoch*/ r = sx.R;
-      
       if (r != LongEpoch.READ_SHARED) {
         final int rTid = LongEpoch.tid(r);
         if (rTid == tid || LongEpoch.leq(r, tV.get(rTid))) {
@@ -438,8 +443,8 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
           sx.R = e;
         } else {
           if (COUNT_OPERATIONS) readShare.inc(tid);
-          //int initSize = Math.max(Math.max(rTid,tid), INIT_VECTOR_CLOCK_SIZE);
-          sx.makeCV(Math.max(Math.max(rTid,tid), INIT_VECTOR_CLOCK_SIZE));
+          int initSize = Math.max(Math.max(rTid,tid), INIT_VECTOR_CLOCK_SIZE);
+          sx.makeCV(initSize);
           sx.set(rTid, r);
           sx.set(tid, e);
           sx.R = LongEpoch.READ_SHARED;
@@ -460,43 +465,28 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
       
       /* optional */ {
         final long/*epoch*/ r = sx.R;
-        
-        if (r == e) {
-          if (COUNT_OPERATIONS) readSameLongEpoch.inc(st.getTid());
+        final long/*epoch*/ w = sx.W;
+        if (r == e || w == e || (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e)) {
+          if (COUNT_OPERATIONS) {
+            if (r == e) readSameLongEpoch.inc(st.getTid());
+            else if (w == e) readWriteSameLongEpoch.inc(st.getTid());
+            else readSharedSameLongEpoch.inc(st.getTid());
+          }
           return true;
         }
-        
-        if (sx.W == e) { // newly added
-          if (COUNT_OPERATIONS) readWriteSameLongEpoch.inc(st.getTid());
-          return true;
-        }
-        
-        if (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e) {
-          if (COUNT_OPERATIONS) readSharedSameLongEpoch.inc(st.getTid());
-          return true;
-        }
-        
-        
       }
       
-      
-      
+      final int tid = st.getTid();
+      final LongVectorClock tV = ts_get_V(st);
       synchronized(sx) {
-        
-        /* optional */ //{
-          final long/*epoch*/ w = sx.W;
-          final int wTid = LongEpoch.tid(w);
-          final int tid = st.getTid();
-          final LongVectorClock tV = ts_get_V(st);
-          
-          if (wTid != tid && !LongEpoch.leq(w, tV.get(wTid))) {
-            ts_set_badVarState(st, sx);
-            return false;
-          }
-        //}
+        final long/*epoch*/ w = sx.W;
+        final int wTid = LongEpoch.tid(w);
+        if (wTid != tid && !LongEpoch.leq(w, tV.get(wTid))) {
+          ts_set_badVarState(st, sx);
+          return false;
+        }
         
         final long/*epoch*/ r = sx.R;
-        
         if (r != LongEpoch.READ_SHARED) {
           final int rTid = LongEpoch.tid(r);
           if (rTid == tid || LongEpoch.leq(r, tV.get(rTid))) {
@@ -504,15 +494,15 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
             sx.R = e;
           } else {
             if (COUNT_OPERATIONS) readShare.inc(tid);
-            //int initSize = Math.max(Math.max(rTid,tid), INIT_VECTOR_CLOCK_SIZE);
-            sx.makeCV(Math.max(Math.max(rTid,tid), INIT_VECTOR_CLOCK_SIZE));
+            int initSize = Math.max(Math.max(rTid,tid), INIT_VECTOR_CLOCK_SIZE);
+            sx.makeCV(initSize);
             sx.set(rTid, r);
             sx.set(tid, e);
             sx.R = LongEpoch.READ_SHARED;
           }
         } else {
           if (COUNT_OPERATIONS) readShared.inc(tid);
-          sx.set(tid, e);
+          sx.set(tid, e);					
         }
         return true;
       }
@@ -536,31 +526,9 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
     }
     
     
+    
     final int tid = st.getTid();
     final LongVectorClock tV = ts_get_V(st);
-    
-    /* optional */ {
-      final long/*epoch*/ r = sx.R;
-      
-      if (r != LongEpoch.READ_SHARED) {
-        final int rTid = LongEpoch.tid(r);
-        if (rTid != tid /* optimization */ && !LongEpoch.leq(r, tV.get(rTid))) {
-          if (COUNT_OPERATIONS) readWriteError.inc(tid);
-          error(event, sx, "Read-Write Race", "Read by ", rTid, "Write by ", tid);
-          return;
-        }
-        if (COUNT_OPERATIONS) writeExclusive.inc(tid);
-        
-      } else {
-        if (sx.anyGt(tV)) {
-          if (COUNT_OPERATIONS) sharedWriteError.inc(tid);
-          error(event, sx, "Read(Shared)-Write Race", "Read by ", sx.nextGt(tV, 0), "Write by ", tid);
-          return;
-        }
-        if (COUNT_OPERATIONS) writeShared.inc(tid);
-      }
-      
-    }
     
     synchronized(sx) {
       final long/*epoch*/ w = sx.W;
@@ -571,18 +539,32 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
         error(event, sx, "Write-Write Race", "Write by ", wTid, "Write by ", tid);
         return;
       }
+      
+      final long/*epoch*/ r = sx.R;
+      if (r != LongEpoch.READ_SHARED) {
+        final int rTid = LongEpoch.tid(r);
+        if (rTid != tid /* optimization */ && !LongEpoch.leq(r, tV.get(rTid))) {
+          if (COUNT_OPERATIONS) readWriteError.inc(tid);
+          error(event, sx, "Read-Write Race", "Read by ", rTid, "Write by ", tid);
+          return;
+        }
+        if (COUNT_OPERATIONS) writeExclusive.inc(tid);
+      } else {
+        if (sx.anyGt(tV)) {
+          if (COUNT_OPERATIONS) sharedWriteError.inc(tid);
+          error(event, sx, "Read(Shared)-Write Race", "Read by ", sx.nextGt(tV, 0), "Write by ", tid);
+          return;
+        }
+        if (COUNT_OPERATIONS) writeShared.inc(tid);
+      }
       sx.W = e;
     }
-    
   }
-  
-  
   
   // only count events when returning true;
   public static boolean writeFastPath(final ShadowVar shadow, final ShadowThread st) {
     if (shadow instanceof FTVarState) {
       final FTVarState sx = ((FTVarState)shadow);
-      
       final long/*epoch*/ e = ts_get_E(st);
       
       /* optional */ {
@@ -594,10 +576,17 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
       
       final int tid = st.getTid();
       final LongVectorClock tV = ts_get_V(st);
-      
-      /* optional */ {
-        final long/*epoch*/ r = sx.R;
+
+      synchronized(sx) {
+        final long/*epoch*/ w = sx.W;
+        final int wTid = LongEpoch.tid(w);
         
+        if (wTid != tid && !LongEpoch.leq(w, tV.get(wTid))) {
+          ts_set_badVarState(st, sx);
+          return false;
+        }
+        
+        final long/*epoch*/ r = sx.R;
         if (r != LongEpoch.READ_SHARED) {
           final int rTid = LongEpoch.tid(r);
           if (rTid != tid && !LongEpoch.leq(r, tV.get(rTid))) {
@@ -612,21 +601,9 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
           }
           if (COUNT_OPERATIONS) writeShared.inc(tid);
         }
-      }
-      
-      synchronized(sx) {
-        final long/*epoch*/ w = sx.W;
-        final int wTid = LongEpoch.tid(w);
-        
-        if (wTid != tid && !LongEpoch.leq(w, tV.get(wTid))) {
-          ts_set_badVarState(st, sx);
-          return false;
-        }
         sx.W = e;
+        return true;
       }
-      
-      return true;
-      
     } else {
       return false;
     }
@@ -808,12 +785,12 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
                         aae.getInfo(),
                         "Alloc Site", 		ArrayAllocSiteTracker.get(target),
                         "Shadow State", 	sx,
-                        "Current Thread",	toString(st), 
+                        "Current Thread",	toString(st),
                         "Array",			Util.objectToIdentityString(target) + "[" + aae.getIndex() + "]",
                         "Message", 			description,
                         "Previous Op",		prevOp + " " + ShadowThread.get(prevTid),
-                        "Currrent Op",		curOp + " " + ShadowThread.get(curTid), 
-                        "Stack",			ShadowThread.stackDumpForErrorMessage(st)); 
+                        "Currrent Op",		curOp + " " + ShadowThread.get(curTid),
+                        "Stack",			ShadowThread.stackDumpForErrorMessage(st));
     }
     Assert.assertTrue(prevTid != curTid);
     
@@ -833,12 +810,12 @@ public class FastTrackToolEnhancedV2 extends Tool implements BarrierListener<FTB
       fieldErrors.error(st,
                         fd,
                         "Shadow State", 	sx,
-                        "Current Thread",	toString(st), 
+                        "Current Thread",	toString(st),
                         "Class",			(target==null?fd.getOwner():target.getClass()),
-                        "Field",			Util.objectToIdentityString(target) + "." + fd, 
+                        "Field",			Util.objectToIdentityString(target) + "." + fd,
                         "Message", 			description,
                         "Previous Op",		prevOp + " " + ShadowThread.get(prevTid),
-                        "Currrent Op",		curOp + " " + ShadowThread.get(curTid), 
+                        "Currrent Op",		curOp + " " + ShadowThread.get(curTid),
                         "Stack",			ShadowThread.stackDumpForErrorMessage(st));
     }
     

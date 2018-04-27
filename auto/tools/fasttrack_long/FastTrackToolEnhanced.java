@@ -212,11 +212,11 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
   }
   
   
-  protected boolean fakeIncLongEpochAndCheckEq(ShadowThread st, LongVectorClock other) {
-    final int tid = st.getTid();
-    final LongVectorClock tV = ts_get_V(st);
-    return other.fakeIncThenCheckEq(tV, tid);
-  }
+//  protected boolean fakeIncLongEpochAndCheckEq(ShadowThread st, LongVectorClock other) {
+//    final int tid = st.getTid();
+//    final LongVectorClock tV = ts_get_V(st);
+//    return other.fakeIncThenCheckEq(tV, tid);
+//  }
   
   
   static final Decoration<ShadowLock,FTLockState> lockVs = ShadowLock.makeDecoration("FastTrack:ShadowLock", DecorationFactory.Type.MULTIPLE,
@@ -275,12 +275,19 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
   @Override
   public void acquire(final AcquireEvent event) {
     final ShadowThread st = event.getThread();
-    final FTLockState lockV = getV(event.getLock());
+    final ShadowLock currLock = event.getLock();
+    final FTLockState lockV = getV(currLock);
+    final int tidLast = lockV.tidLast;
+    final int tid = st.getTid();
     
-    if (!fakeIncLongEpochAndCheckEq(st, lockV))
+    //if (!fakeIncLongEpochAndCheckEq(st, lockV))
+    if (tid != tidLast) {
+        //final FTLockState lockV = getV(currLock);
         maxLongEpochAndCV(st, lockV, event.getInfo());
-    else if (COUNT_OPERATIONS) delayedAcquire.inc(st.getTid());
-      
+    } else if (COUNT_OPERATIONS) delayedAcquire.inc(st.getTid());
+    
+    st.n += 1;
+    
     super.acquire(event);
     if (COUNT_OPERATIONS) acquire.inc(st.getTid());
   }
@@ -293,15 +300,21 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
     final LongVectorClock tV = ts_get_V(st);
     final ShadowLock currLock = event.getLock();
 
-    final LongVectorClock lockV = getV(currLock);
+    final FTLockState lockV = getV(currLock);
     final Object lastLockObj = st.lastlockObj;
     final Object currLockObj = currLock.getLock();
+    final int n = st.n;
+    final int tid = st.getTid();
     
-    if (!fakeIncLongEpochAndCheckEq(st, lockV) || lastLockObj != currLockObj) { // newly added
-      lockV.max(tV);
+    //if (!fakeIncLongEpochAndCheckEq(st, lockV) || lastLockObj != currLockObj) { // newly added
+    if (lastLockObj != currLockObj || n != 1) {
+      lockV.copy(tV); // changed here
       incLongEpochAndCV(st, event.getInfo());
       st.lastlockObj = currLockObj;
-    } else if (COUNT_OPERATIONS) delayedRelease.inc(st.getTid());
+    } else if (COUNT_OPERATIONS) delayedRelease.inc(tid);
+    
+    lockV.tidLast = tid;
+    st.n = 0;
     
     super.release(event);
     if (COUNT_OPERATIONS) release.inc(st.getTid());
@@ -399,46 +412,33 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
   protected void read(final AccessEvent event, final ShadowThread st, final FTVarState sx) {
     final long/*epoch*/ e = ts_get_E(st);
     
-    
     /* optional */ {
-      
       final long/*epoch*/ r = sx.R;
-      
-      if (r == e) {
-        if (COUNT_OPERATIONS) readSameLongEpoch.inc(st.getTid());
+      final long/*epoch*/ w = sx.W;
+      if (r == e || w == e || (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e)) {
+        if (COUNT_OPERATIONS) {
+          if (r == e) readSameLongEpoch.inc(st.getTid());
+          else if (w == e) readWriteSameLongEpoch.inc(st.getTid());
+          else readSharedSameLongEpoch.inc(st.getTid());
+        }
         return;
       }
-      
-      if (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e) {
-        if (COUNT_OPERATIONS) readSharedSameLongEpoch.inc(st.getTid());
-        return;
-      }
-      
-      if (sx.W == e) { // newly added
-        if (COUNT_OPERATIONS) readWriteSameLongEpoch.inc(st.getTid());
-        return;
-      }
-      
     }
     
-    final int tid = st.getTid();
     final LongVectorClock tV = ts_get_V(st);
+    final int tid = st.getTid();
     
     synchronized(sx) {
+      final long/*epoch*/ w = sx.W;
+      final int wTid = LongEpoch.tid(w);
       
-      /* optional */ {
-        final long/*epoch*/ w = sx.W;
-        final int wTid = LongEpoch.tid(w);
-        
-        if (wTid != tid && !LongEpoch.leq(w, tV.get(wTid))) {
-          if (COUNT_OPERATIONS) writeReadError.inc(tid);
-          error(event, sx, "Write-Read Race", "Write by ", wTid, "Read by ", tid);
-          return;
-        }
+      if (wTid != tid && !LongEpoch.leq(w, tV.get(wTid))) {
+        if (COUNT_OPERATIONS) writeReadError.inc(tid);
+        error(event, sx, "Write-Read Race", "Write by ", wTid, "Read by ", tid);
+        return;
       }
       
       final long/*epoch*/ r = sx.R;
-      
       if (r != LongEpoch.READ_SHARED) {
         final int rTid = LongEpoch.tid(r);
         if (rTid == tid || LongEpoch.leq(r, tV.get(rTid))) {
@@ -446,8 +446,8 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
           sx.R = e;
         } else {
           if (COUNT_OPERATIONS) readShare.inc(tid);
-          //int initSize = Math.max(Math.max(rTid,tid), INIT_VECTOR_CLOCK_SIZE);
-          sx.makeCV(Math.max(Math.max(rTid,tid), INIT_VECTOR_CLOCK_SIZE));
+          int initSize = Math.max(Math.max(rTid,tid), INIT_VECTOR_CLOCK_SIZE);
+          sx.makeCV(initSize);
           sx.set(rTid, r);
           sx.set(tid, e);
           sx.R = LongEpoch.READ_SHARED;
@@ -468,39 +468,28 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
       
       /* optional */ {
         final long/*epoch*/ r = sx.R;
-        
-        if (r == e) {
-          if (COUNT_OPERATIONS) readSameLongEpoch.inc(st.getTid());
+        final long/*epoch*/ w = sx.W;
+        if (r == e || w == e || (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e)) {
+          if (COUNT_OPERATIONS) {
+            if (r == e) readSameLongEpoch.inc(st.getTid());
+            else if (w == e) readWriteSameLongEpoch.inc(st.getTid());
+            else readSharedSameLongEpoch.inc(st.getTid());
+          }
           return true;
         }
-        if (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e) {
-          if (COUNT_OPERATIONS) readSharedSameLongEpoch.inc(st.getTid());
-          return true;
-        }
-        if (sx.W == e) { // newly added
-          if (COUNT_OPERATIONS) readWriteSameLongEpoch.inc(st.getTid());
-          return true;
-        }
-        
       }
       
       final int tid = st.getTid();
       final LongVectorClock tV = ts_get_V(st);
-      
       synchronized(sx) {
-        
-        /* optional */ {
-          final long/*epoch*/ w = sx.W;
-          final int wTid = LongEpoch.tid(w);
-          
-          if (wTid != tid && !LongEpoch.leq(w, tV.get(wTid))) {
-            ts_set_badVarState(st, sx);
-            return false;
-          }
+        final long/*epoch*/ w = sx.W;
+        final int wTid = LongEpoch.tid(w);
+        if (wTid != tid && !LongEpoch.leq(w, tV.get(wTid))) {
+          ts_set_badVarState(st, sx);
+          return false;
         }
         
         final long/*epoch*/ r = sx.R;
-        
         if (r != LongEpoch.READ_SHARED) {
           final int rTid = LongEpoch.tid(r);
           if (rTid == tid || LongEpoch.leq(r, tV.get(rTid))) {
@@ -508,15 +497,15 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
             sx.R = e;
           } else {
             if (COUNT_OPERATIONS) readShare.inc(tid);
-            //int initSize = Math.max(Math.max(rTid,tid), INIT_VECTOR_CLOCK_SIZE);
-            sx.makeCV(Math.max(Math.max(rTid,tid), INIT_VECTOR_CLOCK_SIZE));
+            int initSize = Math.max(Math.max(rTid,tid), INIT_VECTOR_CLOCK_SIZE);
+            sx.makeCV(initSize);
             sx.set(rTid, r);
             sx.set(tid, e);
             sx.R = LongEpoch.READ_SHARED;
           }
         } else {
           if (COUNT_OPERATIONS) readShared.inc(tid);
-          sx.set(tid, e);
+          sx.set(tid, e);					
         }
         return true;
       }
@@ -539,31 +528,25 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
       }
     }
     
-    
     final int tid = st.getTid();
     final LongVectorClock tV = ts_get_V(st);
     
-    /* optional */ {
-      final long/*epoch*/ r = sx.R;
-      
-      if (r != LongEpoch.READ_SHARED) {
-        final int rTid = LongEpoch.tid(r);
-        if (rTid != tid /* optimization */ && !LongEpoch.leq(r, tV.get(rTid))) {
-          if (COUNT_OPERATIONS) readWriteError.inc(tid);
-          error(event, sx, "Read-Write Race", "Read by ", rTid, "Write by ", tid);
-          return;
-        }
-        if (COUNT_OPERATIONS) writeExclusive.inc(tid);
-        
-      } else {
-        if (sx.anyGt(tV)) {
-          if (COUNT_OPERATIONS) sharedWriteError.inc(tid);
-          error(event, sx, "Read(Shared)-Write Race", "Read by ", sx.nextGt(tV, 0), "Write by ", tid);
-          return;
-        }
-        if (COUNT_OPERATIONS) writeShared.inc(tid);
+    final long/*epoch*/ r = sx.R;
+    if (r != LongEpoch.READ_SHARED) {
+      final int rTid = LongEpoch.tid(r);
+      if (rTid != tid /* optimization */ && !LongEpoch.leq(r, tV.get(rTid))) {
+        if (COUNT_OPERATIONS) readWriteError.inc(tid);
+        error(event, sx, "Read-Write Race", "Read by ", rTid, "Write by ", tid);
+        return;
       }
-      
+      if (COUNT_OPERATIONS) writeExclusive.inc(tid);
+    } else {
+      if (sx.anyGt(tV)) {
+        if (COUNT_OPERATIONS) sharedWriteError.inc(tid);
+        error(event, sx, "Read(Shared)-Write Race", "Read by ", sx.nextGt(tV, 0), "Write by ", tid);
+        return;
+      }
+      if (COUNT_OPERATIONS) writeShared.inc(tid);
     }
     
     synchronized(sx) {
@@ -599,23 +582,20 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
       final int tid = st.getTid();
       final LongVectorClock tV = ts_get_V(st);
       
-      /* optional */ {
-        final long/*epoch*/ r = sx.R;
-        
-        if (r != LongEpoch.READ_SHARED) {
-          final int rTid = LongEpoch.tid(r);
-          if (rTid != tid && !LongEpoch.leq(r, tV.get(rTid))) {
-            ts_set_badVarState(st, sx);
-            return false;
-          }
-          if (COUNT_OPERATIONS) writeExclusive.inc(tid);
-        } else {
-          if (sx.anyGt(tV)) {
-            ts_set_badVarState(st, sx);
-            return false;
-          }
-          if (COUNT_OPERATIONS) writeShared.inc(tid);
+      final long/*epoch*/ r = sx.R;
+      if (r != LongEpoch.READ_SHARED) {
+        final int rTid = LongEpoch.tid(r);
+        if (rTid != tid && !LongEpoch.leq(r, tV.get(rTid))) {
+          ts_set_badVarState(st, sx);
+          return false;
         }
+        if (COUNT_OPERATIONS) writeExclusive.inc(tid);
+      } else {
+        if (sx.anyGt(tV)) {
+          ts_set_badVarState(st, sx);
+          return false;
+        }
+        if (COUNT_OPERATIONS) writeShared.inc(tid);
       }
       
       synchronized(sx) {

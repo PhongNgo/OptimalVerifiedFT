@@ -1,4 +1,4 @@
 ,ReadSameEpoch,ReadwithWriteSameEpoch,WriteSameEpoch,ReadSharedSameEpoch,DelayedRelease,DelayedAcquire,Total,
-crypt-a,0.43,0.1,0.07,0.31,0.67,0.67,0.9,
-lufact-a,0.01,0.01,0.01,0.31,0.67,0.67,0.35,
-Mean,0.22,0.055,0.04,0.31,0.67,0.67,0.625,
+crypt-a,0.43,0.1,0.07,0.31,--,--,0.9,
+lufact-a,0.01,0.01,0.01,0.31,--,--,0.35,
+Mean,0.22,0.055,0.04,0.31,--,--,0.625,

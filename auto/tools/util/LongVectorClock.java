@@ -179,64 +179,64 @@ public class LongVectorClock implements Serializable {
 	}
   
   
-  /**
-   * Return true if we do a tick at the index tid for this vector clock,
-   * and then the ticked vector is equal to other vector
-   */
-  final public boolean fakeIncThenCheckEq(LongVectorClock other, int tid) {
-    long/*epoch*/[] thisValues = this.values;
-    long/*epoch*/[] otherValues = other.values;
-    
-    int thisLen = thisValues.length;
-    int otherLen = otherValues.length;
-    
-    if (thisLen != otherLen || thisLen <= tid) return false;
-    
-    
-    switch (tid) {
-      default:
-        for (int i = FAST; i < tid; i++) {
-          if (!LongEpoch.equal(thisValues[i], otherValues[i])) return false;
-        }
-      case 8:  if (!LongEpoch.equal(thisValues[7], otherValues[7])) return false;
-      case 7:  if (!LongEpoch.equal(thisValues[6], otherValues[6])) return false;
-      case 6:  if (!LongEpoch.equal(thisValues[5], otherValues[5])) return false;
-      case 5:  if (!LongEpoch.equal(thisValues[4], otherValues[4])) return false;
-      case 4:  if (!LongEpoch.equal(thisValues[3], otherValues[3])) return false;
-      case 3:  if (!LongEpoch.equal(thisValues[2], otherValues[2])) return false;
-      case 2:  if (!LongEpoch.equal(thisValues[1], otherValues[1])) return false;
-      case 1:  if (!LongEpoch.equal(thisValues[0], otherValues[0])) return false;
-      case 0:
-    }
-    
-    
-    // the tid that we need to do a tick
-    if (!LongEpoch.equal(thisValues[tid]+1, otherValues[tid])) return false;
-    
-    int remain = thisLen - tid - 1;
-    switch (remain) {
-      default:
-        for (int i = FAST; i < remain; i++) {
-          if (!LongEpoch.equal(thisValues[tid+1+i], otherValues[tid+1+i])) return false;
-        }
-      case 8:  if (!LongEpoch.equal(thisValues[tid+8], otherValues[tid+8])) return false;
-      case 7:  if (!LongEpoch.equal(thisValues[tid+7], otherValues[tid+7])) return false;
-      case 6:  if (!LongEpoch.equal(thisValues[tid+6], otherValues[tid+6])) return false;
-      case 5:  if (!LongEpoch.equal(thisValues[tid+5], otherValues[tid+5])) return false;
-      case 4:  if (!LongEpoch.equal(thisValues[tid+4], otherValues[tid+4])) return false;
-      case 3:  if (!LongEpoch.equal(thisValues[tid+3], otherValues[tid+3])) return false;
-      case 2:  if (!LongEpoch.equal(thisValues[tid+2], otherValues[tid+2])) return false;
-      case 1:  if (!LongEpoch.equal(thisValues[tid+1], otherValues[tid+1])) return false;
-      case 0:
-    }
-    
-//    for (int i = tid+1; i < thisLen; i++) {
-//      if (!LongEpoch.equal(thisValues[i], otherValues[i])) return false;
+//  /**
+//   * Return true if we do a tick at the index tid for this vector clock,
+//   * and then the ticked vector is equal to other vector
+//   */
+//  final public boolean fakeIncThenCheckEq(LongVectorClock other, int tid) {
+//    long/*epoch*/[] thisValues = this.values;
+//    long/*epoch*/[] otherValues = other.values;
+//    
+//    int thisLen = thisValues.length;
+//    int otherLen = otherValues.length;
+//    
+//    if (thisLen != otherLen || thisLen <= tid) return false;
+//    
+//    
+//    switch (tid) {
+//      default:
+//        for (int i = FAST; i < tid; i++) {
+//          if (!LongEpoch.equal(thisValues[i], otherValues[i])) return false;
+//        }
+//      case 8:  if (!LongEpoch.equal(thisValues[7], otherValues[7])) return false;
+//      case 7:  if (!LongEpoch.equal(thisValues[6], otherValues[6])) return false;
+//      case 6:  if (!LongEpoch.equal(thisValues[5], otherValues[5])) return false;
+//      case 5:  if (!LongEpoch.equal(thisValues[4], otherValues[4])) return false;
+//      case 4:  if (!LongEpoch.equal(thisValues[3], otherValues[3])) return false;
+//      case 3:  if (!LongEpoch.equal(thisValues[2], otherValues[2])) return false;
+//      case 2:  if (!LongEpoch.equal(thisValues[1], otherValues[1])) return false;
+//      case 1:  if (!LongEpoch.equal(thisValues[0], otherValues[0])) return false;
+//      case 0:
 //    }
-    
-    return true;
-      
-  }
+//    
+//    
+//    // the tid that we need to do a tick
+//    if (!LongEpoch.equal(thisValues[tid]+1, otherValues[tid])) return false;
+//    
+//    int remain = thisLen - tid - 1;
+//    switch (remain) {
+//      default:
+//        for (int i = FAST; i < remain; i++) {
+//          if (!LongEpoch.equal(thisValues[tid+1+i], otherValues[tid+1+i])) return false;
+//        }
+//      case 8:  if (!LongEpoch.equal(thisValues[tid+8], otherValues[tid+8])) return false;
+//      case 7:  if (!LongEpoch.equal(thisValues[tid+7], otherValues[tid+7])) return false;
+//      case 6:  if (!LongEpoch.equal(thisValues[tid+6], otherValues[tid+6])) return false;
+//      case 5:  if (!LongEpoch.equal(thisValues[tid+5], otherValues[tid+5])) return false;
+//      case 4:  if (!LongEpoch.equal(thisValues[tid+4], otherValues[tid+4])) return false;
+//      case 3:  if (!LongEpoch.equal(thisValues[tid+3], otherValues[tid+3])) return false;
+//      case 2:  if (!LongEpoch.equal(thisValues[tid+2], otherValues[tid+2])) return false;
+//      case 1:  if (!LongEpoch.equal(thisValues[tid+1], otherValues[tid+1])) return false;
+//      case 0:
+//    }
+//    
+////    for (int i = tid+1; i < thisLen; i++) {
+////      if (!LongEpoch.equal(thisValues[i], otherValues[i])) return false;
+////    }
+//    
+//    return true;
+//      
+//  }
   
   
 

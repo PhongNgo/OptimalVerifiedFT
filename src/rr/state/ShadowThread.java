@@ -179,6 +179,7 @@ public class ShadowThread extends Decoratable implements ShadowVar {
 
 
   public Object lastlockObj;
+  public int n;
   
 	// require ShadowThread.class
 	private static synchronized int allocTid(ShadowThread newThread) {
