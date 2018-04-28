@@ -1,4 +1,5 @@
 *.out.*
+*.class
 *.html
 *.jar
 *.pyc
@@ -29,3 +30,5 @@ auto/tools/util/LongVectorClock.java
 
 benchmarks/Experiments/small-tables-stats.pdf
 benchmarks/Experiments/small-tables-perf.pdf
+build/bin/rrrun
+OptimalVerifiedFT/OptimalVerifiedFT.xcodeproj/project.xcworkspace/xcuserdata/tuan-phongngo.xcuserdatad/UserInterfaceState.xcuserstate
