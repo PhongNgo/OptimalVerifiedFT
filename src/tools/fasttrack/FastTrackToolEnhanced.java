@@ -279,14 +279,11 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
     final int tidLast = lockV.tidLast;
     final int tid = st.getTid();
     
-    //if (!fakeIncEpochAndCheckEq(st, lockV))
     if (tid != tidLast) {
-        //final FTLockState lockV = getV(currLock);
         maxEpochAndCV(st, lockV, event.getInfo());
+        st.merge_n += 1;
     } else if (COUNT_OPERATIONS) delayedAcquire.inc(st.getTid());
-    
-    st.n += 1;
-    
+  
     super.acquire(event);
     if (COUNT_OPERATIONS) acquire.inc(st.getTid());
   }
@@ -298,22 +295,30 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
     final ShadowThread st = event.getThread();
     final VectorClock tV = ts_get_V(st);
     final ShadowLock currLock = event.getLock();
-
     final FTLockState lockV = getV(currLock);
     final Object lastLockObj = st.lastlockObj;
     final Object currLockObj = currLock.getLock();
-    final int n = st.n;
+    final int merge_n = st.merge_n;
+    final int tidLast = lockV.tidLast;
     final int tid = st.getTid();
+    final boolean hasStart = st.hasStart;
     
-    //if (!fakeIncEpochAndCheckEq(st, lockV) || lastLockObj != currLockObj) { // newly added
-    if (lastLockObj != currLockObj || n != 1) {
+    if (lastLockObj != currLockObj || merge_n != 1) {
       lockV.copy(tV); // changed here
       incEpochAndCV(st, event.getInfo());
-      st.lastlockObj = currLockObj;
-    } else if (COUNT_OPERATIONS) delayedRelease.inc(tid);
+    } else {
+      if (hasStart || tidLast != tid) {
+        final int/*epoch*/ e = ts_get_E(st);
+        lockV.set(tid, e);
+        incEpochAndCV(st, event.getInfo());
+        if (COUNT_OPERATIONS) simplifiedRelease.inc(tid);
+      } else if (COUNT_OPERATIONS) delayedRelease.inc(tid);
+    }
     
+    st.lastlockObj = currLockObj;
+    st.hasStart = false;
     lockV.tidLast = tid;
-    st.n = 0;
+    st.merge_n = 0;
     
     super.release(event);
     if (COUNT_OPERATIONS) release.inc(st.getTid());
@@ -384,6 +389,7 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
   // new added variables
   private static final ThreadLocalCounter readWriteSameEpoch = new ThreadLocalCounter("FT", "Read with Write Same Epoch", RR.maxTidOption.get());
   private static final ThreadLocalCounter delayedRelease = new ThreadLocalCounter("FT", "Delayed Release", RR.maxTidOption.get());
+  private static final ThreadLocalCounter simplifiedRelease = new ThreadLocalCounter("FT", "Simplified Release", RR.maxTidOption.get());
   private static final ThreadLocalCounter delayedAcquire = new ThreadLocalCounter("FT", "Delayed Acquire", RR.maxTidOption.get());
   
   
@@ -403,6 +409,7 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
       Util.printf("Read Same Epoch:             %g\n", ((double)readSameEpoch.getCount()) / accesses.getCount());
       Util.printf("Read Shared Same Epoch:      %g\n------------------------------------\n", ((double)readSharedSameEpoch.getCount()) / accesses.getCount());
       Util.printf("Delayed Release:             %g\n", ((double)delayedRelease.getCount()) / release.getCount());
+      Util.printf("Simplified Release:          %g\n", ((double)simplifiedRelease.getCount()) / release.getCount());
       Util.printf("Delayed Acquire:             %g\n", ((double)delayedAcquire.getCount()) / acquire.getCount());
       Util.printf("All Fast Paths:              %g\n\n\n", ((double)(writeSameEpoch.getCount() + readWriteSameEpoch.getCount() + readSameEpoch.getCount() + readSharedSameEpoch.getCount())) / accesses.getCount());
     }
@@ -655,6 +662,8 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
     maxAndIncEpochAndCV(su, tV, event.getInfo());
     incEpochAndCV(st, event.getInfo());
     
+    st.hasStart = true;
+    
     super.preStart(event);
     if (COUNT_OPERATIONS) fork.inc(st.getTid());
   }
@@ -681,6 +690,8 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
     // this thread has sync'd with u.
     
     maxEpochAndCV(st, ts_get_V(su), event.getInfo());
+    st.merge_n += 1;
+    
     // no need to inc su's clock here -- that was just for
     // the proof in the original FastTrack rules.
     
@@ -692,9 +703,37 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
   @Override
   public void preWait(WaitEvent event) {
     final ShadowThread st = event.getThread();
-    final VectorClock lockV = getV(event.getLock());
-    lockV.max(ts_get_V(st)); // we hold lock, so no need to sync here...
-    incEpochAndCV(st, event.getInfo());
+    final VectorClock tV = ts_get_V(st);
+    final ShadowLock currLock = event.getLock();
+    final FTLockState lockV = getV(currLock);
+    final Object lastLockObj = st.lastlockObj;
+    final Object currLockObj = currLock.getLock();
+    final int merge_n = st.merge_n;
+    final int tidLast = lockV.tidLast;
+    final int tid = st.getTid();
+    final boolean hasStart = st.hasStart;
+    
+//    lockV.copy(tV); // we hold lock, so no need to sync here...
+//    incEpochAndCV(st, event.getInfo());
+    
+    if (lastLockObj != currLockObj || merge_n != 1) {
+      lockV.copy(tV); // changed here
+      incEpochAndCV(st, event.getInfo());
+    } else {
+      if (hasStart || tidLast != tid) {
+        final int/*epoch*/ e = ts_get_E(st);
+        lockV.set(tid, e);
+        incEpochAndCV(st, event.getInfo());
+        if (COUNT_OPERATIONS) simplifiedRelease.inc(tid);
+      } else if (COUNT_OPERATIONS) delayedRelease.inc(tid);
+    }
+    
+    st.lastlockObj = currLockObj;
+    st.hasStart = false;
+    lockV.tidLast = tid;
+    st.merge_n = 0;
+    
+    
     super.preWait(event);
     if (COUNT_OPERATIONS) wait.inc(st.getTid());
   }
@@ -702,8 +741,16 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
   @Override
   public void postWait(WaitEvent event) {
     final ShadowThread st = event.getThread();
-    final VectorClock lockV = getV(event.getLock());
-    maxEpochAndCV(st, lockV, event.getInfo()); // we hold lock here
+    final ShadowLock currLock = event.getLock();
+    final FTLockState lockV = getV(currLock);
+    final int tidLast = lockV.tidLast;
+    final int tid = st.getTid();
+    
+    if (tid != tidLast) {
+      maxEpochAndCV(st, lockV, event.getInfo());
+      st.merge_n += 1;
+    } else if (COUNT_OPERATIONS) delayedAcquire.inc(st.getTid());
+    
     super.postWait(event);
     if (COUNT_OPERATIONS) wait.inc(st.getTid());
   }
@@ -724,6 +771,9 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
       barrierV.max(ts_get_V(st));
       vectorClockForBarrierEntry.set(st, barrierV);
     }
+    
+    st.hasStart = true;
+    
     if (COUNT_OPERATIONS) barrier.inc(st.getTid());
   }
   
@@ -735,6 +785,9 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
       barrierObj.stopUsingOldVectorClock(barrierV);
       maxAndIncEpochAndCV(st, barrierV, null);
     }
+    
+    st.merge_n += 1;
+    
     if (COUNT_OPERATIONS) this.barrier.inc(st.getTid());
   }
   
