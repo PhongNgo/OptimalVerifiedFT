@@ -53,12 +53,7 @@ sed -i.bak  -e "s/\"FT2E\"/\"FT2EL\"/g" auto/tools/fasttrack_long/FastTrackToolE
 sed -i.bak  -e "s/\"FT2E-V1\"/\"FT2EL-V1\"/g" auto/tools/fasttrack_long/FastTrackToolEnhancedV1.java
 sed -i.bak  -e "s/\"FT2E-V2\"/\"FT2EL-V2\"/g" auto/tools/fasttrack_long/FastTrackToolEnhancedV2.java
 sed -i.bak  -e "s/\"FT2E-V3\"/\"FT2EL-V3\"/g" auto/tools/fasttrack_long/FastTrackToolEnhancedV3.java
-
-sed -i.bak  -e "s/Integer/Long/g" auto/tools/fasttrack_long/FTEVarState.java
-sed -i.bak  -e "s/Integer/Long/g" auto/tools/fasttrack_long/FastTrackToolEnhanced.java
-sed -i.bak  -e "s/Integer/Long/g" auto/tools/fasttrack_long/FastTrackToolEnhancedV1.java
-sed -i.bak  -e "s/Integer/Long/g" auto/tools/fasttrack_long/FastTrackToolEnhancedV2.java
-sed -i.bak  -e "s/Integer/Long/g" auto/tools/fasttrack_long/FastTrackToolEnhancedV3.java
+sed -i.bak  -e "s/\"FT2E-V4\"/\"FT2EL-V4\"/g" auto/tools/fasttrack_long/FastTrackToolEnhancedV4.java
 
 
 

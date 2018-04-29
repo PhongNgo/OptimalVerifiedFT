@@ -78,6 +78,8 @@ ftExperimentV5 =        MultiExperiment('FastTrackEnhanced', standardCmd + " -to
 ftExperimentV5L =       MultiExperiment('FastTrackEnhancedL', standardCmd + " -tool=FT2EL", TRIALS, startNum=START)
 ftExperimentV6 =        MultiExperiment('FastTrackEnhancedV2', standardCmd + " -tool=FT2E-V2", TRIALS, startNum=START)
 ftExperimentV7 =        MultiExperiment('FastTrackEnhancedV3', standardCmd + " -tool=FT2E-V3", TRIALS, startNum=START)
+ftExperimentV8 =        MultiExperiment('FastTrackEnhancedV4', standardCmd + " -tool=FT2E-V4", TRIALS, startNum=START)
+
 
 def getTime(e,row,outDir): 
     return e.getXMLCounter(row,outDir,'RRBench: Average')
@@ -175,7 +177,8 @@ cols = [
     makeOverhead(ftExperimentV4,'VFT-E-v1'),
 ##    makeOverhead(ftExperimentV6,'VFT-E-v2'),
     makeOverhead(ftExperimentV7,'VFT-E-v3'),
-    makeOverhead(ftExperimentV6,'VFT-E-V2'),
+    makeOverhead(ftExperimentV8,'VFT-E-v4'),
+ #   makeOverhead(ftExperimentV6,'VFT-E-V2'),
     makeOverhead(ftExperimentV3,'VFT-v2'),
 ##    makeOverhead(ftExperimentV5,'VFT-E'),
               
@@ -203,7 +206,8 @@ exps=[
     ftExperimentV4,
 ##    ftExperimentV6,
     ftExperimentV7,
-    ftExperimentV6,
+    ftExperimentV8,
+    #ftExperimentV6,
     ftExperimentV3,
 ##    ftExperimentV5,
 ##    ftExperimentOld,
@@ -224,7 +228,8 @@ cols = [
     makeErrors(ftExperimentV4,'VFT-E-v1', 'c|','r|'),
 ##    makeErrors(ftExperimentV6,'VFT-E-v2', 'c|','r|'),
     makeErrors(ftExperimentV7,'VFT-E-v3', 'c|','r|'),
-    makeErrors(ftExperimentV6,'VFT-E-V2', 'c|','r|'),
+    makeErrors(ftExperimentV8,'VFT-E-v4', 'c|','r|'),
+ #   makeErrors(ftExperimentV6,'VFT-E-V2', 'c|','r|'),
     makeErrors(ftExperimentV3,'VFT-v2', 'c|','r|'),
 ##    makeErrors(ftExperimentV5,'VFT-E', 'c|','r|'),
 ]

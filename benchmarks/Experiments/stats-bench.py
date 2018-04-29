@@ -77,6 +77,14 @@ def delayedReleasePercent(e,name='',title='c|',rowf='r|'):
                   lambda row, outDir: 
 		               round(float((e.getXMLCounter(row,outDir,'FT: Delayed Release'))) / 
                                      float(e.getXMLCounter(row,outDir,'FT: Release')),S), rowf,title,[],scale=3,sideways=True)
+def delayedWritePercent(e,name='',title='c|',rowf='r|'):
+    if name=='':
+       name = e.abbrev
+    return AverageColumn(name, 
+                  lambda row, outDir: 
+		               round(float((e.getXMLCounter(row,outDir,'FT: Delayed Write'))) / 
+                                     float(e.getXMLCounter(row,outDir,'FT: Total Access Ops')),S), rowf,title,[],scale=3,sideways=True)
+
 def simplifiedReleasePercent(e,name='',title='c|',rowf='r|'):
     if name=='':
        name = e.abbrev
@@ -101,6 +109,7 @@ def sameReadEpochPercent(e,name='',title='c|',rowf='r|'):
                   lambda row, outDir: 
 		               round(float((e.getXMLCounter(row,outDir,'FT: Read Same Epoch'))) / 
                                      float(e.getXMLCounter(row,outDir,'FT: Total Access Ops')),S), rowf,title,[],scale=3,sideways=True)
+
 def sameReadWriteEpochPercent(e,name='',title='c|',rowf='r|'):
     if name=='':
        name = e.abbrev
@@ -142,6 +151,7 @@ cols = [
     sameReadWriteEpochPercent(ftExperimentV5,'ReadwithWriteSameEpoch'),
     sameWriteEpochPercent(ftExperimentV5,'WriteSameEpoch'),
     sameReadSharedEpochPercent(ftExperimentV5,'ReadSharedSameEpoch'),
+    delayedWritePercent(ftExperimentV5,'DelayedWrite'),
     simplifiedReleasePercent(ftExperimentV5,'SimplifiedRelease'),
     delayedReleasePercent(ftExperimentV5,'DelayedRelease'),
     delayedAcquirePercent(ftExperimentV5,'DelayedAcquire'),

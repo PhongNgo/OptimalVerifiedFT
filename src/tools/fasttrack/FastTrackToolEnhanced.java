@@ -388,7 +388,7 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
   private static final ThreadLocalCounter delayedRelease = new ThreadLocalCounter("FT", "Delayed Release", RR.maxTidOption.get());
   private static final ThreadLocalCounter simplifiedRelease = new ThreadLocalCounter("FT", "Simplified Release", RR.maxTidOption.get());
   private static final ThreadLocalCounter delayedAcquire = new ThreadLocalCounter("FT", "Delayed Acquire", RR.maxTidOption.get());
-  
+  private static final ThreadLocalCounter delayedWrite = new ThreadLocalCounter("FT", "Delayed Write", RR.maxTidOption.get());
   
   private static final ThreadLocalCounter other = new ThreadLocalCounter("FT", "Other", RR.maxTidOption.get());
   
@@ -397,7 +397,7 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
   
   public void fini() {
     AggregateCounter reads = new AggregateCounter("FT", "Total Reads", readWriteSameEpoch, readSameEpoch, readSharedSameEpoch, readExclusive, readShare, readShared, writeReadError);
-    AggregateCounter writes = new AggregateCounter("FT", "Total Writes", writeSameEpoch, writeExclusive, writeShared, writeWriteError, readWriteError, sharedWriteError);
+    AggregateCounter writes = new AggregateCounter("FT", "Total Writes", writeSameEpoch, delayedWrite, writeExclusive, writeShared, writeWriteError, readWriteError, sharedWriteError);
     AggregateCounter accesses = new AggregateCounter("FT", "Total Access Ops", reads, writes);
     new AggregateCounter("FT", "Total Ops", accesses, acquire, release, fork, join, barrier, wait, vol, other);
     if (COUNT_OPERATIONS) {
@@ -408,6 +408,7 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
       Util.printf("Delayed Release:             %g\n", ((double)delayedRelease.getCount()) / release.getCount());
       Util.printf("Simplified Release:          %g\n", ((double)simplifiedRelease.getCount()) / release.getCount());
       Util.printf("Delayed Acquire:             %g\n", ((double)delayedAcquire.getCount()) / acquire.getCount());
+      Util.printf("Delayed Write:               %g\n", ((double)delayedWrite.getCount()) / accesses.getCount());
       Util.printf("All Fast Paths:              %g\n\n\n", ((double)(writeSameEpoch.getCount() + readWriteSameEpoch.getCount() + readSameEpoch.getCount() + readSharedSameEpoch.getCount())) / accesses.getCount());
     }
   }
@@ -531,38 +532,45 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
       }
     }
     
-    synchronized(sx) {
-      final int/*epoch*/ w = sx.W;
-      final int wTid = Epoch.tid(w);
-      final int tid = st.getTid();
-      final VectorClock tV = ts_get_V(st);
-      
-      if (wTid != tid /* optimization */ && !Epoch.leq(w, tV.get(wTid))) {
-        if (COUNT_OPERATIONS) writeWriteError.inc(tid);
-        error(event, sx, "Write-Write Race", "Write by ", wTid, "Write by ", tid);
-        return;
-      }
-      
-      final int/*epoch*/ r = sx.R;
-      if (r != Epoch.READ_SHARED) {
-        final int rTid = Epoch.tid(r);
-        if (rTid != tid /* optimization */ && !Epoch.leq(r, tV.get(rTid))) {
-          if (COUNT_OPERATIONS) readWriteError.inc(tid);
-          error(event, sx, "Read-Write Race", "Read by ", rTid, "Write by ", tid);
-        } else {
-          if (COUNT_OPERATIONS) writeExclusive.inc(tid);
-        }
-      } else {
-        if (sx.anyGt(tV)) {
-          for (int prevReader = sx.nextGt(tV, 0); prevReader > -1; prevReader = sx.nextGt(tV, prevReader + 1)) {
-            error(event, sx, "Read(Shared)-Write Race", "Read by ", prevReader, "Write by ", tid);
-          }
-          if (COUNT_OPERATIONS) sharedWriteError.inc(tid);
-        } else {
-          if (COUNT_OPERATIONS) writeShared.inc(tid);
-        }
-      }
+    final int/*epoch*/ r1 = sx.R;
+    /* Thhe case when we have a read before the current write */
+    if ((r1 == e) || (r1 == Epoch.READ_SHARED && sx.get(st.getTid()) == e)) {
       sx.W = e;
+      if (COUNT_OPERATIONS) delayedWrite.inc(st.getTid());
+    } else {
+      synchronized(sx) {
+        final int/*epoch*/ w = sx.W;
+        final int wTid = Epoch.tid(w);
+        final int tid = st.getTid();
+        final VectorClock tV = ts_get_V(st);
+        
+        if (wTid != tid /* optimization */ && !Epoch.leq(w, tV.get(wTid))) {
+          if (COUNT_OPERATIONS) writeWriteError.inc(tid);
+          error(event, sx, "Write-Write Race", "Write by ", wTid, "Write by ", tid);
+          return;
+        }
+        
+        final int/*epoch*/ r = sx.R;
+        if (r != Epoch.READ_SHARED) {
+          final int rTid = Epoch.tid(r);
+          if (rTid != tid /* optimization */ && !Epoch.leq(r, tV.get(rTid))) {
+            if (COUNT_OPERATIONS) readWriteError.inc(tid);
+            error(event, sx, "Read-Write Race", "Read by ", rTid, "Write by ", tid);
+          } else {
+            if (COUNT_OPERATIONS) writeExclusive.inc(tid);
+          }
+        } else {
+          if (sx.anyGt(tV)) {
+            for (int prevReader = sx.nextGt(tV, 0); prevReader > -1; prevReader = sx.nextGt(tV, prevReader + 1)) {
+              error(event, sx, "Read(Shared)-Write Race", "Read by ", prevReader, "Write by ", tid);
+            }
+            if (COUNT_OPERATIONS) sharedWriteError.inc(tid);
+          } else {
+            if (COUNT_OPERATIONS) writeShared.inc(tid);
+          }
+        }
+        sx.W = e;
+      }
     }
   }
   
@@ -572,11 +580,18 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
       final FTVarState sx = ((FTVarState)shadow);
       final int/*epoch*/ e = ts_get_E(st);
       
-      /* optional */ {
-        if (sx.W == e) {
-          if (COUNT_OPERATIONS) writeSameEpoch.inc(st.getTid());
-          return true;
-        }
+      final int/*epoch*/ w1 = sx.W;
+      if (w1 == e) {
+        if (COUNT_OPERATIONS) writeSameEpoch.inc(st.getTid());
+        return true;
+      }
+      
+      final int/*epoch*/ r1 = sx.R;
+      /* The case when we have a read before the current write */
+      if ((r1 == e) || (r1 == Epoch.READ_SHARED && sx.get(st.getTid()) == e)) {
+        sx.W = e;
+        if (COUNT_OPERATIONS) delayedWrite.inc(st.getTid());
+        return true;
       }
       
       synchronized(sx) {
