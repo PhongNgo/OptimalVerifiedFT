@@ -170,8 +170,8 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
    *   Sm.V -- FTLockState decoration on ShadowLock
    *          - See FTLockState for synchronization rules.
    *
-   *   Sx.R,Sx.W,Sx.V -- FTVarState objects
-   *          - See FTVarState for synchronization rules.
+   *   Sx.R,Sx.W,Sx.V -- FTEVarState objects
+   *          - See FTEVarState for synchronization rules.
    *
    *   Svx.V -- FTVolatileState decoration on ShadowVolatile  (serves same purpose as L for volatiles)
    *          - See FTVolatileState for synchronization rules.
@@ -244,8 +244,8 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
       return super.makeShadowVar(event);
     } else {
       // on first access, set var start to hit fast path
-      //return new FTVarState(event.isWrite(), COUNT_OPERATIONS ? Epoch.ZERO : ts_get_E(event.getThread()));
-      return new FTVarState(event.isWrite(), ts_get_E(event.getThread()));
+      //return new FTEVarState(event.isWrite(), COUNT_OPERATIONS ? Epoch.ZERO : ts_get_E(event.getThread()));
+      return new FTEVarState(event.isWrite(), ts_get_E(event.getThread()));
     }
   }
   
@@ -324,11 +324,11 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
     if (COUNT_OPERATIONS) release.inc(st.getTid());
   }
   
-  static FTVarState ts_get_badVarState(ShadowThread st) { Assert.panic("Bad");	return null;	}
-  static void ts_set_badVarState(ShadowThread st, FTVarState v) { Assert.panic("Bad");  }
+  static FTEVarState ts_get_badVarState(ShadowThread st) { Assert.panic("Bad");	return null;	}
+  static void ts_set_badVarState(ShadowThread st, FTEVarState v) { Assert.panic("Bad");  }
   
   protected static ShadowVar getOriginalOrBad(ShadowVar original, ShadowThread st) {
-    final FTVarState savedState = ts_get_badVarState(st);
+    final FTEVarState savedState = ts_get_badVarState(st);
     if (savedState != null) {
       ts_set_badVarState(st, null);
       return savedState;
@@ -342,8 +342,8 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
     final ShadowThread st = event.getThread();
     final ShadowVar shadow = getOriginalOrBad(event.getOriginalShadow(), st);
     
-    if (shadow instanceof FTVarState) {
-      FTVarState sx = (FTVarState)shadow;
+    if (shadow instanceof FTEVarState) {
+      FTEVarState sx = (FTEVarState)shadow;
       
       Object target = event.getTarget();
       if (target == null) {
@@ -415,7 +415,7 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
     }
   }
   
-  protected void read(final AccessEvent event, final ShadowThread st, final FTVarState sx) {
+  protected void read(final AccessEvent event, final ShadowThread st, final FTEVarState sx) {
     final int/*epoch*/ e = ts_get_E(st);
     
     /* optional */ {
@@ -434,16 +434,7 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
     final VectorClock tV = ts_get_V(st);
     final int tid = st.getTid();
     
-    synchronized(sx) {
-      final int/*epoch*/ w = sx.W;
-      final int wTid = Epoch.tid(w);
-      
-      if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
-        if (COUNT_OPERATIONS) writeReadError.inc(tid);
-        error(event, sx, "Write-Read Race", "Write by ", wTid, "Read by ", tid);
-        return;
-      }
-      
+    synchronized(sx.R) {
       final int/*epoch*/ r = sx.R;
       if (r != Epoch.READ_SHARED) {
         final int rTid = Epoch.tid(r);
@@ -463,12 +454,24 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
         sx.set(tid, e);
       }
     }
+    
+    //synchronized(sx.W) {
+      final int/*epoch*/ w = sx.W;
+      final int wTid = Epoch.tid(w);
+      
+      if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
+        if (COUNT_OPERATIONS) writeReadError.inc(tid);
+        error(event, sx, "Write-Read Race", "Write by ", wTid, "Read by ", tid);
+        return;
+      }
+    //}
+
   }
   
   
   public static boolean readFastPath(final ShadowVar shadow, final ShadowThread st) {
-    if (shadow instanceof FTVarState) {
-      final FTVarState sx = ((FTVarState)shadow);
+    if (shadow instanceof FTEVarState) {
+      final FTEVarState sx = ((FTEVarState)shadow);
       
       final int/*epoch*/ e = ts_get_E(st);
       
@@ -487,14 +490,8 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
       
       final int tid = st.getTid();
       final VectorClock tV = ts_get_V(st);
+      
       synchronized(sx) {
-        final int/*epoch*/ w = sx.W;
-        final int wTid = Epoch.tid(w);
-        if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
-          ts_set_badVarState(st, sx);
-          return false;
-        }
-        
         final int/*epoch*/ r = sx.R;
         if (r != Epoch.READ_SHARED) {
           final int rTid = Epoch.tid(r);
@@ -511,10 +508,20 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
           }
         } else {
           if (COUNT_OPERATIONS) readShared.inc(tid);
-          sx.set(tid, e);					
+          sx.set(tid, e);
         }
-        return true;
       }
+
+      //synchronized(sx.W) {
+        final int/*epoch*/ w = sx.W;
+        final int wTid = Epoch.tid(w);
+        if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
+          ts_set_badVarState(st, sx);
+          return false;
+        }
+      //}
+      
+      return true;
     } else {
       return false;
     }
@@ -524,7 +531,7 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
   
   /***/
   
-  protected void write(final AccessEvent event, final ShadowThread st, final FTVarState sx) {
+  protected void write(final AccessEvent event, final ShadowThread st, final FTEVarState sx) {
     final int/*epoch*/ e = ts_get_E(st);
     
     /* optional */ {
@@ -536,6 +543,18 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
     
     final int tid = st.getTid();
     final VectorClock tV = ts_get_V(st);
+    
+    synchronized(sx.W) {
+      final int/*epoch*/ w = sx.W;
+      final int wTid = Epoch.tid(w);
+      
+      if (wTid != tid /* optimization */ && !Epoch.leq(w, tV.get(wTid))) {
+        if (COUNT_OPERATIONS) writeWriteError.inc(tid);
+        error(event, sx, "Write-Write Race", "Write by ", wTid, "Write by ", tid);
+        return;
+      }
+      sx.W = e;
+    }
     
     final int/*epoch*/ r = sx.R;
     if (r != Epoch.READ_SHARED) {
@@ -555,17 +574,7 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
       if (COUNT_OPERATIONS) writeShared.inc(tid);
     }
     
-    synchronized(sx) {
-      final int/*epoch*/ w = sx.W;
-      final int wTid = Epoch.tid(w);
-      
-      if (wTid != tid /* optimization */ && !Epoch.leq(w, tV.get(wTid))) {
-        if (COUNT_OPERATIONS) writeWriteError.inc(tid);
-        error(event, sx, "Write-Write Race", "Write by ", wTid, "Write by ", tid);
-        return;
-      }
-      sx.W = e;
-    }
+    
     
   }
   
@@ -573,8 +582,8 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
   
   // only count events when returning true;
   public static boolean writeFastPath(final ShadowVar shadow, final ShadowThread st) {
-    if (shadow instanceof FTVarState) {
-      final FTVarState sx = ((FTVarState)shadow);
+    if (shadow instanceof FTEVarState) {
+      final FTEVarState sx = ((FTEVarState)shadow);
       
       final int/*epoch*/ e = ts_get_E(st);
       
@@ -588,6 +597,17 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
       final int tid = st.getTid();
       final VectorClock tV = ts_get_V(st);
       
+      synchronized(sx.W) {
+        final int/*epoch*/ w = sx.W;
+        final int wTid = Epoch.tid(w);
+        
+        if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
+          ts_set_badVarState(st, sx);
+          return false;
+        }
+        sx.W = e;
+      }
+
       final int/*epoch*/ r = sx.R;
       if (r != Epoch.READ_SHARED) {
         final int rTid = Epoch.tid(r);
@@ -602,17 +622,6 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
           return false;
         }
         if (COUNT_OPERATIONS) writeShared.inc(tid);
-      }
-      
-      synchronized(sx) {
-        final int/*epoch*/ w = sx.W;
-        final int wTid = Epoch.tid(w);
-        
-        if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
-          ts_set_badVarState(st, sx);
-          return false;
-        }
-        sx.W = e;
       }
       
       return true;
@@ -826,7 +835,7 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
   }
   
   
-  protected void error(final AccessEvent ae, final FTVarState x, final String description, final String prevOp, final int prevTid, final String curOp, final int curTid) {
+  protected void error(final AccessEvent ae, final FTEVarState x, final String description, final String prevOp, final int prevTid, final String curOp, final int curTid) {
     
     if (ae instanceof FieldAccessEvent) {
       fieldError((FieldAccessEvent)ae, x, description, prevOp, prevTid, curOp, curTid);
@@ -835,7 +844,7 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
     }
   }
   
-  protected void arrayError(final ArrayAccessEvent aae, final FTVarState sx, final String description, final String prevOp, final int prevTid, final String curOp, final int curTid) {
+  protected void arrayError(final ArrayAccessEvent aae, final FTEVarState sx, final String description, final String prevOp, final int prevTid, final String curOp, final int curTid) {
     final ShadowThread st = aae.getThread();
     final Object target = aae.getTarget();
     
@@ -860,7 +869,7 @@ public class FastTrackToolEnhanced extends Tool implements BarrierListener<FTBar
     }
   }
   
-  protected void fieldError(final FieldAccessEvent fae, final FTVarState sx, final String description, final String prevOp, final int prevTid, final String curOp, final int curTid) {
+  protected void fieldError(final FieldAccessEvent fae, final FTEVarState sx, final String description, final String prevOp, final int prevTid, final String curOp, final int curTid) {
     final FieldInfo fd = fae.getInfo().getField();
     final ShadowThread st = fae.getThread();
     final Object target = fae.getTarget();
