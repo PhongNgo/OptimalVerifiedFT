@@ -176,7 +176,7 @@ cols = [
 ##    makeOverhead(ftExperimentV2,'VFT-v1.5'),
     makeOverhead(ftExperimentV4,'VFT-E-v1'),
 ##    makeOverhead(ftExperimentV6,'VFT-E-v2'),
-    makeOverhead(ftExperimentV7,'VFT-E-v3'),
+#    makeOverhead(ftExperimentV7,'VFT-E-v3'),
     makeOverhead(ftExperimentV8,'VFT-E-v4'),
  #   makeOverhead(ftExperimentV6,'VFT-E-V2'),
     makeOverhead(ftExperimentV3,'VFT-v2'),
@@ -188,12 +188,12 @@ cols = [
 headers = [
     [Header('',1,'|c|'),
      Header('',1),
-     Header('Overhead',4,'c|'),
+     Header('Overhead',3,'c|'),
      ],
     [Header('Program',1,'|c|'),
      Header('Time',1,'c|'),
      Header('',1),Header('',1), 
-     Header('',1), Header('',1),
+     Header('',1), #Header('',1),
 #     Header('',1),
      ]
 ]
@@ -205,7 +205,7 @@ exps=[
 ##    ftExperimentV2,
     ftExperimentV4,
 ##    ftExperimentV6,
-    ftExperimentV7,
+ #   ftExperimentV7,
     ftExperimentV8,
     #ftExperimentV6,
     ftExperimentV3,
@@ -227,7 +227,7 @@ cols = [
 ##    makeErrors(ftExperimentV2,'VFT-v1.5', 'c|','r|'),
     makeErrors(ftExperimentV4,'VFT-E-v1', 'c|','r|'),
 ##    makeErrors(ftExperimentV6,'VFT-E-v2', 'c|','r|'),
-    makeErrors(ftExperimentV7,'VFT-E-v3', 'c|','r|'),
+ #   makeErrors(ftExperimentV7,'VFT-E-v3', 'c|','r|'),
     makeErrors(ftExperimentV8,'VFT-E-v4', 'c|','r|'),
  #   makeErrors(ftExperimentV6,'VFT-E-V2', 'c|','r|'),
     makeErrors(ftExperimentV3,'VFT-v2', 'c|','r|'),
@@ -235,7 +235,7 @@ cols = [
 ]
 
 headers = [
-    [Header('',1,'|c||'),Header('Warnings',4,'|c|')]
+    [Header('',1,'|c||'),Header('Warnings',3,'|c|')]
 ]
 
 errorTable = Table('Performance', 'large', headers, javagrade_rows + dacapo_rows, cols, [],'bench')
