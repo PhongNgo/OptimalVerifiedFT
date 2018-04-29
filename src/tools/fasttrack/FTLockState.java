@@ -48,9 +48,7 @@ public class FTLockState extends VectorClock {
 	// That lock will be held during acquire/release/wait events.
 
 	private final ShadowLock peer;
-	
-  public volatile int tidLast;
-  
+	  
 	public FTLockState(ShadowLock peer, int size) {
 		super(size);
 		this.peer = peer;

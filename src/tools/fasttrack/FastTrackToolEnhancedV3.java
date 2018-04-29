@@ -1,7 +1,9 @@
 /******************************************************************************
  
  An enhanced version for VerifiedFT by Tuan Phong Ngo
- 
+ - Optimize read and write in a same epoch
+ - Optimize acquire
+ - Optimize release
  ******************************************************************************/
 
 
@@ -167,8 +169,8 @@ public class FastTrackToolEnhancedV3 extends Tool implements BarrierListener<FTB
    *          - The thread starting t may access st.V before the start.
    *          - Any thread joining on t may read st.V after the join.
    *
-   *   Sm.V -- FTLockState decoration on ShadowLock
-   *          - See FTLockState for synchronization rules.
+   *   Sm.V -- FTELockState decoration on ShadowLock
+   *          - See FTELockState for synchronization rules.
    *
    *   Sx.R,Sx.W,Sx.V -- FTVarState objects
    *          - See FTVarState for synchronization rules.
@@ -211,18 +213,11 @@ public class FastTrackToolEnhancedV3 extends Tool implements BarrierListener<FTB
   }
   
   
-//  protected boolean fakeIncEpochAndCheckEq(ShadowThread st, VectorClock other) {
-//    final int tid = st.getTid();
-//    final VectorClock tV = ts_get_V(st);
-//    return other.fakeIncThenCheckEq(tV, tid);
-//  }
-  
-  
-  static final Decoration<ShadowLock,FTLockState> lockVs = ShadowLock.makeDecoration("FastTrack:ShadowLock", DecorationFactory.Type.MULTIPLE,
-                                                                                     new DefaultValue<ShadowLock,FTLockState>() { public FTLockState get(final ShadowLock lock) { return new FTLockState(lock, INIT_VECTOR_CLOCK_SIZE); }});
+  static final Decoration<ShadowLock,FTELockState> lockVs = ShadowLock.makeDecoration("FastTrack:ShadowLock", DecorationFactory.Type.MULTIPLE,
+                                                                                     new DefaultValue<ShadowLock,FTELockState>() { public FTELockState get(final ShadowLock lock) { return new FTELockState(lock, INIT_VECTOR_CLOCK_SIZE); }});
   
   // only call when ld.peer() is held
-  static final FTLockState getV(final ShadowLock ld) {
+  static final FTELockState getV(final ShadowLock ld) {
     return lockVs.get(ld);
   }
   
@@ -275,7 +270,7 @@ public class FastTrackToolEnhancedV3 extends Tool implements BarrierListener<FTB
   public void acquire(final AcquireEvent event) {
     final ShadowThread st = event.getThread();
     final ShadowLock currLock = event.getLock();
-    final FTLockState lockV = getV(currLock);
+    final FTELockState lockV = getV(currLock);
     final int tidLast = lockV.tidLast;
     final int tid = st.getTid();
     
@@ -295,7 +290,7 @@ public class FastTrackToolEnhancedV3 extends Tool implements BarrierListener<FTB
     final ShadowThread st = event.getThread();
     final VectorClock tV = ts_get_V(st);
     final ShadowLock currLock = event.getLock();
-    final FTLockState lockV = getV(currLock);
+    final FTELockState lockV = getV(currLock);
     final Object lastLockObj = st.lastlockObj;
     final Object currLockObj = currLock.getLock();
     final int merge_n = st.merge_n;
@@ -433,12 +428,12 @@ public class FastTrackToolEnhancedV3 extends Tool implements BarrierListener<FTB
       }
     }
     
-    final VectorClock tV = ts_get_V(st);
-    final int tid = st.getTid();
     
     synchronized(sx) {
+      final VectorClock tV = ts_get_V(st);
       final int/*epoch*/ w = sx.W;
       final int wTid = Epoch.tid(w);
+      final int tid = st.getTid();
       
       if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
         if (COUNT_OPERATIONS) writeReadError.inc(tid);
@@ -487,9 +482,10 @@ public class FastTrackToolEnhancedV3 extends Tool implements BarrierListener<FTB
         }
       }
       
-      final int tid = st.getTid();
-      final VectorClock tV = ts_get_V(st);
+      
       synchronized(sx) {
+        final int tid = st.getTid();
+        final VectorClock tV = ts_get_V(st);
         final int/*epoch*/ w = sx.W;
         final int wTid = Epoch.tid(w);
         if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
@@ -513,7 +509,7 @@ public class FastTrackToolEnhancedV3 extends Tool implements BarrierListener<FTB
           }
         } else {
           if (COUNT_OPERATIONS) readShared.inc(tid);
-          sx.set(tid, e);					
+          sx.set(tid, e);
         }
         return true;
       }
@@ -521,7 +517,6 @@ public class FastTrackToolEnhancedV3 extends Tool implements BarrierListener<FTB
       return false;
     }
   }
-  
   
   
   /***/
@@ -536,14 +531,11 @@ public class FastTrackToolEnhancedV3 extends Tool implements BarrierListener<FTB
       }
     }
     
-    
-    
-    final int tid = st.getTid();
-    final VectorClock tV = ts_get_V(st);
-    
     synchronized(sx) {
       final int/*epoch*/ w = sx.W;
       final int wTid = Epoch.tid(w);
+      final int tid = st.getTid();
+      final VectorClock tV = ts_get_V(st);
       
       if (wTid != tid /* optimization */ && !Epoch.leq(w, tV.get(wTid))) {
         if (COUNT_OPERATIONS) writeWriteError.inc(tid);
@@ -557,16 +549,18 @@ public class FastTrackToolEnhancedV3 extends Tool implements BarrierListener<FTB
         if (rTid != tid /* optimization */ && !Epoch.leq(r, tV.get(rTid))) {
           if (COUNT_OPERATIONS) readWriteError.inc(tid);
           error(event, sx, "Read-Write Race", "Read by ", rTid, "Write by ", tid);
-          return;
+        } else {
+          if (COUNT_OPERATIONS) writeExclusive.inc(tid);
         }
-        if (COUNT_OPERATIONS) writeExclusive.inc(tid);
       } else {
         if (sx.anyGt(tV)) {
+          for (int prevReader = sx.nextGt(tV, 0); prevReader > -1; prevReader = sx.nextGt(tV, prevReader + 1)) {
+            error(event, sx, "Read(Shared)-Write Race", "Read by ", prevReader, "Write by ", tid);
+          }
           if (COUNT_OPERATIONS) sharedWriteError.inc(tid);
-          error(event, sx, "Read(Shared)-Write Race", "Read by ", sx.nextGt(tV, 0), "Write by ", tid);
-          return;
+        } else {
+          if (COUNT_OPERATIONS) writeShared.inc(tid);
         }
-        if (COUNT_OPERATIONS) writeShared.inc(tid);
       }
       sx.W = e;
     }
@@ -585,12 +579,11 @@ public class FastTrackToolEnhancedV3 extends Tool implements BarrierListener<FTB
         }
       }
       
-      final int tid = st.getTid();
-      final VectorClock tV = ts_get_V(st);
-
       synchronized(sx) {
+        final int tid = st.getTid();
         final int/*epoch*/ w = sx.W;
         final int wTid = Epoch.tid(w);
+        final VectorClock tV = ts_get_V(st);
         
         if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
           ts_set_badVarState(st, sx);
@@ -632,8 +625,10 @@ public class FastTrackToolEnhancedV3 extends Tool implements BarrierListener<FTB
       final VectorClock tV = ts_get_V(st);
       volV.max(tV);
       incEpochAndCV(st, event.getAccessInfo());
+      st.hasStart = true;
     } else {
       maxEpochAndCV(st, volV, event.getAccessInfo());
+      st.merge_n += 1;
     }
     
     super.volatileAccess(event);
@@ -704,7 +699,7 @@ public class FastTrackToolEnhancedV3 extends Tool implements BarrierListener<FTB
     final ShadowThread st = event.getThread();
     final VectorClock tV = ts_get_V(st);
     final ShadowLock currLock = event.getLock();
-    final FTLockState lockV = getV(currLock);
+    final FTELockState lockV = getV(currLock);
     final Object lastLockObj = st.lastlockObj;
     final Object currLockObj = currLock.getLock();
     final int merge_n = st.merge_n;
@@ -741,7 +736,7 @@ public class FastTrackToolEnhancedV3 extends Tool implements BarrierListener<FTB
   public void postWait(WaitEvent event) {
     final ShadowThread st = event.getThread();
     final ShadowLock currLock = event.getLock();
-    final FTLockState lockV = getV(currLock);
+    final FTELockState lockV = getV(currLock);
     final int tidLast = lockV.tidLast;
     final int tid = st.getTid();
     

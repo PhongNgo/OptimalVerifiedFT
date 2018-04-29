@@ -1,7 +1,7 @@
 /******************************************************************************
 
  An enhanced version for VerifiedFT by Tuan Phong Ngo
- 
+   - Optimize read and write in a same epoch
  ******************************************************************************/
 
 
@@ -391,13 +391,13 @@ public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTB
       }
 		}
 
-    final VectorClock tV = ts_get_V(st);
-    final int tid = st.getTid();
     
 		synchronized(sx) {
+      final VectorClock tV = ts_get_V(st);
       final int/*epoch*/ w = sx.W;
       final int wTid = Epoch.tid(w);
-      
+      final int tid = st.getTid();
+
       if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
         if (COUNT_OPERATIONS) writeReadError.inc(tid);
         error(event, sx, "Write-Read Race", "Write by ", wTid, "Read by ", tid);
@@ -445,9 +445,10 @@ public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTB
         }
 			}
 
-      final int tid = st.getTid();
-      final VectorClock tV = ts_get_V(st);
+      
 			synchronized(sx) {
+        final int tid = st.getTid();
+        final VectorClock tV = ts_get_V(st);
         final int/*epoch*/ w = sx.W;
         final int wTid = Epoch.tid(w);
         if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
@@ -493,11 +494,12 @@ public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTB
 			}
 		}
 
-    final int tid = st.getTid();
-    final VectorClock tV = ts_get_V(st);
+    
 		synchronized(sx) {
 			final int/*epoch*/ w = sx.W;
 			final int wTid = Epoch.tid(w);				
+      final int tid = st.getTid();
+      final VectorClock tV = ts_get_V(st);
       
 			if (wTid != tid /* optimization */ && !Epoch.leq(w, tV.get(wTid))) {
 				if (COUNT_OPERATIONS) writeWriteError.inc(tid);
@@ -541,13 +543,13 @@ public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTB
 				}
 			}
 
-      final int tid = st.getTid();
-      final VectorClock tV = ts_get_V(st);
 
 			synchronized(sx) {
+        final int tid = st.getTid();
 				final int/*epoch*/ w = sx.W;
         final int wTid = Epoch.tid(w);
-        
+        final VectorClock tV = ts_get_V(st);
+
 				if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
 					ts_set_badVarState(st, sx);
 					return false;

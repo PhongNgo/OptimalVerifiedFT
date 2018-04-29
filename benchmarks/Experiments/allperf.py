@@ -121,8 +121,9 @@ r_luindex,
 r_lusearch,
 r_pmd,
 r_sunflow, 
-r_xalan
-#r_tomcat, # doesn't work
+r_xalan,
+r_tomcat
+#, # doesn't work
 ]
 
 
