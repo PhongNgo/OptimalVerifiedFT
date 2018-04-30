@@ -417,15 +417,10 @@ public class FastTrackToolEnhancedV3 extends Tool implements BarrierListener<FTB
     
     /* optional */ {
       final int/*epoch*/ r = sx.R;
+      if (r == e) return;
       final int/*epoch*/ w = sx.W;
-      if (r == e || w == e || (r == Epoch.READ_SHARED && sx.get(st.getTid()) == e)) {
-        if (COUNT_OPERATIONS) {
-          if (r == e) readSameEpoch.inc(st.getTid());
-          else if (w == e) readWriteSameEpoch.inc(st.getTid());
-          else readSharedSameEpoch.inc(st.getTid());
-        }
-        return;
-      }
+      if (w == e) return;
+      if (r == Epoch.READ_SHARED && sx.get(st.getTid()) == e) return;
     }
     
     
@@ -471,15 +466,10 @@ public class FastTrackToolEnhancedV3 extends Tool implements BarrierListener<FTB
       
       /* optional */ {
         final int/*epoch*/ r = sx.R;
+        if (r == e) return true;
         final int/*epoch*/ w = sx.W;
-        if (r == e || w == e || (r == Epoch.READ_SHARED && sx.get(st.getTid()) == e)) {
-          if (COUNT_OPERATIONS) {
-            if (r == e) readSameEpoch.inc(st.getTid());
-            else if (w == e) readWriteSameEpoch.inc(st.getTid());
-            else readSharedSameEpoch.inc(st.getTid());
-          }
-          return true;
-        }
+        if (w == e) return true;
+        if (r == Epoch.READ_SHARED && sx.get(st.getTid()) == e) return true;
       }
       
       

@@ -381,15 +381,15 @@ public class FastTrackToolEnhancedV4 extends Tool implements BarrierListener<FTB
     
 		/* optional */ {
       final long/*epoch*/ r = sx.R;
+      if (r == e) return;
       final long/*epoch*/ w = sx.W;
-      if (r == e || w == e || (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e)) {
+      if (w == e) return;
+      if (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e) return;
 //        if (COUNT_OPERATIONS) {
 //            if (r == e) readSameLongEpoch.inc(st.getTid());
 //            else if (w == e) readWriteSameLongEpoch.inc(st.getTid());
 //            else readSharedSameLongEpoch.inc(st.getTid());
 //        }
-        return;
-      }
 		}
 
     
@@ -435,15 +435,15 @@ public class FastTrackToolEnhancedV4 extends Tool implements BarrierListener<FTB
 
       /* optional */ {
         final long/*epoch*/ r = sx.R;
+        if (r == e) return true;
         final long/*epoch*/ w = sx.W;
-        if (r == e || w == e || (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e)) {
+        if (w == e) return true;
+        if (r == LongEpoch.READ_SHARED && sx.get(st.getTid()) == e) return true;
 //          if (COUNT_OPERATIONS) {
 //            if (r == e) readSameLongEpoch.inc(st.getTid());
 //            else if (w == e) readWriteSameLongEpoch.inc(st.getTid());
 //            else readSharedSameLongEpoch.inc(st.getTid());
 //          }
-          return true;
-        }
 			}
 
       
