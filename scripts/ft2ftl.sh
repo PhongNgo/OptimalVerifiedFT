@@ -44,16 +44,17 @@
 mkdir -p auto/tools/fasttrack_long
 cp src/tools/fasttrack/*.java auto/tools/fasttrack_long/
 rm auto/tools/fasttrack_long/FastTrackToolV*.java
+rm auto/tools/fasttrack_long/FastTrackToolEnhancedV*.java
 sed -i.bak  -e "s/int\/\*epoch\*\//long\/*epoch*\//g" auto/tools/fasttrack_long/*.java
 sed -i.bak  -e "s/VectorClock/LongVectorClock/g" auto/tools/fasttrack_long/*.java
 sed -i.bak  -e "s/Epoch/LongEpoch/g" auto/tools/fasttrack_long/*.java
 sed -i.bak  -e "s/package tools\.fasttrack/package tools.fasttrack_long/g" auto/tools/fasttrack_long/*.java
 sed -i.bak  -e "s/\"FT2\"/\"FT2L\"/g" auto/tools/fasttrack_long/FastTrackTool.java
 sed -i.bak  -e "s/\"FT2E\"/\"FT2EL\"/g" auto/tools/fasttrack_long/FastTrackToolEnhanced.java
-sed -i.bak  -e "s/\"FT2E-V1\"/\"FT2EL-V1\"/g" auto/tools/fasttrack_long/FastTrackToolEnhancedV1.java
-sed -i.bak  -e "s/\"FT2E-V2\"/\"FT2EL-V2\"/g" auto/tools/fasttrack_long/FastTrackToolEnhancedV2.java
-sed -i.bak  -e "s/\"FT2E-V3\"/\"FT2EL-V3\"/g" auto/tools/fasttrack_long/FastTrackToolEnhancedV3.java
-sed -i.bak  -e "s/\"FT2E-V4\"/\"FT2EL-V4\"/g" auto/tools/fasttrack_long/FastTrackToolEnhancedV4.java
+#sed -i.bak  -e "s/\"FT2E-V1\"/\"FT2EL-V1\"/g" auto/tools/fasttrack_long/FastTrackToolEnhancedV1.java
+#sed -i.bak  -e "s/\"FT2E-V2\"/\"FT2EL-V2\"/g" auto/tools/fasttrack_long/FastTrackToolEnhancedV2.java
+#sed -i.bak  -e "s/\"FT2E-V3\"/\"FT2EL-V3\"/g" auto/tools/fasttrack_long/FastTrackToolEnhancedV3.java
+#sed -i.bak  -e "s/\"FT2E-V4\"/\"FT2EL-V4\"/g" auto/tools/fasttrack_long/FastTrackToolEnhancedV4.java
 
 
 
@@ -71,6 +72,12 @@ cat src/tools/util/VectorClock.java >> auto/tools/util/LongVectorClock.java
 sed -i.bak  -e "s/int\/\*epoch\*\//long\/*epoch*\//g" auto/tools/util/LongVectorClock.java
 sed -i.bak  -e "s/VectorClock/LongVectorClock/g" auto/tools/util/LongVectorClock.java
 sed -i.bak  -e "s/Epoch/LongEpoch/g" auto/tools/util/LongVectorClock.java
+echo "// AUTO-GENERATED --- DO NOT EDIT DIRECTLY " > auto/tools/util/LongVectorClockE.java
+cat src/tools/util/VectorClockE.java >> auto/tools/util/LongVectorClockE.java
+sed -i.bak  -e "s/int\/\*epoch\*\//long\/*epoch*\//g" auto/tools/util/LongVectorClockE.java
+sed -i.bak  -e "s/VectorClock/LongVectorClock/g" auto/tools/util/LongVectorClockE.java
+sed -i.bak  -e "s/Epoch/LongEpoch/g" auto/tools/util/LongVectorClockE.java
+
 rm auto/tools/util/*.bak
 
 echo "// AUTO-GENERATED --- DO NOT EDIT DIRECTLY " > auto/tools/util/LongEpoch.java

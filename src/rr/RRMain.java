@@ -432,12 +432,14 @@ public class RRMain {
 					benchmark = construct.newInstance((Object)argv);
 
 					RR.startTimer();
-
+          
+          long total = 0;
+          
 					for (int i = 0; i < warmUpOption.get(); i++) {
-						doOneIteration("Warmup " + (i+1));
+						total += doOneIteration("Warmup " + (i+1));
 					}
 
-					long total = 0;
+					
 					final int iterations = benchmarkOption.get();
 
 					for (int i = 0; i < iterations; i++) {
@@ -447,7 +449,7 @@ public class RRMain {
 					cleanup.invoke(benchmark);
 
 					Counter c = new Counter("RRBench", "Average");
-					c.add(total / iterations);
+					c.add(total / (iterations + warmUpOption.get()));
 
 					ShadowThread.terminate(this);
 

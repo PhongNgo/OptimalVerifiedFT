@@ -48,25 +48,30 @@ import acme.util.Assert;
  * 
  * The client is responsible for providing synchronization.
  */
-public class VectorClock implements Serializable {
+public class VectorClockE implements Serializable {
 	private static final int FAST = 8;
 
-	protected volatile int/*epoch*/[] values;
+	protected  int/*epoch*/[] values;
 
 	// use for all VCs that start with an empty array
 	private static final int/*epoch*/[] EMPTY = new int/*epoch*/[0];
 
-	protected VectorClock() { 
+	protected VectorClockE() {
 		values = EMPTY;
 	}
 
-	public VectorClock(VectorClock other) {
+	public VectorClockE(VectorClock other) {
 		this(other.size());
 		copy(other);
 	}
 	
+  public VectorClockE(VectorClockE other) {
+    this(other.size());
+    copy(other);
+  }
+  
 	// requires: size >= 0
-	public VectorClock(int size) {
+	public VectorClockE(int size) {
 		if (size > 0) {
 			makeCV(size);
 		} else {
@@ -124,10 +129,6 @@ public class VectorClock implements Serializable {
 			thisValues[i] = srcValues[i];
 		}
 	}
-
-  
-  
-  
   
   
   // requires: exclusive access to this and src
@@ -166,9 +167,6 @@ public class VectorClock implements Serializable {
       thisValues[i] = srcValues[i];
     }
   }
-  
-
-  
   
   
   
@@ -218,9 +216,7 @@ public class VectorClock implements Serializable {
 			if (Epoch.leq(dstValues[i], srcValues[i])) dstValues[i] = srcValues[i];
 		}
 	}
-  
-  
-  
+
   
   
   // requires: exclusive access to this and other
@@ -255,7 +251,8 @@ public class VectorClock implements Serializable {
       if (Epoch.leq(dstValues[i], srcValues[i])) dstValues[i] = srcValues[i];
     }
   }
-
+  
+  
   
   
 	/* Return false if all entries in this.values are <= other.values. */
@@ -263,15 +260,6 @@ public class VectorClock implements Serializable {
 	final public boolean leq(VectorClock other) {
 		return !anyGt(other);
 	}
-  
-  
-  
-  /* Return false if all entries in this.values are <= other.values. */
-  // requires: exclusive access to this and other
-  final public boolean leq(VectorClockE other) {
-    return !anyGt(other);
-  }
-  
   
   
 //  /**
@@ -380,49 +368,6 @@ public class VectorClock implements Serializable {
 		}
 		return false; 
 	}
-  
-  
-  
-  /* Return true if any entry in this.values is greater than in other.values. */
-  // requires: exclusive access to this and other
-  final public boolean anyGt(VectorClockE other) {
-    //	other.ensureCapacity(this.values.length);
-    int/*epoch*/[] thisValues = this.values;
-    int/*epoch*/[] otherValues = other.values;
-    
-    int thisLen = thisValues.length;
-    int otherLen = otherValues.length;
-    int min = Math.min(thisLen, otherLen);
-    switch (min) {
-      default: if (slowAnyGt(thisValues, otherValues, min)) return true; // handle 8..min
-      case 8:  if (!Epoch.leq(thisValues[7], otherValues[7])) return true;
-      case 7:  if (!Epoch.leq(thisValues[6], otherValues[6])) return true;
-      case 6:  if (!Epoch.leq(thisValues[5], otherValues[5])) return true;
-      case 5:  if (!Epoch.leq(thisValues[4], otherValues[4])) return true;
-      case 4:  if (!Epoch.leq(thisValues[3], otherValues[3])) return true;
-      case 3:  if (!Epoch.leq(thisValues[2], otherValues[2])) return true;
-      case 2:  if (!Epoch.leq(thisValues[1], otherValues[1])) return true;
-      case 1:  if (!Epoch.leq(thisValues[0], otherValues[0])) return true;
-      case 0:
-    }
-    
-    // handle min..thisLen
-    for (int i = min; i < thisLen; i++) {
-      if (thisValues[i] != Epoch.make(i, 0)) return true;
-    }
-    
-    // handle thisLen..otherLen
-    // our values are t@0 -> so never greater than other values.
-    
-    return false;
-  }
-  
-  
-  
-  
-  
-  
-  
 
 	/*
 	 * Returns next index i >= start such that this.a[i] > other.a[i],
@@ -467,56 +412,6 @@ public class VectorClock implements Serializable {
 		return -1;
 	}
 
-  
-  
-  
-  
-  /*
-   * Returns next index i >= start such that this.a[i] > other.a[i],
-   * or -1 if no such.
-   * requires: exclusive access to this and other
-   */
-  final public int nextGt(VectorClockE other, int start) {
-    //other.ensureCapacity(this.values.length);
-    
-    final int/*epoch*/[] thisValues = this.values;
-    final int thisLen = thisValues.length;
-    
-    if (start >= thisLen) {
-      // this.values has no non-0 epochs left.
-      return -1;
-    }
-    
-    final int/*epoch*/[] otherValues = other.values;
-    final int otherLen = otherValues.length;
-    
-    final int min = Math.min(thisLen, otherLen);
-    
-    int i = start;
-    
-    // handle start..min
-    for (; i < min; i++) {
-      if (!Epoch.leq(thisValues[i], otherValues[i])) {
-        return i;
-      }
-    }
-    
-    // handle i..thisLen
-    for (; i < thisLen; i++) {
-      if (thisValues[i] != Epoch.make(i, 0)) {
-        return i;
-      }
-    }
-    
-    // handle thisLen..otherLen
-    // our values are t@0 -> so never greater than other values.
-    
-    return -1;
-  }
-  
-  
-  
-  
 	// requires: exclusive access to this
 	final public void tick(int tid) {
 		ensureCapacity(tid + 1);
@@ -557,57 +452,57 @@ public class VectorClock implements Serializable {
 		return values.length;
 	}
 
-	public static void main(String args[]) {
-		VectorClock v1 = new VectorClock(4);
-		VectorClock v2 = new VectorClock(8);
-		v1.tick(3);
-		v1.tick(5);
-		v2.tick(1);
-		v2.tick(3);
-		v2.tick(5);
-		v2.tick(7);
-		System.out.println("v1 =" + v1);
-		System.out.println("v2 =" + v2);
-		System.out.println("v1 <= v1 => " + !v1.anyGt(v1));
-		System.out.println("v1 <= v2 => " + !v1.anyGt(v2));
-		System.out.println("v2 <= v1 => " + !v2.anyGt(v1));
-
-		int start = -1;
-		while (true) {
-			start = v2.nextGt(v1, start + 1);
-			if (start == -1) break;
-			System.out.print(start + " " );
-		}
-		System.out.println();
-
-		{
-			VectorClock v3 = new VectorClock(0);
-			v3.max(v2);
-			System.out.println("v3 =" + v3);
-		}
-
-		{
-			VectorClock v3 = new VectorClock(12);
-			v3.copy(v1);
-			v3.tick(3);
-			v3.tick(10);
-			v3.max(v2);
-			System.out.println("v3 =" + v3);
-		}
-
-		{
-			VectorClock v3 = new VectorClock(12);
-			v3.copy(v1);
-			v3.tick(3);
-			v3.tick(10);
-			v3.copy(v2);
-			System.out.println("v3 =" + v3);
-		}
-
-
-
-
-	}
+//	public static void main(String args[]) {
+//		VectorClock v1 = new VectorClock(4);
+//		VectorClock v2 = new VectorClock(8);
+//		v1.tick(3);
+//		v1.tick(5);
+//		v2.tick(1);
+//		v2.tick(3);
+//		v2.tick(5);
+//		v2.tick(7);
+//		System.out.println("v1 =" + v1);
+//		System.out.println("v2 =" + v2);
+//		System.out.println("v1 <= v1 => " + !v1.anyGt(v1));
+//		System.out.println("v1 <= v2 => " + !v1.anyGt(v2));
+//		System.out.println("v2 <= v1 => " + !v2.anyGt(v1));
+//
+//		int start = -1;
+//		while (true) {
+//			start = v2.nextGt(v1, start + 1);
+//			if (start == -1) break;
+//			System.out.print(start + " " );
+//		}
+//		System.out.println();
+//
+//		{
+//			VectorClock v3 = new VectorClock(0);
+//			v3.max(v2);
+//			System.out.println("v3 =" + v3);
+//		}
+//
+//		{
+//			VectorClock v3 = new VectorClock(12);
+//			v3.copy(v1);
+//			v3.tick(3);
+//			v3.tick(10);
+//			v3.max(v2);
+//			System.out.println("v3 =" + v3);
+//		}
+//
+//		{
+//			VectorClock v3 = new VectorClock(12);
+//			v3.copy(v1);
+//			v3.tick(3);
+//			v3.tick(10);
+//			v3.copy(v2);
+//			System.out.println("v3 =" + v3);
+//		}
+//
+//
+//
+//
+//	}
 
 }
 

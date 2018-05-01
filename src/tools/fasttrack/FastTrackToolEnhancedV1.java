@@ -92,6 +92,7 @@ import rr.tool.RR;
 import rr.tool.Tool;
 import tools.util.Epoch;
 import tools.util.VectorClock;
+import tools.util.VectorClockE;
 import acme.util.Assert;
 import acme.util.Util;
 import acme.util.Yikes;
@@ -184,28 +185,45 @@ public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTB
 	protected static int/*epoch*/ ts_get_E(ShadowThread st) { Assert.panic("Bad");	return -1;	}
 	protected static void ts_set_E(ShadowThread st, int/*epoch*/ e) { Assert.panic("Bad");  }
 
-	protected static VectorClock ts_get_V(ShadowThread st) { Assert.panic("Bad");	return null; }
-	protected static void ts_set_V(ShadowThread st, VectorClock V) { Assert.panic("Bad");  }
+	protected static VectorClockE ts_get_V(ShadowThread st) { Assert.panic("Bad");	return null; }
+	protected static void ts_set_V(ShadowThread st, VectorClockE V) { Assert.panic("Bad");  }
 
 
 	protected void maxAndIncEpochAndCV(ShadowThread st, VectorClock other, OperationInfo info) {
 		final int tid = st.getTid();
-		final VectorClock tV = ts_get_V(st);
+		final VectorClockE tV = ts_get_V(st);
 		tV.max(other);
 		tV.tick(tid);
 		ts_set_E(st, tV.get(tid));
 	}
+  
+  protected void maxAndIncEpochAndCV(ShadowThread st, VectorClockE other, OperationInfo info) {
+    final int tid = st.getTid();
+    final VectorClockE tV = ts_get_V(st);
+    tV.max(other);
+    tV.tick(tid);
+    ts_set_E(st, tV.get(tid));
+  }
+  
 
 	protected void maxEpochAndCV(ShadowThread st, VectorClock other, OperationInfo info) {
 		final int tid = st.getTid();
-		final VectorClock tV = ts_get_V(st);
+		final VectorClockE tV = ts_get_V(st);
 		tV.max(other);
 		ts_set_E(st, tV.get(tid));
 	}
-
+  
+  protected void maxEpochAndCV(ShadowThread st, VectorClockE other, OperationInfo info) {
+    final int tid = st.getTid();
+    final VectorClockE tV = ts_get_V(st);
+    tV.max(other);
+    ts_set_E(st, tV.get(tid));
+  }
+  
+  
 	protected void incEpochAndCV(ShadowThread st, OperationInfo info) {
 		final int tid = st.getTid();
-		final VectorClock tV = ts_get_V(st);
+		final VectorClockE tV = ts_get_V(st);
 		tV.tick(tid);
 		ts_set_E(st, tV.get(tid));
 	}
@@ -249,7 +267,7 @@ public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTB
 
 		if (ts_get_V(st) == null) {
 			final int tid = st.getTid();
-			final VectorClock tV = new VectorClock(INIT_VECTOR_CLOCK_SIZE);
+			final VectorClockE tV = new VectorClockE(INIT_VECTOR_CLOCK_SIZE);
 			ts_set_V(st, tV);
 			synchronized (maxEpochPerTid) {
 				final int/*epoch*/ epoch = maxEpochPerTid.get(tid) + 1;
@@ -280,7 +298,7 @@ public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTB
 	@Override
 	public void release(final ReleaseEvent event) {
 		final ShadowThread st = event.getThread();
-		final VectorClock tV = ts_get_V(st);
+		final VectorClockE tV = ts_get_V(st);
 		final VectorClock lockV = getV(event.getLock());
 
 		//lockV.max(tV);
@@ -315,7 +333,7 @@ public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTB
 			Object target = event.getTarget();
 			if (target == null) {
 				ClassInfo owner = ((FieldAccessEvent)event).getInfo().getField().getOwner();
-				final VectorClock tV = ts_get_V(st);
+				//final VectorClockE tV = ts_get_V(st);
 				synchronized (classInitTime) {
 					VectorClock initTime = classInitTime.get(owner);
 					maxEpochAndCV(st, initTime, event.getAccessInfo()); // won't change current epoch
@@ -334,38 +352,38 @@ public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTB
 
 
 	// Counters for relative frequencies of each rule
-	private static final ThreadLocalCounter readSameEpoch = new ThreadLocalCounter("FT", "Read Same Epoch", RR.maxTidOption.get());
-	private static final ThreadLocalCounter readSharedSameEpoch = new ThreadLocalCounter("FT", "ReadShared Same Epoch", RR.maxTidOption.get());
-	private static final ThreadLocalCounter readExclusive = new ThreadLocalCounter("FT", "Read Exclusive", RR.maxTidOption.get());
-	private static final ThreadLocalCounter readShare = new ThreadLocalCounter("FT", "Read Share", RR.maxTidOption.get());
-	private static final ThreadLocalCounter readShared = new ThreadLocalCounter("FT", "Read Shared", RR.maxTidOption.get());
-	private static final ThreadLocalCounter writeReadError = new ThreadLocalCounter("FT", "Write-Read Error", RR.maxTidOption.get());
-	private static final ThreadLocalCounter writeSameEpoch = new ThreadLocalCounter("FT", "Write Same Epoch", RR.maxTidOption.get());
-	private static final ThreadLocalCounter writeExclusive = new ThreadLocalCounter("FT", "Write Exclusive", RR.maxTidOption.get());
-	private static final ThreadLocalCounter writeShared = new ThreadLocalCounter("FT", "Write Shared", RR.maxTidOption.get());
-	private static final ThreadLocalCounter writeWriteError = new ThreadLocalCounter("FT", "Write-Write Error", RR.maxTidOption.get());
-	private static final ThreadLocalCounter readWriteError = new ThreadLocalCounter("FT", "Read-Write Error", RR.maxTidOption.get());
-	private static final ThreadLocalCounter sharedWriteError = new ThreadLocalCounter("FT", "Shared-Write Error", RR.maxTidOption.get());
-	private static final ThreadLocalCounter acquire = new ThreadLocalCounter("FT", "Acquire", RR.maxTidOption.get());
-	private static final ThreadLocalCounter release = new ThreadLocalCounter("FT", "Release", RR.maxTidOption.get());
-	private static final ThreadLocalCounter fork = new ThreadLocalCounter("FT", "Fork", RR.maxTidOption.get());
-	private static final ThreadLocalCounter join = new ThreadLocalCounter("FT", "Join", RR.maxTidOption.get());
-	private static final ThreadLocalCounter barrier = new ThreadLocalCounter("FT", "Barrier", RR.maxTidOption.get());
-	private static final ThreadLocalCounter wait = new ThreadLocalCounter("FT", "Wait", RR.maxTidOption.get());
-	private static final ThreadLocalCounter vol = new ThreadLocalCounter("FT", "Volatile", RR.maxTidOption.get());
-  // new added variables
-  private static final ThreadLocalCounter readWriteSameEpoch = new ThreadLocalCounter("FT", "Read with Write Same Epoch", RR.maxTidOption.get());
-	
-	private static final ThreadLocalCounter other = new ThreadLocalCounter("FT", "Other", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter readSameEpoch = new ThreadLocalCounter("FT", "Read Same Epoch", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter readSharedSameEpoch = new ThreadLocalCounter("FT", "ReadShared Same Epoch", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter readExclusive = new ThreadLocalCounter("FT", "Read Exclusive", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter readShare = new ThreadLocalCounter("FT", "Read Share", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter readShared = new ThreadLocalCounter("FT", "Read Shared", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter writeReadError = new ThreadLocalCounter("FT", "Write-Read Error", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter writeSameEpoch = new ThreadLocalCounter("FT", "Write Same Epoch", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter writeExclusive = new ThreadLocalCounter("FT", "Write Exclusive", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter writeShared = new ThreadLocalCounter("FT", "Write Shared", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter writeWriteError = new ThreadLocalCounter("FT", "Write-Write Error", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter readWriteError = new ThreadLocalCounter("FT", "Read-Write Error", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter sharedWriteError = new ThreadLocalCounter("FT", "Shared-Write Error", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter acquire = new ThreadLocalCounter("FT", "Acquire", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter release = new ThreadLocalCounter("FT", "Release", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter fork = new ThreadLocalCounter("FT", "Fork", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter join = new ThreadLocalCounter("FT", "Join", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter barrier = new ThreadLocalCounter("FT", "Barrier", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter wait = new ThreadLocalCounter("FT", "Wait", RR.maxTidOption.get());
+//	private static final ThreadLocalCounter vol = new ThreadLocalCounter("FT", "Volatile", RR.maxTidOption.get());
+//  // new added variables
+//  private static final ThreadLocalCounter readWriteSameEpoch = new ThreadLocalCounter("FT", "Read with Write Same Epoch", RR.maxTidOption.get());
+//	
+//	private static final ThreadLocalCounter other = new ThreadLocalCounter("FT", "Other", RR.maxTidOption.get());
 
-	static {
-	}
+//	static {
+//	}
 
 	public void fini() {
-		AggregateCounter reads = new AggregateCounter("FT", "Total Reads", readWriteSameEpoch, readSameEpoch, readSharedSameEpoch, readExclusive, readShare, readShared, writeReadError);
-		AggregateCounter writes = new AggregateCounter("FT", "Total Writes", writeSameEpoch, writeExclusive, writeShared, writeWriteError, readWriteError, sharedWriteError);
-		AggregateCounter accesses = new AggregateCounter("FT", "Total Access Ops", reads, writes);
-		new AggregateCounter("FT", "Total Ops", accesses, acquire, release, fork, join, barrier, wait, vol, other);
+//		AggregateCounter reads = new AggregateCounter("FT", "Total Reads", readWriteSameEpoch, readSameEpoch, readSharedSameEpoch, readExclusive, readShare, readShared, writeReadError);
+//		AggregateCounter writes = new AggregateCounter("FT", "Total Writes", writeSameEpoch, writeExclusive, writeShared, writeWriteError, readWriteError, sharedWriteError);
+//		AggregateCounter accesses = new AggregateCounter("FT", "Total Access Ops", reads, writes);
+//		new AggregateCounter("FT", "Total Ops", accesses, acquire, release, fork, join, barrier, wait, vol, other);
 //		if (COUNT_OPERATIONS) {
 //			Util.printf("\n\nWrite Same Epoch:        %g\n", ((double)writeSameEpoch.getCount()) / accesses.getCount());
 //      Util.printf("Read with Write Same Epoch:  %g\n", ((double)readWriteSameEpoch.getCount()) / accesses.getCount());
@@ -377,28 +395,22 @@ public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTB
 	
 	protected void read(final AccessEvent event, final ShadowThread st, final FTVarState sx) {
 		final int/*epoch*/ e = ts_get_E(st);
-    
+
 		/* optional */ {
       final int/*epoch*/ r = sx.R;
       if (r == e) return;
+      if (r == Epoch.READ_SHARED && sx.get(st.getTid()) == e) return;
       final int/*epoch*/ w = sx.W;
       if (w == e) return;
-      if (r == Epoch.READ_SHARED && sx.get(st.getTid()) == e) return;
-//        if (COUNT_OPERATIONS) {
-//            if (r == e) readSameEpoch.inc(st.getTid());
-//            else if (w == e) readWriteSameEpoch.inc(st.getTid());
-//            else readSharedSameEpoch.inc(st.getTid());
-//        }
-      
 		}
 
-    
+    final VectorClockE tV = ts_get_V(st);
+    final int tid = st.getTid();
+
 		synchronized(sx) {
-      final VectorClock tV = ts_get_V(st);
       final int/*epoch*/ w = sx.W;
       final int wTid = Epoch.tid(w);
-      final int tid = st.getTid();
-
+     
       if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
         //if (COUNT_OPERATIONS) writeReadError.inc(tid);
         error(event, sx, "Write-Read Race", "Write by ", wTid, "Read by ", tid);
@@ -432,26 +444,23 @@ public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTB
 			final FTVarState sx = ((FTVarState)shadow);
 
 			final int/*epoch*/ e = ts_get_E(st);
+      
 
       /* optional */ {
         final int/*epoch*/ r = sx.R;
         if (r == e) return true;
-        final int/*epoch*/ w = sx.W;
-        if (w == e) return true; 
         if (r == Epoch.READ_SHARED && sx.get(st.getTid()) == e) return true;
-//          if (COUNT_OPERATIONS) {
-//            if (r == e) readSameEpoch.inc(st.getTid());
-//            else if (w == e) readWriteSameEpoch.inc(st.getTid());
-//            else readSharedSameEpoch.inc(st.getTid());
-//          }
+        final int/*epoch*/ w = sx.W;
+        if (w == e) return true;
 			}
-
+      
+      final VectorClockE tV = ts_get_V(st);
+      final int tid = st.getTid();
       
 			synchronized(sx) {
-        final int tid = st.getTid();
-        final VectorClock tV = ts_get_V(st);
         final int/*epoch*/ w = sx.W;
         final int wTid = Epoch.tid(w);
+        
         if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
           ts_set_badVarState(st, sx);
           return false;
@@ -471,15 +480,15 @@ public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTB
 						sx.set(tid, e);
 						sx.R = Epoch.READ_SHARED;
 					}
+          
 				} else {
 					//if (COUNT_OPERATIONS) readShared.inc(tid);
 					sx.set(tid, e);					
 				}
 				return true;
 			}
-		} else {
-			return false;
-		}
+		} else
+      return false;
 	}
 
 
@@ -495,12 +504,13 @@ public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTB
 			}
 		}
 
+    final int tid = st.getTid();
+    final VectorClockE tV = ts_get_V(st);
     
 		synchronized(sx) {
 			final int/*epoch*/ w = sx.W;
 			final int wTid = Epoch.tid(w);				
-      final int tid = st.getTid();
-      final VectorClock tV = ts_get_V(st);
+      
       
 			if (wTid != tid /* optimization */ && !Epoch.leq(w, tV.get(wTid))) {
 				//if (COUNT_OPERATIONS) writeWriteError.inc(tid);
@@ -545,12 +555,13 @@ public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTB
 				}
 			}
 
-
+      final VectorClockE tV = ts_get_V(st);
+      final int tid = st.getTid();
+      
 			synchronized(sx) {
-        final int tid = st.getTid();
 				final int/*epoch*/ w = sx.W;
         final int wTid = Epoch.tid(w);
-        final VectorClock tV = ts_get_V(st);
+
 
 				if (wTid != tid && !Epoch.leq(w, tV.get(wTid))) {
 					ts_set_badVarState(st, sx);
@@ -589,7 +600,7 @@ public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTB
 		final VectorClock volV = getV((event).getShadowVolatile());
 
 		if (event.isWrite()) {
-			final VectorClock tV = ts_get_V(st);
+			final VectorClockE tV = ts_get_V(st);
 			volV.max(tV);
 			incEpochAndCV(st, event.getAccessInfo()); 		
 		} else {
@@ -606,7 +617,7 @@ public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTB
 	public void preStart(final StartEvent event) {
 		final ShadowThread st = event.getThread();
 		final ShadowThread su = event.getNewThread();
-		final VectorClock tV = ts_get_V(st);
+		final VectorClockE tV = ts_get_V(st);
 
 		/* 
 		 * Safe to access su.V, because u has not started yet.  
@@ -708,7 +719,7 @@ public class FastTrackToolEnhancedV1 extends Tool implements BarrierListener<FTB
 	@Override
 	public void classInitialized(ClassInitializedEvent event) {
 		final ShadowThread st = event.getThread();
-		final VectorClock tV = ts_get_V(st);
+		final VectorClockE tV = ts_get_V(st);
 		synchronized(classInitTime) {
 			VectorClock initTime = classInitTime.get(event.getRRClass());
 			initTime.copy(tV);
