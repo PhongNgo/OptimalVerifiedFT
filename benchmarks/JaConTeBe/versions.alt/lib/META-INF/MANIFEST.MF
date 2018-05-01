@@ -1,0 +1,2 @@
+Manifest-Version: 1.0
+Class-Path: realLib/coring-1.4.jar realLib/jacontebe-1.0.jar realLib/log4j-1.2.15.jar
